@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage, PerspectiveCamera, Html } from '@react-three/drei';
 import { Box as BoxIcon, ImageIcon } from 'lucide-react';
-import { Product3DAnnotation } from '../types';
+import { Product3DAnnotation, ProductConfiguration } from '../types';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -28,16 +29,17 @@ interface ThreeProductViewerProps {
   productType: 'ENCLOSURE' | 'KIOSK' | 'CABIN' | 'SMART_CABIN' | 'AUTOMOBILE' | 'DEFAULT';
   annotations?: Product3DAnnotation[];
   modelUrl?: string;
+  config?: ProductConfiguration;
 }
 
 // --- PROCEDURAL ASSETS (Fallback) ---
 
-const EnclosureMesh = (props: any) => {
+const EnclosureMesh = ({ materialProps, ...props }: any) => {
   return (
     <group {...props}>
       <mesh castShadow receiveShadow position={[0, 1.5, 0]}>
         <boxGeometry args={[2, 3, 1]} />
-        <meshStandardMaterial color="#dddddd" roughness={0.3} metalness={0.1} />
+        <meshStandardMaterial color={materialProps?.color || "#dddddd"} roughness={materialProps?.roughness ?? 0.3} metalness={materialProps?.metalness ?? 0.1} />
       </mesh>
       <mesh castShadow position={[0, 1.5, 0.52]}>
         <boxGeometry args={[1.9, 2.9, 0.1]} />
@@ -47,12 +49,12 @@ const EnclosureMesh = (props: any) => {
   );
 };
 
-const KioskMesh = (props: any) => {
+const KioskMesh = ({ materialProps, ...props }: any) => {
   return (
     <group {...props}>
       <mesh castShadow receiveShadow position={[0, 1.25, 0]}>
         <boxGeometry args={[3, 2.5, 2]} />
-        <meshStandardMaterial color="#cccccc" roughness={0.3} />
+        <meshStandardMaterial color={materialProps?.color || "#cccccc"} roughness={materialProps?.roughness ?? 0.3} />
       </mesh>
       <mesh castShadow position={[0, 2.9, 0]} rotation={[0, Math.PI / 4, 0]}>
         <coneGeometry args={[2.5, 0.8, 4]} />
@@ -66,12 +68,12 @@ const KioskMesh = (props: any) => {
   );
 };
 
-const CabinMesh = (props: any) => {
+const CabinMesh = ({ materialProps, ...props }: any) => {
   return (
     <group {...props}>
       <mesh castShadow receiveShadow position={[0, 1.4, 0]}>
         <boxGeometry args={[3, 2.8, 3]} />
-        <meshStandardMaterial color="#eeeeee" roughness={0.2} />
+        <meshStandardMaterial color={materialProps?.color || "#eeeeee"} roughness={materialProps?.roughness ?? 0.2} metalness={materialProps?.metalness ?? 0.1} />
       </mesh>
       <mesh castShadow position={[0, 2.9, 0]}>
         <boxGeometry args={[3.4, 0.2, 3.4]} />
@@ -79,37 +81,37 @@ const CabinMesh = (props: any) => {
       </mesh>
       <mesh position={[0, 1.6, 1.51]}>
         <boxGeometry args={[2, 1.2, 0.1]} />
-        <meshPhysicalMaterial 
-          color="#88ccff" 
-          metalness={0.9} 
-          roughness={0.05} 
-          transmission={0.6} 
-          thickness={0.5} 
-          transparent 
-          opacity={0.4} 
+        <meshPhysicalMaterial
+          color="#88ccff"
+          metalness={0.9}
+          roughness={0.05}
+          transmission={0.6}
+          thickness={0.5}
+          transparent
+          opacity={0.4}
         />
       </mesh>
     </group>
   );
 };
 
-const SmartCabinMesh = (props: any) => {
+const SmartCabinMesh = ({ materialProps, ...props }: any) => {
   return (
     <group {...props}>
       <mesh castShadow receiveShadow position={[0, 1.1, 0]}>
         <boxGeometry args={[4, 2.2, 2]} />
-        <meshStandardMaterial color="#eeeeee" roughness={0.1} />
+        <meshStandardMaterial color={materialProps?.color || "#eeeeee"} roughness={materialProps?.roughness ?? 0.1} metalness={materialProps?.metalness ?? 0.1} />
       </mesh>
       <mesh position={[0, 1.1, 1.01]}>
         <boxGeometry args={[3.8, 2, 0.1]} />
-        <meshPhysicalMaterial 
-          color="#88ccff" 
-          metalness={0.9} 
-          roughness={0.05} 
-          transmission={0.6} 
-          thickness={0.5} 
-          transparent 
-          opacity={0.4} 
+        <meshPhysicalMaterial
+          color="#88ccff"
+          metalness={0.9}
+          roughness={0.05}
+          transmission={0.6}
+          thickness={0.5}
+          transparent
+          opacity={0.4}
         />
       </mesh>
       <mesh receiveShadow position={[0, -0.1, 0.4]}>
@@ -120,7 +122,7 @@ const SmartCabinMesh = (props: any) => {
   );
 };
 
-const AutoPartMesh = (props: any) => {
+const AutoPartMesh = ({ materialProps, ...props }: any) => {
   return (
     <group {...props}>
       <mesh castShadow position={[0, 0.1, 0]}>
@@ -130,7 +132,7 @@ const AutoPartMesh = (props: any) => {
       {[...Array(5)].map((_, i) => (
         <mesh key={i} position={[0, 0.2, -0.8 + i * 0.4]}>
           <boxGeometry args={[3.5, 0.05, 0.1]} />
-          <meshStandardMaterial color="#00ADB5" />
+          <meshStandardMaterial color={materialProps?.color || "#00ADB5"} roughness={materialProps?.roughness ?? 0.5} />
         </mesh>
       ))}
     </group>
@@ -149,20 +151,20 @@ const Annotation: React.FC<AnnotationProps> = ({ data, isOpen, onToggle }) => {
   return (
     <Html position={data.position} center zIndexRange={[100, 0]} occlude>
       <div className="relative group">
-        <button 
+        <button
           onClick={() => onToggle(data.id)}
           className={`w-6 h-6 rounded-full flex items-center justify-center border-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,173,181,0.5)] ${isOpen ? 'bg-emphz-teal border-white scale-110' : 'bg-black/60 border-emphz-teal text-white hover:bg-emphz-teal hover:scale-110'}`}
         >
           {isOpen ? <div className="w-2 h-2 bg-white rounded-full" /> : <div className="w-1.5 h-1.5 bg-emphz-teal rounded-full animate-pulse" />}
         </button>
-        
+
         {isOpen && (
           <div className="absolute left-full top-1/2 -translate-y-1/2 ml-4 w-48 bg-black/80 backdrop-blur-md border border-emphz-teal/30 p-3 rounded-lg text-left shadow-2xl animate-fade-in origin-left">
-             <h4 className="text-white font-bold text-xs font-display uppercase tracking-wider mb-1">{data.title}</h4>
-             <p className="text-gray-300 text-[10px] leading-relaxed">{data.description}</p>
-             
-             {/* Connector Line */}
-             <div className="absolute right-full top-1/2 -translate-y-1/2 w-4 h-px bg-emphz-teal/50"></div>
+            <h4 className="text-white font-bold text-xs font-display uppercase tracking-wider mb-1">{data.title}</h4>
+            <p className="text-gray-300 text-[10px] leading-relaxed">{data.description}</p>
+
+            {/* Connector Line */}
+            <div className="absolute right-full top-1/2 -translate-y-1/2 w-4 h-px bg-emphz-teal/50"></div>
           </div>
         )}
       </div>
@@ -185,7 +187,7 @@ const RobustModelLoader = ({ url, fallback }: { url: string, fallback: React.Rea
 
     // DIAGNOSIS FIX: Explicit logging of progress and errors
     console.log(`[Viewer] Attempting to load: ${url}`);
-    
+
     loader.load(
       url,
       (data) => {
@@ -201,7 +203,7 @@ const RobustModelLoader = ({ url, fallback }: { url: string, fallback: React.Rea
         setError(err instanceof Error ? err : new Error('Unknown loader error'));
       }
     );
-    
+
     return () => { draco.dispose(); }
   }, [url]);
 
@@ -209,7 +211,7 @@ const RobustModelLoader = ({ url, fallback }: { url: string, fallback: React.Rea
     // DIAGNOSIS FIX: Fallback to procedural geometry on error
     return <>{fallback}</>;
   }
-  
+
   if (!gltf) return null; // Let the parent Suspense or a spinner handle the 'loading' state visibly if needed
 
   return <primitive object={gltf.scene} />;
@@ -217,61 +219,76 @@ const RobustModelLoader = ({ url, fallback }: { url: string, fallback: React.Rea
 
 // --- SCENE COMPONENT ---
 
-const ModelStage: React.FC<{ type: string; annotations?: Product3DAnnotation[]; modelUrl?: string }> = ({ type, annotations, modelUrl }) => {
+const ModelStage: React.FC<{
+  type: string;
+  annotations?: Product3DAnnotation[];
+  modelUrl?: string;
+  config?: ProductConfiguration;
+}> = ({ type, annotations, modelUrl, config }) => {
   const [openAnnotation, setOpenAnnotation] = useState<string | null>(null);
 
   const toggleAnnotation = (id: string) => {
     setOpenAnnotation(prev => prev === id ? null : id);
   };
 
-  // Determine Procedural Fallback Mesh
-  let FallbackModel = EnclosureMesh;
-  if (type === 'KIOSK') FallbackModel = KioskMesh;
-  if (type === 'CABIN') FallbackModel = CabinMesh;
-  if (type === 'SMART_CABIN') FallbackModel = SmartCabinMesh;
-  if (type === 'AUTOMOBILE') FallbackModel = AutoPartMesh;
+  // Determine material properties based on config
+  const materialProps = {
+    color: config?.color || '#dddddd',
+    roughness: config?.finish === 'Glossy' ? 0.2 : config?.finish === 'Matte' ? 0.8 : 0.5,
+    metalness: config?.finish === 'Glossy' ? 0.6 : 0.1,
+  };
+
+  // Pass dynamic props to meshes
+  const meshProps = { ...materialProps };
+
+  // Determine Procedural Fallback Mesh Component
+  let MeshComponent = EnclosureMesh;
+  if (type === 'KIOSK') MeshComponent = KioskMesh;
+  if (type === 'CABIN') MeshComponent = CabinMesh;
+  if (type === 'SMART_CABIN') MeshComponent = SmartCabinMesh;
+  if (type === 'AUTOMOBILE') MeshComponent = AutoPartMesh;
 
   return (
     <>
       <Stage intensity={0.5} environment="city" adjustCamera={1.2} shadows="contact">
         {modelUrl ? (
-          <RobustModelLoader 
-            url={modelUrl} 
-            fallback={<FallbackModel />} 
+          <RobustModelLoader
+            url={modelUrl}
+            fallback={<MeshComponent materialProps={meshProps} />}
           />
         ) : (
-          <FallbackModel />
+          <MeshComponent materialProps={meshProps} />
         )}
       </Stage>
       {annotations?.map(ann => (
-        <Annotation 
-          key={ann.id} 
-          data={ann} 
-          isOpen={openAnnotation === ann.id} 
-          onToggle={toggleAnnotation} 
+        <Annotation
+          key={ann.id}
+          data={ann}
+          isOpen={openAnnotation === ann.id}
+          onToggle={toggleAnnotation}
         />
       ))}
     </>
   );
 };
 
-const ThreeProductViewer: React.FC<ThreeProductViewerProps> = ({ productType, annotations, modelUrl }) => {
+const ThreeProductViewer: React.FC<ThreeProductViewerProps> = ({ productType, annotations, modelUrl, config }) => {
   const [autoRotate, setAutoRotate] = useState(true);
 
   return (
     <div className="w-full h-full relative group touch-none bg-gradient-to-b from-[#0B1120] to-[#1a2333]">
       <Canvas shadows dpr={[1, 2]}>
         <PerspectiveCamera makeDefault position={[4, 2, 5]} fov={50} />
-        
+
         {/* Lights */}
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
-        
+
         {/* Environment */}
-        <ModelStage type={productType} annotations={annotations} modelUrl={modelUrl} />
-        
+        <ModelStage type={productType} annotations={annotations} modelUrl={modelUrl} config={config} />
+
         {/* Controls */}
-        <OrbitControls 
+        <OrbitControls
           autoRotate={autoRotate}
           autoRotateSpeed={1.0}
           enablePan={true}
@@ -284,12 +301,12 @@ const ThreeProductViewer: React.FC<ThreeProductViewerProps> = ({ productType, an
 
       {/* Control Overlay */}
       <div className="absolute bottom-4 left-4 flex gap-2">
-         <button 
-           onClick={() => setAutoRotate(!autoRotate)}
-           className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border transition-colors ${autoRotate ? 'bg-emphz-teal text-emphz-navy border-emphz-teal' : 'bg-black/50 text-gray-400 border-white/10 hover:text-white'}`}
-         >
-           {autoRotate ? 'Auto-Rotate: ON' : 'Auto-Rotate: OFF'}
-         </button>
+        <button
+          onClick={() => setAutoRotate(!autoRotate)}
+          className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border transition-colors ${autoRotate ? 'bg-emphz-teal text-emphz-navy border-emphz-teal' : 'bg-black/50 text-gray-400 border-white/10 hover:text-white'}`}
+        >
+          {autoRotate ? 'Auto-Rotate: ON' : 'Auto-Rotate: OFF'}
+        </button>
       </div>
 
       <div className="absolute bottom-4 right-4 bg-black/50 text-white text-[10px] px-3 py-1.5 rounded-full backdrop-blur-md pointer-events-none flex items-center gap-2 animate-fade-in border border-white/10 select-none">

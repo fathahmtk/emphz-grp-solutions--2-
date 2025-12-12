@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #FFFFFF;
@@ -13,6 +19,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 /* Global Focus Styles */
@@ -30,11 +38,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Premium Glassmorphism */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+.glass-dark {
+  background: rgba(11, 17, 32, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* Technical Grid Background Pattern */
@@ -45,6 +61,18 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 40px 40px;
 }
 
+/* Carbon Fiber Pattern */
+.bg-carbon-fibre {
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  background-repeat: repeat;
+}
+
+/* Cubes Pattern */
+.bg-cubes {
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-repeat: repeat;
+}
+
 .glass-card-hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -52,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 173, 181, 0.3); 
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -5px rgba(0, 173, 181, 0.1);
+  box-shadow: 0 20px 40px -5px rgba(0, 173, 181, 0.15);
 }
 
 /* Skip Link */
@@ -81,10 +109,91 @@ h1, h2, h3, h4, h5, h6 {
   background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00ADB5; /* Teal Thumb */
+  background: #00ADB5;
   border-radius: 2px;
   border: 2px solid #F1F5F9;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #008C94;
+}
+
+/* Custom Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Utility Classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-2 {
+  transform: rotateY(2deg);
+}
+
+/* Button Enhancements */
+button, a[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Image Loading State */
+img {
+  image-rendering: -webkit-optimize-contrast;
 }

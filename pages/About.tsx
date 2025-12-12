@@ -18,7 +18,7 @@ const AnimatedStatistic: React.FC<{
       ([entry]) => {
         if (entry.isIntersecting && !isVisible.current) {
           isVisible.current = true; // Prevent re-triggering
-          let start = 0;
+          const start = 0;
           const end = endValue;
           const startTime = Date.now();
 

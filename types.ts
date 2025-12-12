@@ -54,12 +54,19 @@ export interface CaseStudy {
   relatedProductCategories?: ProductCategory[];
 }
 
+export interface ProductConfiguration {
+  color: string;
+  finish: 'Glossy' | 'Matte' | 'Textured';
+}
+
 export interface RFQItem {
   id: string;
+  cartId?: string; // Unique ID for cart entry (product ID + config hash)
   name: string;
   quantity: number;
   image?: string;
   modelUrl?: string;
+  configuration?: ProductConfiguration;
 }
 
 export interface ChatMessage {

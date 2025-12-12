@@ -11,6 +11,7 @@ const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const TechnicalCenter = lazy(() => import('./pages/TechnicalCenter'));
 const MaterialScience = lazy(() => import('./pages/MaterialScience'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const Industries = lazy(() => import('./pages/Industries'));
 const About = lazy(() => import('./pages/About'));
 const RFQ = lazy(() => import('./pages/RFQ'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -30,7 +31,7 @@ const PageLoader: React.FC = () => (
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Layout>
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -38,6 +39,7 @@ const App: React.FC = () => {
             <Route path="/products" element={<Catalog />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/technology" element={<MaterialScience />} />
+            <Route path="/industries" element={<Industries />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/technical" element={<TechnicalCenter />} />
             <Route path="/blog" element={<Blog />} />

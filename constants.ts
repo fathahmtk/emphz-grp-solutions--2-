@@ -3,6 +3,7 @@ import { Product, ProductCategory, CaseStudy, BlogPost } from './types';
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'Products', path: '/products' },
+  { label: 'Industries', path: '/industries' },
   { label: 'Technology', path: '/technology' },
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Technical Center', path: '/technical' },
@@ -116,10 +117,10 @@ export const MOCK_PRODUCTS: Product[] = [
       { label: 'Features', value: 'Flush, Sink, Mirror, Vent' },
     ],
     features: ['Freshwater flush system', 'Anti-slip flooring', 'Lockable door with indicator', 'Easy to transport and install', 'Optional waterless bio-toilet'],
-    downloads: [ { title: 'Portable Toilet Brochure', type: 'PDF' } ],
+    downloads: [{ title: 'Portable Toilet Brochure', type: 'PDF' }],
     accessories: ['Solar Lighting Kit', 'Hand Sanitizer Dispenser', 'Exhaust Fan']
   },
-   {
+  {
     id: 'emp-bs-metro',
     name: 'Metro GRP Bus Shelter',
     category: ProductCategory.BUS_SHELTER,
@@ -133,7 +134,7 @@ export const MOCK_PRODUCTS: Product[] = [
       { label: 'Seating', value: 'Integrated GRP Bench' },
     ],
     features: ['Corrosion and rust proof', 'Vandal resistant', 'Integrated seating', 'Advertising panel space', 'Low maintenance'],
-    downloads: [ { title: 'Bus Shelter Datasheet', type: 'PDF' } ],
+    downloads: [{ title: 'Bus Shelter Datasheet', type: 'PDF' }],
     accessories: ['Solar LED Lighting', 'Timetable Display Case', 'Waste Bin']
   },
   {
@@ -381,12 +382,44 @@ export const MOCK_CASE_STUDIES: CaseStudy[] = [
 ];
 
 export const INDUSTRIES = [
-  { title: 'Utilities' },
-  { title: 'Rail' },
-  { title: 'Automotive' },
-  { title: 'Water' },
-  { title: 'Telecom' },
-  { title: 'Oil & Gas' },
-  { title: 'Solar' },
-  { title: 'Fire Safety' },
+  {
+    title: 'Solar & Renewables',
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80",
+    desc: "UV-stable combiner boxes for harsh solar parks."
+  },
+  {
+    title: 'Rail & Metro',
+    image: "https://images.unsplash.com/photo-1474487548417-781cb714c2f3?auto=format&fit=crop&w=600&q=80",
+    desc: "Fire-retardant trackside signaling cabinets."
+  },
+  {
+    title: 'Telecom / 5G',
+    image: "https://images.unsplash.com/photo-1587575494201-11fe74d90d38?auto=format&fit=crop&w=600&q=80",
+    desc: "Radio-transparent shrouds for rooftop antennae."
+  },
+  {
+    title: 'Water Treatment',
+    image: "https://images.unsplash.com/photo-1523365063870-827e85c138f2?auto=format&fit=crop&w=600&q=80",
+    desc: "Corrosion-proof walkways for pump stations."
+  },
+  {
+    title: 'Smart City',
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=600&q=80",
+    desc: "Vandal-resistant modular utility kiosks."
+  },
+  {
+    title: 'Oil & Gas',
+    image: "https://images.unsplash.com/photo-1516937941348-c09e554b96d8?auto=format&fit=crop&w=600&q=80",
+    desc: "Anti-static explosion-proof junction boxes."
+  },
+  {
+    title: 'Automotive',
+    image: "https://images.unsplash.com/photo-1552658514-a9557ee6f1b3?auto=format&fit=crop&w=600&q=80",
+    desc: "Lightweight, fire-safe shields for EV battery packs."
+  },
+  {
+    title: 'Fire Safety',
+    image: "https://images.unsplash.com/photo-1621253456100-e1b12b5087a5?auto=format&fit=crop&w=600&q=80",
+    desc: "High-visibility cabinets for emergency equipment."
+  },
 ];
