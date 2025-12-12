@@ -19,6 +19,9 @@ const Sitemap = lazy(() => import('./pages/Sitemap'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Downloads = lazy(() => import('./pages/Downloads'));
+const Certifications = lazy(() => import('./pages/Certifications'));
+const Calculators = lazy(() => import('./pages/Calculators'));
 
 const PageLoader: React.FC = () => (
   <div className="min-h-[60vh] flex items-center justify-center text-emphz-navy w-full">
@@ -48,6 +51,9 @@ const App: React.FC = () => {
             <Route path="/rfq" element={<RFQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/downloads" element={<Downloads />} />
+            <Route path="/certifications" element={<Certifications />} />
+            <Route path="/calculators" element={<Calculators />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
