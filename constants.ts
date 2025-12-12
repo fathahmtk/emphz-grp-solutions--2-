@@ -74,14 +74,14 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.SMART_CABIN,
     shortDescription: 'Futuristic GRP monocoque living pod with integrated voice automation and panoramic smart glass.',
     fullDescription: 'The Xpod X7 redefines modular luxury. Built on a high-strength GRP monocoque chassis, this plug-and-play living unit is designed for rapid deployment in resorts, rooftops, and remote locations. It features floor-to-ceiling smart privacy glass, voice-controlled lighting and curtains, and a complete suite of integrated entertainment systems. The seamless white GRP shell reflects solar heat, keeping the interior cool even in tropical climates.',
-    imageUrl: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOub2oG1EihitBFUwF9AUR0PXrwoeSe-yfKf7GLI2JRsuJpw2K5Ew8eYtrmixZu_mpDFreoX9XS7ws_DZf1WFmMTPeQkgJ6-3Dw4xeaYSAzvRRm3KqjY6bIO7x23nYf39z3P-27mVlRzxRnJMM5cQJ_aw=w1563-h879-s-no-gm?authuser=0',
     // Added for GLB Testing as per diagnosis action plan
     modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
     gallery: [
-      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1613553422381-05d97858c49d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80'
+      'https://lh3.googleusercontent.com/pw/AP1GczOub2oG1EihitBFUwF9AUR0PXrwoeSe-yfKf7GLI2JRsuJpw2K5Ew8eYtrmixZu_mpDFreoX9XS7ws_DZf1WFmMTPeQkgJ6-3Dw4xeaYSAzvRRm3KqjY6bIO7x23nYf39z3P-27mVlRzxRnJMM5cQJ_aw=w1563-h879-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczMAwEyda-VatlopWLADNQaXs2ac5qXUBGyj127pjaQNQX1ovYq7FZLeSHxttDZHdHTitg8V4nvvU5F0Ad4SypnZnvXC0wKmqomtms1jkFrTREFrcXNhwBxdoojhP2ciD6fBA2dhWu5mtxELeCChbHPerw=w1563-h879-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczMpO460jYx94eD8HEyGiPrJ0ea--4ru7cDN-zzbgx0KaLGug6YehZZVIzzn2U1QnE8hsfGln4KuW1oJjiLNZQmIsa73Cr1DevyUW5i81y1YuCPqtd8-7gLHUhUHv0eU3vFiheNfrc5g58c-cqZGv21uyg=w1563-h879-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczPDRXHhmo1DelLxi0HtftJnSmJ5IkdKr2Ul0o4WqNdZC0aJLGTf3RDD6NY95soy12tjT-9X5MXLRdCBt8plfP21vC68xJgU31pGM52ih8yBsDP2UzyWWShp8haDaNLGCv-EGnHQMuwNSVEJe7G288whig=w1563-h879-s-no-gm?authuser=0'
     ],
     specs: [
       { label: 'Structure', value: 'Monocoque GRP Shell' },
@@ -109,7 +109,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.PORTABLE_TOILET,
     shortDescription: 'Premium portable toilet cabin with modern amenities for events and executive sites.',
     fullDescription: 'Our Executive GRP Portable Toilet offers superior hygiene and comfort. The robust GRP shell is easy to clean and resistant to vandalism. It comes equipped with a ceramic toilet, freshwater flushing system, a wash basin, and optional solar-powered lighting.',
-    imageUrl: 'https://images.unsplash.com/photo-1599057571583-696441b8b688?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMe1mwOA84BIJHtR5Bmlm2Y59AP-X4R0c-xrWMKdq3PTwxcwl3JKGVtTucHulwZC7fvPFGgSG9JOHxRFG7HgNvZksxRPnBM43HKmghY8xFC119g3rlfoQw6keBieXkY0ieeipHFXt8ae0tpNw3ULflq5g=w879-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Base Size', value: '4ft x 4ft' },
       { label: 'Material', value: 'Insulated GRP Panels' },
@@ -126,7 +126,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.BUS_SHELTER,
     shortDescription: 'Durable and maintenance-free GRP bus shelter for modern urban transport projects.',
     fullDescription: 'The Metro GRP Bus Shelter is designed for public spaces, offering protection from the elements with a modern aesthetic. The composite structure is fire retardant, UV resistant, and will not corrode, making it ideal for any climate. It features integrated seating and space for advertising panels.',
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczO3L_xurkDK4HJR7YzwvNc7v8yjrFUoaaQ_wTIcmUXHEAzLKIm6J26KGchF9DTAqmCkVUnGV5_o7o13CVoNoGrhUfBhyerd5jL5nA1KQQeoURTOLcdpCM1oO9JJ91xy8q1KWMg0S5tBQaSveFNLXGR1Gw=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Dimensions', value: '4.5m x 1.5m x 2.8m' },
       { label: 'Frame', value: 'Pultruded GRP Sections' },
@@ -143,7 +143,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.KIOSK,
     shortDescription: 'Expandable modular GRP kiosk for substations and metering units.',
     fullDescription: 'Our Modular Utility Kiosk M2 is designed for rapid deployment in infrastructure projects. The modular panel design allows for flat-packing to site and quick assembly. Excellent thermal insulation properties protect internal switchgear from extreme heat typical in Southern India.',
-    imageUrl: 'https://images.unsplash.com/photo-1617999192569-c6e7d0573934?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczN_e_6SauJrdgvk6ECPkpKsOVno64FBSKHPQkCdW0YHsfN6qlFG7_F07Lxwtek2Sfbj0ge8WqJ8MAXgEhH1Ty2kiqmJWFlxSng_Wxx0uipHJWHE7JJEKezq-W-PJ33JoD4_MtsmVvRn0l_tc5_N4XULFw=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Construction', value: 'Sandwich Panel GRP' },
       { label: 'Thermal Insulation', value: 'PU Foam Core' },
@@ -167,7 +167,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.CABIN,
     shortDescription: 'All-weather GRP security cabin with integrated electricals.',
     fullDescription: 'A turnkey solution for industrial gatehouses. The seamless GRP shell ensures zero leakage during monsoons. Comes pre-wired with lighting and ventilation fans.',
-    imageUrl: 'https://images.unsplash.com/photo-1588525287394-135b3d7c95e4?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOWO0DDx5ynInyVjNCp6VTvfaUHfPOEfSd966mpl0YORv3_zoXcuZ27v8I4VUu_HcNxcPIUmTBNhnn335FaMpCYoBwWsfeZj_eDVe6paSWPHN-Xl8KVk4rqS29fmU4gYsTHbd-kDoaTNAE-sOGibovzoQ=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Size', value: '4ft x 4ft or 6ft x 6ft' },
       { label: 'Flooring', value: 'Marine Ply with Vinyl' },
@@ -185,7 +185,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.FIRE_SAFETY,
     shortDescription: 'UV-stable, bright red GRP cabinet for fire hose reels and extinguishers.',
     fullDescription: 'Designed for high-visibility and extreme durability, the RedGuard cabinet protects vital fire safety equipment from the elements. Unlike steel cabinets that rust shut in coastal areas, our GRP hinges and locks remain functional for decades. The UV-stabilized red gelcoat ensures the color does not fade even under intense direct sunlight.',
-    imageUrl: 'https://images.unsplash.com/photo-1621253456100-e1b12b5087a5?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczM0dG21ZiBwjBrZwIxfJ8mJ5ViE8mzgsiKQbn8GsECSD_IPKGrRrndkHP7rwCaR4oLH4zPDwnLHZstQWawRZvCfV6bzHfozFekfZUbY4LY23QTBpHIgbaU-dTqA-f5Af3AgrG-pBp6oWIv8YI77svlpBg=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Color', value: 'Signal Red (RAL 3000)' },
       { label: 'Material', value: 'Fire Retardant GRP' },
@@ -205,7 +205,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.WATER_STORAGE,
     shortDescription: 'Sectional hot-press molded water tanks for potable water storage.',
     fullDescription: 'Our modular GRP tanks are assembled from hot-pressed SMC panels, allowing for customizable capacities from 1,000 to 1,000,000 liters. Certified for potable water storage, the smooth internal surface prevents algae growth and bacteria buildup. The modular design makes it perfect for installation in basements or rooftops with restricted access.',
-    imageUrl: 'https://images.unsplash.com/photo-1632516421426-529075e7a934?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMThPat9zZABpXncns5L4Pno4jteF8vvyPxTm0buAL0Sh3UxZaQ_fAYHostcuSwR6h5aRThdh1Y522GhGqVM6zgDkialtBmfreTJ3MR8W4NoFTYjy0mGfHqW_QIDXop4szPJ8lnEuOB4Bh_E0n_CYSQkg=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Panel Size', value: '1m x 1m / 1m x 0.5m' },
       { label: 'Process', value: 'SMC Hot Press' },
@@ -225,7 +225,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.INDUSTRIAL_PROTECTION,
     shortDescription: 'Protective GRP canopy for field instruments and transmitters.',
     fullDescription: 'Essential for Oil & Gas refineries, this GRP sunshade protects expensive instrumentation (pressure transmitters, gauges, analyzers) from direct solar radiation and heavy rain. The material is anti-static and fire-retardant, making it safe for hazardous zones.',
-    imageUrl: 'https://images.unsplash.com/photo-1560942484-91e34a02d8a4?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOQ76mdkLWOPl8Nl5IrVZQYjizUkHlRB_iI5wZWug1QKhiQKtFMDOFHw4DPjwn3H8s3ZWQIa9E1K0sk6KL-Qfmvo7D7DrnujfSwq0cs-HIBqb_Y4zc8-46PZXqmMbtsYHRH-kwL4QYFFk6oOLfg0VDoDw=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Material', value: 'Anti-static GRP' },
       { label: 'Thickness', value: '4mm - 6mm' },
@@ -245,7 +245,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.AUTOMOBILE,
     shortDescription: 'Lightweight fire-retardant GRP composite cover for EV battery modules.',
     fullDescription: 'Engineered for the next generation of electric mobility, this GRP battery shield offers a 40% weight reduction compared to steel equivalents while maintaining superior impact resistance. It is rigorously tested for fire retardancy (UL94 V-0) and provides excellent thermal insulation to manage battery temperatures effectively.',
-    imageUrl: 'https://images.unsplash.com/photo-1552658514-a9557ee6f1b3?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMBNCfNLNoWr6JCuTq0_dlvSEbMIsyFcsvCtW5wA52Dccl3L8MBRw0QzaRqG180EgkQDBwvXfZUAT4vCR2CiQR04BfFP9y6Mq-E3CSoxv-QZl5HZPbBp0mOE77LomhaqWuuzMdWy_d_tcmiNYtzG5q-Tg=w586-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Material', value: 'Fire Retardant GRP' },
       { label: 'Fire Rating', value: 'UL94 V-0' },
@@ -265,7 +265,7 @@ export const MOCK_PRODUCTS: Product[] = [
     category: ProductCategory.ENCLOSURE,
     shortDescription: 'Heavy-duty GRP enclosure designed for high-salinity coastal environments.',
     fullDescription: 'The E-Series represents the pinnacle of protection for sensitive electrical equipment in harsh environments. Specifically engineered for the coastal climates of Kerala and Karnataka, this GRP enclosure offers superior corrosion resistance compared to stainless steel. It features a UV-stabilized formulation to prevent chalking and degradation under intense tropical sun.',
-    imageUrl: 'https://images.unsplash.com/photo-1621947081720-86970823b77a?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczNflc3SRp2gYEInU7lZELUN8Jnn_g1f33VxbVxTakvnUd1Fo8vLuAmkakM7-VI6IAFDjlwj3Qbx6SSoHTdwWidcGwutrihjdzZT2sxzfH3qOFKrFqPqd91l3439BHIsQ7JQXVXbrii582OgFakqDxMRVw=w1319-h879-s-no-gm?authuser=0',
     specs: [
       { label: 'Material', value: 'Hot Press Molded GRP' },
       { label: 'IP Rating', value: 'IP66 / IP67' },
