@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+  color: #0B1120;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Global Focus Styles */
+:focus-visible {
+  outline: 2px solid #00ADB5; 
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 173, 181, 0.2);
+}
+
+/* Selection Color */
+::selection {
+  background-color: #00ADB5;
+  color: white;
+}
+
+/* Premium Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Technical Grid Background Pattern */
+.bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 173, 181, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 173, 181, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 173, 181, 0.3); 
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(0, 173, 181, 0.1);
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #00ADB5;
+  color: #0B1120;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+  font-weight: 600;
+  border-bottom-right-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Custom Scrollbar - Engineering Style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ADB5; /* Teal Thumb */
+  border-radius: 2px;
+  border: 2px solid #F1F5F9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008C94;
+}
