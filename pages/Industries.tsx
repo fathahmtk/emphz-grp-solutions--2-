@@ -24,9 +24,10 @@ const Industries: React.FC = () => {
     return (
         <div className="bg-white text-emphz-navy min-h-screen">
             {/* Hero Section */}
-            <section className="relative py-24 md:py-32 bg-emphz-navy overflow-hidden">
+            <section className="relative py-24 md:py-32 bg-gradient-to-br from-emphz-navy via-emphz-dark to-emphz-navy overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2670&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-emphz-navy via-emphz-navy/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-dots opacity-10"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-3xl animate-fade-up">
@@ -35,12 +36,12 @@ const Industries: React.FC = () => {
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black text-white font-display leading-tight mb-6">
                             Solutions for Critical <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-white">Infrastructure.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">Infrastructure.</span>
                         </h1>
-                        <p className="text-gray-300 text-lg font-light leading-relaxed max-w-2xl font-sans mb-8">
+                        <p className="text-gray-300 text-lg font-light leading-relaxed max-w-2xl font-sans mb-8 border-l-4 border-emphz-teal pl-6">
                             Every industry faces unique environmental challenges. From the corrosive salt spray of coastal regions to the explosive hazards of petrochemical plants, Emphz engineers GRP solutions tailored to survive.
                         </p>
-                        <Link to="/contact" className="inline-flex items-center bg-emphz-teal text-emphz-navy px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-white transition-colors group font-display">
+                        <Link to="/contact" className="inline-flex items-center bg-gradient-to-r from-emphz-teal to-emphz-cyan text-white px-8 py-4 rounded-xl font-bold text-sm tracking-widest uppercase hover:shadow-xl hover:shadow-emphz-teal/50 transition-all group font-display animate-pulse-glow">
                             Partner With Us <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </div>
@@ -51,7 +52,7 @@ const Industries: React.FC = () => {
             <section className="py-20 md:py-28 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 font-display">Applications</h2>
+                        <h2 className="text-sm font-bold text-emphz-teal tracking-widest uppercase mb-3 font-display">Applications</h2>
                         <h3 className="text-3xl md:text-4xl font-black text-emphz-navy font-display">Where GRP Outperforms Steel.</h3>
                     </div>
 

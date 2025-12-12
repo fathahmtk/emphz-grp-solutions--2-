@@ -37,7 +37,7 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col bg-white text-emphz-navy overflow-x-hidden motion-safe:scroll-smooth">
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050A14] group">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emphz-navy via-emphz-dark to-emphz-navy group">
 
         {/* Cinematic Background Slider */}
         <div className="absolute inset-0 z-0 select-none">
@@ -50,10 +50,10 @@ const Home: React.FC = () => {
                 decoding="async"
                 className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${index === currentImageIndex ? 'scale-110' : 'scale-100'}`}
               />
-              {/* Premium Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-[#0B1120]/60 to-transparent opacity-90"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120]/80 via-transparent to-[#0B1120]/80"></div>
-              <div className="absolute inset-0 bg-carbon-fibre opacity-20 mix-blend-overlay"></div>
+              {/* Modern Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-emphz-navy via-emphz-navy/60 to-transparent opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-emphz-navy/80 via-transparent to-emphz-navy/80"></div>
+              <div className="absolute inset-0 bg-dots opacity-10"></div>
             </div>
           ))}
         </div>
@@ -76,20 +76,20 @@ const Home: React.FC = () => {
 
             {/* Main Headline */}
             <h1
-              className="text-5xl md:text-7xl lg:text-8xl font-black font-display text-white leading-[0.9] tracking-tighter drop-shadow-2xl animate-fade-up mix-blend-screen"
+              className="text-5xl md:text-7xl lg:text-8xl font-black font-display text-white leading-[0.9] tracking-tighter drop-shadow-2xl animate-fade-up"
               style={{ animationDelay: '400ms' }}
             >
-              BUILT FOR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">RESILIENCE.</span>
+              ENGINEERED FOR <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">TOMORROW.</span>
             </h1>
 
             {/* Subheading */}
             <p
-              className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light font-sans tracking-wide animate-fade-up border-l-2 border-emphz-teal pl-6"
+              className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light font-sans tracking-wide animate-fade-up border-l-4 border-emphz-teal pl-6"
               style={{ animationDelay: '600ms' }}
             >
-              Advanced <strong className="text-white">GRP Composites</strong> engineered to outperform steel in the world's harshest industrial environments.
-              <span className="block mt-2 text-sm text-gray-500 font-mono">LIFESPAN: 25+ YEARS // CORROSION: 0%</span>
+              Next-generation <strong className="text-white font-bold">GRP composites</strong> that outlast steel, resist corrosion, and reduce lifecycle costs by up to 60%.
+              <span className="block mt-3 text-sm text-emphz-cyan font-mono font-bold">25+ YEAR LIFESPAN • ZERO CORROSION • CARBON NEUTRAL</span>
             </p>
 
             {/* CTA Buttons */}
@@ -97,15 +97,15 @@ const Home: React.FC = () => {
               className="flex flex-col sm:flex-row gap-5 pt-4 animate-fade-up"
               style={{ animationDelay: '800ms' }}
             >
-              <Link to="/products" className="group relative px-8 py-4 bg-emphz-teal text-emphz-navy font-black text-sm tracking-[0.15em] uppercase font-display rounded-sm overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(0,173,181,0.3)] hover:shadow-[0_0_60px_rgba(0,173,181,0.5)]">
+              <Link to="/products" className="group relative px-8 py-4 bg-gradient-to-r from-emphz-teal to-emphz-cyan text-white font-black text-sm tracking-[0.15em] uppercase font-display rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emphz-teal/30 hover:shadow-xl hover:shadow-emphz-teal/50 animate-pulse-glow">
                 <span className="relative z-10 flex items-center">
-                  Explore Catalog <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Explore Solutions <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </Link>
 
-              <Link to="/rfq" className="group px-8 py-4 bg-transparent border border-white/20 text-white font-bold text-sm tracking-[0.15em] uppercase font-display rounded-sm backdrop-blur-md hover:bg-white/5 hover:border-white/50 transition-all flex items-center justify-center">
-                Request Quote
+              <Link to="/rfq" className="group px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold text-sm tracking-[0.15em] uppercase font-display rounded-xl backdrop-blur-md hover:bg-white/20 hover:border-white/60 transition-all flex items-center justify-center">
+                Get Quote
               </Link>
             </div>
           </div>
@@ -131,12 +131,12 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <section className="py-16 md:py-24 bg-gray-50 border-b border-gray-200">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-[0.2em] uppercase mb-3 font-display">Certified Excellence</h2>
-              <p className="text-emphz-navy font-bold text-2xl md:text-3xl leading-tight">Meeting Global Standards <br />for Safety & Quality.</p>
+              <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-3 font-display">Certified Excellence</h2>
+              <p className="text-emphz-navy font-black text-2xl md:text-3xl leading-tight font-display">Meeting Global Standards <br />for Safety & Quality.</p>
             </div>
             <div className="flex flex-wrap gap-8 md:gap-12 justify-center md:justify-end">
               {[
@@ -146,10 +146,10 @@ const Home: React.FC = () => {
                 { icon: Sun, label: "ASTM UV", sub: "Weatherability" }
               ].map((cert, idx) => (
                 <div key={idx} className="flex flex-col items-center group cursor-default">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100 mb-3 group-hover:border-emphz-teal group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-emphz-teal/20">
-                    <cert.icon size={28} className="text-slate-500 group-hover:text-emphz-teal transition-colors" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-emphz-teal to-emphz-cyan rounded-2xl flex items-center justify-center shadow-lg border border-white/20 mb-3 group-hover:scale-110 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-emphz-teal/40">
+                    <cert.icon size={28} className="text-white" />
                   </div>
-                  <span className="text-xs font-black text-emphz-navy uppercase tracking-wider group-hover:text-emphz-teal-text transition-colors">{cert.label}</span>
+                  <span className="text-xs font-black text-emphz-navy uppercase tracking-wider group-hover:text-emphz-teal transition-colors">{cert.label}</span>
                   <span className="text-[10px] text-slate-500 font-mono mt-1">{cert.sub}</span>
                 </div>
               ))}
@@ -164,16 +164,16 @@ const Home: React.FC = () => {
 
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="mb-16 md:mb-24 text-center">
-            <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-[0.2em] uppercase mb-4 font-display">The Emphz Advantage</h2>
+            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-4 font-display">The Emphz Advantage</h2>
             <h3 className="text-4xl md:text-6xl font-black text-emphz-navy font-display tracking-tight leading-none">Why Engineers <br />Choose GRP.</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ScrollReveal>
-              <div className="bg-white p-8 md:p-12 rounded-3xl relative overflow-hidden group hover:-translate-y-3 transition-transform duration-500 shadow-xl shadow-gray-200/50 border border-gray-100 hover:border-emphz-teal h-full flex flex-col">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-emphz-teal/5 rounded-bl-[100px] -mr-8 -mt-8 transition-all group-hover:bg-emphz-teal/10"></div>
+              <div className="bg-white p-8 md:p-12 rounded-3xl relative overflow-hidden group hover:-translate-y-3 transition-transform duration-500 shadow-xl shadow-gray-200/50 border border-gray-100 hover:border-emphz-teal/50 hover:shadow-2xl hover:shadow-emphz-teal/10 h-full flex flex-col">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emphz-teal/10 to-emphz-cyan/10 rounded-bl-[100px] -mr-8 -mt-8 transition-all group-hover:from-emphz-teal/20 group-hover:to-emphz-cyan/20"></div>
 
-                <div className="w-16 h-16 bg-emphz-teal text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emphz-teal/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-emphz-teal to-emphz-cyan text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emphz-teal/30 group-hover:scale-110 transition-transform duration-500 relative z-10">
                   <Droplet size={32} />
                 </div>
 
@@ -183,8 +183,8 @@ const Home: React.FC = () => {
                 </p>
 
                 <div className="border-t border-gray-100 pt-6 mt-auto">
-                  <span className="text-xs font-bold text-emphz-teal-text uppercase tracking-wider flex items-center">
-                    Learn More <ArrowRight size={14} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                  <span className="text-xs font-bold text-emphz-teal uppercase tracking-wider flex items-center group/link cursor-pointer">
+                    Learn More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-2 transition-transform" />
                   </span>
                 </div>
               </div>
