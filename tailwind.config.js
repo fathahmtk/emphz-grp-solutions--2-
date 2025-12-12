@@ -18,20 +18,22 @@ export default {
       },
       colors: {
         emphz: {
-          navy: '#0B1120',
+          navy: '#1E293B',      // Deep Indigo (was #0B1120)
           beige: '#F1F5F9',
-          teal: '#00ADB5',
-          'teal-text': '#008C94',
-          'teal-dark': '#00737a',
-          orange: '#F97316',
+          teal: '#3B82F6',      // Electric Blue (was #00ADB5)
+          'teal-text': '#2563EB',
+          'teal-dark': '#1E40AF',
+          orange: '#F59E0B',    // Amber (was #F97316)
           cream: '#FFFFFF',
-          slate: '#475569',
-          dark: '#020617'
+          slate: '#64748B',
+          dark: '#0F172A',
+          cyan: '#06B6D4',      // New accent color
+          success: '#10B981',   // New success color
         }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Montserrat', 'sans-serif'],
+        display: ['Inter', 'sans-serif'],  // Changed from Montserrat
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
@@ -41,6 +43,8 @@ export default {
         'scroll': 'scroll 20s linear infinite',
         'slide-up-fade': 'slideUpFade 0.3s ease-out forwards',
         'ken-burns': 'kenBurns 25s ease-out infinite alternate',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 8s ease infinite',
       },
       keyframes: {
         float: {
@@ -66,6 +70,15 @@ export default {
         kenBurns: {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.1)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)' },
+          '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.8)' },
+        },
+        gradientShift: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         }
       }
     }
