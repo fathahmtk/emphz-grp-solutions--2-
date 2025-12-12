@@ -14,37 +14,142 @@ export default {
       backgroundImage: {
         'carbon-fibre': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cg fill='%23ffffff' fill-opacity='0.1'%3e%3cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3e%3c/g%3e%3c/svg%3e\")",
         'cubes': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3e%3cg fill-rule='evenodd'%3e%3cg fill='%23ffffff' fill-opacity='0.05'%3e%3cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e\")",
-        'diagmonds-light': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cg fill='%23ffffff' fill-opacity='0.05'%3e%3cpath d='M8 0L0 8l8 8 8-8z'/%3e%3c/g%3e%3c/svg%3e\")"
+        'diagmonds-light': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cg fill='%23ffffff' fill-opacity='0.05'%3e%3cpath d='M8 0L0 8l8 8 8-8z'/%3e%3c/g%3e%3c/svg%3e\")",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'mesh-gradient': 'radial-gradient(at 0% 0%, hsla(210, 100%, 50%, 0.15) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(190, 100%, 50%, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(210, 100%, 50%, 0.15) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(190, 100%, 50%, 0.15) 0px, transparent 50%)',
       },
       colors: {
         emphz: {
-          navy: '#1E293B',      // Deep Indigo (was #0B1120)
+          // Primary Navy Palette - Deeper, more sophisticated
+          navy: {
+            50: '#F0F4F8',
+            100: '#D9E2EC',
+            200: '#BCCCDC',
+            300: '#9FB3C8',
+            400: '#829AB1',
+            500: '#627D98',
+            600: '#486581',
+            700: '#334E68',
+            800: '#243B53',
+            900: '#102A43',
+            950: '#0A1929',
+          },
+          // Teal/Cyan Palette - Vibrant and energetic
+          teal: {
+            50: '#E0F7FA',
+            100: '#B2EBF2',
+            200: '#80DEEA',
+            300: '#4DD0E1',
+            400: '#26C6DA',
+            500: '#00BCD4',
+            600: '#00ACC1',
+            700: '#0097A7',
+            800: '#00838F',
+            900: '#006064',
+          },
+          // Blue Palette - Professional and trustworthy
+          blue: {
+            50: '#EFF6FF',
+            100: '#DBEAFE',
+            200: '#BFDBFE',
+            300: '#93C5FD',
+            400: '#60A5FA',
+            500: '#3B82F6',
+            600: '#2563EB',
+            700: '#1D4ED8',
+            800: '#1E40AF',
+            900: '#1E3A8A',
+          },
+          // Amber/Orange Palette - Warm accents
+          amber: {
+            50: '#FFFBEB',
+            100: '#FEF3C7',
+            200: '#FDE68A',
+            300: '#FCD34D',
+            400: '#FBBF24',
+            500: '#F59E0B',
+            600: '#D97706',
+            700: '#B45309',
+            800: '#92400E',
+            900: '#78350F',
+          },
+          // Neutral Palette - Refined grays
+          slate: {
+            50: '#F8FAFC',
+            100: '#F1F5F9',
+            200: '#E2E8F0',
+            300: '#CBD5E1',
+            400: '#94A3B8',
+            500: '#64748B',
+            600: '#475569',
+            700: '#334155',
+            800: '#1E293B',
+            900: '#0F172A',
+          },
+          // Legacy color mappings for backward compatibility
           beige: '#F1F5F9',
-          teal: '#3B82F6',      // Electric Blue (was #00ADB5)
-          'teal-text': '#2563EB',
-          'teal-dark': '#1E40AF',
-          orange: '#F59E0B',    // Amber (was #F97316)
+          'teal-text': '#0097A7',
+          'teal-dark': '#006064',
+          orange: '#F59E0B',
           cream: '#FFFFFF',
-          slate: '#64748B',
-          dark: '#0F172A',
-          cyan: '#06B6D4',      // New accent color
-          success: '#10B981',   // New success color
+          dark: '#0A1929',
+          cyan: '#00BCD4',
+          success: '#10B981',
+          warning: '#F59E0B',
+          error: '#EF4444',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Inter', 'sans-serif'],  // Changed from Montserrat
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        display: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.05em' }],
+        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
+        'base': ['1rem', { lineHeight: '1.5rem' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.02em' }],
+        '5xl': ['3rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
+        '6xl': ['3.75rem', { lineHeight: '1', letterSpacing: '-0.03em' }],
+        '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.03em' }],
+        '8xl': ['6rem', { lineHeight: '1', letterSpacing: '-0.04em' }],
+        '9xl': ['8rem', { lineHeight: '1', letterSpacing: '-0.04em' }],
+      },
+      boxShadow: {
+        'glow-sm': '0 0 10px rgba(59, 130, 246, 0.3)',
+        'glow': '0 0 20px rgba(59, 130, 246, 0.4)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.5)',
+        'glow-teal': '0 0 30px rgba(0, 188, 212, 0.4)',
+        'glow-teal-lg': '0 0 50px rgba(0, 188, 212, 0.5)',
+        'inner-glow': 'inset 0 0 20px rgba(59, 130, 246, 0.2)',
+        'premium': '0 20px 60px -10px rgba(0, 0, 0, 0.3), 0 10px 20px -5px rgba(0, 0, 0, 0.2)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 8s ease-in-out infinite',
         'fade-up': 'fadeUp 0.8s ease-out forwards',
+        'fade-down': 'fadeDown 0.8s ease-out forwards',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'fade-in-slow': 'fadeIn 1s ease-out forwards',
         'scroll': 'scroll 20s linear infinite',
+        'scroll-slow': 'scroll 40s linear infinite',
         'slide-up-fade': 'slideUpFade 0.3s ease-out forwards',
+        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
         'ken-burns': 'kenBurns 25s ease-out infinite alternate',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'pulse-glow-slow': 'pulseGlow 3s ease-in-out infinite',
         'gradient-shift': 'gradientShift 8s ease infinite',
+        'gradient-xy': 'gradientXY 15s ease infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+        'scale-in': 'scaleIn 0.3s ease-out forwards',
       },
       keyframes: {
         float: {
@@ -52,12 +157,16 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeDown: {
+          '0%': { opacity: '0', transform: 'translateY(-30px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
         scroll: {
           '0%': { transform: 'translateX(0)' },
@@ -66,6 +175,14 @@ export default {
         slideUpFade: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         kenBurns: {
           '0%': { transform: 'scale(1)' },
@@ -79,8 +196,39 @@ export default {
           '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
-        }
-      }
+        },
+        gradientXY: {
+          '0%, 100%': { backgroundPosition: '0% 0%' },
+          '25%': { backgroundPosition: '100% 0%' },
+          '50%': { backgroundPosition: '100% 100%' },
+          '75%': { backgroundPosition: '0% 100%' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+        '900': '900ms',
+      },
+      transitionTimingFunction: {
+        'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
     }
   },
   plugins: [],
