@@ -74,13 +74,19 @@ const Home: React.FC = () => {
               ))}
             </div>
 
+            {/* Brand Badge */}
+            <div className="inline-flex items-center gap-2 backdrop-blur-md bg-white/5 border border-white/10 text-gray-200 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest font-mono mb-6 animate-fade-down" style={{ animationDelay: '200ms' }}>
+              <Cpu size={14} className="text-emphz-teal" />
+              GRP Intelligence Platform™
+            </div>
+
             {/* Main Headline */}
             <h1
               className="text-5xl md:text-7xl lg:text-8xl font-black font-display text-white leading-[0.9] tracking-tighter drop-shadow-2xl animate-fade-up"
               style={{ animationDelay: '400ms' }}
             >
-              ENGINEERED FOR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">TOMORROW.</span>
+              SMART GRP <br />
+              INFRASTRUCTURE SYSTEMS
             </h1>
 
             {/* Subheading */}
@@ -88,8 +94,8 @@ const Home: React.FC = () => {
               className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light font-sans tracking-wide animate-fade-up border-l-4 border-emphz-teal pl-6"
               style={{ animationDelay: '600ms' }}
             >
-              Next-generation <strong className="text-white font-bold">GRP composites</strong> that outlast steel, resist corrosion, and reduce lifecycle costs by up to 60%.
-              <span className="block mt-3 text-sm text-emphz-cyan font-mono font-bold">25+ YEAR LIFESPAN • ZERO CORROSION • CARBON NEUTRAL</span>
+              Engineered with <strong className="text-white font-bold">predictive intelligence</strong> — not just corrosion-proof materials. Our GRP systems combine environmental performance analytics, lifecycle design intelligence, and digital configuration to deliver infrastructure that thinks ahead.
+              <span className="block mt-3 text-sm text-emphz-cyan font-mono font-bold">PREDICTIVE ENGINEERING • MATERIAL SCIENCE • DIGITAL TWIN READY</span>
             </p>
 
             {/* CTA Buttons */}
@@ -97,15 +103,15 @@ const Home: React.FC = () => {
               className="flex flex-col sm:flex-row gap-5 pt-4 animate-fade-up"
               style={{ animationDelay: '800ms' }}
             >
-              <Link to="/products" className="group relative px-8 py-4 bg-gradient-to-r from-emphz-teal to-emphz-cyan text-white font-black text-sm tracking-[0.15em] uppercase font-display rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emphz-teal/30 hover:shadow-xl hover:shadow-emphz-teal/50 animate-pulse-glow">
+              <Link to="/rfq" className="group relative px-8 py-4 bg-gradient-to-r from-emphz-teal to-emphz-cyan text-white font-black text-sm tracking-[0.15em] uppercase font-display rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emphz-teal/30 hover:shadow-xl hover:shadow-emphz-teal/50 animate-pulse-glow">
                 <span className="relative z-10 flex items-center">
-                  Explore Solutions <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Configure Your System <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </Link>
 
-              <Link to="/rfq" className="group px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold text-sm tracking-[0.15em] uppercase font-display rounded-xl backdrop-blur-md hover:bg-white/20 hover:border-white/60 transition-all flex items-center justify-center">
-                Get Quote
+              <Link to="/technical" className="group px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold text-sm tracking-[0.15em] uppercase font-display rounded-xl backdrop-blur-md hover:bg-white/20 hover:border-white/60 transition-all flex items-center justify-center">
+                Material Intelligence Hub <Lightbulb className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -158,14 +164,75 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* B2B Trust Metrics Section */}
+      <section className="py-16 md:py-20 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-3 font-display">Proven Track Record</h2>
+            <p className="text-emphz-navy font-black text-2xl md:text-3xl leading-tight font-display">Engineering Excellence <br />Backed by Results</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-emphz-navy to-emphz-dark p-8 rounded-3xl text-white relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emphz-teal/20 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-emphz-teal/20 rounded-xl flex items-center justify-center mb-4">
+                  <Award className="text-emphz-teal" size={24} />
+                </div>
+                <div className="text-5xl font-black mb-2 font-display">15+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider font-display">Years in Business</div>
+                <p className="text-xs text-gray-500 mt-3 leading-relaxed">Serving India's infrastructure sector since 2009</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl border-2 border-emphz-teal/20 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-xl hover:border-emphz-teal/50">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emphz-teal/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-emphz-teal/10 rounded-xl flex items-center justify-center mb-4">
+                  <CheckCircle className="text-emphz-teal" size={24} />
+                </div>
+                <div className="text-5xl font-black mb-2 font-display text-emphz-navy">500+</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wider font-display">Installations</div>
+                <p className="text-xs text-gray-500 mt-3 leading-relaxed">Across telecom, power, and infrastructure sectors</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 rounded-3xl text-white relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-xl shadow-blue-600/30">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                  <Droplet className="text-white" size={24} />
+                </div>
+                <div className="text-5xl font-black mb-2 font-display">60%</div>
+                <div className="text-sm text-blue-100 uppercase tracking-wider font-display">Cost Reduction</div>
+                <p className="text-xs text-blue-200 mt-3 leading-relaxed">Lifecycle cost savings vs. traditional steel</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl border-2 border-gray-200 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 shadow-xl hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gray-100 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                  <Shield className="text-emphz-navy" size={24} />
+                </div>
+                <div className="text-5xl font-black mb-2 font-display text-emphz-navy">25+</div>
+                <div className="text-sm text-gray-600 uppercase tracking-wider font-display">Year Lifespan</div>
+                <p className="text-xs text-gray-500 mt-3 leading-relaxed">Zero maintenance, zero corrosion guarantee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-32 relative bg-white overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[100px] opacity-60 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-teal-50 rounded-full blur-[100px] opacity-60 -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="mb-16 md:mb-24 text-center">
-            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-4 font-display">The Emphz Advantage</h2>
-            <h3 className="text-4xl md:text-6xl font-black text-emphz-navy font-display tracking-tight leading-none">Why Engineers <br />Choose GRP.</h3>
+            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-4 font-display">Zero-Compromise Engineering™</h2>
+            <h3 className="text-4xl md:text-6xl font-black text-emphz-navy font-display tracking-tight leading-none">Our Corporate <br />Commitment</h3>
+            <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Every system we engineer carries these non-negotiable performance guarantees</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -177,14 +244,14 @@ const Home: React.FC = () => {
                   <Droplet size={32} />
                 </div>
 
-                <h4 className="text-2xl font-black mb-4 text-emphz-navy font-display">Corrosion Immunity</h4>
+                <h4 className="text-2xl font-black mb-4 text-emphz-navy font-display">Zero Water Ingress</h4>
                 <p className="text-slate-700 leading-relaxed text-sm font-medium font-sans mb-6 flex-grow">
-                  Engineered specifically for high-salinity coastal environments. Our GRP composites are chemically inert, offering a 25+ year lifespan where traditional steel enclosures fail within months.
+                  Our precision-molded sealing systems are validated through IP67 immersion testing. Environmental behavior simulation ensures hermetic protection across temperature cycles, pressure differentials, and mechanical stress.
                 </p>
 
                 <div className="border-t border-gray-100 pt-6 mt-auto">
                   <span className="text-xs font-bold text-emphz-teal uppercase tracking-wider flex items-center group/link cursor-pointer">
-                    Learn More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-2 transition-transform" />
+                    Performance Data <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-2 transition-transform" />
                   </span>
                 </div>
               </div>
@@ -199,14 +266,14 @@ const Home: React.FC = () => {
                   <Zap size={32} />
                 </div>
 
-                <h4 className="text-2xl font-black mb-4 text-white font-display">Electrical Safety</h4>
+                <h4 className="text-2xl font-black mb-4 text-white font-display">Zero UV Degradation Drift</h4>
                 <p className="text-gray-400 leading-relaxed text-sm font-medium font-sans mb-6 flex-grow">
-                  Naturally non-conductive and electrically insulating material. It completely eliminates shock hazards for personnel and often removes the need for expensive additional earthing systems.
+                  Accelerated aging testing validates color stability and mechanical retention over 5000+ UV exposure hours. Our resin formulation maintains structural integrity within rated lifecycle window with <5% property variance.
                 </p>
 
                 <div className="border-t border-white/10 pt-6 mt-auto">
                   <span className="text-xs font-bold text-yellow-400 uppercase tracking-wider flex items-center">
-                    View Certifications <ArrowRight size={14} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                    Test Reports <ArrowRight size={14} className="ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </div>
               </div>
@@ -220,14 +287,14 @@ const Home: React.FC = () => {
                   <Layers size={32} />
                 </div>
 
-                <h4 className="text-2xl font-black mb-4 text-emphz-navy font-display">Modular Design</h4>
+                <h4 className="text-2xl font-black mb-4 text-emphz-navy font-display">Zero Downtime Installations</h4>
                 <p className="text-slate-700 leading-relaxed text-sm font-medium font-sans mb-6 flex-grow">
-                  Smart flat-pack capability allows for rapid deployment in difficult terrain. Our precision modular connections ensure IP66/67 ratings are rigorously maintained after assembly.
+                  Predictive assembly protocols and tolerance-controlled manufacturing eliminate field adjustments. Our systems achieve operational status within documented installation windows — no callbacks, no corrections.
                 </p>
 
                 <div className="border-t border-gray-100 pt-6 mt-auto">
                   <span className="text-xs font-bold text-blue-600 uppercase tracking-wider flex items-center">
-                    See Specs <ArrowRight size={14} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                    Installation Data <ArrowRight size={14} className="ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </div>
               </div>
@@ -277,21 +344,31 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 opacity-5 bg-cubes"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-4 font-display">Applications</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-white font-display">Industries Powering India</h3>
+            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-[0.2em] uppercase mb-4 font-display">Industry Solutions</h2>
+            <h3 className="text-4xl md:text-5xl font-black text-white font-display">Engineered for Your Sector</h3>
+            <p className="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Specialized GRP solutions tailored to the unique challenges of each industry</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {INDUSTRIES.slice(0, 6).map((item, idx) => (
-              <div key={idx} className="group relative h-72 rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <Link to="/industries" key={idx} className="group relative h-72 rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emphz-navy via-emphz-navy/60 to-transparent opacity-90 group-hover:opacity-75 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <h4 className="text-2xl font-bold text-white font-display mb-2 group-hover:text-emphz-teal transition-colors">{item.title}</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">{item.desc}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">{item.desc}</p>
+                  <div className="flex items-center text-emphz-teal text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                    View Solutions <ArrowRight size={14} className="ml-2" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/industries" className="inline-flex items-center bg-white/10 border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-white/20 hover:border-white/60 transition-all font-display backdrop-blur-md">
+              View All Industries <ChevronRight size={18} className="ml-2" />
+            </Link>
           </div>
         </div>
       </section>

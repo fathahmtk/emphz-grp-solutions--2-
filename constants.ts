@@ -3,11 +3,10 @@ import { Product, ProductCategory, CaseStudy, BlogPost } from './types';
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'Products', path: '/products' },
+  { label: 'Manufacturing', path: '/technology' },
   { label: 'Industries', path: '/industries' },
-  { label: 'Technology', path: '/technology' },
   { label: 'Case Studies', path: '/case-studies' },
-  { label: 'Technical Center', path: '/technical' },
-  { label: 'Blog', path: '/blog' },
+  { label: 'Resources', path: '/technical' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
 ];
