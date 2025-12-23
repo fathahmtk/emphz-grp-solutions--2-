@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trash2, Send, CheckCircle, MapPin, Briefcase, Clock, ShieldCheck, Zap, Globe, Cpu } from 'lucide-react';
+import { Trash2, Send, CheckCircle, MapPin, Briefcase, Clock, ShieldCheck, Zap, Globe, Cpu, FileText, Loader2, Info } from 'lucide-react';
 import { useRFQStore } from '../stores/rfqStore';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ const RFQ: React.FC = () => {
    const clearCart = useRFQStore((state) => state.clear);
 
    const [submitted, setSubmitted] = useState(false);
-   const [leadScore, setLeadScore] = useState(0);
+   const [isSubmitting, setIsSubmitting] = useState(false);
    const [formData, setFormData] = useState({
       name: '',
       company: '',
@@ -35,6 +35,10 @@ const RFQ: React.FC = () => {
       urgency: 'Standard',
       message: ''
    });
+
+   // Validation States
+   const [emailError, setEmailError] = useState('');
+   const [emailTouched, setEmailTouched] = useState(false);
 
    // Load user details from cookie on mount
    useEffect(() => {
@@ -47,7 +51,7 @@ const RFQ: React.FC = () => {
                name: parsed.name || '',
                company: parsed.company || '',
                email: parsed.email || '',
-               phone: parsed.phone || '' // Also try to load phone if saved
+               phone: parsed.phone || ''
             }));
          } catch (e) {
             console.error('Failed to parse user cookie', e);
@@ -55,78 +59,94 @@ const RFQ: React.FC = () => {
       }
    }, []);
 
-   // Calculate Lead Score dynamically
-   useEffect(() => {
-      let score = 10;
-      if (formData.urgency === 'Immediate') score += 40;
-      if (formData.urgency === 'OneMonth') score += 20;
-      if (formData.industry === 'Utilities' || formData.industry === 'OilGas') score += 30;
-      if (formData.email.includes('.com') && !formData.email.includes('gmail') && !formData.email.includes('yahoo')) score += 15;
-      if (items.length > 2) score += 20;
-      setLeadScore(Math.min(score, 100));
-   }, [formData, items]);
+   const validateEmail = (email: string) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+   };
+
+   const handleEmailBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+      setEmailTouched(true);
+      if (!validateEmail(e.target.value)) {
+         setEmailError('Please enter a valid corporate email address.');
+      } else {
+         setEmailError('');
+      }
+   };
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+      const { name, value } = e.target;
+      setFormData(prev => ({ ...prev, [name]: value }));
+
+      if (name === 'email' && emailTouched) {
+         if (!validateEmail(value)) {
+            setEmailError('Please enter a valid corporate email address.');
+         } else {
+            setEmailError('');
+         }
+      }
    };
 
-   const handleSubmit = (e: React.FormEvent) => {
+   const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
 
-      // Save user details to cookie for future use (Lead Gen Optimization)
-      setCookie('emphz_user_info', encodeURIComponent(JSON.stringify({
-         name: formData.name,
-         company: formData.company,
-         email: formData.email,
-         phone: formData.phone
-      })), 365); // Remember for 1 year
+      setEmailTouched(true);
+      if (!validateEmail(formData.email)) {
+         setEmailError('Please enter a valid corporate email address.');
+         return;
+      }
 
+      setIsSubmitting(true);
+
+      // Simulate API Network Request
       setTimeout(() => {
+         // Save user details to cookie
+         setCookie('emphz_user_info', encodeURIComponent(JSON.stringify({
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone
+         })), 365);
+
          setSubmitted(true);
          clearCart();
-         window.scrollTo(0, 0);
-      }, 1200);
-   };
-
-   const getPriorityColor = () => {
-      if (leadScore < 40) return 'text-slate-400 bg-slate-100';
-      if (leadScore < 70) return 'text-blue-500 bg-blue-500/10';
-      return 'text-blue-600 bg-blue-600/10';
+         setIsSubmitting(false);
+         // Scroll to top
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 2000);
    };
 
    if (submitted) {
       return (
-         <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden font-sans">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-            <div className="glass p-8 md:p-12 rounded-3xl max-w-lg w-full text-center relative z-10 shadow-2xl bg-white/10 border-white/20">
-               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_30px_#1e40af]">
-                  <CheckCircle className="w-10 h-10 text-white" />
+         <div className="min-h-screen bg-industrial-50 flex items-center justify-center p-4 pt-24">
+            <div className="bg-white p-12 md:p-16 rounded-sm max-w-lg w-full text-center shadow-2xl border border-industrial-100 animate-fade-up">
+               <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8 border border-green-100 shadow-sm">
+                  <CheckCircle className="w-10 h-10 text-green-600" />
                </div>
-               <h2 className="text-3xl font-semibold text-white mb-2 tracking-tight">Request Received</h2>
-               <div className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em] mb-8">Ref ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</div>
-
-               <div className="bg-white/5 rounded-xl p-6 mb-8 border border-white/5">
-                  <div className="flex justify-between text-sm mb-2">
-                     <span className="text-slate-400 font-mono">Routing:</span>
-                     <span className="text-blue-400 font-bold font-mono">
-                        {formData.region === 'Kerala' ? 'Vadakara Ops Center' : 'Central Factory HQ'}
-                     </span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                     <span className="text-slate-400 font-mono">Priority:</span>
-                     <span className={`font-bold font-mono ${leadScore > 60 ? 'text-blue-400' : 'text-slate-400'}`}>
-                        {leadScore > 60 ? 'HIGH VELOCITY' : 'STANDARD'}
-                     </span>
-                  </div>
+               <h2 className="text-3xl font-medium text-industrial-900 mb-2 tracking-tight">Requirement Logged</h2>
+               <div className="text-industrial-400 font-mono text-[10px] uppercase tracking-widest mb-10">
+                  Ref ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}
                </div>
 
-               <p className="text-slate-300 text-sm mb-8 leading-relaxed">
-                  Our engineering team has received your manifest. A formal quotation and technical datasheet package will be dispatched to <span className="text-white font-bold">{formData.email}</span> within 24 hours.
+               <div className="bg-industrial-50 rounded-sm p-6 mb-8 border border-industrial-100 text-left relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-industrial-200/20 rounded-bl-full pointer-events-none"></div>
+                  <div className="flex justify-between text-xs mb-4 relative z-10">
+                     <span className="text-industrial-500 font-bold uppercase tracking-wider">Routing</span>
+                     <span className="text-industrial-900 font-mono font-bold">
+                        {formData.region === 'International' ? 'Export Division' : 'Domestic Ops Center'}
+                     </span>
+                  </div>
+                  <div className="flex justify-between text-xs relative z-10">
+                     <span className="text-industrial-500 font-bold uppercase tracking-wider">Status</span>
+                     <span className="text-accent-blue font-bold font-mono bg-accent-blue/10 px-2 py-0.5 rounded-sm">QUEUED_FOR_ENGINEERING</span>
+                  </div>
+               </div>
+
+               <p className="text-industrial-600 text-sm mb-10 leading-relaxed font-light">
+                  Your manifest has been securely transmitted to our engineering team. A formal technical evaluation and commercial proposal will be sent to <span className="font-semibold text-industrial-900">{formData.email}</span> within 24 business hours.
                </p>
 
-               <Link to="/" className="inline-flex items-center justify-center w-full bg-white text-slate-900 font-bold py-4 rounded-xl hover:bg-blue-600 hover:text-white transition-all uppercase tracking-widest text-xs">
-                  Return to Home
+               <Link to="/" className="inline-flex items-center justify-center w-full bg-industrial-900 text-white font-bold py-4 rounded-sm hover:bg-accent-blue transition-all uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-industrial-900/20">
+                  Return to Dashboard
                </Link>
             </div>
          </div>
@@ -134,56 +154,79 @@ const RFQ: React.FC = () => {
    }
 
    return (
-      <div className="min-h-screen bg-white flex flex-col lg:flex-row font-sans">
+      <div className="min-h-screen bg-white flex flex-col lg:flex-row font-sans pt-20">
 
-         {/* Left Panel: The Manifest (Dark Mode) */}
-         <div className="w-full lg:w-5/12 bg-slate-950 text-white relative overflow-hidden flex flex-col order-2 lg:order-1">
-            <div className="absolute inset-0 bg-dots opacity-10"></div>
-            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-slate-950 to-transparent"></div>
+         {/* Loading Overlay */}
+         {isSubmitting && (
+            <div className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
+               <Loader2 className="w-12 h-12 text-accent-blue animate-spin mb-4" />
+               <p className="text-xs font-bold uppercase tracking-[0.3em] text-industrial-900 animate-pulse">Transmitting Manifest...</p>
+            </div>
+         )}
 
-            <div className="p-8 lg:p-12 relative z-10 flex-grow flex flex-col">
-               <Link to="/products" className="inline-flex items-center text-slate-400 hover:text-white mb-8 text-xs font-bold uppercase tracking-widest transition-colors">
-                  ← Modify Parameters
-               </Link>
+         {/* Left Panel: The Manifest (Industrial Dark) */}
+         <div className="w-full lg:w-5/12 bg-industrial-900 text-white relative flex flex-col order-2 lg:order-1 border-r border-industrial-800 lg:min-h-[calc(100vh-80px)]">
+            {/* Subtle Pattern */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #334155 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
-               <h1 className="text-4xl lg:text-5xl font-semibold mb-2 tracking-tight">
-                  Bill of <br /> Materials
-               </h1>
-               <p className="text-blue-500 font-mono text-xs uppercase tracking-wider mb-10">
-                  {'// AUDIT_PENDING // SPEC_SECURE'}
-               </p>
+            <div className="p-8 lg:p-12 relative z-10 flex-grow flex flex-col h-full">
+               <div className="flex items-center justify-between mb-12">
+                  <Link to="/products" className="inline-flex items-center text-industrial-400 hover:text-white text-[10px] font-bold uppercase tracking-[0.2em] transition-colors gap-2">
+                     <div className="w-6 h-6 rounded-full border border-industrial-700 flex items-center justify-center hover:bg-industrial-800">←</div> Modify Config
+                  </Link>
+                  <span className="text-[10px] font-mono text-industrial-600">SID-{new Date().getFullYear()}</span>
+               </div>
 
-               <div className="flex-grow space-y-4 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-800">
+               <div className="mb-10 animate-fade-up">
+                  <h1 className="text-3xl lg:text-5xl font-medium mb-4 tracking-tight text-white leading-tight">
+                     Project <br /> <span className="text-industrial-400">Requisition.</span>
+                  </h1>
+                  <p className="text-industrial-400 text-sm font-light leading-relaxed max-w-sm">
+                     Confirm your system configuration below. Engineering will review all items for compatibility before issuance.
+                  </p>
+               </div>
+
+               <div className="flex-grow space-y-3 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-industrial-700 mb-8 max-h-[40vh] lg:max-h-none">
                   {items.length === 0 ? (
-                     <div className="p-8 border-2 border-dashed border-white/10 rounded-2xl text-center">
-                        <p className="text-slate-500 text-sm mb-4">No systems selected.</p>
-                        <Link to="/products" className="text-blue-500 font-bold text-xs hover:underline uppercase tracking-wide">Configure Products</Link>
+                     <div className="py-16 border border-dashed border-industrial-700/50 bg-industrial-800/20 rounded-sm text-center animate-fade-in">
+                        <div className="w-12 h-12 bg-industrial-800 rounded-full flex items-center justify-center mx-auto mb-4 text-industrial-500">
+                           <FileText size={20} />
+                        </div>
+                        <p className="text-industrial-400 text-sm mb-4 font-light">Manifest is currently empty.</p>
+                        <Link to="/products" className="text-accent-blue font-bold text-[10px] hover:text-white uppercase tracking-widest transition-colors border-b border-accent-blue/30 hover:border-accent-blue pb-1">
+                           Browse Systems
+                        </Link>
                      </div>
                   ) : (
                      items.map((item, i) => (
-                        <div key={i} className="glass border border-white/10 p-4 rounded-xl flex items-center justify-between group hover:bg-white/10 transition-colors bg-white/5">
-                           <div>
-                              <div className="text-white font-semibold text-sm">{item.name}</div>
-                              {item.configuration && (
-                                 <div className="flex gap-2 mt-1.5">
-                                    <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-slate-300 font-mono flex items-center gap-1.5">
-                                       <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: item.configuration.color }}></span>
-                                       {item.configuration.finish}
-                                    </span>
-                                 </div>
-                              )}
-                              <div className="text-[10px] text-slate-500 font-mono mt-1">UUID: {item.id.substring(0, 8)}</div>
+                        <div key={i} className="bg-industrial-800/50 border border-industrial-700 p-4 rounded-sm flex items-center justify-between group hover:border-industrial-600 transition-colors animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                           <div className="flex items-start gap-4">
+                              <div className="w-12 h-12 bg-industrial-900 rounded-sm border border-industrial-700 flex-shrink-0 overflow-hidden">
+                                 <img src={item.image} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                              <div>
+                                 <div className="text-white font-medium text-sm group-hover:text-accent-blue transition-colors line-clamp-1">{item.name}</div>
+                                 {item.configuration && (
+                                    <div className="flex gap-2 mt-1.5">
+                                       <span className="text-[9px] bg-industrial-900 px-1.5 py-0.5 rounded text-industrial-400 font-mono flex items-center gap-1.5 uppercase tracking-wide border border-industrial-700">
+                                          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ backgroundColor: item.configuration.color }}></span>
+                                          {item.configuration.finish}
+                                       </span>
+                                    </div>
+                                 )}
+                                 <div className="text-[9px] text-industrial-500 font-mono mt-1 uppercase tracking-widest">SKU: {item.id.substring(0, 8).toUpperCase()}</div>
+                              </div>
                            </div>
                            <div className="flex items-center gap-4">
-                              <div className="bg-black/40 px-3 py-1 rounded text-xs font-mono text-blue-500 border border-white/5">
-                                 QTY: {item.quantity}
+                              <div className="bg-black/40 px-3 py-1 rounded-sm text-xs font-mono text-accent-blue border border-industrial-700/50 font-bold">
+                                 x{item.quantity}
                               </div>
                               <button
                                  onClick={() => removeItem(item.cartId || item.id)}
-                                 className="text-slate-600 hover:text-red-400 transition-colors"
-                                 aria-label="Remove item"
+                                 className="text-industrial-500 hover:text-red-400 transition-colors p-2 hover:bg-industrial-700/50 rounded-full"
+                                 title="Remove Item"
                               >
-                                 <Trash2 size={16} />
+                                 <Trash2 size={14} />
                               </button>
                            </div>
                         </div>
@@ -191,96 +234,101 @@ const RFQ: React.FC = () => {
                   )}
                </div>
 
-               <div className="mt-8 pt-8 border-t border-white/10">
-                  <div className="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider font-bold text-slate-500 mb-6">
-                     <div className="flex items-center gap-2">
-                        <ShieldCheck size={14} className="text-blue-500" /> ISO Certified
+               <div className="pt-8 border-t border-industrial-800 mt-auto">
+                  <div className="grid grid-cols-2 gap-y-6 gap-x-8 text-[9px] uppercase tracking-[0.15em] font-bold text-industrial-400">
+                     <div className="flex items-center gap-3">
+                        <ShieldCheck size={14} className="text-accent-blue" />
+                        <span>ISO 9001:2015 <br /><span className="text-industrial-600 font-normal normal-case tracking-normal">Certified Process</span></span>
                      </div>
-                     <div className="flex items-center gap-2">
-                        <Zap size={14} className="text-blue-500" /> Fast Response
+                     <div className="flex items-center gap-3">
+                        <Zap size={14} className="text-accent-blue" />
+                        <span>24hr Turnaround <br /><span className="text-industrial-600 font-normal normal-case tracking-normal">For Standard Quotes</span></span>
                      </div>
-                     <div className="flex items-center gap-2">
-                        <Globe size={14} className="text-blue-500" /> Export Ready
+                     <div className="flex items-center gap-3">
+                        <Globe size={14} className="text-accent-blue" />
+                        <span>Global Logistics <br /><span className="text-industrial-600 font-normal normal-case tracking-normal">Export Ready</span></span>
                      </div>
-                     <div className="flex items-center gap-2">
-                        <Cpu size={14} className="text-blue-500" /> Spec Compliant
+                     <div className="flex items-center gap-3">
+                        <Cpu size={14} className="text-accent-blue" />
+                        <span>Eng. Review <br /><span className="text-industrial-600 font-normal normal-case tracking-normal">Technical Validation</span></span>
                      </div>
                   </div>
-
-                  <div className="bg-blue-600 h-1 w-full rounded-full opacity-20"></div>
                </div>
             </div>
          </div>
 
-         {/* Right Panel: Logistics Data (Light Mode) */}
-         <div className="w-full lg:w-7/12 bg-slate-50 p-8 lg:p-12 overflow-y-auto order-1 lg:order-2">
-            <div className="max-w-2xl mx-auto">
-               <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl font-semibold text-slate-900">Procurement Logistics</h2>
-
-                  {/* Lead Score Indicator */}
-                  <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-bold font-mono transition-all duration-500 ${getPriorityColor()}`}>
-                     <div className="relative w-2 h-2">
-                        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${leadScore > 60 ? 'bg-blue-400' : 'bg-slate-400'}`}></span>
-                        <span className={`relative inline-flex rounded-full h-2 w-2 ${leadScore > 60 ? 'bg-blue-500' : 'bg-slate-500'}`}></span>
-                     </div>
-                     <span>PRIORITY: {leadScore}%</span>
+         {/* Right Panel: Form (Clean Industrial Light) */}
+         <div className="w-full lg:w-7/12 bg-white p-8 lg:p-16 overflow-y-auto order-1 lg:order-2">
+            <div className="max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+               <div className="flex items-center justify-between mb-10 pb-6 border-b border-industrial-100">
+                  <div>
+                     <h2 className="text-2xl font-medium text-industrial-900">Project Parameters</h2>
+                     <p className="text-sm text-industrial-500 mt-1 font-light">Coordinate supply chain and site requirements.</p>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-industrial-400 bg-industrial-50 px-3 py-1.5 rounded-sm border border-industrial-100">
+                     <FileText size={14} className="text-accent-blue" /> Q-25-001
                   </div>
                </div>
 
-               <form onSubmit={handleSubmit} className="space-y-8">
+               <form onSubmit={handleSubmit} className="space-y-12">
                   {/* Section 1: Context */}
-                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
-                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
-                        <Briefcase size={14} className="mr-2" /> Sector Context
+                  <div className="space-y-8">
+                     <h3 className="text-[10px] font-bold text-industrial-900 uppercase tracking-[0.2em] flex items-center gap-3">
+                        <span className="w-8 h-[1px] bg-accent-blue"></span> Operational Context
                      </h3>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                           <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Industry Segment</label>
-                           <select
-                              name="industry"
-                              value={formData.industry}
-                              onChange={handleChange}
-                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
-                           >
-                              <option value="Construction">Construction / Civil</option>
-                              <option value="Utilities">Power & Utilities</option>
-                              <option value="OilGas">Oil & Gas / Petrochem</option>
-                              <option value="Telecom">Telecom / Data</option>
-                              <option value="Hospitality">Hospitality / Resorts</option>
-                           </select>
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Industry Sector</label>
+                           <div className="relative">
+                              <select
+                                 name="industry"
+                                 value={formData.industry}
+                                 onChange={handleChange}
+                                 className="w-full bg-industrial-50/50 border border-industrial-200 rounded-sm p-3 text-sm text-industrial-900 focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all appearance-none cursor-pointer hover:bg-industrial-50"
+                              >
+                                 <option value="Construction">Construction / Civil</option>
+                                 <option value="Utilities">Power & Utilities</option>
+                                 <option value="OilGas">Oil & Gas / Petrochem</option>
+                                 <option value="Telecom">Telecom / Data</option>
+                                 <option value="Hospitality">Hospitality / Resorts</option>
+                              </select>
+                              <Briefcase size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
+                           </div>
                         </div>
-                        <div>
-                           <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Timeline / Volume</label>
-                           <select
-                              name="urgency"
-                              value={formData.urgency}
-                              onChange={handleChange}
-                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
-                           >
-                              <option value="Standard">Standard (4-6 Weeks)</option>
-                              <option value="Immediate">Immediate (Stock Check)</option>
-                              <option value="OneMonth">Planning (1-3 Mo)</option>
-                              <option value="Budget">Budgetary Quote Only</option>
-                           </select>
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Project Timeline</label>
+                           <div className="relative">
+                              <select
+                                 name="urgency"
+                                 value={formData.urgency}
+                                 onChange={handleChange}
+                                 className="w-full bg-industrial-50/50 border border-industrial-200 rounded-sm p-3 text-sm text-industrial-900 focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all appearance-none cursor-pointer hover:bg-industrial-50"
+                              >
+                                 <option value="Standard">Standard (4-6 Weeks)</option>
+                                 <option value="Immediate">Immediate (Stock Check)</option>
+                                 <option value="OneMonth">Planning (1-3 Mo)</option>
+                                 <option value="Budget">Budgetary Quote Only</option>
+                              </select>
+                              <Clock size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
+                           </div>
                         </div>
                      </div>
                   </div>
 
                   {/* Section 2: Contact */}
-                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
-                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
-                        <MapPin size={14} className="mr-2" /> Distribution Target
+                  <div className="space-y-8">
+                     <h3 className="text-[10px] font-bold text-industrial-900 uppercase tracking-[0.2em] flex items-center gap-3">
+                        <span className="w-8 h-[1px] bg-accent-blue"></span> Contact Intelligence
                      </h3>
 
-                     <div className="mb-6">
-                        <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Region / Logistics Hub</label>
+                     <div className="group">
+                        <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Distribution Hub</label>
                         <div className="relative">
                            <select
                               name="region"
                               value={formData.region}
                               onChange={handleChange}
-                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all appearance-none"
+                              className="w-full bg-industrial-50/50 border border-industrial-200 rounded-sm p-3 text-sm text-industrial-900 focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all appearance-none cursor-pointer hover:bg-industrial-50"
                            >
                               <option value="Kerala">Kerala (Vadakara Hub)</option>
                               <option value="Karnataka">Karnataka (Mysore Central)</option>
@@ -288,79 +336,103 @@ const RFQ: React.FC = () => {
                               <option value="RestOfIndia">Domestic India</option>
                               <option value="International">Export Division</option>
                            </select>
-                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
-                              <MapPin size={16} />
-                           </div>
+                           <MapPin size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
                         </div>
                      </div>
 
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <input
-                           type="text"
-                           name="name"
-                           placeholder="Primary Contact Name *"
-                           required
-                           value={formData.name}
-                           onChange={handleChange}
-                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-                        />
-                        <input
-                           type="text"
-                           name="company"
-                           placeholder="Organization Name *"
-                           required
-                           value={formData.company}
-                           onChange={handleChange}
-                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-                        />
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Full Name</label>
+                           <input
+                              type="text"
+                              name="name"
+                              placeholder="e.g. Robert Smith"
+                              required
+                              value={formData.name}
+                              onChange={handleChange}
+                              className="w-full bg-white border border-industrial-200 rounded-sm p-3 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all placeholder:text-industrial-300"
+                           />
+                        </div>
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Organization</label>
+                           <input
+                              type="text"
+                              name="company"
+                              placeholder="Company Name"
+                              required
+                              value={formData.company}
+                              onChange={handleChange}
+                              className="w-full bg-white border border-industrial-200 rounded-sm p-3 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all placeholder:text-industrial-300"
+                           />
+                        </div>
                      </div>
-                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input
-                           type="email"
-                           name="email"
-                           placeholder="Corporate Email Alias *"
-                           required
-                           value={formData.email}
-                           onChange={handleChange}
-                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-                        />
-                        <input
-                           type="tel"
-                           name="phone"
-                           placeholder="Contact Number *"
-                           required
-                           value={formData.phone}
-                           onChange={handleChange}
-                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-                        />
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Official Email</label>
+                           <input
+                              type="email"
+                              name="email"
+                              placeholder="name@company.com"
+                              required
+                              value={formData.email}
+                              onChange={handleChange}
+                              onBlur={handleEmailBlur}
+                              className={`w-full bg-white border ${emailError ? 'border-red-400 bg-red-50 focus:border-red-500 focus:ring-red-500' : 'border-industrial-200 focus:border-accent-blue focus:ring-accent-blue'} rounded-sm p-3 text-sm focus:ring-1 outline-none transition-all placeholder:text-industrial-300`}
+                           />
+                           {emailError && (
+                              <p className="mt-2 text-[10px] text-red-500 font-bold uppercase tracking-wide flex items-center gap-1">
+                                 <Info size={10} /> {emailError}
+                              </p>
+                           )}
+                        </div>
+                        <div className="group">
+                           <label className="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider group-focus-within:text-accent-blue transition-colors">Direct Phone</label>
+                           <input
+                              type="tel"
+                              name="phone"
+                              placeholder="+91..."
+                              required
+                              value={formData.phone}
+                              onChange={handleChange}
+                              className="w-full bg-white border border-industrial-200 rounded-sm p-3 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all placeholder:text-industrial-300"
+                           />
+                        </div>
                      </div>
                   </div>
 
                   {/* Section 3: Notes */}
-                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
-                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Technical Annotations</h3>
-                     <textarea
-                        name="message"
-                        rows={3}
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Dimensional constraints, IP ratings, resin preferences..."
-                        className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
-                     ></textarea>
+                  <div className="space-y-8">
+                     <h3 className="text-[10px] font-bold text-industrial-900 uppercase tracking-[0.2em] flex items-center gap-3">
+                        <span className="w-8 h-[1px] bg-accent-blue"></span> Technical Specifics
+                     </h3>
+                     <div className="relative group">
+                        <textarea
+                           name="message"
+                           rows={3}
+                           value={formData.message}
+                           onChange={handleChange}
+                           placeholder="Specify dimensional constraints, IP ratings, mounting preferences, or custom fabrication requirements..."
+                           className="w-full bg-white border border-industrial-200 rounded-sm p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all resize-y min-h-[120px] placeholder:text-industrial-300 placeholder:font-light"
+                        ></textarea>
+                     </div>
                   </div>
 
-                  <button
-                     type="submit"
-                     disabled={items.length === 0}
-                     className="w-full bg-slate-900 text-white font-bold py-5 rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/10 hover:shadow-blue-600/30 text-xs uppercase tracking-[0.2em] transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
-                  >
-                     <Send size={18} /> Initialize RFQ Transmission
-                  </button>
-
-                  <p className="text-center text-[10px] text-slate-400 font-mono">
-                     <Clock size={10} className="inline mr-1" />
-                     SLA: Response guaranteed &lt; 4 Hours during Business Cycles.
-                  </p>
+                  <div className="pt-4">
+                     <button
+                        type="submit"
+                        disabled={items.length === 0 || isSubmitting}
+                        className="w-full bg-industrial-900 text-white font-bold py-5 rounded-sm hover:bg-accent-blue transition-all duration-300 text-xs uppercase tracking-[0.2em] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg shadow-industrial-900/10 hover:shadow-accent-blue/20"
+                     >
+                        {isSubmitting ? (
+                           <>Processing Transmission...</>
+                        ) : (
+                           <><Send size={16} /> Transmit Requisition</>
+                        )}
+                     </button>
+                     <p className="text-center text-[9px] text-industrial-400 font-mono mt-4">
+                        SECURE TRANSMISSION ENCRYPTED via SSL. INTERNAL ENGINEERING USE ONLY.
+                     </p>
+                  </div>
                </form>
             </div>
          </div>

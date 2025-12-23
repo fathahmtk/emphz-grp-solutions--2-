@@ -222,6 +222,150 @@ export const MOCK_PRODUCTS: Product[] = [
     ],
     features: ['Custom design', 'Material choice', 'Precision molding'],
     downloads: [{ title: 'Radome Design Specs', type: 'PDF' }]
+  },
+
+  // 7. Metro Bus Shelter
+  {
+    id: 'emp-shelter-001',
+    name: 'Metro City Bus Shelter',
+    category: ProductCategory.POD_SHELTER,
+    shortDescription: 'Vandal-resistant GRP bus shelters for urban public transport networks.',
+    fullDescription: 'Our modular GRP bus shelters are designed for the modern smart city. They offer high resistance to vandalism, graffiti, and environmental wear while providing a sleek aesthetic for urban landscapes.',
+    whyItExists: 'Concrete shelters crack and steel shelters rust. GRP offers a permanent, low-maintenance solution for municipal corporations.',
+    typicalUsage: 'City bus stops, metro feeder stations, and campus waiting areas.',
+    recommendedWhen: [
+      'High-traffic urban areas',
+      'Coastal cities with salt air',
+      'Municipal projects requiring 20+ year life'
+    ],
+    imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2023/1/YI/WO/XU/3642603/frp-bus-shelter.jpg',
+    specs: [
+      { label: 'Dimensions', value: 'L5000 x W1500 x H2500 mm' },
+      { label: 'Wind Load', value: 'Designed for 180 km/h' },
+      { label: 'Seating', value: 'Integrated GRP Bench' }
+    ],
+    features: ['Graffiti-resistant gelcoat', 'Integrated rain gutter', 'Solar-ready roof'],
+    downloads: [{ title: 'Metro Shelter Specs', type: 'PDF' }]
+  },
+
+  // 8. Fire Hose Cabinet
+  {
+    id: 'emp-safety-001',
+    name: 'RedGuard Fire Hose Cabinet',
+    category: ProductCategory.ENCLOSURE,
+    shortDescription: 'UV-stable safety equipment housing for fire hoses and extinguishers.',
+    fullDescription: 'The RedGuard series is engineered to protect vital fire safety equipment from the elements. Unlike steel cabinets that rust shut, our GRP hinges and bodies ensure the equipment is accessible when it matters most.',
+    whyItExists: 'To ensure fire safety equipment is not compromised by rusted cabinet doors in outdoor settings.',
+    typicalUsage: 'Refineries, outdoor industrial plants, and marine jetties.',
+    recommendedWhen: [
+      'Outdoor fire hydrant points',
+      'Marine and offshore platforms',
+      'Chemical plants with corrosive atmosphere'
+    ],
+    imageUrl: 'https://m.media-amazon.com/images/I/61kC-IqN+pL.jpg',
+    specs: [
+      { label: 'Color', value: 'Signal Red (RAL 3000)' },
+      { label: 'Material', value: 'UV Stabilized GRP' },
+      { label: 'Window', value: 'Break-glass or Acrylic' }
+    ],
+    features: ['High-visibility finish', 'Corrosion-proof hinges', 'Weather sealed'],
+    downloads: [{ title: 'RedGuard Catalog', type: 'PDF' }]
+  },
+
+  // 9. Modular Panel Tank
+  {
+    id: 'emp-tank-001',
+    name: 'Modular GRP Panel Tank',
+    category: ProductCategory.CUSTOM,
+    shortDescription: 'Sectional GRP water storage tanks for potable and industrial water.',
+    fullDescription: 'EMPHZ modular tanks are assembled on-site using hot-pressed SMC panels. This allows for massive storage capacities even in areas with restricted access, like basements or rooftops.',
+    whyItExists: 'A hygienic, algae-free alternative to concrete tanks that is easier to install than welded steel.',
+    typicalUsage: 'Residential complexes, commercial buildings, and industrial fire water storage.',
+    recommendedWhen: [
+      'High capacity storage needed (10kL - 1000kL)',
+      'Rooftop installation (Lightweight)',
+      'Hygienic potable water requirement'
+    ],
+    imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2020/12/QO/QZ/IG/2456909/smc-panel-tank.jpg',
+    specs: [
+      { label: 'Panel Size', value: '1m x 1m / 1m x 0.5m' },
+      { label: 'Standard', value: 'SS 245:1995' },
+      { label: 'Reinforcement', value: 'Internal SS Tie-rods' }
+    ],
+    features: ['Food-grade material', 'Zero leakage design', 'Fast assembly'],
+    downloads: [{ title: 'Tank Capacity Chart', type: 'PDF' }]
+  },
+
+  // 10. Instrument Sunshade
+  {
+    id: 'emp-inst-001',
+    name: 'Instrument Sunshade S2',
+    category: ProductCategory.ENCLOSURE,
+    shortDescription: 'Protective canopies for field instruments and transmitters.',
+    fullDescription: 'The S2 Sunshade protects sensitive field instruments from direct sunlight, rain, and physical impact. It prevents overheating of electronics and ensures accurate readings in harsh climates.',
+    whyItExists: 'Prevents "LCD blackening" and overheating of transmitters in direct desert or tropical sun.',
+    typicalUsage: 'Oil & Gas fields, power plants, and outdoor process industries.',
+    recommendedWhen: [
+      'Protecting pressure transmitters',
+      'Outdoor gauge protection',
+      'High UV exposure zones'
+    ],
+    imageUrl: 'https://cpimg.tistatic.com/08544838/b/4/FRP-Canopy-for-Instruments.jpg',
+    specs: [
+      { label: 'Material', value: 'Anti-static GRP' },
+      { label: 'Mounting', value: '2" Pipe Mount' },
+      { label: 'Wind Rating', value: 'Type tested for storms' }
+    ],
+    features: ['UV blocking', 'Chemical resistant', 'Lightweight'],
+    downloads: [{ title: 'S2 Shade Datasheet', type: 'PDF' }]
+  },
+
+  // 11. EV Battery Shield
+  {
+    id: 'emp-auto-001',
+    name: 'EV Battery Pack Shield',
+    category: ProductCategory.CUSTOM,
+    shortDescription: 'Lightweight, flame-retardant covers for electric vehicle battery packs.',
+    fullDescription: 'Engineered for the automotive sector, these GRP composite shields provide impact protection and fire retardancy for EV battery packs while keeping weight to a minimum.',
+    whyItExists: 'Metal shields are too heavy; standard plastics melt. GRP offers the perfect balance of heat resistance and light weight.',
+    typicalUsage: 'Electric buses, 3-wheelers, and commercial EV fleets.',
+    recommendedWhen: [
+      'Weight reduction is critical',
+      'UL 94 V0 fire rating is needed',
+      'Impact protection for under-chassis'
+    ],
+    imageUrl: 'https://www.compositestrategies.com/wp-content/uploads/2019/11/EV-Battery-Box-Composite.jpg',
+    specs: [
+      { label: 'Resin', value: 'Fire Retardant Vinyl Ester' },
+      { label: 'Process', value: 'RTM / Infusion' },
+      { label: 'Dielectric', value: 'High strength' }
+    ],
+    features: ['High strength-to-weight', 'Electrical insulation', 'Thermal barrier'],
+    downloads: [{ title: 'EV Automotives Guide', type: 'PDF' }]
+  },
+
+  // 12. Cable Management
+  {
+    id: 'emp-cable-001',
+    name: 'Heavy Duty Cable Tray',
+    category: ProductCategory.CUSTOM,
+    shortDescription: 'Pultruded GRP cable trays for corrosive industrial environments.',
+    fullDescription: 'Our GRP cable trays and ladders are manufactured using pultrusion for maximum load-bearing capacity. They are essential in chemical plants where steel trays would corrode within months.',
+    whyItExists: 'To carry heavy power cables in acid/alkali rich environments without collapsing from corrosion.',
+    typicalUsage: 'Chemical plants, offshore platforms, wastewater treatment plants, and tunnels.',
+    recommendedWhen: [
+      'Desalination plants (Chlorine)',
+      'Fertilizer plants (Ammonia)',
+      'Battery rooms (Acid fumes)'
+    ],
+    imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2021/4/XK/QD/OM/3499709/frp-cable-trays.jpg',
+    specs: [
+      { label: 'Standard', value: 'NEMA FG-1' },
+      { label: 'Load Class', value: 'Heavy Duty' },
+      { label: 'Length', value: '3m Standard' }
+    ],
+    features: ['Snap-fit covers', 'Electrical transparency', 'Zero maintenance'],
+    downloads: [{ title: 'Cable Support Systems', type: 'PDF' }]
   }
 ];
 
@@ -247,5 +391,16 @@ export const MOCK_CASE_STUDIES: CaseStudy[] = [
     outcome: 'Meter failures were reduced. The GRP cabinets remained in good condition without any maintenance.',
     imageUrl: 'https://images.unsplash.com/photo-1617999192569-c6e7d0573934?auto=format&fit=crop&w=800&q=80',
     relatedProductCategories: [ProductCategory.KIOSK]
+  },
+  {
+    id: 'cs-kochi-port',
+    title: 'Port Trust Asset Protection',
+    location: 'Kochi, Kerala',
+    category: 'Industrial',
+    challenge: 'Port electrical infrastructure faced extreme corrosion from sea spray and humidity, leading to dangerous short circuits.',
+    solution: 'Deployed IP66 rated GRP Junction Boxes and custom sunshades for crane control panels.',
+    outcome: 'Electrical safety incidents reduced to zero. Equipment lifespan extended by 5+ years.',
+    imageUrl: 'https://images.unsplash.com/photo-1574972767078-4384dbf0687f?auto=format&fit=crop&w=800&q=80',
+    relatedProductCategories: [ProductCategory.ENCLOSURE, ProductCategory.CUSTOM]
   }
 ];
