@@ -92,7 +92,97 @@ export const MOCK_BLOG_POSTS: BlogPost[] = [
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
-  // 1. GRP Electrical Enclosures
+  // 1. UrbanCell Infrastructure (Flagship)
+  {
+    id: 'emp-uc-retail',
+    name: 'UrbanCell™ RETAIL',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Modular, plug-in retail hubs for smart city environments.',
+    fullDescription: 'UrbanCell RETAIL is a factory-built, plug-in infrastructure cell designed for rapid deployment as retail hubs, mini-markets, or convenience store setups. Built with high-durability GRP, it features glass facades and integrated thermal management for modern urban commerce.',
+    whyItExists: 'Traditional brick-and-mortar retail takes months to build; UrbanCell deploys in hours with a premium aesthetic.',
+    typicalUsage: 'Mini-markets, convenience store setups, pop-up shops, and urban hubs.',
+    recommendedWhen: [
+      'Smart city projects requiring fast ROI',
+      'Areas with limited construction footprints',
+      'High-traffic urban zones needing premium design'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'Mini-market / Convenience' },
+      { label: 'Form Factor', value: 'Modular 3.5m x 4.0m' },
+      { label: 'Shell', value: 'GRP Monocoque' }
+    ],
+    features: ['Plug-and-play electrical', 'Integrated POS ready', 'Smart locks', 'Self-cleaning coating'],
+    downloads: [{ title: 'UrbanCell Retail Specs', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-services',
+    name: 'UrbanCell™ SERVICES',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Automated service pods for banking, digital services, and kiosks.',
+    fullDescription: 'UrbanCell SERVICES is a secure, automated pod designed for digital banking, government service kiosks, and customer service hubs. It provides a climate-controlled, secure environment for 24/7 automated operations.',
+    whyItExists: 'To provide high-tech service touchpoints in smart cities without the overhead of manned branch offices.',
+    typicalUsage: 'Automated Service Kiosks, digital banking, municipal service points, and information hubs.',
+    recommendedWhen: [
+      'Municipalities expanding digital reach',
+      'Banks extending 24/7 service footprint',
+      'Urban zones requiring secure automated kiosks'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'Banking & Automated Services' },
+      { label: 'Form Factor', value: 'Kiosk Format' },
+      { label: 'Security', value: 'Reinforced GRP + Smart Surveillance' }
+    ],
+    features: ['Climate controlled', 'IoT-ready networking', 'Secure card access', 'Solar-ready roof'],
+    downloads: [{ title: 'UrbanCell Service Guide', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-energy',
+    name: 'UrbanCell™ ENERGY',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Integrated EV charging and solar hub for modern transit.',
+    fullDescription: 'The UrbanCell ENERGY module combines high-capacity EV charging stations with a solar-active roof structure. It serves as both a charging point and a power management hub for smart grid integration.',
+    whyItExists: 'To solve the need for aesthetic, weather-proof, and rapidly deployable EV infrastructure in cities.',
+    typicalUsage: 'EV Charging + solar panels, battery backup, highway rest stops, and corporate campuses.',
+    recommendedWhen: [
+      'Transitioning to electric fleets',
+      'Municipal green-energy mandates',
+      'Remote sites requiring off-grid power'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'EV Charging & Solar Hub' },
+      { label: 'Charger', value: 'Dual 50kW DC Fast Charge' },
+      { label: 'Solar Cap', value: '12-Panel HV Array' }
+    ],
+    features: ['Solar integration', 'Battery storage ready', 'Weather-proof GRP housing', 'Remote monitoring'],
+    downloads: [{ title: 'UrbanCell Energy Guide', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-cold',
+    name: 'UrbanCell™ COLD',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Industrial-grade modular cold storage and delivery hub.',
+    fullDescription: 'UrbanCell COLD provides thermally superior temperature-controlled storage cells. Ideal for last-mile food delivery or medical storage, these units use composite insulation that outperforms traditional sandwich panels.',
+    whyItExists: 'To prevent the "thermal leak" common in metal-sheet cold rooms that rust in humid environments.',
+    typicalUsage: 'Temperature-controlled Cold Chain module, grocery collection points, pharmaceutical storage.',
+    recommendedWhen: [
+      'Strict temperature control required',
+      'Coastal or high-humidity regions',
+      'Food-grade hygiene standards'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'Cold Chain / Storage' },
+      { label: 'Operating Temp', value: '-20°C to +10°C' },
+      { label: 'Wall Type', value: 'High-Density Composite PUF' }
+    ],
+    features: ['Algae-free interior', 'High R-Value insulation', 'Integrated defrost', 'Shock-resistant walls'],
+    downloads: [{ title: 'UrbanCell Cold Data', type: 'PDF' }]
+  },
+
+  // 2. GRP Electrical Enclosures
   {
     id: 'emp-encl-001',
     name: 'Industrial GRP Junction Box (J-Series)',
@@ -121,7 +211,7 @@ export const MOCK_PRODUCTS: Product[] = [
     downloads: [{ title: 'J-Series Datasheet', type: 'PDF' }]
   },
 
-  // 2. Portable Toilet Units
+  // 3. Portable Toilet Units
   {
     id: 'emp-toil-001',
     name: 'Eco-San GRP Toilet Cabin',
@@ -365,73 +455,6 @@ export const MOCK_PRODUCTS: Product[] = [
     features: ['Snap-fit covers', 'Electrical transparency', 'Zero maintenance'],
     downloads: [{ title: 'Cable Support Systems', type: 'PDF' }]
   },
-  // 13. UrbanCell Infrastructure
-  {
-    id: 'emp-uc-retail',
-    name: 'UrbanCell™ RETAIL',
-    category: ProductCategory.URBANCELL,
-    shortDescription: 'Modular, plug-in retail hubs for smart city environments.',
-    fullDescription: 'UrbanCell RETAIL is a factory-built, plug-in infrastructure cell designed for rapid deployment as retail hubs, shops, or kiosks. Built with high-durability GRP, it features glass facades and integrated thermal management for modern urban commerce.',
-    whyItExists: 'Traditional brick-and-mortar retail takes months to build; UrbanCell deploys in hours with a premium aesthetic.',
-    typicalUsage: 'Pop-up shops, ticket booths, information centers, and urban mini-marts.',
-    recommendedWhen: [
-      'Smart city projects requiring fast ROI',
-      'Areas with limited construction footprints',
-      'High-traffic urban zones needing premium design'
-    ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
-    specs: [
-      { label: 'Form Factor', value: 'Modular 3.5m x 4.0m' },
-      { label: 'Shell', value: 'GRP Monocoque' },
-      { label: 'Glass', value: 'Double Glazed Safety' }
-    ],
-    features: ['Plug-and-play electrical', 'Integrated POS ready', 'Smart locks', 'Self-cleaning coating'],
-    downloads: [{ title: 'UrbanCell Retail Specs', type: 'PDF' }]
-  },
-  {
-    id: 'emp-uc-energy',
-    name: 'UrbanCell™ ENERGY',
-    category: ProductCategory.URBANCELL,
-    shortDescription: 'Integrated EV charging and solar hub for modern transit.',
-    fullDescription: 'The UrbanCell ENERGY module combines high-capacity EV charging stations with a solar-active roof structure. It serves as both a charging point and a power management hub for smart grid integration.',
-    whyItExists: 'To solve the need for aesthetic, weather-proof, and rapidly deployable EV infrastructure in cities.',
-    typicalUsage: 'Parking lots, highway rest stops, and corporate campuses.',
-    recommendedWhen: [
-      'Transitioning to electric fleets',
-      'Municipal green-energy mandates',
-      'Remote sites requiring off-grid power'
-    ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
-    specs: [
-      { label: 'Charger', value: 'Dual 50kW DC Fast Charge' },
-      { label: 'Solar Cap', value: '12-Panel HV Array' },
-      { label: 'Safety', value: 'Non-conductive GRP shell' }
-    ],
-    features: ['Solar integration', 'Battery storage ready', 'Weather-proof GRP housing', 'Remote monitoring'],
-    downloads: [{ title: 'UrbanCell Energy Guide', type: 'PDF' }]
-  },
-  {
-    id: 'emp-uc-cold',
-    name: 'UrbanCell™ COLD',
-    category: ProductCategory.URBANCELL,
-    shortDescription: 'Industrial-grade modular cold storage and delivery hub.',
-    fullDescription: 'UrbanCell COLD provides thermally superior temperature-controlled storage cells. Ideal for last-mile food delivery or medical storage, these units use composite insulation that outperforms traditional sandwich panels.',
-    whyItExists: 'To prevent the "thermal leak" common in metal-sheet cold rooms that rust in humid environments.',
-    typicalUsage: 'Grocery collection points, pharmaceutical storage, and fresh food markets.',
-    recommendedWhen: [
-      'Strict temperature control required',
-      'Coastal or high-humidity regions',
-      'Food-grade hygiene standards'
-    ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
-    specs: [
-      { label: 'Operating Temp', value: '-20°C to +10°C' },
-      { label: 'Wall Type', value: 'High-Density Composite PUF' },
-      { label: 'Hygiene', value: 'FDA-compliant Gem-coat' }
-    ],
-    features: ['Algae-free interior', 'High R-Value insulation', 'Integrated defrost', 'Shock-resistant walls'],
-    downloads: [{ title: 'UrbanCell Cold Data', type: 'PDF' }]
-  }
 ];
 
 export const MOCK_CASE_STUDIES: CaseStudy[] = [

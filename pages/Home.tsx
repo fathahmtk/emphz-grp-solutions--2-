@@ -119,7 +119,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {MOCK_PRODUCTS.slice(0, 3).map((product, i) => (
+            {MOCK_PRODUCTS.slice(0, 4).map((product, i) => (
               <TiltCard key={product.id} className="h-full">
                 <Link to={`/products/${product.id}`} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
                   <div className="aspect-video overflow-hidden bg-industrial-100 relative">

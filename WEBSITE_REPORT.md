@@ -55,8 +55,9 @@ The website consists of 14 key pages organized into a clear B2B funnel.
 ### Products (14 Total)
 The website features detailed technical documentation for 14 core product lines:
 1.  **UrbanCell™ RETAIL**: Modular smart city retail units.
-2.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
-3.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
+2.  **UrbanCell™ SERVICES**: Automated service & banking pods.
+3.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
+4.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
 4.  **Executive Portable Toilet**: High-end temporary sanitation.
 5.  **Metro Bus Shelter**: Vandal-resistant urban infrastructure.
 6.  **Modular Utility Kiosk M2**: Thermally insulated electrical housing.

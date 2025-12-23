@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingCart, Phone, Mail, MapPin, ChevronRight, MessageCircle, FileText, Search } from 'lucide-react';
+import { Menu, X, ShoppingCart, Phone, Mail, MapPin, ChevronRight, MessageCircle } from 'lucide-react';
 import { NAV_LINKS, MOCK_PRODUCTS, MOCK_BLOG_POSTS } from '../constants';
 import { useRFQStore } from '../stores/rfqStore';
-import LiveChatWidget from './LiveChatWidget';
-import Logo from './Logo';
 import CommandPalette from './CommandPalette';
 import { ProductCategory } from '../types';
 
@@ -64,7 +62,7 @@ const SEO_DATA = {
     },
     [ProductCategory.URBANCELL]: {
       title: 'UrbanCell™ Infrastructure | Modular Smart City Solutions | EMPHZ',
-      description: 'Plug-in infrastructure for smart cities. Modular GRP retail hubs, service kiosks, energy stations, and cold storage units designed for rapid deployment.',
+      description: 'Modular GRP infrastructure for smart cities: Retail hubs, automated banking services, solar energy stations, and cold chain storage units.',
     },
     [ProductCategory.CUSTOM]: {
       title: 'Custom GRP Fabrication | Bespoke FRP Engineering',
@@ -90,21 +88,17 @@ export function Layout({ children }: LayoutProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  // Initialize based on window width to avoid FOUC/Layout shifts
-  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' ? window.innerWidth < 768 : false);
   const location = useLocation();
-
   // Zustand Store
-  const items = useRFQStore((state) => state.items);
-
+  const items = useRFQStore((state: any) => state.items);
   const { pathname } = location;
 
   // Robust Mobile Check to prevent double rendering
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
     // Note: Initial check already done in useState, but we keep listener for resizes
+    const checkMobile = () => {
+      // Logic for mobile check if needed
+    };
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
@@ -192,7 +186,7 @@ export function Layout({ children }: LayoutProps) {
     for (let i = 0; i < pathParts.length; i++) {
       const part = pathParts[i];
       currentPath += `/${part}`;
-      let name = part.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      let name = part.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
 
       // Specific override for product detail page to inject category
       if (pathParts[0] === 'products' && i === 1) {
@@ -262,7 +256,7 @@ export function Layout({ children }: LayoutProps) {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
-        setIsSearchOpen(prev => !prev);
+        setIsSearchOpen((prev: boolean) => !prev);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -277,37 +271,7 @@ export function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
 
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [isMenuOpen]);
 
-  const isHeaderTransparent = isHome && !scrolled && !isMenuOpen;
-
-  const headerBaseClass = "fixed top-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]";
-  const headerBgClass = isMenuOpen
-    ? 'bg-transparent border-transparent py-4'
-    : (isHeaderTransparent
-      ? 'bg-transparent border-transparent py-6 md:py-8'
-      : 'bg-emphz-navy/95 backdrop-blur-xl border-b border-white/10 py-3 md:py-4 shadow-[0_4px_30px_rgba(30,41,59,0.4)]');
-
-  const navLinkClass = isHeaderTransparent
-    ? 'text-white/90 hover:text-white font-medium drop-shadow-sm'
-    : 'text-gray-400 font-medium hover:text-white';
-
-  const activeLinkClass = 'text-emphz-teal font-bold drop-shadow-md';
-
-  const iconColorClass = isHeaderTransparent
-    ? 'text-white hover:text-emphz-teal drop-shadow-sm'
-    : 'text-gray-400 hover:text-emphz-teal';
-
-  const navPillClass = isHeaderTransparent
-    ? 'bg-black/10 border border-white/10 backdrop-blur-[2px]'
-    : 'bg-transparent border-transparent';
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-emphz-navy font-sans selection:bg-emphz-teal selection:text-white relative">
@@ -452,7 +416,7 @@ export function Layout({ children }: LayoutProps) {
           <div className="w-full bg-industrial-50/80 backdrop-blur-sm border-b border-industrial-100 sticky top-16 z-30">
             <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-6 md:px-8 py-3">
               <ol className="flex items-center space-x-2 text-[11px] text-industrial-400 font-medium uppercase tracking-widest">
-                {breadcrumbs.map((crumb, index) => (
+                {breadcrumbs.map((crumb: any, index: number) => (
                   <li key={`${crumb.path}-${crumb.name}`} className="flex items-center">
                     {index > 0 && <ChevronRight size={10} className="mx-2 opacity-50" />}
                     {crumb.isCurrent ? (
