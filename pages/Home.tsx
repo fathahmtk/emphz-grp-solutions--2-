@@ -154,6 +154,56 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Strategic Roadmap */}
+      <section className="py-24 bg-industrial-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="mb-16 text-center">
+            <h2 className="text-[10px] font-bold text-accent-blue uppercase tracking-[0.3em] mb-4">Implementation Strategy</h2>
+            <h3 className="text-3xl md:text-5xl font-medium mb-6">Execution Roadmap</h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                phase: 'SHORT-TERM',
+                title: 'High-Demand Pilots',
+                concepts: ['CampMart™', 'FlexServe™'],
+                desc: 'Prioritizing workforce housing and municipal essential services for immediate deployment and ROI.'
+              },
+              {
+                phase: 'MID-TERM',
+                title: 'Market Expansion',
+                concepts: ['StreetSmart™', 'TradePod™', 'StoreBox™'],
+                desc: 'Scaling standardized retail units across heritage zones, exhibitions, and dense urban neighborhoods.'
+              },
+              {
+                phase: 'LONG-TERM',
+                title: 'Ecosystem Flagship',
+                concepts: ['UrbanCell™', 'SmartPod Grid™'],
+                desc: 'Transitioning to a fully integrated, IoT-managed nationwide infrastructure network.'
+              }
+            ].map((step, idx) => (
+              <div key={idx} className="relative p-8 border border-white/10 bg-white/5 backdrop-blur-sm group hover:border-accent-blue/50 transition-colors">
+                <div className="text-accent-blue text-[9px] font-bold uppercase tracking-widest mb-6 block ring-1 ring-accent-blue/20 w-fit px-2 py-1">
+                  {step.phase}
+                </div>
+                <h4 className="text-xl font-medium mb-4">{step.title}</h4>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {step.concepts.map(c => (
+                    <span key={c} className="text-[10px] bg-white/10 px-2 py-0.5 rounded-full text-industrial-300">
+                      {c}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-sm text-industrial-400 leading-relaxed font-light group-hover:text-white transition-colors">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Products – Content First */}
       <section className="py-24 md:py-32 bg-industrial-50">

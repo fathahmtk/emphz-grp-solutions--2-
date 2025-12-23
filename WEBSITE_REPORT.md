@@ -52,24 +52,29 @@ The website consists of 14 key pages organized into a clear B2B funnel.
 
 ## 4. Content Inventory
 
-### Products (15 Total)
-The website features detailed technical documentation for 15 core product lines:
+### Products (20+ Core Product Lines)
+The website features technical documentation for over 20 core product lines, led by the Modular Infrastructure Matrix:
 1.  **SmartPod Grid™ System**: IoT-managed networked ecosystem.
 2.  **UrbanCell™ RETAIL**: Modular smart city retail units.
 3.  **UrbanCell™ SERVICES**: Automated service & banking pods.
 4.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
 5.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
-4.  **Executive Portable Toilet**: High-end temporary sanitation.
-5.  **Metro Bus Shelter**: Vandal-resistant urban infrastructure.
-6.  **Modular Utility Kiosk M2**: Thermally insulated electrical housing.
-7.  **Security Guard Villa**: All-weather industrial checkpoint.
-8.  **RedGuard Fire Hose Cabinet**: UV-stable safety equipment housing.
-9.  **Modular GRP Panel Tank**: Potable water storage system.
-10. **Instrument Sunshade S2**: Hazardous area instrument protection.
-11. **EV Battery Pack Shield**: Lightweight automotive safety component.
-12. **E-Series Coastal Enclosure**: IP66/IP67 rated coastal protection.
-13. **Heavy Duty Cable Tray**: Pultruded corrosion-proof system.
-14. **Anti-Slip Walkway Grating**: Industrial safety flooring.
+6.  **FlexServe™ Hybrid Pod**: Multi-functional public service nodes.
+7.  **CampMart™ Retail**: Workforce accommodation infrastructure.
+8.  **StoreBox™ Inventory Pod**: Integrated retail storage solutions.
+9.  **StreetSmart™ Municipality Unit**: Regulated street vending units.
+10. **TradePod™ Showroom**: Premium exhibition & showroom pods.
+11. **Eco-San GRP Toilet Cabin**: Vandal-proof public sanitation.
+12. **Metro Bus Shelter**: High-durability urban transit infrastructure.
+13. **Industrial Junction Boxes**: Corrosion-free electrical protection.
+14. **Security Guard Villa**: All-weather industrial checkpoints.
+15. **RedGuard Fire Hose Cabinet**: UV-stable safety equipment housing.
+16. **Modular GRP Panel Tank**: Potable water storage systems.
+17. **Instrument Sunshades**: Hazardous area equipment protection.
+18. **EV Battery Pack Shields**: Lightweight automotive safety.
+19. **Coastal Enclosures**: IP66/IP67 rated harsh environment housing.
+20. **Heavy Duty Cable Trays**: Pultruded GRP distribution systems.
+21. **Anti-Slip Walkways**: Safety-critical industrial flooring.
 
 ### Case Studies
 - **Coastal Resort Upgrade (Kerala)**: Corrosion solution for hotel infrastructure.

@@ -25,10 +25,12 @@ export default {
           900: '#0F172A', // Deepest Navy
         },
         accent: {
-          blue: '#2563EB', // More vibrant electric blue (Modern Tech)
-          'blue-hover': '#1D4ED8',
-          teal: '#0D9488', // Secondary Safety/Eco color
-        }
+          blue: '#1A5F7A', // Brand Petrol Teal (from logo bolt)
+          'blue-hover': '#164E63', // Deeper shade for hover
+          teal: '#0D9488', // Secondary Eco color
+        },
+        'emphz-teal': '#1A5F7A',
+        'emphz-navy': '#0F172A',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

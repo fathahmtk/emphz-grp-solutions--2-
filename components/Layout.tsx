@@ -335,12 +335,11 @@ export function Layout({ children }: LayoutProps) {
           `}>
 
           <Link to="/" className="flex items-center group" onClick={() => setIsMenuOpen(false)}>
-            <div className={`w-8 h-8 rounded-lg bg-gradient-to-br from-industrial-900 to-industrial-800 flex items-center justify-center mr-3 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-              <span className="text-white font-bold font-display text-sm tracking-tighter">EM</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold font-display text-lg tracking-tight text-industrial-900 group-hover:text-accent-blue transition-colors">EMPHZ</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="EMPHZ Logo"
+              className={`h-8 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -460,9 +459,13 @@ export function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
             <div className="col-span-1 md:col-span-2">
               <div className="mb-8">
-                <Link to="/" className="flex flex-col">
-                  <span className="font-bold text-2xl text-white tracking-tight">EMPHZ</span>
-                  <span className="text-xs uppercase tracking-[0.3em] text-industrial-500">Corporate HQ</span>
+                <Link to="/" className="flex flex-col group">
+                  <img
+                    src="/logo.png"
+                    alt="EMPHZ Logo"
+                    className="h-10 w-auto brightness-0 invert mb-2 opacity-80 group-hover:opacity-100 transition-all duration-300"
+                  />
+                  <span className="text-[10px] uppercase tracking-[0.4em] text-industrial-600 font-bold">Advanced GRP Engineering</span>
                 </Link>
               </div>
               <p className="text-industrial-400 text-sm leading-relaxed max-w-sm mb-8">

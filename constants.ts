@@ -203,6 +203,116 @@ export const MOCK_PRODUCTS: Product[] = [
     features: ['Algae-free interior', 'High R-Value insulation', 'Integrated defrost', 'Shock-resistant walls'],
     downloads: [{ title: 'UrbanCell Cold Data', type: 'PDF' }]
   },
+  {
+    id: 'emp-uc-flexserve',
+    name: 'FlexServe™ Hybrid Pod',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Hybrid retail and citizen service node for high-footfall zones.',
+    fullDescription: 'EMPHZ FlexServe™ is a multi-functional modular pod designed to house both essential retail and digital citizen services. It features a split layout for commercial activity and public service kiosks, maximizing utility in limited urban footprints.',
+    whyItExists: 'To diversify revenue streams and public utility within a single modular footprint.',
+    typicalUsage: 'City centers, public plazas, and multi-modal transit stations.',
+    recommendedWhen: [
+      'High footfall locations needing diverse services',
+      'Municipal-private partnerships (PPP)',
+      'Maximizing ROI on small urban land parcels'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    specs: [
+      { label: 'Application', value: 'Retail & Public Services' },
+      { label: 'Layout', value: 'Dual-Zone Configuration' },
+      { label: 'Tech Stack', value: 'IoT + Service Terminals' }
+    ],
+    features: ['Split-use interior', 'Vandal-proof service screen', 'Automatic vending integration', 'Public Wi-Fi hub'],
+    downloads: [{ title: 'FlexServe Product Guide', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-campmart',
+    name: 'CampMart™ Retail',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Purpose-built retail for workforce cities and labor camps.',
+    fullDescription: 'CampMart™ is a standardized retail infrastructure designed for institutional deployment in massive labor accommodations. It focuses on high-volume essential goods with a layout optimized for efficient throughput and inventory management.',
+    whyItExists: 'Traditional camp canteens are inefficient; CampMart™ provides a dignified, modern retail experience for workforce populations.',
+    typicalUsage: 'Workforce accommodations, labor camps, and remote industrial project sites.',
+    recommendedWhen: [
+      'Managing 1000+ residents',
+      'Institutional bulk procurement needs',
+      'Predictable demand modeling required'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'Workforce Retail' },
+      { label: 'Durability', value: 'Extreme Industrial Duty' },
+      { label: 'Inventory', value: 'Integrated POS + Live ERP' }
+    ],
+    features: ['High-traffic flooring', 'Reinforced shelving', 'Secure cash/point systems', 'Modular expansion'],
+    downloads: [{ title: 'CampMart Implementation Guide', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-storebox',
+    name: 'StoreBox™ Inventory Pod',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Retail frontage with integrated secure storage or cold storage.',
+    fullDescription: 'StoreBox™ solves the critical issue of space management for small retailers by combining a display-front shop with a high-capacity, thermally controlled rear storage zone. It minimizes stock-outs and theft while optimizing sales floor space.',
+    whyItExists: 'To solve inventory, theft, and space constraints for retailers in dense urban areas.',
+    typicalUsage: 'Neighborhood retail, pharmacies, and high-value electronics boutiques.',
+    recommendedWhen: [
+      'Restricted shop floor area',
+      'Temperature-sensitive inventory',
+      'High-shrinkage/theft environments'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Frontage', value: 'Full Glazing / Display' },
+      { label: 'Storage', value: 'Insulated 10m³ Rear Zone' },
+      { label: 'Control', value: 'Biometric Access' }
+    ],
+    features: ['Smart inventory racks', 'Rear loading access', 'Integrated CCTV', 'Thermal zoning'],
+    downloads: [{ title: 'StoreBox Technical Brief', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-streetsmart',
+    name: 'StreetSmart™ Municipality Unit',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Standardized municipal street retail for regulated vending.',
+    fullDescription: 'StreetSmart™ is a regulated modular kiosk designed for municipality-led urban renewal. It provides a standardized, clean, and taxable retail platform for street vendors, ensuring urban aesthetic consistency and public safety.',
+    whyItExists: 'To replace disorganized street vending with a premium, manageable urban infrastructure.',
+    typicalUsage: 'Public sidewalks, heritage zones, and municipal market areas.',
+    recommendedWhen: [
+      'Smart City urban renewal projects',
+      'Municipality vending regulation',
+      'Tourist-heavy heritage zones'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    specs: [
+      { label: 'Application', value: 'Regulated Street Retail' },
+      { label: 'Certification', value: 'Municipal Standard Approved' },
+      { label: 'Mobility', value: 'Forklift-ready Base' }
+    ],
+    features: ['Self-closing security shutters', 'Standardized power hookup', 'Vandal-resistant GRP', 'Aesthetic customization'],
+    downloads: [{ title: 'StreetSmart Project Catalog', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-tradepod',
+    name: 'TradePod™ Showroom',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Premium modular showroom for brands and exhibitions.',
+    fullDescription: 'TradePod™ is a high-spec modular showcase designed for temporary exhibitions, product launches, or semi-permanent dealership extensions. It offers a premium glass-heavy aesthetic that mirrors high-end corporate interiors.',
+    whyItExists: 'To provide a mobile, high-margin rental platform for brands requiring instant physical presence.',
+    typicalUsage: 'Trade shows, automotive showrooms, and luxury brand launches.',
+    recommendedWhen: [
+      'Product launch campaign',
+      'Exhibition presence',
+      'Semi-permanent dealership extensions'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    specs: [
+      { label: 'Aesthetic', value: 'Premium Glass + GRP Finish' },
+      { label: 'Lighting', value: 'Integrated LED Studio Array' },
+      { label: 'HVAC', value: 'Dual-unit Climate Control' }
+    ],
+    features: ['Panoramic glass walls', 'Designer interior finish', 'Acoustic treatment', 'Fast 4-hour setup'],
+    downloads: [{ title: 'TradePod Design Options', type: 'PDF' }]
+  },
 
   // 2. GRP Electrical Enclosures
   {

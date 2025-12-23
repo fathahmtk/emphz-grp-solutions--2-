@@ -75,7 +75,7 @@ This document provides a comprehensive structural and textual guide for the EMPH
     *   **Rail & Metro**: Trackside signaling protection.
     *   **Telecom / 5G**: Radio-transparent antenna shrouds.
     *   **Water Treatment**: Non-porous tanks and walkways.
-    *   **Smart City**: **SmartPod Grid™** (IoT System) & **UrbanCell™** modules.
+    *   **Smart City**: **SmartPod Grid™**, **UrbanCell™**, **FlexServe™**, **StreetSmart™**, and **TradePod™**.
     *   **Oil & Gas**: Anti-static ATEX-certified junction boxes.
 
 ---
