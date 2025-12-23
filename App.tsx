@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 // RFQProvider removed - State is now handled by global Zustand store
@@ -31,28 +32,30 @@ const PageLoader: React.FC = () => (
 
 const App: React.FC = () => {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <Layout>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Catalog />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/technology" element={<MaterialScience />} />
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/technical" element={<TechnicalCenter />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/rfq" element={<RFQ />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </Layout>
-    </Router>
+    <HelmetProvider>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <Layout>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Catalog />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/technology" element={<MaterialScience />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/technical" element={<TechnicalCenter />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/rfq" element={<RFQ />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      </Router>
+    </HelmetProvider>
   );
 };
 

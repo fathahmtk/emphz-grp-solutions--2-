@@ -11,10 +11,15 @@ import {
   FileText
 } from 'lucide-react';
 import { MOCK_PRODUCTS } from '../constants';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col bg-industrial-50 text-industrial-900">
+      <SEO
+        title="Home"
+        description="EMPHZ is a leading manufacturer of GRP/FRP enclosures, portable toilets, security cabins, and composite infrastructure solutions in India and the UAE."
+      />
       {/* Hero Section – Engineering Precision */}
       <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-16 items-center">
