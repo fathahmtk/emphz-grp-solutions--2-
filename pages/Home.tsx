@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             <p className="text-lg md:text-xl text-industrial-600 max-w-lg leading-relaxed mb-10 font-light">
               Specialized GRP manufacturer delivering high-durability enclosures, cabins, and modular structures designed for aggressive industrial environments.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/products" className="btn-industrial shadow-lg shadow-accent-blue/20">
                 View Solutions
               </Link>
@@ -61,58 +61,162 @@ const Home: React.FC = () => {
               />
             </div>
             <div className="absolute -bottom-8 -left-8 glass-panel p-8 max-w-[280px] hidden md:block rounded-xl animate-float">
-// ...
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {MOCK_PRODUCTS.slice(0, 3).map((product, i) => (
-                  <TiltCard key={product.id} className="h-full">
-                    <Link to={`/products/${product.id}`} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
-                      <div className="aspect-video overflow-hidden bg-industrial-100 relative">
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
-                        <img
-                          src={product.imageUrl}
-                          alt={product.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                          loading="lazy"
-                          width="400"
-                          height="300"
-                        />
-                      </div>
-// ...
-                      <div className="relative animate-in">
-                        <img
-                          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
-                          alt="Mysuru Plant"
-                          className="rounded-sm shadow-subtle grayscale-[10%]"
-                          loading="lazy"
-                          width="600"
-                          height="400"
-                        />
-                        <div className="absolute -top-10 -right-10 w-40 h-40 border-t border-r border-industrial-200 hidden lg:block" />
-                        <div className="absolute -bottom-10 -left-10 w-40 h-40 border-b border-l border-industrial-200 hidden lg:block" />
-                      </div>
-                    </div>
-                  </div>
+              <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 flex items-center gap-2">
+                <Shield size={12} /> Material Science
+              </p>
+              <p className="text-sm font-medium text-industrial-900 leading-snug">Advanced FRP composites engineered for 50+ year service life.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-              {/* Quote Section */}
-              <section className="py-24 md:py-32 bg-industrial-900 relative overflow-hidden">
-                <div className="max-w-4xl mx-auto px-6 text-center relative z-10 animate-up">
-                  <h2 className="text-3xl md:text-5xl font-medium text-white mb-8 tracking-tight">Upgrade Your Infrastructure Durability</h2>
-                  <p className="text-industrial-400 text-lg mb-12 max-w-2xl mx-auto">
-                    Contact our engineering team to discuss GRP replacements for your existing steel or concrete assets.
-                  </p>
-                  <div className="flex flex-col sm:flex-row justify-center gap-6">
-                    <Link to="/rfq" className="bg-white text-industrial-900 px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-100 transition-colors">
-                      Request Technical Quote
-                    </Link>
-                    <Link to="/technical" className="border border-industrial-700 text-white px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-800 transition-colors flex items-center justify-center gap-2">
-                      <FileText size={16} /> Datasheets
-                    </Link>
-                  </div>
-                </div>
-              </section>
+      {/* Engineering Advantages */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid lg:grid-cols-3 gap-16">
+            <div className="animate-up">
+              <div className="w-12 h-12 rounded-sm bg-industrial-50 flex items-center justify-center mb-8 border border-industrial-100">
+                <Shield size={24} className="text-accent-blue" />
+              </div>
+              <h3 className="text-xl font-medium mb-4">Chemical Resilience</h3>
+              <p className="text-industrial-600 text-sm leading-relaxed">
+                Inherently resistant to acid rain, coastal salinity, and industrial effluents. Zero risk of oxidation or structural leaching.
+              </p>
             </div>
-            );
+            <div className="animate-up" style={{ animationDelay: '0.1s' }}>
+              <div className="w-12 h-12 rounded-sm bg-industrial-50 flex items-center justify-center mb-8 border border-industrial-100">
+                <Zap size={24} className="text-accent-blue" />
+              </div>
+              <h3 className="text-xl font-medium mb-4">Dielectric Safety</h3>
+              <p className="text-industrial-600 text-sm leading-relaxed">
+                Non-conductive properties eliminate the need for grounding in electrical installations, ensuring total operator safety.
+              </p>
+            </div>
+            <div className="animate-up" style={{ animationDelay: '0.2s' }}>
+              <div className="w-12 h-12 rounded-sm bg-industrial-50 flex items-center justify-center mb-8 border border-industrial-100">
+                <Award size={24} className="text-accent-blue" />
+              </div>
+              <h3 className="text-xl font-medium mb-4">Zero Maintenance</h3>
+              <p className="text-industrial-600 text-sm leading-relaxed">
+                UV-stabilized gel coats provide permanent color and finish. No painting, scraping, or rust treatment required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products – Content First */}
+      <section className="py-24 md:py-32 bg-industrial-50">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="animate-up">
+              <h2 className="text-[10px] font-bold text-industrial-400 uppercase tracking-[0.3em] mb-4">Product Matrix</h2>
+              <h3 className="text-3xl md:text-4xl font-medium text-industrial-900">Standardized Industrial Solutions</h3>
+            </div>
+            <Link to="/products" className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-industrial-900 hover:text-accent-blue transition-colors group">
+              Full Catalog <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {MOCK_PRODUCTS.slice(0, 3).map((product, i) => (
+              <TiltCard key={product.id} className="h-full">
+                <Link to={`/products/${product.id}`} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                  <div className="aspect-video overflow-hidden bg-industrial-100 relative">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      width="400"
+                      height="300"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-grow relative bg-white/50 backdrop-blur-sm">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-[9px] font-bold text-accent-blue uppercase tracking-widest border-b border-accent-blue/30 pb-0.5">
+                        {product.category}
+                      </span>
+                    </div>
+                    <h4 className="text-xl font-medium text-industrial-900 mb-3 group-hover:text-accent-blue transition-colors">{product.name}</h4>
+                    <p className="text-sm text-industrial-500 leading-relaxed mb-8 flex-grow">
+                      {product.shortDescription}
+                    </p>
+                    <div className="flex items-center justify-between pt-6 border-t border-industrial-100">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical Brief</span>
+                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </Link>
+              </TiltCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Operations */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="animate-up">
+              <h2 className="text-[10px] font-bold text-industrial-400 uppercase tracking-[0.3em] mb-6">Operations</h2>
+              <h3 className="text-4xl font-medium mb-8 leading-tight">Advanced GRP Manufacturing in Mysuru</h3>
+              <p className="text-lg text-industrial-600 mb-10 leading-relaxed">
+                Production at our Mysuru facility adheres to strict engineering tolerances and material consistency. Managed by our core engineering team in Kerala, we ensure every unit meets industrial protection standards.
+              </p>
+              <div className="space-y-6 mb-12">
+                {[
+                  'ISO 9001:2015 Quality Management Systems',
+                  'IP 66/67 Ingress Protection Testing',
+                  'UL 94 V-0 Self-Extinguishing Material Options',
+                  'ASTM Standard UV Resistance Testing'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <CheckCircle2 size={18} className="text-accent-blue flex-shrink-0" />
+                    <span className="text-sm font-medium text-industrial-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Link to="/contact" className="btn-industrial px-10 py-4 text-sm uppercase tracking-wider font-bold">
+                Inquire for Project
+              </Link>
+            </div>
+            <div className="relative animate-in">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+                alt="Mysuru Plant"
+                className="rounded-sm shadow-subtle grayscale-[10%]"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <div className="absolute -top-10 -right-10 w-40 h-40 border-t border-r border-industrial-200 hidden lg:block" />
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 border-b border-l border-industrial-200 hidden lg:block" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Section */}
+      <section className="py-24 md:py-32 bg-industrial-900 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10 animate-up">
+          <h2 className="text-3xl md:text-5xl font-medium text-white mb-8 tracking-tight">Upgrade Your Infrastructure Durability</h2>
+          <p className="text-industrial-400 text-lg mb-12 max-w-2xl mx-auto">
+            Contact our engineering team to discuss GRP replacements for your existing steel or concrete assets.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Link to="/rfq" className="bg-white text-industrial-900 px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-100 transition-colors">
+              Request Technical Quote
+            </Link>
+            <Link to="/technical" className="border border-industrial-700 text-white px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-800 transition-colors flex items-center justify-center gap-2">
+              <FileText size={16} /> Datasheets
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
-            export default Home;
+export default Home;

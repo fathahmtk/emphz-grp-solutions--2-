@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
 
                             <div className="space-y-6">
                                 {/* Info Cards */}
-                                <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="flex items-start group p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
+                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start group p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
                                     <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform flex-shrink-0 shadow-lg">
                                         <MapPin size={20} className="text-blue-500" />
                                     </div>
