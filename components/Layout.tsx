@@ -50,10 +50,6 @@ const SEO_DATA = {
       title: 'GRP Electrical Enclosures | HT/LT, Solar, Telecom & Metering Boxes',
       description: 'Industrial-grade GRP/FRP enclosures designed for weatherproof performance in power, utility, solar, telecom, and infrastructure projects.',
     },
-    [ProductCategory.JUNCTION_BOX]: {
-      title: 'GRP Electrical Enclosures | HT/LT, Solar, Telecom & Metering Boxes',
-      description: 'Industrial-grade GRP/FRP enclosures designed for weatherproof performance in power, utility, solar, telecom, and infrastructure projects.',
-    },
     [ProductCategory.CABIN]: {
       title: 'GRP Security Cabins | FRP Guard Rooms & Portable Booths',
       description: 'Anti-vandal GRP security cabins for malls, construction sites, factories, and gated communities.',
@@ -62,14 +58,14 @@ const SEO_DATA = {
       title: 'GRP Food Kiosks | Portable Food Cabins & Retail Units',
       description: 'Durable, hygienic GRP kiosks ideal for F&B outlets, retail pop-ups, and outdoor commercial use.',
     },
-    [ProductCategory.SMART_CABIN]: {
-      title: 'Portable Sleeping Pods, Resort Pods & Villa Pods | GRP Luxury Cabins',
-      description: 'Premium GRP portable pods crafted for resorts, eco-parks, tourism operators, and private properties.',
+    [ProductCategory.POD_SHELTER]: {
+      title: 'Modular Pods & Shelters | GRP Sleeping Pods & Bus Shelters',
+      description: 'Maintenance-free GRP pods and shelters for tourism, urban mobility, and remote site offices.',
     },
-    [ProductCategory.BUS_SHELTER]: {
-      title: 'GRP Bus Shelters | FRP Bus Stop Manufacturer',
-      description: 'Maintenance-free GRP bus shelters for government, municipal and urban mobility projects.',
-    },
+    [ProductCategory.CUSTOM]: {
+      title: 'Custom GRP Fabrication | Bespoke FRP Engineering',
+      description: 'Custom-designed GRP solutions for specialized industrial needs including radomes, tanks, and structural profiles.',
+    }
   }
 };
 
@@ -469,8 +465,8 @@ export function Layout({ children }: LayoutProps) {
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block text-4xl sm:text-5xl font-black tracking-tight font-display group transition-colors duration-300 ${isActive(link.path)
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-cyan-200 drop-shadow-[0_2px_4px_rgba(0,173,181,0.4)]'
-                      : 'text-gray-200 hover:text-white'
+                    ? 'text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-cyan-200 drop-shadow-[0_2px_4px_rgba(0,173,181,0.4)]'
+                    : 'text-gray-200 hover:text-white'
                     }`}
                 >
                   <span className="inline-block group-active:scale-95 transition-transform origin-left">{link.label}</span>
@@ -577,21 +573,23 @@ export function Layout({ children }: LayoutProps) {
                   <Logo className="h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity" variant="light" />
                 </Link>
               </div>
-              <h3 className="text-2xl md:text-4xl font-display font-bold mb-6 leading-tight max-w-lg bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                Replace steel. Ignore corrosion. Build for the future.
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-2 leading-tight max-w-lg text-white uppercase tracking-wider">
+                GRP / FRP Product Manufacturer
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-md font-sans border-l-2 border-emphz-teal pl-4">
-                India's premier GRP infrastructure manufacturer. Delivering precision-molded composites from Mysore to the harshest coastal environments.
-              </p>
+              <div className="flex flex-col gap-1 mb-8">
+                <p className="text-emphz-teal text-xs md:text-sm font-bold tracking-[0.2em] uppercase font-display">Kerala Managed | Mysuru Manufactured</p>
+                <p className="text-gray-400 text-sm font-sans border-l-2 border-white/10 pl-4 mt-2">Serving Infrastructure Projects Across India</p>
+              </div>
             </div>
 
             <div>
               <h4 className="text-xs font-bold text-emphz-teal uppercase tracking-[0.2em] mb-6 font-display">Products</h4>
               <ul className="space-y-4 text-sm font-medium text-gray-400">
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal transform group-hover:translate-x-1 transition-transform" /> Enclosures</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal transform group-hover:translate-x-1 transition-transform" /> Modular Kiosks</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal transform group-hover:translate-x-1 transition-transform" /> Security Cabins</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal transform group-hover:translate-x-1 transition-transform" /> Resort Villas</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Enclosures</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Cabins & Guard Rooms</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Modular Kiosks</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Portable Toilets</Link></li>
+                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Pods & Shelters</Link></li>
               </ul>
             </div>
 
@@ -613,7 +611,7 @@ export function Layout({ children }: LayoutProps) {
           </div>
 
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-6">
-            <p>&copy; 2025 Emphz Engineering Pvt Ltd. Precision Molded in India.</p>
+            <p>&copy; 2025 Emphz Engineering Pvt Ltd. Factory Hub: Mysuru, Karnataka.</p>
             <div className="flex space-x-8 font-bold uppercase tracking-widest text-[10px]">
               <Link to="#" className="hover:text-emphz-teal transition-colors">Privacy Policy</Link>
               <Link to="#" className="hover:text-emphz-teal transition-colors">Terms of Use</Link>

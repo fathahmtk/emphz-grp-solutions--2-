@@ -1,17 +1,10 @@
 export enum ProductCategory {
-  AUTOMOBILE = 'Automobile Components',
-  BUS_SHELTER = 'Bus Shelters',
+  ENCLOSURE = 'GRP Electrical Enclosures',
+  PORTABLE_TOILET = 'Portable Toilet Units',
   CABIN = 'Security Cabins',
-  CUSTOM = 'Custom Structures',
-  ENCLOSURE = 'Electrical Enclosures',
-  FIRE_SAFETY = 'Fire Safety Equipment',
-  INDUSTRIAL_PROTECTION = 'Industrial Protection',
-  JUNCTION_BOX = 'Junction Boxes',
   KIOSK = 'Modular Kiosks',
-  PORTABLE_TOILET = 'Portable Toilets',
-  SMART_CABIN = 'Smart Living Pods',
-  STRUCTURAL = 'Structural Profiles',
-  WATER_STORAGE = 'Water Storage Solutions'
+  POD_SHELTER = 'Modular Pods & Shelters',
+  CUSTOM = 'Custom GRP Fabrication'
 }
 
 export interface ProductSpec {
@@ -32,6 +25,10 @@ export interface Product {
   category: ProductCategory;
   shortDescription: string;
   fullDescription: string;
+  whyItExists?: string;
+  typicalUsage?: string;
+  recommendedWhen?: string[];
+  notRecommendedWhen?: string[];
   specs: ProductSpec[];
   features: string[];
   imageUrl: string;

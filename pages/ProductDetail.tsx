@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Check, FileText, Plus, Minus, ArrowLeft, Package, Settings, Download, Box, Image as ImageIcon, Loader2, Share2, CheckCircle, ChevronLeft, ChevronRight, Maximize, X, ZoomIn, ZoomOut, RotateCcw, Linkedin, Twitter, Mail, Link as LinkIcon, Copy, MessageCircle, Flame, Layers, ShieldCheck, Award } from 'lucide-react';
+import { Check, FileText, Plus, Minus, ArrowLeft, Package, Settings, Download, Box, Image as ImageIcon, Loader2, Share2, CheckCircle, ChevronLeft, ChevronRight, Maximize, X, ZoomIn, ZoomOut, RotateCcw, Linkedin, Twitter, Mail, Link as LinkIcon, Copy, MessageCircle, Flame, Layers, ShieldCheck, Award, Info, AlertTriangle, Lightbulb } from 'lucide-react';
 import { MOCK_PRODUCTS } from '../constants';
 import { useRFQStore } from '../stores/rfqStore';
 import { ProductCategory, ProductConfiguration } from '../types';
@@ -110,19 +110,12 @@ const ShareModal: React.FC<{
 };
 
 const H1_MAP: Record<ProductCategory, string> = {
-  [ProductCategory.PORTABLE_TOILET]: 'GRP/FRP Portable Toilets Built for Heavy-Duty, Long-Term Use',
-  [ProductCategory.ENCLOSURE]: 'High-Performance GRP/FRP Electrical Enclosures for Industrial Operations',
-  [ProductCategory.JUNCTION_BOX]: 'High-Performance GRP/FRP Electrical Enclosures for Industrial Operations',
-  [ProductCategory.SMART_CABIN]: 'Portable Sleeping, Resort & Villa Pods Designed for Premium Living',
-  [ProductCategory.CABIN]: 'GRP Security Cabins & FRP Guard Rooms',
-  [ProductCategory.KIOSK]: 'GRP Food Kiosks & Portable Retail Units',
-  [ProductCategory.BUS_SHELTER]: 'Durable GRP Bus Shelters for Public Infrastructure',
-  [ProductCategory.FIRE_SAFETY]: 'Fire Safety GRP Equipment Cabinets',
-  [ProductCategory.WATER_STORAGE]: 'Modular GRP Water Storage Solutions',
-  [ProductCategory.INDUSTRIAL_PROTECTION]: 'Industrial GRP Protection and Sunshades',
-  [ProductCategory.AUTOMOBILE]: 'Advanced GRP Automobile Components',
-  [ProductCategory.STRUCTURAL]: 'High-Strength GRP Structural Profiles',
-  [ProductCategory.CUSTOM]: 'Custom Engineered GRP Structures',
+  [ProductCategory.PORTABLE_TOILET]: 'GRP Portable Toilets (Factory Built)',
+  [ProductCategory.ENCLOSURE]: 'GRP Electrical Enclosures (IP66 Rated)',
+  [ProductCategory.CABIN]: 'Security Cabins & Guard Rooms',
+  [ProductCategory.KIOSK]: 'Modular Kiosks & Retail Units',
+  [ProductCategory.POD_SHELTER]: 'Modular GRP Pods & Bus Shelters',
+  [ProductCategory.CUSTOM]: 'Custom GRP / FRP Fabrication',
 };
 
 
@@ -202,11 +195,10 @@ const ProductDetail: React.FC = () => {
   const is3DAvailable = useMemo(() => {
     if (!product) return false;
     return [
-      ProductCategory.SMART_CABIN,
+      ProductCategory.POD_SHELTER,
       ProductCategory.ENCLOSURE,
       ProductCategory.KIOSK,
-      ProductCategory.CABIN,
-      ProductCategory.AUTOMOBILE
+      ProductCategory.CABIN
     ].includes(product.category);
   }, [product]);
 
@@ -326,8 +318,7 @@ const ProductDetail: React.FC = () => {
     if (product.category === ProductCategory.ENCLOSURE) return 'ENCLOSURE';
     if (product.category === ProductCategory.KIOSK) return 'KIOSK';
     if (product.category === ProductCategory.CABIN) return 'CABIN';
-    if (product.category === ProductCategory.SMART_CABIN) return 'SMART_CABIN';
-    if (product.category === ProductCategory.AUTOMOBILE) return 'AUTOMOBILE';
+    if (product.category === ProductCategory.POD_SHELTER) return 'SMART_CABIN';
     return 'DEFAULT';
   };
 
@@ -551,6 +542,58 @@ const ProductDetail: React.FC = () => {
                         ))}
                       </div>
                     </div>
+
+                    {product.whyItExists && (
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-2xl my-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Lightbulb className="text-blue-600" size={20} />
+                          <h4 className="font-bold text-blue-900 font-display uppercase tracking-wider text-xs">Operational Context</h4>
+                        </div>
+                        <p className="text-blue-800 text-sm italic font-medium">"{product.whyItExists}"</p>
+                      </div>
+                    )}
+
+                    {product.typicalUsage && (
+                      <div className="my-8">
+                        <h3 className="text-lg font-bold text-emphz-navy mb-4 font-display">Typical Site Usage</h3>
+                        <p className="text-slate-600 border-l-2 border-gray-200 pl-4 py-1 italic">{product.typicalUsage}</p>
+                      </div>
+                    )}
+
+                    {(product.recommendedWhen || product.notRecommendedWhen) && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                        {product.recommendedWhen && (
+                          <div className="bg-green-50/50 border border-green-100 p-6 rounded-2xl">
+                            <h4 className="font-bold text-green-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider font-display">
+                              <CheckCircle size={18} className="text-green-600" /> Recommended When
+                            </h4>
+                            <ul className="space-y-3">
+                              {product.recommendedWhen.map((item, idx) => (
+                                <li key={idx} className="flex gap-2 text-xs text-green-800 font-medium">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-green-400 mt-1.5 shrink-0" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {product.notRecommendedWhen && (
+                          <div className="bg-red-50/50 border border-red-100 p-6 rounded-2xl">
+                            <h4 className="font-bold text-red-900 mb-4 flex items-center gap-2 text-sm uppercase tracking-wider font-display">
+                              <AlertTriangle size={18} className="text-red-600" /> Not Recommended When
+                            </h4>
+                            <ul className="space-y-3">
+                              {product.notRecommendedWhen.map((item, idx) => (
+                                <li key={idx} className="flex gap-2 text-xs text-red-800 font-medium">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-red-400 mt-1.5 shrink-0" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
 
                     {product.accessories && (
                       <div className="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden">

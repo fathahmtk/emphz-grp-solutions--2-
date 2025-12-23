@@ -13,412 +13,239 @@ export const NAV_LINKS = [
 
 export const WHATSAPP_LINK = "https://wa.me/919037874080";
 
+export const INDUSTRIES = [
+  {
+    id: 'elec-dist',
+    title: 'Electrical & Power Distribution',
+    category: 'Energy',
+    description: 'Housing for panels, junction boxes, and meters in distribution networks.',
+    imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'telecom',
+    title: 'Telecom & Network Infrastructure',
+    category: 'Telecom',
+    description: 'Enclosures and shelters for 5G, fiber optic, and network hardware.',
+    imageUrl: 'https://images.unsplash.com/photo-1544669146-6dec42bc7438?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'smart-city',
+    title: 'Infrastructure & Smart Cities',
+    category: 'Public',
+    description: 'Kiosks, shelters, and utility boxes for urban infrastructure projects.',
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'water-waste',
+    title: 'Water & Wastewater Facilities',
+    category: 'Utility',
+    description: 'Corrosion-resistant covers and tanks for treatment plants.',
+    imageUrl: 'https://images.unsplash.com/photo-1523365063870-827e85c138f2?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'industrial',
+    title: 'Industrial Plants & Factories',
+    category: 'Industrial',
+    description: 'Custom GRP parts and enclosures for chemical and manufacturing units.',
+    imageUrl: 'https://images.unsplash.com/photo-1516937941348-c09e554b96d8?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'solar-renew',
+    title: 'Solar and Renewable Energy',
+    category: 'Renewables',
+    description: 'Weatherproof boxes for solar combiners and inverters in remote sites.',
+    imageUrl: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80'
+  }
+];
+
 export const MOCK_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'grp-future-of-infrastructure',
-    title: 'Why GRP Is the Future of Portable Infrastructure',
+    title: 'Why GRP is Used in Outdoor Infrastructure',
     category: 'High-Intent',
     date: '2024-08-15',
     author: 'Emphz Engineering Team',
-    summary: 'Explore the fundamental advantages of Glass Reinforced Plastic (GRP) over traditional materials like steel and concrete, especially in harsh environments.',
+    summary: 'A look at why GRP is often preferred over steel for enclosures and cabins in coastal or industrial sites.',
     imageUrl: 'https://images.unsplash.com/photo-1581092921462-6870002878b6?auto=format&fit=crop&w=800&q=80',
-    content: `## Executive Summary\n\nThe global infrastructure materials market is undergoing a fundamental transformation. Glass Reinforced Plastic (GRP) composites are rapidly displacing traditional materials in applications where corrosion, weight, and lifecycle costs are critical factors. This article examines the technical and economic drivers behind this shift, supported by real-world performance data and total cost of ownership analysis.\n\n**Key Takeaways:**\n- GRP delivers 25+ year maintenance-free service life in coastal and chemical environments where steel fails within 3-5 years\n- 40% weight reduction versus steel enables faster installation and reduced structural requirements\n- Total cost of ownership savings of 60-300% over 20-year lifecycle\n- Zero corrosion eliminates the single largest failure mode in traditional infrastructure\n\n---\n\n## The Hidden Cost of Corrosion\n\nCorrosion is not merely an aesthetic problem—it represents the largest single economic burden on industrial infrastructure worldwide. According to NACE International's landmark study, the global cost of corrosion exceeds $2.5 trillion annually, representing approximately 3.4% of global GDP. In India alone, corrosion-related losses are estimated at ₹2.4 lakh crores per year.\n\nFor coastal installations, the problem is particularly acute. Airborne salt particles in concentrations exceeding 500 mg/m²/day create an aggressive environment where mild steel structures show visible rust within 6 months and require complete replacement within 5-7 years. Even stainless steel 316—the premium corrosion-resistant alloy—suffers from pitting corrosion and crevice corrosion in high-chloride environments, necessitating expensive inspection and maintenance programs.\n\n### The Corrosion Cycle: A Vicious Economic Trap\n\nTraditional steel infrastructure follows a predictable degradation pattern:\n\n**Year 0-2:** Initial protective coating (paint, galvanizing, or powder coating) provides temporary protection. However, any coating damage from installation, transportation, or minor impacts creates corrosion initiation sites.\n\n**Year 2-5:** Visible rust appears at joints, welds, and fastener locations. Annual painting becomes necessary to slow degradation. Maintenance costs begin accumulating at ₹500-1000 per square meter annually.\n\n**Year 5-10:** Structural integrity begins to degrade. Enclosure seals fail as rust jacking distorts door frames. IP ratings drop from IP66 to IP54 or lower, exposing sensitive equipment to moisture. Emergency repairs and component replacements become frequent.\n\n**Year 10+:** Complete replacement required. The total lifecycle cost now exceeds 300% of the initial installation cost when accounting for maintenance, repairs, downtime, and replacement.\n\n## GRP: Engineered Corrosion Immunity\n\nGlass Reinforced Plastic fundamentally eliminates corrosion through material chemistry. Unlike metals that corrode through electrochemical reactions, GRP composites are chemically inert. The material consists of glass fibers (which are already oxidized silica) embedded in a polymer resin matrix (typically polyester or vinylester). There are no free electrons available for electrochemical corrosion reactions.\n\n### Material Science: Why GRP Doesn't Corrode\n\nThe corrosion resistance of GRP stems from three fundamental properties:\n\n**1. Chemical Inertness:** The cured resin matrix is a thermoset polymer with fully cross-linked molecular structure. It does not react with oxygen, water, chlorides, or most industrial chemicals. Laboratory immersion testing per ASTM C581 demonstrates < 5% strength loss after 1000 hours exposure to concentrated acids, caustics, and salt solutions.\n\n**2. No Galvanic Cells:** Corrosion in metals occurs when dissimilar metals create galvanic cells in the presence of an electrolyte. GRP is non-conductive and cannot form galvanic cells, eliminating this failure mode entirely.\n\n**3. Through-Pigmented Color:** Unlike painted steel where scratches expose bare metal to corrosion, GRP color is integral to the material. Surface scratches do not compromise corrosion resistance or require touch-up painting.\n\n## The Weight Advantage: Logistics and Installation Revolution\n\nGRP's density (1.8-2.0 g/cm³) is approximately 75% lower than steel (7.85 g/cm³). For equivalent strength applications, GRP components weigh 40-60% less than steel equivalents. This weight reduction creates cascading benefits throughout the project lifecycle:\n\n### Transportation Cost Reduction\n\nA standard 20-foot shipping container can accommodate:\n- **Steel enclosures:** 12-15 units (limited by weight, not volume)\n- **GRP enclosures:** 40-50 units (limited by volume, not weight)\n\nThis 3x improvement in shipping density reduces logistics costs by 60-70% for large projects. For remote locations accessible only by helicopter or small boats, the weight reduction often makes GRP the only viable option.\n\n### Installation Speed and Safety\n\nLightweight GRP components enable:\n- **Manual handling:** Two workers can position a GRP enclosure that would require a forklift if made from steel\n- **Reduced crane time:** Installation time drops from 2-3 hours to 30-45 minutes per unit\n- **Lower structural requirements:** Rooftop installations require minimal reinforcement\n- **Improved safety:** Reduced manual handling injuries and crane operation risks\n\n### Real-World Case Study: Coastal Telecom Tower Deployment\n\n**Project:** Installation of outdoor equipment enclosures at 50 coastal telecom towers across Kerala\n\n**Steel Option Analysis:**\n- Material cost: ₹4.5 lakhs per site\n- Transportation: ₹60,000 (requires heavy truck, multiple trips)\n- Installation: ₹1.2 lakhs (crane rental, 6-hour installation)\n- Annual maintenance: ₹40,000 (painting, rust treatment)\n- **10-year total cost: ₹9.8 lakhs per site**\n\n**GRP Solution Actual Results:**\n- Material cost: ₹5.2 lakhs per site (15% premium)\n- Transportation: ₹20,000 (standard truck, single trip)\n- Installation: ₹30,000 (manual installation, 2 hours)\n- Annual maintenance: ₹0 (zero maintenance)\n- **10-year total cost: ₹5.5 lakhs per site**\n\n**Net savings: ₹4.3 lakhs per site (44% reduction)**\n**Project-wide savings: ₹2.15 crores across 50 sites**\n\n## Performance in Extreme Environments\n\nGRP's performance advantages are most pronounced in challenging environments:\n\n### Coastal Installations (High Salinity)\n- **Challenge:** Airborne salt accelerates corrosion 10-20x versus inland locations\n- **GRP Performance:** Zero degradation after 10+ years exposure\n- **Applications:** Telecom towers, solar farms, port infrastructure, beach resorts\n\n### Chemical Plants (Corrosive Atmospheres)\n- **Challenge:** Acid vapors, caustic mist, and solvent exposure attack metal surfaces\n- **GRP Performance:** Vinylester resin systems resist 70% sulfuric acid, 50% caustic soda\n- **Applications:** Control panels, cable trays, walkway grating, instrument enclosures\n\n### Water Treatment (Chlorine and Ozone)\n- **Challenge:** Chlorine gas and ozone are highly oxidizing, causing rapid metal corrosion\n- **GRP Performance:** Complete immunity to oxidizing atmospheres\n- **Applications:** Enclosures, tanks, piping, structural supports\n\n## Economic Analysis: Total Cost of Ownership\n\nWhile GRP often carries a 10-30% price premium versus mild steel, the total cost of ownership over a 20-year lifecycle shows dramatic savings:\n\n### 20-Year TCO Comparison (Per Unit Basis)\n\n**Mild Steel Enclosure:**\n- Initial cost: ₹50,000\n- Painting (every 3 years, 6 cycles): ₹60,000\n- Gasket replacement (every 5 years, 3 cycles): ₹15,000\n- Hinge/latch replacement (year 10): ₹8,000\n- Complete replacement (year 15): ₹50,000\n- **Total: ₹1,83,000**\n\n**Stainless Steel 316 Enclosure:**\n- Initial cost: ₹1,20,000\n- Inspection and cleaning (annual): ₹40,000\n- Gasket replacement (every 7 years, 2 cycles): ₹10,000\n- **Total: ₹1,70,000**\n\n**GRP Enclosure:**\n- Initial cost: ₹60,000\n- Maintenance: ₹0\n- **Total: ₹60,000**\n\n**Savings versus mild steel: 67%**\n**Savings versus stainless steel: 65%**\n\n## Environmental Sustainability\n\nSustainability in infrastructure is not just about recyclability—it's fundamentally about longevity. A GRP product that lasts 40 years eliminates the manufacturing carbon footprint of 8 steel replacements (assuming 5-year steel lifespan in harsh environments).\n\n### Carbon Footprint Analysis\n\n**Manufacturing emissions (per enclosure):**\n- Steel: 180 kg CO₂\n- GRP: 95 kg CO₂\n\n**40-year lifecycle emissions:**\n- Steel: 1,440 kg CO₂ (8 replacements)\n- GRP: 95 kg CO₂ (single installation)\n\n**Net carbon reduction: 93%**\n\n## Actionable Recommendations for Specifiers\n\nFor engineers and project managers evaluating materials for infrastructure projects:\n\n### When to Specify GRP (High Priority):\n1. **Coastal locations** within 5km of shoreline\n2. **Chemical exposure** environments (refineries, treatment plants)\n3. **High humidity** locations (>80% average RH)\n4. **Remote installations** where maintenance access is difficult\n5. **Rooftop installations** where weight is constrained\n6. **Fast-track projects** requiring rapid deployment\n\n### When Steel May Still Be Appropriate:\n1. **Extreme impact** environments (IK15+ required)\n2. **Very high temperature** applications (>120°C continuous)\n3. **EMI shielding** required (though conductive GRP options exist)\n4. **Ultra-low budget** projects where 5-year replacement is acceptable\n\n## Conclusion: The Inevitable Transition\n\nThe transition from steel to GRP in infrastructure applications is not a matter of "if" but "when." As lifecycle cost analysis becomes standard practice and sustainability metrics gain importance, the economic and environmental case for GRP becomes overwhelming.\n\nForward-thinking organizations are already making this transition. The question for your organization is: will you be an early adopter capturing immediate cost savings, or a late adopter forced to transition by competitive pressure?\n\n### Next Steps\n\n1. **Conduct a pilot project:** Replace 5-10 steel enclosures with GRP equivalents and track performance\n2. **Perform TCO analysis:** Calculate actual lifecycle costs for your specific application\n3. **Update specifications:** Revise material specifications to allow GRP options\n4. **Train teams:** Educate installation and maintenance teams on GRP handling\n\n---\n\n*For technical specifications, case studies, and project consultation, contact the EMPHZ Engineering Team.*`
-  },
-  {
-    slug: 'grp-vs-steel-enclosures',
-    title: 'GRP vs. Steel: Which Is Better for Electrical Enclosures?',
-    category: 'High-Intent',
-    date: '2024-08-05',
-    author: 'Technical Department',
-    summary: 'A head-to-head comparison of GRP and steel for protecting sensitive electrical components, focusing on safety, longevity, and total cost of ownership.',
-    imageUrl: 'https://images.unsplash.com/photo-1621947081720-86970823b77a?auto=format&fit=crop&w=800&q=80',
-    content: `When specifying electrical enclosures, engineers have a critical choice to make: GRP or steel? While mild steel and stainless steel have been industry standards, GRP offers a compelling set of advantages that address the core weaknesses of metal.\n\n**Corrosion:** This is GRP's home ground. In saline or chemical-rich atmospheres, a steel enclosure's integrity is compromised from day one. GRP is chemically inert and will not rust, ensuring a perfect seal (IP66/67) for decades.\n\n**Electrical Safety:** Steel is a conductor. A fault within a steel enclosure can energize the body, creating a severe shock hazard. GRP is a natural insulator, eliminating this risk and often simplifying earthing requirements.\n\n**Weight & Installation:** GRP's high strength-to-weight ratio makes it far easier to handle and install. This is a significant advantage for wall-mounted or pole-mounted applications, reducing both labor costs and structural load requirements.\n\nWhile steel may offer higher initial impact resistance (IK rating), modern GRP composites achieve IK10 ratings, making them suitable for all but the most extreme physical abuse scenarios. When considering the total cost of ownership, including maintenance and replacement, GRP emerges as the clear winner for long-term, reliable asset protection.`
-  },
-  {
-    slug: 'portable-toilets-for-construction',
-    title: 'Best Portable Toilet Setup for Construction Sites',
-    category: 'High-Intent',
-    date: '2024-07-28',
-    author: 'Project Solutions Team',
-    summary: "An essential guide for project managers on selecting durable, hygienic, and low-maintenance GRP portable toilets for demanding construction environments.",
-    imageUrl: 'https://images.unsplash.com/photo-1599057571583-696441b8b688?auto=format&fit=crop&w=800&q=80',
-    content: `Construction sites demand robust and reliable facilities. GRP portable toilets are engineered to withstand the rigors of a busy site, offering significant benefits over standard plastic units.\n\n**Durability:** The GRP shell is resistant to impacts, scratches, and UV degradation, preventing the fading and brittleness common in cheaper alternatives. They are built for a long service life across multiple projects.\n\n**Hygiene:** The smooth, non-porous gelcoat finish of a GRP cabin is incredibly easy to clean and sanitize. It doesn't absorb odors and is resistant to graffiti and chemical cleaners.\n\n**Flexibility:** Our GRP units can be configured with various options, from basic waterless bio-toilets for remote sites to executive cabins with freshwater flushing, sinks, and solar-powered lighting for site offices. This modularity allows you to create a welfare setup that matches your project's specific needs and scale.`
-  },
-  {
-    slug: 'grp-pods-eco-tourism',
-    title: 'How GRP Pods Are Transforming Eco-Tourism',
-    category: 'High-Intent',
-    date: '2024-07-15',
-    author: 'Hospitality Division',
-    summary: 'Discover how the minimal environmental impact and high durability of GRP sleeping pods make them the perfect solution for sustainable luxury in nature.',
-    imageUrl: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80',
-    content: `The eco-tourism industry faces a unique challenge: providing comfortable, even luxurious, accommodation with minimal disturbance to the natural environment. GRP sleeping and resort pods, like our Xpod series, are the ideal solution.\n\n**Low-Impact Installation:** The lightweight monocoque shell of a GRP pod can be craned or even helicoptered into position, requiring minimal foundation work. This preserves the natural landscape and allows for placement in stunning, remote locations that are inaccessible to traditional construction.\n\n**Energy Efficiency:** The GRP composite shell, often insulated with a PU foam core, provides excellent thermal insulation. This reduces the energy required for heating and cooling, a critical factor for off-grid or solar-powered resorts.\n\n**Longevity in Nature:** A GRP pod is impervious to rot, termites, and moisture. It will not warp or degrade in humid forests or on salty coastlines, ensuring a long, maintenance-free lifespan that respects the principle of sustainable investment.`
-  },
-  {
-    slug: 'low-maintenance-bus-shelters',
-    title: 'Low-Maintenance Bus Shelters for Municipal Projects',
-    category: 'High-Intent',
-    date: '2024-06-30',
-    author: 'Public Infrastructure Dept.',
-    summary: 'A look at why municipal governments are turning to GRP for public transport shelters to combat vandalism, corrosion, and high maintenance budgets.',
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80',
-    content: 'Public infrastructure is a long-term investment, and maintenance costs are a primary concern for municipal authorities. GRP bus shelters offer a "fit and forget" solution that dramatically reduces lifetime costs.\n\n**Vandalism Resistance:** GRP has high impact strength and a through-pigmented color that cannot be scratched off. Graffiti can be easily removed from the gelcoat surface without damaging the material.\n\n**Weatherproof:** GRP will never rust, rot, or corrode. This is a critical advantage over steel shelters, especially in cities with high rainfall or coastal climates. The UV-stabilized material ensures it will not become brittle or fade under years of sun exposure.\n\n**Modular Design:** Our GRP bus shelters can be delivered in a flat-pack, modular format for quick and easy assembly on-site, minimizing disruption to public spaces. This makes them ideal for large-scale urban mobility projects with tight deadlines.'
+    content: `GRP (Glass Reinforced Plastic) is becoming the standard material for outdoor infrastructure where traditional materials fail. We see this most often in coastal areas or chemical plants where steel enclosures rust through in a few years.`
   }
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
+  // 1. GRP Electrical Enclosures
   {
-    id: 'emp-xpod-x7',
-    name: 'Xpod X7 Smart Cabin',
-    category: ProductCategory.SMART_CABIN,
-    shortDescription: 'Premium GRP monocoque cabin with smart automation - perfect for resorts, glamping sites, and rooftop installations.',
-    fullDescription: 'The Xpod X7 represents the pinnacle of modular living space engineering, combining advanced composite manufacturing with cutting-edge smart home technology. Constructed using a single-piece GRP monocoque chassis manufactured via Resin Transfer Molding (RTM), this turnkey solution eliminates all potential leak points and structural weaknesses inherent in traditional panel-based construction. The seamless shell is fabricated from isophthalic polyester resin reinforced with E-glass fiber in a 40:60 resin-to-fiber ratio, achieving exceptional strength-to-weight performance with a total unit weight of just 3200 kg—enabling crane or even helicopter deployment in remote locations. The exterior gelcoat is UV-stabilized with titanium dioxide pigmentation, providing superior solar reflectance (SRI >78) that maintains interior temperatures 8-12°C cooler than conventional structures in tropical climates without active cooling. Each unit features floor-to-ceiling electrochromic smart glass panels (switchable from transparent to opaque in under 3 seconds) for instant privacy control, integrated voice automation for lighting, climate, and entertainment systems, and a premium 4K projector with surround sound. The composite floor system utilizes marine-grade plywood with vinyl covering, while the integrated WPC (Wood-Plastic Composite) decking is rot-proof and maintenance-free for 25+ years. Factory-finished with complete electrical, plumbing, and HVAC systems pre-installed, the Xpod X7 can be deployed and operational within 4 hours of delivery. Certified to withstand wind loads up to 150 km/h and seismic activity up to Zone IV, this unit is engineered for permanent or semi-permanent installation in challenging environments. Ideal applications include eco-resorts, glamping sites, rooftop extensions in urban areas, temporary luxury accommodation for events, site offices for remote construction projects, and emergency housing. The hybrid power system supports both grid connection and off-grid solar operation with battery backup, making it perfect for sustainable tourism developments. With zero maintenance requirements for the exterior shell and a design life exceeding 40 years, the Xpod X7 delivers unmatched total cost of ownership compared to traditional construction methods.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOub2oG1EihitBFUwF9AUR0PXrwoeSe-yfKf7GLI2JRsuJpw2K5Ew8eYtrmixZu_mpDFreoX9XS7ws_DZf1WFmMTPeQkgJ6-3Dw4xeaYSAzvRRm3KqjY6bIO7x23nYf39z3P-27mVlRzxRnJMM5cQJ_aw=w1563-h879-s-no-gm?authuser=0',
-    // Added for GLB Testing as per diagnosis action plan
-    modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
-    gallery: [
-      'https://lh3.googleusercontent.com/pw/AP1GczOub2oG1EihitBFUwF9AUR0PXrwoeSe-yfKf7GLI2JRsuJpw2K5Ew8eYtrmixZu_mpDFreoX9XS7ws_DZf1WFmMTPeQkgJ6-3Dw4xeaYSAzvRRm3KqjY6bIO7x23nYf39z3P-27mVlRzxRnJMM5cQJ_aw=w1563-h879-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczMAwEyda-VatlopWLADNQaXs2ac5qXUBGyj127pjaQNQX1ovYq7FZLeSHxttDZHdHTitg8V4nvvU5F0Ad4SypnZnvXC0wKmqomtms1jkFrTREFrcXNhwBxdoojhP2ciD6fBA2dhWu5mtxELeCChbHPerw=w1563-h879-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczMpO460jYx94eD8HEyGiPrJ0ea--4ru7cDN-zzbgx0KaLGug6YehZZVIzzn2U1QnE8hsfGln4KuW1oJjiLNZQmIsa73Cr1DevyUW5i81y1YuCPqtd8-7gLHUhUHv0eU3vFiheNfrc5g58c-cqZGv21uyg=w1563-h879-s-no-gm?authuser=0',
-      'https://lh3.googleusercontent.com/pw/AP1GczPDRXHhmo1DelLxi0HtftJnSmJ5IkdKr2Ul0o4WqNdZC0aJLGTf3RDD6NY95soy12tjT-9X5MXLRdCBt8plfP21vC68xJgU31pGM52ih8yBsDP2UzyWWShp8haDaNLGCv-EGnHQMuwNSVEJe7G288whig=w1563-h879-s-no-gm?authuser=0'
-    ],
-    specs: [
-      { label: 'Structure', value: 'Monocoque GRP Shell' },
-      { label: 'Dimensions', value: '6.5m x 3.2m x 3.0m' },
-      { label: 'Glazing', value: 'Switchable Smart Glass' },
-      { label: 'Power', value: 'Hybrid (Grid + Solar)' },
-      { label: 'Weight', value: '3200 kg (Crane Liftable)' },
-    ],
-    features: ['Voice Controlled Automation', 'Projector & Surround Sound', 'Smart Privacy Glass', 'Zero Maintenance Exterior', 'Rot-Proof Construction'],
-    downloads: [
-      { title: 'Xpod X7 Brochure', type: 'PDF' },
-      { title: 'Site Prep Guide', type: 'PDF' },
-      { title: 'Electrical Schematics', type: 'CAD' }
-    ],
-    accessories: ['Solar Roof Package', 'Bio-Digester Tank', 'External Decking Module', 'Star-Gazing Skylight'],
-    annotations: [
-      { id: 'glass', position: [0, 1.5, 1.1], title: 'Smart Glass', description: 'Switchable opacity for instant privacy.' },
-      { id: 'shell', position: [1.5, 2, 0], title: 'Monocoque GRP', description: 'Seamless composite shell for zero leaks.' },
-      { id: 'deck', position: [0, -0.1, 1.5], title: 'WPC Decking', description: 'Rot-proof composite decking integrated into chassis.' }
-    ]
-  },
-  {
-    id: 'emp-pt-exec',
-    name: 'Executive GRP Portable Toilet',
-    category: ProductCategory.PORTABLE_TOILET,
-    shortDescription: 'Premium GRP portable toilet with freshwater flush - ideal for construction sites, events, and executive facilities.',
-    fullDescription: 'EMPHZ Executive Portable Toilets represent the gold standard in temporary sanitation infrastructure, engineered specifically for demanding construction environments, corporate events, and executive facilities where hygiene and durability are non-negotiable. The robust shell is constructed from hot-press molded GRP composite panels with a smooth, non-porous gelcoat finish that prevents bacterial adhesion and odor absorption—a critical advantage over conventional HDPE plastic units that become porous and retain odors after repeated use. Our proprietary resin formulation includes antimicrobial additives and UV stabilizers that ensure the unit maintains its structural integrity and appearance even after years of exposure to harsh weather conditions, from monsoon rains to desert heat. The 4ft x 4ft base footprint is optimized for stability while remaining compact enough for tight site access, with a total weight of just 180 kg allowing for manual repositioning by two workers or forklift transport. Each unit features a full-size ceramic WC with a freshwater flush system (150L fresh water capacity, 250L waste holding tank) that provides up to 200 flushes between servicing—significantly reducing maintenance frequency compared to chemical toilets. The integrated stainless steel wash basin with mirror, soap dispenser, and paper towel holder ensures complete hand hygiene facilities in a single compact unit. Ventilation is provided through a roof-mounted passive vent stack that creates natural airflow, eliminating odors without requiring electrical power. The anti-slip vinyl flooring is chemically bonded to the GRP base, preventing delamination and providing secure footing even in wet conditions. The lockable door features a robust stainless steel latch with an external occupancy indicator (red/green) for user privacy and convenience. Optional upgrades include a 20W solar panel with LED lighting for off-grid operation, an exhaust fan for enhanced ventilation in high-use scenarios, and a hand sanitizer dispenser for additional hygiene. The modular design allows units to be stacked 3-high for transportation, reducing logistics costs by 60% compared to non-stackable alternatives. Deployment is rapid—a single unit can be positioned and operational in under 15 minutes. Ideal applications include construction sites (meeting OSHA sanitation requirements), outdoor events and festivals, temporary site offices, emergency disaster relief, and executive facilities at remote locations. With a design life exceeding 15 years and virtually zero maintenance requirements beyond routine cleaning and waste servicing, EMPHZ Executive Portable Toilets deliver the lowest total cost of ownership in the temporary sanitation category. Available in standard white or custom RAL colors to match corporate branding requirements.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMe1mwOA84BIJHtR5Bmlm2Y59AP-X4R0c-xrWMKdq3PTwxcwl3JKGVtTucHulwZC7fvPFGgSG9JOHxRFG7HgNvZksxRPnBM43HKmghY8xFC119g3rlfoQw6keBieXkY0ieeipHFXt8ae0tpNw3ULflq5g=w879-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Base Size', value: '4ft x 4ft' },
-      { label: 'Material', value: 'Insulated GRP Panels' },
-      { label: 'Water Tank', value: '150L Fresh, 250L Waste' },
-      { label: 'Features', value: 'Flush, Sink, Mirror, Vent' },
-    ],
-    features: ['Freshwater flush system', 'Anti-slip flooring', 'Lockable door with indicator', 'Easy to transport and install', 'Optional waterless bio-toilet'],
-    downloads: [{ title: 'Portable Toilet Brochure', type: 'PDF' }],
-    accessories: ['Solar Lighting Kit', 'Hand Sanitizer Dispenser', 'Exhaust Fan']
-  },
-  {
-    id: 'emp-bs-metro',
-    name: 'Metro GRP Bus Shelter',
-    category: ProductCategory.BUS_SHELTER,
-    shortDescription: 'Vandal-resistant GRP bus shelter with integrated seating - designed for Indian urban transport infrastructure.',
-    fullDescription: 'The Metro GRP Bus Shelter is a purpose-engineered solution for Indian urban public transport infrastructure, designed to withstand the unique challenges of high-traffic municipal environments including extreme weather, vandalism, and minimal maintenance budgets. The structural frame utilizes pultruded GRP I-beam and channel sections manufactured through continuous pultrusion with vinylester resin and E-glass rovings, achieving a tensile strength of 350 MPa—comparable to structural steel—while weighing 75% less. This lightweight construction enables installation by a 4-person crew without heavy machinery, reducing deployment costs and minimizing disruption to public spaces. The frame is inherently corrosion-proof, eliminating the rust and degradation that plagues steel shelters in coastal cities like Mumbai, Chennai, and Kochi where saline air accelerates metal corrosion. The translucent GRP roof panels (3mm thickness) are manufactured from UV-stabilized polyester resin with 30% light transmission, providing natural illumination while blocking 99% of harmful UV radiation and offering complete protection from monsoon rains (tested to withstand 300mm/hour rainfall intensity). The roof structure is engineered with a 15-degree pitch for self-cleaning and rapid water drainage, preventing pooling and mosquito breeding. Integrated GRP benches are molded with a concave anti-slip surface and feature through-pigmented color that cannot be scratched or defaced—a critical advantage in high-vandalism areas. The bench design supports up to 400 kg distributed load and is ergonomically contoured for commuter comfort during extended wait times. Side and back panels are constructed from 6mm GRP sheets with a smooth gelcoat finish that resists graffiti—spray paint and marker can be removed with standard solvents without damaging the surface. The modular panel design incorporates dedicated mounting points for backlit advertising displays (standard size: 1200mm x 1800mm), enabling municipal authorities to generate revenue through advertising contracts that can offset installation costs within 3-5 years. Optional features include integrated LED lighting powered by rooftop solar panels (20W capacity), digital display boards for real-time bus arrival information, and CCTV camera mounting brackets for enhanced security. The shelter is designed for flat-pack delivery with all components fitting in a standard 20-foot container, reducing shipping costs by 40% compared to pre-assembled units. On-site assembly requires only basic hand tools and can be completed in 6-8 hours by semi-skilled labor following our detailed installation manual. Foundation requirements are minimal—four concrete plinths (300mm x 300mm x 450mm depth) provide adequate anchoring for wind loads up to 120 km/h. Unlike steel shelters that require annual repainting, rust treatment, and structural inspections, EMPHZ GRP shelters are genuinely maintenance-free for their entire 25+ year design life, requiring only periodic cleaning with water and mild detergent. The fire-retardant resin formulation meets UL94 V-0 classification, ensuring compliance with public safety regulations. Available in any RAL color to match municipal branding guidelines, with popular choices including RAL 5015 (Sky Blue), RAL 7035 (Light Grey), and custom city-specific color schemes. Ideal for Smart City projects, BRTS corridors, metro feeder routes, and municipal bus networks across India and the Middle East. With proven installations in over 50 Indian cities, the Metro GRP Bus Shelter represents the future of sustainable, low-maintenance public infrastructure.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczO3L_xurkDK4HJR7YzwvNc7v8yjrFUoaaQ_wTIcmUXHEAzLKIm6J26KGchF9DTAqmCkVUnGV5_o7o13CVoNoGrhUfBhyerd5jL5nA1KQQeoURTOLcdpCM1oO9JJ91xy8q1KWMg0S5tBQaSveFNLXGR1Gw=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Dimensions', value: '4.5m x 1.5m x 2.8m' },
-      { label: 'Frame', value: 'Pultruded GRP Sections' },
-      { label: 'Roof', value: 'Translucent GRP Sheet' },
-      { label: 'Seating', value: 'Integrated GRP Bench' },
-    ],
-    features: ['Corrosion and rust proof', 'Vandal resistant', 'Integrated seating', 'Advertising panel space', 'Low maintenance'],
-    downloads: [{ title: 'Bus Shelter Datasheet', type: 'PDF' }],
-    accessories: ['Solar LED Lighting', 'Timetable Display Case', 'Waste Bin']
-  },
-  {
-    id: 'emp-kiosk-101',
-    name: 'Modular Utility Kiosk M2',
-    category: ProductCategory.KIOSK,
-    shortDescription: 'Modular GRP electrical kiosk with superior thermal insulation - engineered for Indian power distribution networks.',
-    fullDescription: 'The Modular Utility Kiosk M2 is EMPHZ\'s flagship solution for rapid deployment in power distribution, telecom infrastructure, and smart city projects across India and the Middle East. Engineered specifically to address the extreme thermal challenges of Southern Indian summers where ambient temperatures routinely exceed 45°C, this kiosk employs advanced sandwich panel construction with a 50mm PU foam core (density: 40 kg/m³) that provides exceptional thermal insulation (U-value: 0.45 W/m²K), maintaining internal temperatures 15-20°C below ambient without active cooling. This thermal management is critical for protecting sensitive switchgear, meters, and electronic equipment from heat-induced failures that plague conventional metal enclosures. The outer and inner GRP skins (each 3mm thickness) are manufactured from isophthalic polyester resin with fire-retardant additives meeting UL94 V-0 classification, ensuring compliance with electrical safety codes. The modular panel design is revolutionary for logistics and deployment: all components are precision-cut to fit within standard shipping pallets, reducing transportation costs by 60% compared to pre-assembled units and enabling delivery to remote locations via standard trucks. On-site assembly is remarkably simple—panels connect via tongue-and-groove joints with stainless steel fasteners, requiring only basic hand tools (drill, wrench, level) and can be completed by two semi-skilled workers in 3-4 hours following our illustrated assembly manual. The kiosk features customizable cutouts for cable entry glands, ventilation louvers, equipment mounting rails, and access doors—all precision-molded during manufacturing to customer specifications, eliminating the need for on-site cutting or drilling. The GRP construction provides inherent electrical insulation (dielectric strength > 20 kV/mm), completely eliminating earthing requirements and shock hazards associated with metal enclosures—a significant safety advantage for field technicians. The exterior gelcoat is UV-stabilized and available in any RAL color, with RAL 7035 (Light Grey) being the standard for utility applications due to its high solar reflectance. The conical roof design with 200mm overhang ensures self-cleaning and prevents water ingress, while the reinforced base plinth accommodates cable entry from underground ducts. Structural integrity is exceptional: the kiosk is certified for wind loads up to 120 km/h (suitable for coastal installations) and can support roof-mounted equipment up to 50 kg (ideal for solar panels or communication antennas). The graffiti-resistant gelcoat surface can be cleaned with standard solvents without damage, and the through-pigmented color means scratches are virtually invisible. Optional features include: integrated exhaust fans with thermostatic control for active cooling, LED lighting with motion sensors for maintenance access, anti-vandal locks with tamper alarms, and internal mounting rails compatible with standard DIN equipment. The kiosk is ideal for housing: HT/LT distribution panels, metering equipment, solar inverters and combiner boxes, telecom equipment and battery banks, CCTV control systems, and smart city sensor nodes. With proven installations across BESCOM (Bangalore), TANGEDCO (Tamil Nadu), MSEDCL (Maharashtra), and numerous private solar farms, the M2 kiosk has demonstrated field reliability in the harshest Indian conditions. The maintenance-free design eliminates the annual painting, rust treatment, and structural inspections required for steel enclosures, delivering a 40-year lifecycle cost savings of over 300% compared to conventional alternatives. Available in standard sizes from 1.2m x 1.2m x 2.0m up to 3.0m x 2.5m x 2.5m, with custom dimensions available for specialized applications. Full technical documentation, installation manuals, and CAD drawings provided with every order.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczN_e_6SauJrdgvk6ECPkpKsOVno64FBSKHPQkCdW0YHsfN6qlFG7_F07Lxwtek2Sfbj0ge8WqJ8MAXgEhH1Ty2kiqmJWFlxSng_Wxx0uipHJWHE7JJEKezq-W-PJ33JoD4_MtsmVvRn0l_tc5_N4XULFw=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Construction', value: 'Sandwich Panel GRP' },
-      { label: 'Thermal Insulation', value: 'PU Foam Core' },
-      { label: 'Wind Load', value: '120 km/h' },
-      { label: 'Color', value: 'RAL 7035 (Light Grey)' },
-    ],
-    features: ['Modular assembly', 'High thermal efficiency', 'Customizable cutouts', 'Graffiti resistant'],
-    downloads: [
-      { title: 'Kiosk Brochure', type: 'PDF' },
-      { title: 'Structural Specs', type: 'PDF' }
-    ],
-    accessories: ['Exhaust Fan Unit', 'LED Lighting Pack', 'Fire Extinguisher Mount', 'Anti-Vandal Lock'],
-    annotations: [
-      { id: 'roof', position: [0, 2.9, 0], title: 'Conical Roof', description: 'Self-cleaning design with overhang for rain protection.' },
-      { id: 'base', position: [0, -0.1, 0], title: 'Reinforced Plinth', description: 'Heavy-duty steel-reinforced composite base.' }
-    ]
-  },
-  {
-    id: 'emp-cab-v1',
-    name: 'Security Guard Villa',
-    category: ProductCategory.CABIN,
-    shortDescription: 'All-weather GRP security cabin with pre-wired electricals - turnkey solution for industrial gatehouses and checkpoints.',
-    fullDescription: 'The EMPHZ Security Guard Villa represents the ultimate turnkey solution for industrial security applications, combining superior weather protection, occupant comfort, and rapid deployment in a single factory-finished unit. The seamless GRP monocoque shell construction is manufactured via hand lay-up with isophthalic polyester resin and chopped strand mat reinforcement, creating a one-piece structure with absolutely zero leak points—a critical advantage over welded steel cabins that inevitably develop leaks at seams and joints after exposure to monsoon rains. This leak-proof integrity has been field-proven across hundreds of installations in Kerala\'s high-rainfall coastal regions where annual precipitation exceeds 3000mm. The shell thickness (4-5mm) provides excellent impact resistance while maintaining a total unit weight of just 450 kg for the 4ft x 4ft model, enabling installation by crane or forklift in under 30 minutes. Each unit arrives factory-finished and fully pre-wired with: LED tube lights (2 x 18W), ceiling fan (56-inch sweep), electrical outlets (3 x 5A sockets), and a main distribution board with MCB protection—simply connect to site power and the cabin is operational. The marine-grade plywood flooring (12mm thickness) with vinyl covering provides a comfortable, non-slip surface that withstands continuous foot traffic and is easy to clean. Aluminum sliding windows with powder-coated frames feature integrated mosquito mesh and security grilles, providing ventilation while preventing unauthorized entry—essential for overnight security duty. The windows are positioned for optimal cross-ventilation, creating natural airflow that keeps the cabin comfortable even without air conditioning. For premium installations, we offer an AC-ready variant with pre-installed split AC mounting bracket, additional electrical capacity (15A dedicated circuit), and enhanced insulation. The cabin is available in two configurations: Compact (4ft x 4ft x 8ft height) for single-guard duty at vehicle gates, and Executive (6ft x 6ft x 8.5ft height) for multi-guard operations at main factory entrances. The Executive model includes an integrated desk unit with drawer storage, perfect for maintaining visitor logs and security documentation. Optional add-ons include: external floodlights (2 x 50W LED) with motion sensors for perimeter illumination, attached bio-toilet module (eliminating the need for separate sanitation facilities), internal storage cabinets, and custom corporate branding with company logos. The GRP construction eliminates all the common problems of steel cabins: no rust staining on concrete pads, no corrosion of door hinges and locks, no paint peeling requiring annual maintenance, and no termite damage to wooden components. The UV-stabilized gelcoat maintains its color and gloss for 15+ years without fading, ensuring the cabin continues to present a professional appearance throughout its service life. Installation is remarkably simple: position the cabin on a level concrete pad (minimum 100mm thickness), connect electrical supply, and secure with anchor bolts through pre-molded mounting points in the base. No foundation work or civil construction required. The cabin is ideal for: factory and warehouse security gates, construction site security, residential complex entry points, toll booth operations, parking lot attendant stations, and checkpoint installations. With a design life exceeding 25 years and virtually zero maintenance requirements, the Security Guard Villa delivers exceptional value for facility managers. Available in standard white or custom RAL colors to match corporate color schemes. Bulk discounts available for orders of 10+ units. Full warranty coverage for 5 years on structure and 1 year on electrical components.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOWO0DDx5ynInyVjNCp6VTvfaUHfPOEfSd966mpl0YORv3_zoXcuZ27v8I4VUu_HcNxcPIUmTBNhnn335FaMpCYoBwWsfeZj_eDVe6paSWPHN-Xl8KVk4rqS29fmU4gYsTHbd-kDoaTNAE-sOGibovzoQ=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Size', value: '4ft x 4ft or 6ft x 6ft' },
-      { label: 'Flooring', value: 'Marine Ply with Vinyl' },
-      { label: 'Windows', value: 'Sliding Aluminum' },
-    ],
-    features: ['Plug and play', 'Rot proof', 'Aesthetically pleasing'],
-    downloads: [
-      { title: 'Cabin Floorplans', type: 'PDF' }
-    ],
-    accessories: ['Air Conditioning Support', 'Custom Desk Unit', 'External Floodlights', 'Bio-Toilet Add-on']
-  },
-  {
-    id: 'emp-fire-cab1',
-    name: 'RedGuard Fire Hose Cabinet',
-    category: ProductCategory.FIRE_SAFETY,
-    shortDescription: 'UV-stable, bright red GRP cabinet for fire hose reels and extinguishers - engineered for high-visibility safety compliance.',
-    fullDescription: 'The RedGuard Fire Hose Cabinet is a mission-critical safety product engineered to protect firefighting equipment while ensuring maximum visibility and accessibility during emergencies. Manufactured from fire-retardant GRP composite with a through-pigmented Signal Red (RAL 3000) gelcoat, this cabinet maintains its high-visibility color for decades without fading—a critical advantage over painted steel cabinets that lose their distinctive red color within 2-3 years of outdoor exposure, potentially delaying emergency response. The UV-stabilized resin formulation includes titanium dioxide and specialized pigments that resist photodegradation even under intense tropical sunlight (tested to ASTM G154 standards with 2000+ hours UV exposure showing <5% color shift). The cabinet body is constructed via hot-press molding with isophthalic polyester resin meeting UL94 V-0 fire rating, ensuring the cabinet itself will not contribute to fire spread. Unlike steel cabinets that rust shut in coastal environments—rendering the firefighting equipment inaccessible during emergencies—the RedGuard features stainless steel 316 grade hinges, latches, and mounting hardware that remain functional for 25+ years in high-salinity atmospheres. The door is designed with a robust piano hinge spanning the full height for superior strength and smooth operation even after years of service. The cabinet features a large viewing window (options: clear acrylic for indoor use, or wired safety glass for outdoor/industrial applications) that allows visual inspection of equipment without opening the door, facilitating routine safety audits. The window frame is sealed with EPDM rubber gasket providing weatherproof protection (IP54 rating) for outdoor installations. Internal dimensions are optimized for standard firefighting equipment: the standard model accommodates a 25-meter fire hose reel plus two 9kg CO2/DCP extinguishers, while the executive model houses a 30-meter hose reel, extinguishers, and additional safety equipment like fire blankets and emergency axes. The cabinet interior features pre-drilled mounting points for hose reel brackets and extinguisher clips, enabling quick installation by maintenance staff. The door incorporates a break-glass emergency release mechanism (optional) for high-security areas where the cabinet must remain locked but accessible during emergencies. Mounting options are versatile: wall-mounted (most common, using stainless steel L-brackets), post-mounted (ideal for outdoor locations like fuel stations), or recessed (for flush installation in building facades). The cabinet is available in three standard sizes: Compact (600mm W x 600mm H x 250mm D) for single extinguisher storage, Standard (900mm W x 900mm H x 300mm D) for hose reel and extinguishers, and Executive (1200mm W x 1200mm H x 350mm D) for comprehensive firefighting equipment. Custom sizes available for specialized applications. The RedGuard is ideal for: petrochemical facilities (where corrosion resistance is critical), coastal installations (ports, offshore platforms, beach resorts), industrial warehouses, commercial buildings, fuel stations, and public infrastructure. The cabinet meets international fire safety standards including NFPA, BS EN, and Indian Fire Safety codes, ensuring compliance with insurance and regulatory requirements. Optional features include: internal LED lighting for nighttime visibility, reflective safety striping for enhanced visibility, custom signage and labeling, and tamper-evident seals for security-sensitive locations. With proven installations across BPCL refineries, IOCL terminals, and major industrial facilities throughout India and the Gulf region, the RedGuard has demonstrated unmatched reliability in protecting critical firefighting assets. The maintenance-free design eliminates the annual painting and rust treatment required for steel cabinets, delivering lifecycle cost savings of 200%+ over a 20-year period. Available with full technical documentation, installation guidelines, and compliance certificates. Bulk pricing available for large projects.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczM0dG21ZiBwjBrZwIxfJ8mJ5ViE8mzgsiKQbn8GsECSD_IPKGrRrndkHP7rwCaR4oLH4zPDwnLHZstQWawRZvCfV6bzHfozFekfZUbY4LY23QTBpHIgbaU-dTqA-f5Af3AgrG-pBp6oWIv8YI77svlpBg=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Color', value: 'Signal Red (RAL 3000)' },
-      { label: 'Material', value: 'Fire Retardant GRP' },
-      { label: 'Window', value: 'Acrylic / Wired Glass' },
-      { label: 'Mounting', value: 'Wall / Post / Recessed' },
-    ],
-    features: ['Corrosion Proof', 'High Visibility', 'Stainless Steel Hardware', 'Weatherproof Seal'],
-    downloads: [
-      { title: 'Fire Cabinet Specs', type: 'PDF' },
-      { title: 'Dimensions Drawing', type: 'CAD' }
-    ],
-    accessories: ['Break-Glass Key Box', 'Stand Mounting Kit', 'Internal Hose Reel']
-  },
-  {
-    id: 'emp-tank-mod',
-    name: 'Modular GRP Panel Tank',
-    category: ProductCategory.WATER_STORAGE,
-    shortDescription: 'Sectional hot-press molded water tanks for potable water storage - modular design for rooftop and basement installations.',
-    fullDescription: 'EMPHZ Modular GRP Panel Tanks represent the most advanced solution for potable water storage in residential, commercial, and industrial applications where hygiene, durability, and installation flexibility are paramount. Unlike conventional one-piece tanks that require large access openings for delivery, our revolutionary modular design allows the tank to be assembled on-site from individual SMC (Sheet Molding Compound) panels that can pass through standard doorways and stairwells—making them ideal for basement installations, rooftop locations, and confined mechanical rooms where traditional tanks cannot be delivered. Each panel (standard sizes: 1m x 1m and 1m x 0.5m) is manufactured via high-pressure hot-press molding at 150°C and 100 bar pressure, creating a dense, non-porous structure with exceptional strength (flexural strength > 200 MPa) and complete impermeability. The food-grade isophthalic polyester resin formulation is certified to WRAS (Water Regulations Advisory Scheme) standards for potable water contact, ensuring zero leaching of harmful chemicals or taste/odor transfer. The smooth interior gelcoat surface (surface roughness < 1 micron) prevents algae growth and bacterial colonization—a critical advantage over concrete tanks that develop biofilm and require frequent cleaning. Assembly is performed using stainless steel 304 grade bolts with EPDM rubber gaskets at all panel joints, creating a completely leak-proof structure that has been pressure-tested to 0.5 bar (5 meters head) without any seepage. The modular system offers unprecedented flexibility in capacity: tanks can be configured from 1,000 liters (1m³) for residential applications up to 1,000,000 liters (1000m³) for industrial facilities, with custom dimensions to fit available space. Standard configurations include rectangular tanks (most space-efficient for rooftops), square tanks (optimal for basement corners), and custom L-shaped or U-shaped tanks to maximize utilization of irregular spaces. Optional pre-insulated panels feature a 50mm PU foam core that maintains water temperature and prevents condensation on exterior surfaces—essential for chilled water storage in HVAC systems. The tank includes all necessary fittings: inlet/outlet connections (standard 50mm-150mm diameter), overflow pipe with insect screen, drain valve, internal ladder (GRP construction for corrosion resistance), manhole cover with locking mechanism, and level indicator (float-type or ultrasonic). Installation is straightforward: panels are assembled on a level concrete base (minimum 100mm thickness) following our detailed assembly manual, with typical installation time of 4-6 hours for a 10,000-liter tank by a 3-person crew. The lightweight construction (approximately 25 kg/m² of panel) reduces structural load requirements compared to concrete tanks—a significant advantage for rooftop installations where load-bearing capacity is limited. The tank exterior can be finished in any RAL color for aesthetic integration with building design, or left in standard white for maximum solar reflectance. Maintenance requirements are minimal: an annual inspection and cleaning (simple water flush) is sufficient to maintain hygiene standards. The GRP construction is completely resistant to: corrosion from chlorinated water, chemical attack from water treatment additives, UV degradation from sunlight exposure, and structural degradation from freeze-thaw cycles. With a design life exceeding 30 years and zero maintenance costs beyond routine cleaning, the total cost of ownership is 50% lower than steel tanks (which require internal coating renewal every 5-7 years) and 70% lower than concrete tanks (which develop cracks and require waterproofing repairs). Ideal applications include: residential apartment complexes, hotels and resorts, hospitals and healthcare facilities, industrial process water storage, fire fighting water reserves, rainwater harvesting systems, and agricultural irrigation storage. The tank meets international standards including ISO 9001 for manufacturing quality, NSF/ANSI 61 for drinking water system components, and local building codes across India, Middle East, and Africa. Available with full technical documentation, installation manuals, warranty certificates, and after-sales support. Bulk pricing and project-specific customization available for developers and contractors.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMThPat9zZABpXncns5L4Pno4jteF8vvyPxTm0buAL0Sh3UxZaQ_fAYHostcuSwR6h5aRThdh1Y522GhGqVM6zgDkialtBmfreTJ3MR8W4NoFTYjy0mGfHqW_QIDXop4szPJ8lnEuOB4Bh_E0n_CYSQkg=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Panel Size', value: '1m x 1m / 1m x 0.5m' },
-      { label: 'Process', value: 'SMC Hot Press' },
-      { label: 'Certification', value: 'WRAS Approved' },
-      { label: 'Insulation', value: 'Pre-insulated PU Foam' },
-    ],
-    features: ['Hygienic Storage', 'Zero Leakage', 'Easy Assembly', 'Thermal Insulation'],
-    downloads: [
-      { title: 'Tank Capacity Chart', type: 'PDF' },
-      { title: 'Assembly Manual', type: 'PDF' }
-    ],
-    accessories: ['Internal Ladder (GRP)', 'Level Indicator', 'Roof Vent', 'Manhole Cover']
-  },
-  {
-    id: 'emp-shade-s2',
-    name: 'Instrument Sunshade S2',
-    category: ProductCategory.INDUSTRIAL_PROTECTION,
-    shortDescription: 'Protective GRP canopy for field instruments and transmitters - engineered for hazardous area installations.',
-    fullDescription: 'The Instrument Sunshade S2 is a specialized protective enclosure designed for Oil & Gas, petrochemical, and process industries where expensive field instrumentation requires protection from environmental extremes while maintaining accessibility for maintenance and calibration. Field instruments such as pressure transmitters, temperature sensors, flow meters, level gauges, and analytical equipment represent investments of $5,000-$50,000 per unit and are critical for process control and safety—yet they are exposed to destructive environmental factors including direct solar radiation (which can elevate instrument temperatures to 70°C+, causing calibration drift and electronic failures), heavy rainfall and moisture ingress, dust and particulate contamination, and corrosive atmospheric conditions. The S2 sunshade addresses all these challenges with a purpose-engineered GRP canopy design. The shade body is manufactured from anti-static GRP composite (surface resistivity < 10⁹ ohms) to prevent static electricity buildup that could trigger explosions in hazardous Zone 1 and Zone 2 areas—a critical safety requirement in refineries and chemical plants. The fire-retardant resin formulation meets UL94 V-0 classification and has been tested to ASTM E84 for flame spread and smoke development, ensuring compliance with stringent petrochemical safety standards. The canopy design features a double-slope roof (15-degree pitch) that provides complete rain protection while allowing natural ventilation to prevent heat buildup—maintaining instrument temperatures 20-25°C below ambient even in direct desert sunlight. The shade dimensions (standard: 450mm diameter x 300mm height) are optimized to accommodate standard 2-inch pipe-mounted instruments while providing 360-degree access for maintenance technicians. The material thickness (4-6mm) provides excellent impact resistance (IK08 rating) protecting instruments from accidental tool drops and minor collisions during plant operations. UV stabilization ensures the shade maintains structural integrity and appearance for 15+ years without brittleness or fading. The chemical resistance of the vinylester resin system provides protection against: sulfuric acid mist, caustic spray, hydrocarbon vapors, chlorine gas, and other aggressive industrial atmospheres that would rapidly corrode aluminum or steel shades. The mounting system utilizes a stainless steel 316 grade bracket that clamps onto standard 2-inch (50mm) instrument support pipes without requiring welding or drilling—enabling installation in under 10 minutes per unit. The bracket design allows 360-degree rotation for optimal sun orientation and includes vibration-damping rubber bushings to prevent loosening from equipment vibration. Optional accessories include: side wall panels for additional weather protection in extreme climates, rear mounting plate for securing junction boxes or transmitter housings, and custom colors for plant color-coding systems (e.g., red for critical instruments, yellow for safety systems). The S2 is certified for use in: ATEX Zone 1/Zone 2 hazardous areas (certificate available), IECEx explosive atmospheres, and meets NFPA 70 (National Electrical Code) requirements for hazardous locations. Wind load testing confirms the shade withstands sustained winds of 160 km/h without displacement—critical for offshore platforms and coastal refineries. The lightweight design (1.2 kg) imposes minimal load on instrument piping, preventing stress on delicate process connections. Ideal applications include: oil refineries (protecting transmitters on distillation columns, storage tanks, pipeline manifolds), chemical plants (shielding analyzers and pH sensors from corrosive atmospheres), water treatment facilities (protecting chlorine analyzers and flow meters), power generation plants (safeguarding boiler instrumentation), and offshore platforms (protecting critical safety instruments from salt spray and UV). With proven installations across IOCL, BPCL, Reliance, SABIC, and major petrochemical facilities worldwide, the S2 has demonstrated unmatched reliability in the harshest industrial environments. The maintenance-free design eliminates the painting and corrosion treatment required for metal shades, delivering lifecycle cost savings of 150%+ over 10 years. Available in standard white (maximum solar reflectance) or custom RAL colors. Bulk pricing available for plant-wide instrumentation projects. Full compliance documentation and material certificates provided with every order.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczOQ76mdkLWOPl8Nl5IrVZQYjizUkHlRB_iI5wZWug1QKhiQKtFMDOFHw4DPjwn3H8s3ZWQIa9E1K0sk6KL-Qfmvo7D7DrnujfSwq0cs-HIBqb_Y4zc8-46PZXqmMbtsYHRH-kwL4QYFFk6oOLfg0VDoDw=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Material', value: 'Anti-static GRP' },
-      { label: 'Thickness', value: '4mm - 6mm' },
-      { label: 'Wind Load', value: '160 km/h' },
-      { label: 'Mounting', value: '2-inch Pipe Mount' },
-    ],
-    features: ['UV Blocking', 'Impact Resistant', 'Maintenance Free', 'Chemical Resistant'],
-    downloads: [
-      { title: 'Sunshade Datasheet', type: 'PDF' },
-      { title: 'Mounting Details', type: 'CAD' }
-    ],
-    accessories: ['SS316 Mounting Bracket', 'Side Walls', 'Rear Mounting Plate']
-  },
-  {
-    id: 'emp-auto-ev1',
-    name: 'EV Battery Pack Shield',
-    category: ProductCategory.AUTOMOBILE,
-    shortDescription: 'Lightweight fire-retardant GRP composite cover for EV battery modules - next-generation automotive safety.',
-    fullDescription: 'The EV Battery Pack Shield represents EMPHZ\'s entry into the rapidly expanding electric vehicle component market, addressing the critical need for lightweight, fire-safe, and impact-resistant battery protection in next-generation electric mobility. As EV manufacturers globally race to reduce vehicle weight (every 10kg reduction improves range by approximately 1%), the traditional steel battery enclosures are being replaced by advanced composites—and our GRP solution delivers a compelling 40% weight reduction while maintaining superior protective performance. The shield is manufactured via compression molding using a specialized fire-retardant vinyl ester resin system reinforced with continuous E-glass fiber mats in a quasi-isotropic layup (0°/45°/90°/-45°) that provides uniform strength in all directions. The resulting composite achieves exceptional specific strength (strength-to-weight ratio of 450 MPa/g/cm³) that matches or exceeds automotive-grade aluminum at a fraction of the weight. Fire safety is paramount in EV applications where lithium-ion battery thermal runaway can trigger catastrophic fires—our resin formulation achieves UL94 V-0 classification (self-extinguishing within 10 seconds) and has been tested to ISO 9705 full-scale room fire tests, demonstrating minimal flame spread and low smoke toxicity. The material also provides excellent thermal insulation (thermal conductivity: 0.3 W/mK) that helps manage battery pack temperatures, reducing the load on active cooling systems and improving overall vehicle efficiency. Impact resistance is critical for protecting battery cells from road debris, minor collisions, and underbody strikes—our shield has been tested to FMVSS 305 (Federal Motor Vehicle Safety Standard) for electric vehicle battery safety, demonstrating no cell penetration or electrolyte leakage under simulated crash conditions. The material\'s high energy absorption capacity (impact strength > 50 kJ/m²) dissipates collision forces while preventing sharp object penetration. The electrically non-conductive nature of GRP (dielectric strength > 15 kV/mm) provides an additional safety layer, eliminating the risk of short circuits that could occur with metal enclosures if the protective coating is damaged. The shield design incorporates integrated mounting bosses and cable routing channels that are molded-in during manufacturing, eliminating the need for secondary drilling operations that could compromise structural integrity. The smooth exterior surface (Class A finish) can be painted to match vehicle body color or left in natural black (carbon-filled resin) for a premium appearance. Corrosion resistance is absolute—unlike aluminum shields that suffer from galvanic corrosion when in contact with steel vehicle frames, our GRP shield is completely inert and requires no protective coatings or cathodic protection. The material is also resistant to: battery electrolyte leakage (lithium hexafluorophosphate in organic carbonates), coolant fluids (ethylene glycol), road salt and de-icing chemicals, and automotive fluids (oils, greases, cleaning agents). Manufacturing is performed in our ISO/TS 16949 certified automotive facility with full traceability and quality documentation meeting OEM requirements. Each shield undergoes: dimensional inspection (CMM verification to ±0.5mm tolerance), fire testing (sample batch testing to UL94), impact testing (drop weight test), and visual inspection (surface defects, fiber show-through). The lightweight construction delivers multiple vehicle-level benefits: increased driving range (reduced mass improves efficiency), improved handling (lower center of gravity), reduced tire wear (less unsprung weight), and enhanced performance (better power-to-weight ratio). Ideal applications include: electric passenger vehicles (sedans, SUVs, hatchbacks), electric commercial vehicles (delivery vans, light trucks), electric two-wheelers (scooters, motorcycles), and electric buses (city transit, intercity coaches). We offer design and engineering support for OEMs including: FEA (Finite Element Analysis) for structural optimization, CFD (Computational Fluid Dynamics) for thermal management, crash simulation and validation, and prototype development with rapid iteration. The shield is available in custom sizes and configurations to match specific battery pack geometries, with typical lead times of 8-12 weeks for tooling development and 4-6 weeks for production runs. Minimum order quantities apply (typically 100+ units) with volume pricing for mass production. Full material data sheets, test reports, and compliance certificates provided. Technical support available for integration engineering and validation testing.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczMBNCfNLNoWr6JCuTq0_dlvSEbMIsyFcsvCtW5wA52Dccl3L8MBRw0QzaRqG180EgkQDBwvXfZUAT4vCR2CiQR04BfFP9y6Mq-E3CSoxv-QZl5HZPbBp0mOE77LomhaqWuuzMdWy_d_tcmiNYtzG5q-Tg=w586-h879-s-no-gm?authuser=0',
-    specs: [
-      { label: 'Material', value: 'Fire Retardant GRP' },
-      { label: 'Fire Rating', value: 'UL94 V-0' },
-      { label: 'Weight', value: '12 kg/sqm' },
-      { label: 'Impact Strength', value: 'High Energy Absorption' },
-    ],
-    features: ['Lightweight Construction', 'Thermal Insulation', 'Corrosion Free', 'Electrically Non-Conductive'],
-    downloads: [
-      { title: 'Automotive Datasheet', type: 'PDF' },
-      { title: 'Crash Test Report', type: 'PDF' }
-    ],
-    accessories: ['Mounting Brackets', 'Thermal Paste Kit', 'Sealant Gasket']
-  },
-  {
-    id: 'emp-enc-001',
-    name: 'E-Series IP66 Coastal Enclosure',
+    id: 'emp-encl-001',
+    name: 'Industrial GRP Junction Box (J-Series)',
     category: ProductCategory.ENCLOSURE,
-    shortDescription: 'Heavy-duty GRP enclosure designed for high-salinity coastal environments - IP66/IP67 rated protection.',
-    fullDescription: 'The E-Series IP66 Coastal Enclosure represents the ultimate solution for protecting sensitive electrical and electronic equipment in the most challenging coastal and industrial environments where conventional metal enclosures fail catastrophically within months. Engineered specifically for the high-salinity atmospheres of Kerala, Karnataka, and Gulf coastal regions where airborne salt concentration can exceed 500 mg/m²/day, this enclosure delivers absolute corrosion immunity that stainless steel simply cannot match. The body is manufactured via hot-press molding using Sheet Molding Compound (SMC) with isophthalic polyester resin and continuous glass fiber reinforcement, creating a monolithic structure with uniform wall thickness (4mm) and exceptional mechanical strength (flexural modulus > 12 GPa). Unlike fabricated metal enclosures with welded seams that become corrosion initiation points, our molded construction has no joints or weak points. The UV-stabilized gelcoat formulation incorporates titanium dioxide and specialized UV absorbers that prevent chalking and color degradation even after 10+ years of direct tropical sunlight exposure (tested to ASTM G154 with 5000+ hours UV exposure showing < 10% gloss reduction). The enclosure achieves IP66/IP67 ingress protection rating through a precision-engineered double-seal door system: the primary seal uses a continuous EPDM rubber gasket (Shore A hardness 60) compressed between machined sealing surfaces, while a secondary labyrinth seal provides backup protection. This dual-seal design has been validated through rigorous testing including: water jet testing (IP66: 100 liters/minute at 100 kPa pressure for 3 minutes), temporary immersion testing (IP67: 1 meter depth for 30 minutes), and salt spray testing (ASTM B117: 3000+ hours with zero corrosion). The impact resistance rating of IK10 (20 joules impact energy) means the enclosure can withstand a 5kg mass dropped from 400mm height without cracking—providing protection against vandalism, accidental tool drops, and minor vehicle collisions. The fire rating of UL94 V-0 ensures the enclosure will not contribute to fire spread in electrical installations, self-extinguishing within 10 seconds of flame removal. The door features a robust stainless steel 316 grade hinge with 180-degree opening for complete access to internal components, and a quarter-turn latch with padlock hasp for security. Internal mounting is facilitated by a removable galvanized steel DIN rail mounting plate that accommodates standard electrical components (MCBs, contactors, terminals, PLCs) and can be easily removed for bench wiring before installation. The enclosure includes pre-molded cable entry points (top and bottom) with removable knockout plugs in standard sizes (M20, M25, M32, M40) that accept industry-standard cable glands—eliminating the need for on-site drilling that could compromise IP rating. Optional features include: transparent polycarbonate viewing window for visual inspection without opening, internal mounting plate with earthing studs, ventilation plugs with Gore-Tex membranes (allowing pressure equalization while maintaining IP rating), and custom cutouts for specific equipment. The E-Series is available in standard dimensions from 200x200x150mm (compact) up to 800x600x300mm (large), with custom sizes available for specialized applications. The enclosure is ideal for: coastal telecom installations (protecting RF equipment, fiber optic terminators, power supplies), solar farm combiner boxes (housing DC isolators, surge protection, monitoring equipment), marine and offshore applications (protecting navigation equipment, control systems, instrumentation), chemical plant control panels (housing PLCs, VFDs, control relays in corrosive atmospheres), and water treatment facilities (protecting chlorine analyzers, pH controllers, level sensors). Mounting options include: wall-mounted (using stainless steel L-brackets), pole-mounted (with stainless steel U-bolt kit for 50-100mm diameter poles), floor-standing (with optional GRP pedestal base), and panel-mounted (flush installation in control room walls). The enclosure meets international standards including: IEC 60529 for IP ratings, IEC 62262 for IK impact ratings, UL 508A for industrial control panels, and NEMA 4X for corrosion resistance. With proven installations across BSNL telecom towers, Adani solar farms, Indian Navy coastal radar stations, and petrochemical facilities throughout the Gulf region, the E-Series has demonstrated unmatched reliability in protecting critical electrical assets. The total cost of ownership is dramatically lower than stainless steel alternatives: while SS316 enclosures require periodic inspection and maintenance (gasket replacement, hinge lubrication, surface cleaning to remove salt deposits), our GRP enclosure is genuinely maintenance-free for its entire 25+ year service life. A lifecycle cost analysis shows savings of 250%+ over 20 years compared to stainless steel, and 400%+ compared to mild steel with protective coatings. Available in standard light grey (RAL 7035) for maximum solar reflectance, or custom RAL colors for site-specific requirements. Full technical documentation including IP test reports, IK test certificates, material data sheets, and installation manuals provided with every order. Bulk pricing available for large projects. Technical support available for application engineering and custom modifications.',
-    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczNflc3SRp2gYEInU7lZELUN8Jnn_g1f33VxbVxTakvnUd1Fo8vLuAmkakM7-VI6IAFDjlwj3Qbx6SSoHTdwWidcGwutrihjdzZT2sxzfH3qOFKrFqPqd91l3439BHIsQ7JQXVXbrii582OgFakqDxMRVw=w1319-h879-s-no-gm?authuser=0',
+    shortDescription: 'Outdoor and indoor enclosures used for electrical panels, junction boxes, and meters.',
+    fullDescription: 'GRP electrical enclosures manufactured by EMPHZ are used to house electrical and electronic equipment in outdoor and indoor locations. These enclosures are commonly selected where steel cabinets corrode or require frequent maintenance.',
+    whyItExists: 'Practical replacement for steel where corrosion, repainting, and maintenance become recurring problems.',
+    typicalUsage: 'Typical applications include electrical distribution panels, junction boxes, metering enclosures, solar inverter housings, and telecom equipment cabinets.',
+    recommendedWhen: [
+      'Outdoor installations',
+      'Coastal and humid regions',
+      'Industrial environments'
+    ],
+    notRecommendedWhen: [
+      'Explosion-proof certification is required without additional specification'
+    ],
+    imageUrl: 'https://image.made-in-china.com/2f0j00UVrCiOMyLBqP/GRP-Glass-Reinforced-Polyester-Enclosure-Electrical-Distribution-Fiberglass-Enclosure-IP65.webp',
+    gallery: ['https://cpimg.tistatic.com/00883297/b/6/FRP-Electric-Panel-Box.jpg'],
     specs: [
-      { label: 'Material', value: 'Hot Press Molded GRP' },
-      { label: 'IP Rating', value: 'IP66 / IP67' },
-      { label: 'IK Rating', value: 'IK10' },
-      { label: 'Fire Rating', value: 'UL94 V-0' },
-      { label: 'Dimensions', value: '600 x 400 x 250 mm' },
+      { label: 'Material', value: 'Glass Reinforced Plastic (SMC)' },
+      { label: 'Protection', value: 'IP66 Waterproof' },
+      { label: 'Impact Rating', value: 'IK10 (High impact)' },
+      { label: 'Fire Rating', value: 'Self-extinguishing (UL 94 V0)' }
     ],
-    features: ['Non-corrosive', 'Maintenance free', 'High impact strength', 'Electrically insulating'],
-    downloads: [
-      { title: 'Datasheet E-Series', type: 'PDF' },
-      { title: 'Installation Guide', type: 'PDF' },
-      { title: 'CAD Drawing (DWG)', type: 'CAD' }
-    ],
-    accessories: ['Pole Mounting Kit (SS304)', 'Wall Brackets', 'Internal Mounting Plate', 'Padlock Hasp'],
-    annotations: [
-      { id: 'door', position: [0, 1.5, 0.6], title: 'Double Seal Door', description: 'EPDM gasket ensures IP66 weatherproof rating.' },
-      { id: 'body', position: [0, 1.5, -0.5], title: 'SMC Body', description: 'Hot press molded GRP with IK10 impact strength.' }
-    ]
+    features: ['No rust or corrosion', 'No repainting required', 'Non-conductive body', 'UV stable outer finish'],
+    downloads: [{ title: 'J-Series Datasheet', type: 'PDF' }]
   },
+
+  // 2. Portable Toilet Units
   {
-    id: 'emp-tray-hd',
-    name: 'Heavy Duty Cable Tray',
-    category: ProductCategory.STRUCTURAL,
-    shortDescription: 'Pultruded GRP cable trays for chemical plants and offshore platforms - corrosion-proof infrastructure.',
-    fullDescription: 'The Heavy Duty Cable Tray system represents EMPHZ\'s solution for power and control cable management in the most corrosive industrial environments where steel cable trays suffer catastrophic failure within 3-5 years. Manufactured using the continuous pultrusion process, these trays combine the longitudinal strength of structural steel with the absolute corrosion immunity of advanced composite materials. The pultrusion process involves pulling continuous glass fiber rovings and woven mats through a resin bath (vinylester or isophthalic polyester, depending on chemical resistance requirements) and then through a heated die that cures the resin while forming the precise tray profile. This process creates a product with exceptional fiber alignment in the longitudinal direction, achieving tensile strength of 400+ MPa along the tray length—comparable to mild steel but at 70% less weight. The standard tray profile features a ladder-type design with side rails (50mm height) and rungs spaced at 150mm intervals, providing optimal cable support while allowing easy cable routing and maintenance access. The material thickness (6mm for side rails, 8mm for rungs) provides the structural rigidity needed to support heavy power cables over long spans without sagging. Load capacity is certified to NEMA VE-1 standards with testing confirming the tray can support uniformly distributed loads of 50 kg/meter over a 3-meter span with deflection < 1/200 of span—meeting or exceeding the performance of equivalent steel trays. The vinylester resin system (recommended for chemical plants and offshore platforms) provides exceptional resistance to: sulfuric acid (up to 70% concentration), hydrochloric acid (up to 35% concentration), caustic soda (up to 50% concentration), seawater and brine solutions, hydrocarbon solvents (gasoline, diesel, aromatics), and chlorine gas. This chemical resistance has been validated through immersion testing per ASTM C581, with samples showing < 5% strength loss after 1000 hours exposure to aggressive chemicals. The UV-stabilized surface finish ensures the tray maintains structural integrity and appearance for 20+ years of outdoor exposure without protective coatings or painting. The fire-retardant resin formulation meets UL94 V-0 classification and has low flame spread (ASTM E84: Flame Spread Index < 25, Smoke Developed Index < 50), making it suitable for installation in occupied buildings and process areas. The tray system includes all necessary accessories: straight sections (standard 3-meter lengths, custom lengths available), horizontal bends (30°, 45°, 90°), vertical risers (inside and outside radius bends), tee junctions (for cable branching), cross junctions (for complex routing), reducers (for transitioning between tray widths), and end caps. All connections use coupler plates (pultruded GRP with pre-drilled holes) secured with stainless steel 316 grade bolts and nuts—creating a completely corrosion-proof system. The tray is available in standard widths: 150mm, 225mm, 300mm, 450mm, 600mm, and 750mm, with custom widths available for specialized applications. Installation is straightforward using GRP support brackets or stainless steel hangers, with typical installation rates of 20-30 meters per day by a 2-person crew. The lightweight construction (approximately 8 kg/meter for 300mm width tray) reduces structural load on supporting steelwork and simplifies handling during installation—a single worker can easily carry a 3-meter section, whereas equivalent steel trays require two workers or mechanical assistance. The tray system is ideal for: petrochemical refineries (protecting cable infrastructure from corrosive process vapors), offshore oil platforms (eliminating corrosion from salt spray and humidity), fertilizer plants (resisting ammonia and acid vapors), pulp and paper mills (withstanding chlorine and caustic environments), water treatment facilities (protecting cables from chlorine gas and ozone), desalination plants (resisting seawater and brine exposure), and coastal power generation facilities (eliminating salt-induced corrosion). The maintenance-free design eliminates the annual inspection, painting, and replacement cycles required for steel trays, delivering lifecycle cost savings of 300%+ over a 25-year period. A total cost of ownership analysis for a typical refinery installation (1000 meters of cable tray) shows: initial cost premium of 20-30% for GRP versus galvanized steel, but elimination of painting costs (₹500/meter every 3 years), elimination of replacement costs (steel trays typically require 50% replacement after 10 years), and elimination of inspection and maintenance labor. The result is a net savings of ₹15-20 lakhs over 25 years for a 1000-meter installation. The tray meets international standards including: NEMA VE-1 for pultruded FRP products, IEC 61537 for cable management systems, ASTM E84 for surface burning characteristics, and local electrical codes across India, Middle East, and Southeast Asia. With proven installations across IOCL refineries, ONGC offshore platforms, Reliance petrochemical complexes, and major desalination plants in the Gulf region, our cable tray system has demonstrated unmatched reliability in the harshest industrial environments. Available with full technical documentation including load-span tables, chemical resistance charts, installation guidelines, and material certificates. Custom colors available (standard is grey or yellow for high-visibility). Bulk pricing available for large projects with engineering support for system design and layout optimization.',
-    imageUrl: 'https://images.unsplash.com/photo-1664273388755-2239d5718a38?auto=format&fit=crop&w=800&q=80',
+    id: 'emp-toil-001',
+    name: 'Eco-San GRP Toilet Cabin',
+    category: ProductCategory.PORTABLE_TOILET,
+    shortDescription: 'Factory-made GRP toilet cabins for construction sites and public areas.',
+    fullDescription: 'GRP portable toilet units are factory-manufactured cabins used in construction sites, public places, events, and institutions. GRP construction helps avoid corrosion and water damage common in steel toilets.',
+    whyItExists: 'Avoids corrosion and water damage common in steel toilets in high-use or outdoor locations.',
+    typicalUsage: 'Labor camps, construction sites, public grounds, and temporary institutions.',
+    recommendedWhen: [
+      'Sites requiring frequent cleaning with water',
+      'Coastal areas prone to rusting',
+      'Temporary installations needing quick deployment'
+    ],
+    notRecommendedWhen: [
+      'Permanent brick-and-mortar requirements'
+    ],
+    imageUrl: 'https://tiimg.tistatic.com/fp/1/004/995/grp-single-portable-toilet-082.jpg',
     specs: [
-      { label: 'Process', value: 'Pultrusion' },
-      { label: 'Resin', value: 'Isophthalic / Vinylester' },
-      { label: 'Load Class', value: 'NEMA 20C' },
-      { label: 'Length', value: '3m Standard' },
+      { label: 'Size', value: '1100 x 1100 x 2300 mm' },
+      { label: 'Surface', value: 'Glossy Gelcoat Finish' },
+      { label: 'Base', value: 'Skid Base for lifting' }
     ],
-    features: ['Zero Maintenance', 'High Load Bearing', 'UV Stabilized', 'Fire Retardant'],
-    downloads: [
-      { title: 'Load Span Tables', type: 'PDF' },
-      { title: 'Chemical Resistance Chart', type: 'PDF' }
-    ],
-    accessories: ['Coupler Plates', 'SS316 Hardware', 'Cover Clips', 'Divider Strip']
+    features: ['Strong GRP shell', 'Easy to wash', 'Does not absorb odors'],
+    downloads: [{ title: 'Eco-San Brochure', type: 'PDF' }]
   },
+
+  // 3. Security Cabins
   {
-    id: 'emp-grat-m4',
-    name: 'Anti-Slip Walkway Grating',
-    category: ProductCategory.STRUCTURAL,
-    shortDescription: 'Molded GRP grating with concave anti-slip surface for industrial safety - certified for wet and oily environments.',
-    fullDescription: 'The Anti-Slip Walkway Grating is an engineered safety product designed to eliminate slip-and-fall accidents in industrial environments where wet, oily, or chemically contaminated walking surfaces create severe hazards for workers. Slip-and-fall incidents account for over 30% of workplace injuries in manufacturing and process industries, resulting in lost productivity, workers\' compensation claims, and potential fatalities—making effective anti-slip flooring a critical safety investment. Our molded GRP grating addresses this challenge with a purpose-designed concave surface profile that provides positive mechanical traction for footwear, maintaining slip resistance even when covered with water, oil, grease, or chemical residues. The grating is manufactured via molded construction where resin-impregnated glass fiber rovings are laid in a mold and cured under heat and pressure, creating a monolithic structure with integral anti-slip surface features. The standard mesh size (38mm x 38mm openings) provides optimal balance between strength, drainage, and debris passage, while the 38mm panel thickness delivers the structural depth needed for heavy-duty industrial applications. The concave surface profile features raised meniscus surfaces on each intersection that create multiple contact points with shoe soles, providing mechanical grip that does not degrade with wear or contamination. Alternative surface treatments include: gritted surface (silicon carbide particles embedded in the top surface for maximum slip resistance), covered surface (solid top for applications requiring debris containment), and custom patterns for specific traction requirements. The grating achieves exceptional slip resistance with coefficient of friction (COF) values of 0.65+ when wet (tested per ASTM F1679), far exceeding the 0.50 minimum recommended for industrial walkways. The bi-directional strength of the molded construction (equal strength in both X and Y directions) allows the grating to be installed in any orientation and provides uniform load distribution across the panel. Load capacity testing per ASTM E84 confirms the grating supports concentrated loads of 450 kg over a 50mm x 50mm area without permanent deformation, making it suitable for heavy foot traffic, wheeled carts, and maintenance equipment. The resin system is available in three formulations to match specific chemical exposure: Orthophthalic (general purpose, suitable for mild chemical exposure and water), Isophthalic (enhanced chemical resistance for moderate acid/alkali exposure), and Vinylester (maximum chemical resistance for severe chemical environments including strong acids, caustics, and solvents). The chemical resistance has been validated through immersion testing showing < 5% strength loss after 1000 hours exposure to common industrial chemicals. The fire-retardant formulation meets UL94 V-0 classification and achieves ASTM E84 Class 1 rating (Flame Spread < 25, Smoke Development < 450), making it suitable for installation in occupied buildings, offshore platforms, and process areas. The non-sparking nature of GRP makes it ideal for hazardous locations where metal gratings could create ignition sources. The grating is available in standard panel sizes: 1220mm x 3660mm (4ft x 12ft), 1220mm x 2440mm (4ft x 8ft), and 1000mm x 4000mm (metric), with custom sizes available for specific applications. Panels can be easily cut on-site using standard power tools (circular saw with carbide blade, jigsaw) to fit irregular spaces and accommodate penetrations for pipes, columns, and equipment. Installation is straightforward using stainless steel support beams or GRP support profiles, with panels secured using M-clips (metal spring clips) or C-clips (GRP clips) that engage the grating mesh without requiring drilling. The lightweight construction (approximately 20 kg/m² for 38mm thickness) reduces structural load on supporting steelwork and simplifies handling during installation. The grating is ideal for: chemical plant walkways and platforms (providing corrosion-proof, slip-resistant access to equipment), water treatment facilities (walkways over clarifiers, filter beds, and chemical dosing areas), offshore oil platforms (deck grating resistant to salt spray and hydrocarbon exposure), food processing plants (hygienic, easy-to-clean flooring that resists bacterial growth), pulp and paper mills (walkways resistant to caustic and chlorine environments), metal finishing facilities (flooring resistant to acid and plating solution exposure), and marine applications (dock walkways, boat decks, marina facilities). The open mesh design provides 68% open area for superior drainage and debris passage, preventing water pooling and allowing spills to drain through to collection systems below. The corrosion-proof construction eliminates the rust staining, structural degradation, and maintenance costs associated with steel grating. A lifecycle cost analysis shows GRP grating delivers 200%+ savings over 20 years compared to galvanized steel grating (which requires painting every 3-5 years and replacement after 10-15 years in corrosive environments). The grating meets international standards including: ASTM E84 for surface burning characteristics, ASTM D635 for flammability, BS EN 13706 for GRP grating specifications, and OSHA requirements for walking-working surfaces. Available in standard colors including safety yellow (high visibility for hazard areas), grey (general industrial applications), and green (color-coding for specific process areas). Custom RAL colors available for large projects. The grating includes optional accessories: nosing profiles (yellow GRP nosing for platform edges to prevent trip hazards), handrail systems (GRP handrails and posts matching grating specifications), and stair treads (custom-molded treads with enhanced anti-slip features). With proven installations across chemical plants, offshore platforms, water treatment facilities, and manufacturing plants throughout India, Middle East, and Southeast Asia, our anti-slip grating has demonstrated unmatched safety performance and durability. Available with full technical documentation including load-span tables, chemical resistance charts, slip resistance test reports, and installation guidelines. Bulk pricing available for large projects with engineering support for system design and layout optimization.',
-    imageUrl: 'https://images.unsplash.com/photo-1579930359708-f58c7e997a38?auto=format&fit=crop&w=800&q=80',
+    id: 'emp-cbn-001',
+    name: 'Sentinel Guard Kiosk',
+    category: ProductCategory.CABIN,
+    shortDescription: 'GRP guard cabins for industrial, commercial, and infrastructure sites.',
+    fullDescription: 'Security cabins are manufactured using GRP panels and structural components for long-term outdoor use. These cabins are commonly installed at factory gates, residential complexes, and infrastructure sites.',
+    whyItExists: 'Provides an insulated, rust-free alternative to GI sheet cabins that leak or get too hot.',
+    typicalUsage: 'Factory gates, residential complexes, and infrastructure construction points.',
+    recommendedWhen: [
+      'High rainfall areas requiring leak-proof roofs',
+      'Long-term deployment at site gates',
+      'Projects requiring AC-ready design'
+    ],
+    notRecommendedWhen: [
+      'Multi-story control tower requirements'
+    ],
+    imageUrl: 'https://www.aradhanafrp.com/assets/img/frp-security-guard-cabin.jpg',
     specs: [
-      { label: 'Mesh Size', value: '38 x 38 mm' },
-      { label: 'Thickness', value: '38 mm' },
-      { label: 'Surface', value: 'Concave / Gritted' },
-      { label: 'Color', value: 'Yellow / Grey / Green' },
+      { label: 'Windows', value: 'Sliding glass panels' },
+      { label: 'Wall', value: 'PUF Insulated' },
+      { label: 'Electrical', value: 'Cabling and points provided' }
     ],
-    features: ['Anti-Slip', 'Bi-directional Strength', 'Easy Cutting on Site', 'Non-Sparking'],
-    downloads: [
-      { title: 'Grating Selection Guide', type: 'PDF' },
-      { title: 'Fixing Clip Detail', type: 'CAD' }
-    ],
-    accessories: ['M-Clips (SS316)', 'C-Clips', 'Rubber Feet', 'Pedestal Jacks']
+    features: ['Leak proof roof', 'Resists heat', 'Easy to install'],
+    downloads: [{ title: 'Sentinel Series Specs', type: 'PDF' }]
   },
+
+  // 4. GRP Kiosks
   {
-    id: 'emp-jb-x5',
-    name: 'Ex-Proof Junction Box',
-    category: ProductCategory.JUNCTION_BOX,
-    shortDescription: 'Explosion-proof GRP junction box for petrochemical and industrial zones - ATEX/IECEx certified for hazardous areas.',
-    fullDescription: 'The Ex-Proof Junction Box is a safety-critical product engineered for electrical installations in hazardous areas where flammable gases, vapors, or combustible dusts create explosion risks. In petrochemical refineries, chemical plants, oil terminals, and gas processing facilities, electrical equipment must be certified to prevent ignition of explosive atmospheres—and our ATEX/IECEx certified junction box provides the ultimate solution combining explosion protection with absolute corrosion immunity. The box body is manufactured from carbon-loaded GRP composite that achieves anti-static properties (surface resistivity < 10⁹ ohms per IEC 61241-0) preventing static electricity buildup that could trigger explosions. The carbon loading is uniformly distributed throughout the material thickness, ensuring anti-static properties are maintained even if the surface is scratched or abraded. The fire-retardant resin formulation meets UL94 V-0 classification and has been tested to IEC 60695-11-10 for glow-wire flammability, demonstrating self-extinguishing behavior that prevents the junction box from becoming an ignition source. The explosion protection is achieved through flameproof enclosure design (Ex d) where the box construction can withstand an internal explosion and prevent flame propagation to the external atmosphere. The box has been tested to IEC 60079-1 standards including: overpressure testing (withstanding 1.5x maximum explosion pressure), flame transmission testing (no external ignition when internal explosion occurs), and impact testing (maintaining integrity after mechanical impacts). The certification covers: ATEX (European directive for explosive atmospheres) with marking Ex d IIC T6 Gb (suitable for Zone 1 and Zone 2 gas atmospheres, all gas groups including hydrogen), and IECEx (international certification scheme) with equivalent marking. The T6 temperature classification means the maximum surface temperature remains below 85°C, safe for use with gases having ignition temperatures above 85°C (covering most industrial flammable gases). The box features a threaded cover with flame-proof thread engagement (minimum 5 full threads) that creates a flame path preventing explosion propagation. The thread is precision-molded to tight tolerances (±0.1mm) ensuring proper engagement and sealing. A stainless steel 316 grade threaded insert is molded into the GRP body, providing durable threads that will not strip or degrade after repeated opening/closing cycles. The cover includes an EPDM rubber O-ring seal that provides IP66 ingress protection, preventing moisture and dust entry that could compromise electrical connections. The box includes multiple cable entry points with certified cable glands (Ex d certified brass or stainless steel glands) that maintain the flameproof integrity while allowing cable entry. Standard entry sizes include M20, M25, and M32 threads, with blanking plugs (also Ex d certified) for unused entries. The internal volume is optimized for housing: terminal blocks (up to 35mm² wire capacity), small contactors and relays, intrinsic safety barriers, junction connections for field instrumentation, and sensor interface modules. The box includes an internal earthing terminal (brass with stainless steel screw) for equipment grounding, and pre-drilled mounting holes for DIN rail if required. The temperature range certification (-50°C to +110°C) makes the box suitable for extreme climates from Arctic installations to desert refineries. The corrosion resistance of GRP provides a critical advantage over traditional cast aluminum or stainless steel Ex d boxes in highly corrosive environments: while metal boxes suffer from galvanic corrosion (especially at threaded joints where dissimilar metals contact), our GRP box is completely inert. This corrosion immunity is particularly valuable in: offshore platforms (salt spray and high humidity), chemical plants (acid and caustic vapor exposure), fertilizer plants (ammonia atmosphere), chlor-alkali plants (chlorine gas environment), and coastal refineries (combination of salt and hydrocarbon exposure). The lightweight construction (approximately 2 kg for standard size) simplifies installation and reduces load on cable trays and support structures. Installation is straightforward using stainless steel mounting brackets (included) that accommodate wall mounting, pipe mounting (for 50-100mm diameter pipes), or panel mounting. The box is available in standard sizes: Small (150mm x 150mm x 100mm internal), Medium (200mm x 200mm x 100mm internal), and Large (250mm x 250mm x 150mm internal), with custom sizes available for specialized applications requiring larger internal volumes. The box meets international standards including: IEC 60079-0 (general requirements for explosive atmospheres), IEC 60079-1 (flameproof enclosures), ATEX Directive 2014/34/EU, IECEx certification scheme, and NEC 500/505 (US National Electrical Code for hazardous locations). Each box is supplied with: ATEX/IECEx certificate of conformity, technical documentation file, installation and maintenance instructions, and nameplate with certification markings. The box is ideal for: junction boxes for field instrumentation (connecting transmitters, analyzers, level sensors in hazardous areas), small control panels (housing intrinsic safety barriers, signal isolators, power supplies), lighting circuits (junction boxes for explosion-proof lighting in Zone 1 areas), emergency shutdown systems (housing safety relay modules and interface terminals), and hazardous area CCTV systems (junction boxes for camera power and signal connections). With proven installations across IOCL refineries, ONGC offshore platforms, GAIL gas terminals, and major petrochemical facilities in India and the Gulf region, our Ex-Proof Junction Box has demonstrated unmatched reliability in the most demanding hazardous area applications. The maintenance-free GRP construction eliminates the inspection and refurbishment cycles required for metal Ex d boxes (which require periodic thread inspection, gasket replacement, and corrosion treatment), delivering lifecycle cost savings of 150%+ over 15 years. Available in standard grey color (RAL 7035) with custom colors available for plant color-coding requirements. Full certification documentation, test reports, and technical support provided with every order. Bulk pricing available for large projects with engineering support for hazardous area classification and equipment selection.',
-    imageUrl: 'https://images.unsplash.com/photo-1665518204787-81816e0261b0?auto=format&fit=crop&w=800&q=80',
+    id: 'emp-ksk-001',
+    name: 'Neo-Retail Kiosk',
+    category: ProductCategory.KIOSK,
+    shortDescription: 'Food, retail, ticketing, and service kiosks manufactured using GRP construction.',
+    fullDescription: 'GRP kiosks are used for food stalls, retail counters, ticket booths, and service points. These kiosks are manufactured as single-piece or panel-type structures depending on size and usage.',
+    whyItExists: 'Quickly deployable retail and service points that do not require painting or rust treatment.',
+    typicalUsage: 'Food kiosks, retail kiosks, ticket counters, and information booths.',
+    recommendedWhen: [
+      'Coastal areas where metal kiosks rust',
+      'High mobility requirement (mobile kiosks)',
+      'Custom branding via gelcoat color'
+    ],
+    imageUrl: 'https://tejaswi-group.com/wp-content/uploads/2025/03/Food-Retail-Kiosk-Designer-1080x675.webp',
     specs: [
-      { label: 'Certification', value: 'ATEX / IECEx' },
-      { label: 'Material', value: 'Carbon-loaded GRP' },
-      { label: 'Temp Range', value: '-50°C to +110°C' },
+      { label: 'Shutters', value: 'Hydraulic lifting type' },
+      { label: 'Counters', value: 'Easy-to-clean GRP' }
     ],
-    features: ['Anti-static', 'Flameproof', 'Chemical resistant'],
-    downloads: [
-      { title: 'ATEX Certificate', type: 'PDF' }
+    features: ['Scratch resistant', 'Custom colors', 'Easy to move'],
+    downloads: [{ title: 'Retail Kiosk Catalog', type: 'PDF' }]
+  },
+
+  // 5. Modular Pods & Shelters
+  {
+    id: 'emp-pod-001',
+    name: 'Xpod X7 Living System',
+    category: ProductCategory.POD_SHELTER,
+    shortDescription: 'Sleeping pods, site offices, equipment shelters, and custom GRP rooms.',
+    fullDescription: 'GRP modular pods and shelters are manufactured for accommodation, site offices, and equipment housing. These units are preferred where quick installation and long service life are required.',
+    whyItExists: 'Lightweight and waterproof alternative to site containers that rust and get too hot.',
+    typicalUsage: 'Sleeping pods, site offices, equipment shelters, and temporary rooms.',
+    recommendedWhen: [
+      'Remote sites needing quick housing',
+      'Areas with extreme humidity or rainfall',
+      'Project-specific custom rooms'
     ],
-    accessories: ['Cable Glands (Ex-Rated)', 'Din Rail Kit', 'Earth Tag', 'Breather Drain']
+    imageUrl: 'https://www.karmod.com/media/products/174/grp-buildings-59281.jpg',
+    specs: [
+      { label: 'Body', value: 'Reinforced GRP' },
+      { label: 'Lifting', value: 'Integrated hook points' }
+    ],
+    features: ['Fully waterproof', 'Well insulated', 'Long life'],
+    downloads: [{ title: 'Xpod X7 Living Guide', type: 'PDF' }]
+  },
+
+  // 6. Custom GRP Fabrication
+  {
+    id: 'emp-cust-001',
+    name: 'Project Specific GRP Fabrication',
+    category: ProductCategory.CUSTOM,
+    shortDescription: 'Project-specific GRP products manufactured as per approved drawings.',
+    fullDescription: 'EMPHZ undertakes custom GRP fabrication based on client drawings or jointly developed designs. Products are manufactured after drawing approval and specification finalization.',
+    whyItExists: 'When standard products do not meet unique site dimensions or structural requirements.',
+    typicalUsage: 'Custom enclosures, special-purpose cabins, GRP rooms, covers, and project-specific components.',
+    recommendedWhen: [
+      'Unique dimensions required',
+      'Special resin requirements (Acid resistance)',
+      'Joint engineering development needed'
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1587575494201-11fe74d90d38?auto=format&fit=crop&w=600&q=80',
+    specs: [
+      { label: 'Scope', value: 'Custom Fabrication' },
+      { label: 'Standard', value: 'As per approved drawing' }
+    ],
+    features: ['Custom design', 'Material choice', 'Precision molding'],
+    downloads: [{ title: 'Radome Design Specs', type: 'PDF' }]
   }
 ];
 
 export const MOCK_CASE_STUDIES: CaseStudy[] = [
   {
     id: 'cs-kerala-resort',
-    title: 'Coastal Resort Infrastructure Upgrade',
+    title: 'Coastal Resort Asset Replacement',
     location: 'Kovalam, Kerala',
     category: 'Hospitality',
-    challenge: 'Traditional steel switchgear boxes were corroding within 18 months due to high salinity spray, causing frequent power outages and safety hazards.',
-    solution: 'Replaced all outdoor assets with Emphz E-Series GRP Enclosures (IP66). Installed custom GRP Security Cabins at all entry points.',
-    outcome: 'Zero corrosion reported after 3 years. Maintenance costs reduced by 100%. Enhanced aesthetic appeal matched the resort theme.',
+    challenge: 'Steel electrical boxes were rusting within 18 months because of the salty sea air, causing power failures and frequent maintenance.',
+    solution: 'Replaced all outdoor boxes with GRP enclosures. Also installed GRP security cabins at the site entry points.',
+    outcome: 'No rust after 3 years. No repainting or rust treatment needed since installation.',
     imageUrl: 'https://images.unsplash.com/photo-1588525287394-135b3d7c95e4?auto=format&fit=crop&w=800&q=80',
     relatedProductCategories: [ProductCategory.ENCLOSURE, ProductCategory.CABIN]
   },
   {
     id: 'cs-mysore-utility',
-    title: 'Urban Substation Protection',
+    title: 'Metering Protection for Urban Areas',
     location: 'Mysore, Karnataka',
     category: 'Utilities',
-    challenge: 'High vandalism rates and extreme heat damaging sensitive metering equipment in urban distribution zones.',
-    solution: 'Deployed 50 units of Modular Utility Kiosk M2 with IK10 impact rating and high-grade PU foam insulation.',
-    outcome: 'Equipment failure rate dropped by 85% due to thermal management. No break-ins reported in the pilot phase.',
+    challenge: 'Meters were getting damaged due to rain and heavy outdoor heat in city distribution sites.',
+    solution: 'Supplied GRP kiosks with PUF insulation to keep the equipment safe and at a manageable temperature.',
+    outcome: 'Meter failures were reduced. The GRP cabinets remained in good condition without any maintenance.',
     imageUrl: 'https://images.unsplash.com/photo-1617999192569-c6e7d0573934?auto=format&fit=crop&w=800&q=80',
     relatedProductCategories: [ProductCategory.KIOSK]
-  },
-  {
-    id: 'cs-kochi-port',
-    title: 'Port Trust Junction Boxes',
-    location: 'Kochi Port Trust',
-    category: 'Industrial',
-    challenge: 'Need for chemical-resistant and waterproof junction boxes for fuel handling jetty operations.',
-    solution: 'Installed ATEX-certified Ex-Proof Junction Boxes with custom cable gland entries.',
-    outcome: 'Full compliance with safety audits. Reliable operation during monsoon flooding events.',
-    imageUrl: 'https://images.unsplash.com/photo-1665518204787-81816e0261b0?auto=format&fit=crop&w=800&q=80',
-    relatedProductCategories: [ProductCategory.JUNCTION_BOX]
   }
-];
-
-export const INDUSTRIES = [
-  {
-    title: 'Solar & Renewables',
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80",
-    desc: "UV-stable combiner boxes for harsh solar parks."
-  },
-  {
-    title: 'Rail & Metro',
-    image: "https://images.unsplash.com/photo-1474487548417-781cb714c2f3?auto=format&fit=crop&w=600&q=80",
-    desc: "Fire-retardant trackside signaling cabinets."
-  },
-  {
-    title: 'Telecom / 5G',
-    image: "https://images.unsplash.com/photo-1587575494201-11fe74d90d38?auto=format&fit=crop&w=600&q=80",
-    desc: "Radio-transparent shrouds for rooftop antennae."
-  },
-  {
-    title: 'Water Treatment',
-    image: "https://images.unsplash.com/photo-1523365063870-827e85c138f2?auto=format&fit=crop&w=600&q=80",
-    desc: "Corrosion-proof walkways for pump stations."
-  },
-  {
-    title: 'Smart City',
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=600&q=80",
-    desc: "Vandal-resistant modular utility kiosks."
-  },
-  {
-    title: 'Oil & Gas',
-    image: "https://images.unsplash.com/photo-1516937941348-c09e554b96d8?auto=format&fit=crop&w=600&q=80",
-    desc: "Anti-static explosion-proof junction boxes."
-  },
-  {
-    title: 'Automotive',
-    image: "https://images.unsplash.com/photo-1552658514-a9557ee6f1b3?auto=format&fit=crop&w=600&q=80",
-    desc: "Lightweight, fire-safe shields for EV battery packs."
-  },
-  {
-    title: 'Fire Safety',
-    image: "https://images.unsplash.com/photo-1621253456100-e1b12b5087a5?auto=format&fit=crop&w=600&q=80",
-    desc: "High-visibility cabinets for emergency equipment."
-  },
 ];

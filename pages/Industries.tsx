@@ -61,7 +61,7 @@ const Industries: React.FC = () => {
                             <div key={index} className="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
                                 <div className="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
                                     <img
-                                        src={industry.image}
+                                        src={industry.imageUrl}
                                         alt={industry.title}
                                         loading="lazy"
                                         decoding="async"
@@ -77,7 +77,7 @@ const Industries: React.FC = () => {
                                         {industry.title}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed font-sans text-sm mb-6">
-                                        {industry.desc}
+                                        {industry.description}
                                     </p>
                                     <Link
                                         to="/products"

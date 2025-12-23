@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Gem, Users, Anchor, Lightbulb, Zap, CheckCircle, MapPin, PenTool, Calendar, Award, Rocket, Shield, FileCheck, XCircle, AlertTriangle, Scale, BatteryCharging, Clock, Truck, Droplet, Hammer, Feather, Factory, Recycle, Leaf, Microscope, Sun, Quote } from 'lucide-react';
+import { Target, Gem, Users, Anchor, Lightbulb, Zap, CheckCircle, MapPin, PenTool, Calendar, Award, Rocket, Shield, FileCheck, XCircle, AlertTriangle, Scale, BatteryCharging, Clock, Truck, Droplet, Hammer, Feather, Factory, Recycle, Leaf, Microscope, Sun, Quote, Check } from 'lucide-react';
 
 // Self-contained animated statistic component
 const AnimatedStatistic: React.FC<{
@@ -68,28 +68,28 @@ const About: React.FC = () => {
   const values = [
     {
       icon: <Anchor className="w-8 h-8 text-emphz-teal" />,
-      title: "Uncompromising Durability",
-      description: "Our solutions are engineered to last a generation. We build for long-term performance in the harshest conditions.",
-      statistic: { value: 25, suffix: '+ Year', label: 'Design Life' }
+      title: "Long Service Life",
+      description: "Our products are designed for 25+ years of use without rusting or the need for repainting, even in coastal environments.",
+      statistic: { value: 25, suffix: '+ Year', label: 'Service Life' }
     },
     {
       icon: <Lightbulb className="w-8 h-8 text-emphz-teal" />,
-      title: "Material Innovation",
-      description: "We relentlessly pursue advanced GRP composites, pushing the boundaries of strength, resilience, and design.",
+      title: "Material Weight",
+      description: "GRP components are much lighter than steel, making them easier to handle and mount at typical project sites.",
       statistic: { value: 40, suffix: '%', label: 'Lighter Than Steel' }
     },
     {
       icon: <Users className="w-8 h-8 text-emphz-teal" />,
-      title: "Collaborative Partnership",
-      description: "Your project is our project. We function as an extension of your engineering team, from start to finish.",
-      statistic: { value: 500, suffix: '+', label: 'Projects Delivered' }
+      title: "Project Support",
+      description: "We work directly with site engineers to ensure the enclosures and cabins meet the exact drawings and specs required.",
+      statistic: { value: 500, suffix: '+', label: 'Sites Supplied' }
     },
   ];
 
   const timelineEvents = [
-    { year: "2018", title: "The Spark", description: "Observing the rapid corrosion of steel in Kerala's coastal infrastructure, our founders identified a critical need for a superior material solution.", icon: <Zap /> },
-    { year: "2020", title: "The Foundation", description: "Emphz was born. We established our state-of-the-art manufacturing hub in Mysore, investing in advanced Hot Press Molding technology.", icon: <PenTool /> },
-    { year: "2023", title: "Major Project Milestone", description: "Successfully deployed over 200 custom IP66 enclosures for a major coastal resort, proving our GRP's performance in high-salinity environments.", icon: <Award /> },
+    { year: "2018", title: "The Spark", description: "Observing the rapid corrosion of steel in Kerala's coastal infrastructure, our founders identified a critical need for a durable material alternative.", icon: <Zap /> },
+    { year: "2020", title: "The Foundation", description: "Emphz was born. We established our manufacturing hub in Mysore, investing in advanced Hot Press Molding technology.", icon: <PenTool /> },
+    { year: "2023", title: "Major Project Milestone", description: "Successfully deployed over 200 custom IP66 enclosures for a major coastal resort, confirming our GRP's performance in high-salinity environments.", icon: <Award /> },
     { year: "2025", title: "The Future", description: "Expanding our product line into renewable energy sectors, designing specialized enclosures for solar and wind farm infrastructure.", icon: <Rocket /> },
   ];
 
@@ -101,39 +101,47 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-emphz-navy via-emphz-navy/70 to-transparent"></div>
         <div className="absolute inset-0 bg-dots opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-7xl font-black mb-4 md:mb-6 max-w-3xl leading-tight font-display text-white">
-            Engineering a <span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">Corrosion-Free</span> Future.
+          <h1 className="text-4xl md:text-7xl font-black mb-4 md:mb-6 max-w-4xl leading-tight font-display text-white uppercase">
+            Kerala Managed. <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">Mysore Manufactured.</span>
           </h1>
           <p className="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light border-l-4 border-emphz-teal pl-4 md:pl-6 font-sans">
-            We are a team of material scientists and engineers dedicated to solving India's toughest infrastructure challenges with advanced GRP composites.
+            EMPHZ GRP Solutions is a Kerala-managed enterprise with a dedicated manufacturing hub in Mysore. Our mission is to solve the corrosion crisis in Indian infrastructure using advanced GRP technology.
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
+      {/* About Section */}
       <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="pr-0 md:pr-8">
-            <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-widest uppercase mb-3 md:mb-4 font-display">Our Mission</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-emphz-navy mb-4 md:mb-6 font-display">To Replace Obsolete Materials.</h3>
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base font-sans">
-              Our mission is to systematically replace traditional materials like steel, concrete, and wood with superior, high-performance GRP solutions in critical infrastructure. We aim to eradicate the costs and dangers associated with corrosion and degradation, ensuring longevity and safety for a modern India.
-            </p>
-          </div>
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 space-y-6">
-            <div className="flex items-start">
-              <div className="bg-emphz-teal/10 p-3 rounded-full mr-4"><Target className="w-5 h-5 md:w-6 md:h-6 text-emphz-teal" /></div>
-              <div>
-                <h4 className="font-bold text-base md:text-lg font-display">Engineer for Environment</h4>
-                <p className="text-gray-500 text-xs md:text-sm font-sans">Create products perfectly suited for their intended environment, from saline coasts to harsh industrial zones.</p>
-              </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2">
+              <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-widest uppercase mb-3 md:mb-4 font-display">About EMPHZ GRP Solutions</h2>
+              <h3 className="text-3xl md:text-5xl font-black text-emphz-navy mb-6 font-display leading-[1.1]">Serving India's Infrastructure.</h3>
+              <p className="text-gray-600 leading-relaxed text-base md:text-lg font-sans mb-8">
+                EMPHZ GRP Solutions is an Indian manufacturer of GRP / FRP products serving electrical, telecom, industrial, and infrastructure sectors. The company is managed from Kerala, with manufacturing operations located in Mysuru, Karnataka.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-base md:text-lg font-sans">
+                We focus on practical product design, consistent manufacturing quality, and reliable delivery for project-based requirements.
+              </p>
             </div>
-            <div className="flex items-start">
-              <div className="bg-emphz-teal/10 p-3 rounded-full mr-4"><Gem className="w-5 h-5 md:w-6 md:h-6 text-emphz-teal" /></div>
-              <div>
-                <h4 className="font-bold text-base md:text-lg font-display">Deliver Unmatched Quality</h4>
-                <p className="text-gray-500 text-xs md:text-sm font-sans">Utilize precision manufacturing and the highest-grade materials to deliver products that exceed international standards.</p>
-              </div>
+            <div className="lg:w-1/2 bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100">
+              <h4 className="text-xl font-bold text-emphz-navy mb-8 font-display border-b border-gray-100 pb-4 uppercase tracking-wider">What We Do</h4>
+              <ul className="space-y-6">
+                {[
+                  { title: "Manufacturing", desc: "Manufacture GRP enclosures, cabins, kiosks, and modular units" },
+                  { title: "Custom Fabrication", desc: "Undertake custom GRP fabrication as per drawings" },
+                  { title: "Infrastructure Supply", desc: "Supply products for infrastructure and industrial use" }
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-4 group">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emphz-teal/10 flex items-center justify-center group-hover:bg-emphz-teal transition-colors">
+                      <Check size={14} className="text-emphz-teal group-hover:text-white transition-colors" />
+                    </div>
+                    <p className="text-slate-600 font-sans text-sm md:text-base leading-snug">
+                      <span className="font-bold text-emphz-navy">{item.title}:</span> {item.desc}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -169,7 +177,7 @@ const About: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 md:mb-4 font-display">How We Build</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-emphz-navy mb-4 md:mb-6 font-display">Manufacturing Excellence.</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-emphz-navy mb-4 md:mb-6 font-display">Mysore Factory Setup.</h3>
               <p className="text-base md:text-lg text-gray-600 mb-6 font-light font-sans">
                 At our Mysore facility, we employ multiple advanced composite manufacturing techniques to ensure every product meets specific structural and aesthetic requirements.
               </p>
@@ -178,27 +186,27 @@ const About: React.FC = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">01</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">SMC Hot Press Molding</h4>
+                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Hand Layup & SMC Press</h4>
                     <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      Used for our high-volume enclosures and junction boxes. Sheet Molding Compound (SMC) is placed in heated steel molds and pressed under 1000+ tons of pressure. Result: Consistent wall thickness, smooth finish on both sides, and extreme strength.
+                      We use hot press molding for volume enclosures and hand layup for custom structural parts. This allows us to handle both standard junction boxes and bespoke cabins.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">02</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Pultrusion</h4>
+                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Pultrusion Line</h4>
                     <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      A continuous process used for creating our structural profiles, cable trays, and handrails. Fibers are pulled through a resin bath and heated die, creating infinite lengths of constant cross-section with immense longitudinal strength.
+                      Our factory has pultrusion lines for manufacturing GRP profiles, angles, and cable trays. These profiles are used where high strength is needed for frame support.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">03</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Vacuum Infusion (RTM)</h4>
+                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Assembly & Finishing</h4>
                     <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      Used for large, complex structures like our Smart Cabins and Kiosks. This closed-mold process ensures zero void content and superior fiber-to-resin ratios compared to traditional hand lay-up.
+                      Cabins and Kiosks are assembled at the Mysore plant. Every unit is fitted with electricals and plumbing as per the order before it is packed for dispatch.
                     </p>
                   </div>
                 </div>
@@ -231,12 +239,13 @@ const About: React.FC = () => {
       </section>
 
       {/* NEW: Quality Assurance Section */}
+      {/* NEW: Batch Testing & Standards Section */}
       <section className="py-16 md:py-24 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/3 text-center md:text-left">
               <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 md:mb-4 font-display">Strict Standards</h2>
-              <h3 className="text-3xl font-bold text-emphz-navy mb-3 md:mb-4 font-display">In-House QA Lab</h3>
+              <h3 className="text-3xl font-bold text-emphz-navy mb-3 md:mb-4 font-display">Batch Testing.</h3>
               <p className="text-gray-600 text-sm md:text-base font-sans">
                 We don't just manufacture; we test. Our Mysore facility includes a dedicated Quality Assurance lab where batches are rigorously tested against international standards.
               </p>
@@ -304,13 +313,15 @@ const About: React.FC = () => {
               <h2 className="text-3xl md:text-5xl font-black text-emphz-navy mb-8 font-display leading-tight">
                 Building Resilience for a Changing World.
               </h2>
-              <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-light font-sans">
+              <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-light font-sans italic">
                 <p>
-                  "At Emphz, we realized early on that the infrastructure of tomorrow cannot be built with the materials of yesterday. In a country with such diverse and harsh climates—from the humid coasts of Kerala to the industrial belts of the interior—traditional steel and concrete often fail sooner than expected."
+                  "Our objective is to manufacture GRP products that work reliably in real site conditions, without unnecessary complexity."
                 </p>
-                <p>
-                  "Our mission was to create a solution that essentially pauses time for your assets. By leveraging advanced GRP composites, we aren't just selling enclosures; we are selling peace of mind. We are selling the guarantee that ten years from now, your critical electrical infrastructure will look and perform exactly as it does today."
-                </p>
+                <div className="pt-4 non-italic font-normal">
+                  <p className="text-sm">
+                    As a Kerala-managed company with manufacturing roots in Mysuru, we combine engineering vision with manufacturing scale. We focus on providing durable, corrosion-resistant infrastructure solutions for India's demanding environments.
+                  </p>
+                </div>
               </div>
               <div className="mt-10 pt-8 border-t border-gray-200 flex items-center justify-between">
                 <div>
