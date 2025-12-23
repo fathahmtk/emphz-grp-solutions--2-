@@ -92,7 +92,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Geographically dispersed service points',
       'Centralized asset tracking is critical'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Ecosystem', value: 'Managed IoT Network' },
       { label: 'Management', value: 'Centralized Remote Dashboard' },
@@ -114,7 +114,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Areas with limited construction footprints',
       'High-traffic urban zones needing premium design'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Mini-market / Convenience' },
       { label: 'Form Factor', value: 'Modular 3.5m x 4.0m' },
@@ -136,7 +136,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Banks extending 24/7 service footprint',
       'Urban zones requiring secure automated kiosks'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Banking & Automated Services' },
       { label: 'Form Factor', value: 'Kiosk Format' },
@@ -158,7 +158,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Municipal green-energy mandates',
       'Remote sites requiring off-grid power'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'EV Charging & Solar Hub' },
       { label: 'Charger', value: 'Dual 50kW DC Fast Charge' },
@@ -180,7 +180,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Coastal or high-humidity regions',
       'Food-grade hygiene standards'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Cold Chain / Storage' },
       { label: 'Operating Temp', value: '-20°C to +10°C' },
@@ -202,7 +202,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Municipal-private partnerships (PPP)',
       'Maximizing ROI on small urban land parcels'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1517245327032-96ad3ddbc602?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Retail & Public Services' },
       { label: 'Layout', value: 'Dual-Zone Configuration' },
@@ -224,7 +224,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Institutional bulk procurement needs',
       'Predictable demand modeling required'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Workforce Retail' },
       { label: 'Durability', value: 'Extreme Industrial Duty' },
@@ -246,7 +246,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Temperature-sensitive inventory',
       'High-shrinkage/theft environments'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Frontage', value: 'Full Glazing / Display' },
       { label: 'Storage', value: 'Insulated 10m³ Rear Zone' },
@@ -268,7 +268,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Municipality vending regulation',
       'Tourist-heavy heritage zones'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485657073.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Application', value: 'Regulated Street Retail' },
       { label: 'Certification', value: 'Municipal Standard Approved' },
@@ -290,7 +290,7 @@ export const MOCK_PRODUCTS: Product[] = [
       'Exhibition presence',
       'Semi-permanent dealership extensions'
     ],
-    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=1200&q=80',
     specs: [
       { label: 'Aesthetic', value: 'Premium Glass + GRP Finish' },
       { label: 'Lighting', value: 'Integrated LED Studio Array' },

@@ -3,6 +3,7 @@ import { Send, Loader2, BookOpen, PenTool, FileText, Download, Terminal, Cpu, Th
 import { askTechnicalAssistant } from '../services/geminiService';
 import { ChatMessage } from '../types';
 import GatedDownloadModal from '../components/GatedDownloadModal';
+import SEO from '../components/SEO';
 
 // --- DATA ---
 
@@ -412,6 +413,10 @@ const TechnicalCenter: React.FC = () => {
 
    return (
       <>
+         <SEO
+            title="Technical Center | Datasheets & Support"
+            description="Access our Technical Center for GRP datasheets, installation guides, chemical resistance matrices, and direct consultation with our engineering assistant."
+         />
          <div className="bg-slate-950 min-h-screen text-slate-300 font-mono">
             <style>{`
           .scanline {

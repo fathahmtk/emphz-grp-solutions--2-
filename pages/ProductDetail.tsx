@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { MOCK_PRODUCTS } from '../constants';
 import { useRFQStore } from '../stores/rfqStore';
+import SEO from '../components/SEO';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -36,6 +37,7 @@ const ProductDetail: React.FC = () => {
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-industrial-50">
+        <SEO title="Product Not Found" description="The requested GRP product could not be found." />
         <div className="text-center">
           <h1 className="text-2xl font-medium text-industrial-900 mb-4">Product Not Found</h1>
           <Link to="/catalog" className="text-accent-blue font-bold uppercase tracking-widest text-xs">Back to Catalog</Link>
@@ -64,6 +66,12 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-32">
+      <SEO
+        title={product.name}
+        description={product.shortDescription}
+        image={product.imageUrl}
+        type="article"
+      />
       {/* Product Hero */}
       <section className="bg-industrial-50/50 border-b border-industrial-100">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">

@@ -172,7 +172,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative animate-up">
               <img
-                src="/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
                 alt="SmartPod Grid Ecosystem"
                 className="rounded-sm shadow-2xl"
                 loading="lazy"
