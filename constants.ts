@@ -15,46 +15,32 @@ export const WHATSAPP_LINK = "https://wa.me/919037874080";
 
 export const INDUSTRIES = [
   {
+    id: 'smart-city',
+    title: 'Smart Cities & Municipalities',
+    category: 'Flagship',
+    description: 'Networked infrastructure for urban retail, services, and connectivity.',
+    imageUrl: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'labor-camp',
+    title: 'Workforce Housing & Labor Camps',
+    category: 'Essential',
+    description: 'Standardized retail and sanitary solutions for mass labor accommodations.',
+    imageUrl: 'https://images.unsplash.com/photo-1590674899484-d564fa788e3c?auto=format&fit=crop&w=800&q=80'
+  },
+  {
     id: 'elec-dist',
-    title: 'Electrical & Power Distribution',
-    category: 'Energy',
-    description: 'Housing for panels, junction boxes, and meters in distribution networks.',
+    title: 'Power & Utility Distribution',
+    category: 'Industrial',
+    description: 'Weatherproof housing for panels, junction boxes, and meters.',
     imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'telecom',
-    title: 'Telecom & Network Infrastructure',
-    category: 'Telecom',
-    description: 'Enclosures and shelters for 5G, fiber optic, and network hardware.',
+    title: 'Telecom & Net-Zero Energy',
+    category: 'Infrastructure',
+    description: 'Shielding for 5G hardware and modular solar energy storage.',
     imageUrl: 'https://images.unsplash.com/photo-1544669146-6dec42bc7438?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'smart-city',
-    title: 'Infrastructure & Smart Cities',
-    category: 'Public',
-    description: 'Kiosks, shelters, and utility boxes for urban infrastructure projects.',
-    imageUrl: 'https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'water-waste',
-    title: 'Water & Wastewater Facilities',
-    category: 'Utility',
-    description: 'Corrosion-resistant covers and tanks for treatment plants.',
-    imageUrl: 'https://images.unsplash.com/photo-1523365063870-827e85c138f2?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'industrial',
-    title: 'Industrial Plants & Factories',
-    category: 'Industrial',
-    description: 'Custom GRP parts and enclosures for chemical and manufacturing units.',
-    imageUrl: 'https://images.unsplash.com/photo-1516937941348-c09e554b96d8?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'solar-renew',
-    title: 'Solar and Renewable Energy',
-    category: 'Renewables',
-    description: 'Weatherproof boxes for solar combiners and inverters in remote sites.',
-    imageUrl: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80'
   }
 ];
 
@@ -591,36 +577,36 @@ export const MOCK_PRODUCTS: Product[] = [
 
 export const MOCK_CASE_STUDIES: CaseStudy[] = [
   {
-    id: 'cs-kerala-resort',
-    title: 'Coastal Resort Asset Replacement',
-    location: 'Kovalam, Kerala',
-    category: 'Hospitality',
-    challenge: 'Steel electrical boxes were rusting within 18 months because of the salty sea air, causing power failures and frequent maintenance.',
-    solution: 'Replaced all outdoor boxes with GRP enclosures. Also installed GRP security cabins at the site entry points.',
-    outcome: 'No rust after 3 years. No repainting or rust treatment needed since installation.',
+    id: 'cs-smart-city-retail',
+    title: 'Smart City Retail Hub Expansion',
+    location: 'Dubai Digital Park, UAE',
+    category: 'Smart City',
+    challenge: 'The park required standardized, IoT-ready retail units that could be deployed overnight to support a growing tech workforce without permanent construction.',
+    solution: 'Deployed a fleet of 12 **UrbanCell™ RETAIL** modules integrated with the **SmartPod Grid™** IoT controller for centralized energy monitoring.',
+    outcome: '95% occupancy within 30 days. No disruption to park utilities during setup. Centralized billing reduced operational overhead by 40%.',
+    imageUrl: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=800&q=80',
+    relatedProductCategories: [ProductCategory.URBANCELL, ProductCategory.KIOSK]
+  },
+  {
+    id: 'cs-labor-camp-retail',
+    title: 'Industrial Workforce City Optimization',
+    location: 'Industrial Estate, Mysore',
+    category: 'Logistics',
+    challenge: 'A labor camp housing 5,000 residents lacked dignified retail infrastructure, leading to disorganized street vending and hygiene concerns.',
+    solution: 'Designed and installed a custom **CampMart™** retail block featuring **Eco-San GRP Toilet Cabins** and **StoreBox™** inventory modules.',
+    outcome: 'Standardized retail availability for residents. Improved sanitation metrics. Secured POS integration reduced cash-handling risks for camp operators.',
+    imageUrl: 'https://images.unsplash.com/photo-1590674899484-d564fa788e3c?auto=format&fit=crop&w=800&q=80',
+    relatedProductCategories: [ProductCategory.URBANCELL, ProductCategory.PORTABLE_TOILET]
+  },
+  {
+    id: 'cs-heritage-kiosk',
+    title: 'Heritage Zone Renewal Project',
+    location: 'Fort Kochi, Kerala',
+    category: 'Tourism',
+    challenge: 'The municipality needed to regulate street vendors in a sensitive heritage zone where permanent concrete structures were strictly prohibited.',
+    solution: 'Supplied 15 **StreetSmart™ Municipality Units** with custom heritage-inspired finishes and integrated lighting.',
+    outcome: 'Clean, regulated tourist experience. Zero structural impact on the heritage site. Increased municipal revenue via standardized lease agreements.',
     imageUrl: 'https://images.unsplash.com/photo-1588525287394-135b3d7c95e4?auto=format&fit=crop&w=800&q=80',
-    relatedProductCategories: [ProductCategory.ENCLOSURE, ProductCategory.CABIN]
-  },
-  {
-    id: 'cs-mysore-utility',
-    title: 'Metering Protection for Urban Areas',
-    location: 'Mysore, Karnataka',
-    category: 'Utilities',
-    challenge: 'Meters were getting damaged due to rain and heavy outdoor heat in city distribution sites.',
-    solution: 'Supplied GRP kiosks with PUF insulation to keep the equipment safe and at a manageable temperature.',
-    outcome: 'Meter failures were reduced. The GRP cabinets remained in good condition without any maintenance.',
-    imageUrl: 'https://images.unsplash.com/photo-1617999192569-c6e7d0573934?auto=format&fit=crop&w=800&q=80',
-    relatedProductCategories: [ProductCategory.KIOSK]
-  },
-  {
-    id: 'cs-kochi-port',
-    title: 'Port Trust Asset Protection',
-    location: 'Kochi, Kerala',
-    category: 'Industrial',
-    challenge: 'Port electrical infrastructure faced extreme corrosion from sea spray and humidity, leading to dangerous short circuits.',
-    solution: 'Deployed IP66 rated GRP Junction Boxes and custom sunshades for crane control panels.',
-    outcome: 'Electrical safety incidents reduced to zero. Equipment lifespan extended by 5+ years.',
-    imageUrl: 'https://images.unsplash.com/photo-1574972767078-4384dbf0687f?auto=format&fit=crop&w=800&q=80',
-    relatedProductCategories: [ProductCategory.ENCLOSURE, ProductCategory.CUSTOM]
+    relatedProductCategories: [ProductCategory.URBANCELL, ProductCategory.KIOSK]
   }
 ];

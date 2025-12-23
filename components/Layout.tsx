@@ -338,7 +338,7 @@ export function Layout({ children }: LayoutProps) {
             <img
               src="/logo.png"
               alt="EMPHZ Logo"
-              className={`h-8 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
+              className={`h-14 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
             />
           </Link>
 
@@ -463,7 +463,7 @@ export function Layout({ children }: LayoutProps) {
                   <img
                     src="/logo.png"
                     alt="EMPHZ Logo"
-                    className="h-10 w-auto brightness-0 invert mb-2 opacity-80 group-hover:opacity-100 transition-all duration-300"
+                    className="h-20 w-auto brightness-0 invert mb-4 opacity-90 group-hover:opacity-100 transition-all duration-300"
                   />
                   <span className="text-[10px] uppercase tracking-[0.4em] text-industrial-600 font-bold">Advanced GRP Engineering</span>
                 </Link>
