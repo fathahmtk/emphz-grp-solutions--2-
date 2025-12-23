@@ -1,22 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Industrial Premium - Design System */
 
-/* Industrial Design System - Clean & Engineering-Led */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lexend:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: 'Inter', 'IBM Plex Sans', -apple-system, sans-serif;
-  background-color: #FDFCFC;
-  /* Off-white background */
+  font-family: 'Inter', sans-serif;
+  background-color: #F8FAFC;
   color: #0F172A;
-  /* Slate text */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,
@@ -25,136 +21,158 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  /* Medium weight for industrial feel */
-  letter-spacing: -0.01em;
+  font-family: 'Lexend', sans-serif;
+  letter-spacing: -0.025em;
+  /* Tighter headings for modern look */
   color: #0F172A;
 }
 
-/* Subtle Glass Effect - Engineering Precision */
+/* --- Components --- */
+
+/* Modern Glass Panel */
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(226, 232, 240, 0.5);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 .glass-nav {
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
-/* Industrial Card */
+/* Premium Card Interaction */
 .industrial-card {
-  background: #FFFFFF;
+  background: white;
   border: 1px solid #E2E8F0;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  /* Slightly softer corners */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.industrial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563EB, #0D9488);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .industrial-card:hover {
-  border-color: #CBD5E1;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border-color: #2563EB;
 }
 
-/* Clean CTA */
+.industrial-card:hover::after {
+  opacity: 1;
+}
+
+/* Buttons */
 .btn-industrial {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  background-color: #1E3A8A;
-  /* Deep blue accent */
-  color: #FFFFFF;
+  padding: 0.875rem 2rem;
+  background: #0F172A;
+  color: white;
+  font-family: 'Lexend', sans-serif;
   font-weight: 500;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.btn-industrial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #2563EB;
+  /* Vibrant Blue fill on hover */
+  transition: width 0.3s ease;
+  z-index: -1;
 }
 
 .btn-industrial:hover {
-  background-color: #172554;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-industrial:hover::before {
+  width: 100%;
 }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  background-color: transparent;
+  padding: 0.875rem 2rem;
+  background: transparent;
   color: #334155;
   border: 1px solid #CBD5E1;
+  font-family: 'Lexend', sans-serif;
   font-weight: 500;
-  border-radius: 4px;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   transition: all 0.2s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #F8FAFC;
+  background: #F8FAFC;
   border-color: #94A3B8;
+  color: #0F172A;
 }
 
-/* Custom Scrollbar - Minimal Industrial */
+/* Utility Animations */
+@keyframes softFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: softFloat 6s ease-in-out infinite;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #CBD5E1;
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 2px solid #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
-}
-
-/* Animations */
-.animate-in {
-  animation: fade-in 0.5s ease-out forwards;
-}
-
-.animate-up {
-  animation: fade-up 0.6s ease-out forwards;
-}
-
-/* Remove all legacy neon/glow classes */
-.glass,
-.glass-dark,
-.glass-teal,
-.gradient-primary,
-.gradient-primary-vibrant,
-.gradient-dark,
-.gradient-dark-deep,
-.gradient-mesh,
-.gradient-mesh-vibrant,
-.bg-tech-grid,
-.bg-tech-grid-fine,
-.bg-dots,
-.bg-dots-subtle,
-.bg-carbon-fibre,
-.bg-cubes,
-.card-hover,
-.card-hover-subtle,
-.text-gradient-primary,
-.text-gradient-vibrant,
-.text-gradient-warm,
-.btn-premium,
-.badge-premium,
-.shadow-premium,
-.shadow-premium-teal,
-.shadow-premium-blue,
-.backdrop-blur-premium,
-.backdrop-blur-strong {
-  /* Resetting legacy style hooks to avoid broken layouts while migrating */
-  all: unset;
-  display: revert;
 }

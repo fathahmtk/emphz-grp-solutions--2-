@@ -13,8 +13,8 @@ export default {
     extend: {
       colors: {
         industrial: {
-          50: '#FDFCFC', // Off-white clean background
-          100: '#F1F5F9', // Light industrial grey
+          50: '#F8FAFC', // Crisp Slate - Cleaner than simple white
+          100: '#F1F5F9',
           200: '#E2E8F0',
           300: '#CBD5E1',
           400: '#94A3B8',
@@ -22,20 +22,29 @@ export default {
           600: '#475569',
           700: '#334155',
           800: '#1E293B',
-          900: '#0F172A', // Slate/Charcoal text
+          900: '#0F172A', // Deepest Navy
         },
         accent: {
-          blue: '#1E3A8A', // Deep blue for CTAs only
-          'blue-hover': '#172554',
+          blue: '#2563EB', // More vibrant electric blue (Modern Tech)
+          'blue-hover': '#1D4ED8',
+          teal: '#0D9488', // Secondary Safety/Eco color
         }
       },
       fontFamily: {
-        sans: ['Inter', 'IBM Plex Sans', '-apple-system', 'sans-serif'],
-        display: ['Inter', 'IBM Plex Sans', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Lexend', 'Inter', 'sans-serif'], // Lexend for confident headers
+        mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'subtle': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-        'glass': '0 8px 32px 0 rgba(15, 23, 42, 0.05)',
+        'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+        'glow': '0 0 20px rgba(37, 99, 235, 0.15)', // Blue glow
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'hero-pattern': "url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80')",
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

@@ -12,9 +12,15 @@ import {
   Truck
 } from 'lucide-react';
 
+import SEO from '../components/SEO';
+
 const About: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-24">
+      <SEO
+        title="About Us"
+        description="Learn about EMPHZ GRP Solutions, a Mysuru-based manufacturer of high-quality composite infrastructure. ISO 9001:2015 certified."
+      />
       {/* Hero Section */}
       <section className="bg-industrial-900 py-24 md:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">

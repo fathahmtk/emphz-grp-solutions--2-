@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { INDUSTRIES } from '../constants';
 import { ArrowRight, CheckCircle2, Factory, Zap, Shield, Droplet, Radio, Train, Flame, Truck, ChevronRight } from 'lucide-react';
 
+import SEO from '../components/SEO';
+
 const Industries: React.FC = () => {
     // Scroll to top on mount
     useEffect(() => {
@@ -23,6 +25,10 @@ const Industries: React.FC = () => {
 
     return (
         <div className="bg-white text-industrial-900 min-h-screen">
+            <SEO
+                title="Industries"
+                description="EMPHZ GRP solutions serve critical sectors including Rail, Solar Energy, Oil & Gas, Telecom, and Water Treatment with compliant, high-durability infrastructure."
+            />
             {/* Hero Section */}
             <section className="bg-industrial-900 py-24 md:py-32 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { MOCK_PRODUCTS } from '../constants';
 import { ProductCategory } from '../types';
+import SEO from '../components/SEO';
 
 // Simplified Filter Section
 const FilterItem: React.FC<{
@@ -50,6 +51,7 @@ const Catalog: React.FC = () => {
 
   const categories = ['All', ...Object.values(ProductCategory)];
 
+  // ... existing hooks for filteredProducts and sortedProducts ...
   const filteredProducts = useMemo(() => {
     return MOCK_PRODUCTS.filter(p => {
       const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
@@ -69,6 +71,10 @@ const Catalog: React.FC = () => {
 
   return (
     <div className="bg-industrial-50 min-h-screen pt-24">
+      <SEO
+        title="Products"
+        description="Explore the EMPHZ product catalog: GRP Enclosures, Modular Cabins, Security Kiosks, and Industrial Toilets. Engineered for durability."
+      />
       {/* Header Section */}
       <section className="bg-white border-b border-industrial-100 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-8">

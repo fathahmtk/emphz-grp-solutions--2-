@@ -21,40 +21,46 @@ const Home: React.FC = () => {
         description="EMPHZ is a leading manufacturer of GRP/FRP enclosures, portable toilets, security cabins, and composite infrastructure solutions in India and the UAE."
       />
       {/* Hero Section – Engineering Precision */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-gradient-to-b from-industrial-50 to-white">
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 right-0 w-[60%] h-full bg-industrial-100/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="animate-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-industrial-100 border border-industrial-200 mb-8 font-bold text-[10px] text-industrial-500 uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-industrial-200 mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
               <Factory size={12} className="text-accent-blue" />
-              Kerala Managed | Mysuru Manufactured
+              <span>Kerala Managed | Mysuru Manufactured</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-medium leading-[1.05] tracking-tight text-industrial-900 mb-8">
+            <h1 className="text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-industrial-900 mb-8">
               Composite <br />
-              <span className="text-industrial-400">Infrastructure</span>
+              <span className="text-industrial-500">Infrastructure.</span>
             </h1>
-            <p className="text-lg md:text-xl text-industrial-600 max-w-lg leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-industrial-600 max-w-lg leading-relaxed mb-10 font-light">
               Specialized GRP manufacturer delivering high-durability enclosures, cabins, and modular structures designed for aggressive industrial environments.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/products" className="btn-industrial px-10 py-4 text-sm uppercase tracking-wider font-bold">
+              <Link to="/products" className="btn-industrial shadow-lg shadow-accent-blue/20">
                 View Solutions
               </Link>
-              <Link to="/technical" className="btn-secondary px-10 py-4 text-sm uppercase tracking-wider font-bold">
-                Technical Center
+              <Link to="/technical" className="btn-secondary bg-white/50 backdrop-blur-sm">
+                Technical Center <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>
           </div>
           <div className="relative animate-in">
-            <div className="aspect-[4/3] rounded-sm overflow-hidden border border-industrial-200 shadow-subtle bg-industrial-100">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-industrial-200 shadow-2xl bg-white relative group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/10 to-transparent pointer-events-none z-10" />
               <img
                 src="https://lh3.googleusercontent.com/pw/AP1GczO1hJQxalyxfSiUQD0Co6FyBl4at4jQbtoB5T0iOeOeUi112a4SbR1tk_s2zWjJvOeAIVTf-yU1vM_e-rFFCArb6KZpbArxSR3skWuBDM9tznEyxLQ59jc-h5zaCkL-UVeoUwYtDr7Oo6R8654X6D4Htw=w1563-h879-s-no-gm?authuser=0"
                 alt="EMPHZ GRP Composite Manufacturing"
-                className="w-full h-full object-cover grayscale-[20%] contrast-[1.05]"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 glass-panel p-6 max-w-[240px] hidden md:block">
-              <p className="text-[11px] font-bold text-industrial-400 uppercase tracking-widest mb-1">Material Science</p>
-              <p className="text-sm font-medium text-industrial-900">Advanced FRP composites engineered for 50+ year service life.</p>
+            <div className="absolute -bottom-8 -left-8 glass-panel p-8 max-w-[280px] hidden md:block rounded-xl animate-float">
+              <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 flex items-center gap-2">
+                <Shield size={12} /> Material Science
+              </p>
+              <p className="text-sm font-medium text-industrial-900 leading-snug">Advanced FRP composites engineered for 50+ year service life.</p>
             </div>
           </div>
         </div>

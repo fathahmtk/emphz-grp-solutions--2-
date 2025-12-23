@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight, CheckCircle, HelpCircle, Globe, ChevronDown, User, Book, Loader2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({
