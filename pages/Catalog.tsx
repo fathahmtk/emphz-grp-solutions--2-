@@ -68,7 +68,7 @@ const Catalog: React.FC = () => {
   }, [filteredProducts, sortBy]);
 
   return (
-    <div className="bg-white min-h-screen pt-32">
+    <div className="bg-white min-h-screen">
       <SEO
         title="Products"
         description="Explore the EMPHZ product catalog: GRP Enclosures, Modular Cabins, Security Kiosks, and Industrial Toilets. Engineered for durability."

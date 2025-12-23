@@ -127,7 +127,7 @@ const RFQ: React.FC = () => {
 
    if (submitted) {
       return (
-         <div className="min-h-screen bg-white flex items-center justify-center p-6 pt-32">
+         <div className="min-h-screen bg-white flex items-center justify-center p-6">
             <SEO title="Quote Requested | EMPHZ" description="Your request for quotation has been received. Our engineering team will contact you shortly with a technical proposal." />
             <div className="bg-white p-12 md:p-20 rounded-xl max-w-xl w-full text-center shadow-2xl border border-industrial-100 animate-up">
                <div className="w-24 h-24 bg-industrial-50 rounded-full flex items-center justify-center mx-auto mb-10 border border-industrial-100">
@@ -164,7 +164,7 @@ const RFQ: React.FC = () => {
    }
 
    return (
-      <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-32">
+      <div className="min-h-screen bg-white flex flex-col lg:flex-row">
          <SEO title="Request for Quotation | Corporate GRP Solutions" description="Build your project manifest and request a technical quotation for GRP enclosures, cabins, and modular infrastructure." />
 
          {/* Loading Overlay */}

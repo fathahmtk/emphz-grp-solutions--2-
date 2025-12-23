@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
             />
 
             {/* Hero Section - Minimalist */}
-            <div className="pt-32 pb-64 overflow-hidden bg-white border-b border-industrial-100">
+            <div className="pb-64 overflow-hidden bg-white border-b border-industrial-100">
                 <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-industrial-50 border border-industrial-100 mb-8">
                         <span className="w-2 h-2 rounded-full bg-accent-blue animate-pulse"></span>

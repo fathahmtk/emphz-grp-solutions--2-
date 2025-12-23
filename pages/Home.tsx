@@ -22,7 +22,7 @@ const Home: React.FC = () => {
         description="EMPHZ is a leading manufacturer of GRP/FRP enclosures, portable toilets, security cabins, and composite infrastructure solutions in India and the UAE."
       />
       {/* Hero Section – Engineering Precision with Animated Carousel */}
-      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center pt-20 md:pt-24 overflow-hidden bg-gradient-to-b from-industrial-50 to-white">
+      <section className="relative h-screen flex items-center overflow-hidden bg-industrial-900">
         {/* Animated Background Carousel */}
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         {/* Abstract Background Element */}
         <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/20 -skew-x-12 translate-x-1/4 pointer-events-none z-10" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-20">
+        <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-20">
           <div className="animate-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-industrial-200 mb-6 md:mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
               <Factory size={12} className="text-accent-blue" />
