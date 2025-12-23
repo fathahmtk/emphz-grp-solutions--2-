@@ -14,9 +14,14 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #F8FAFC;
+  background-color: #FFFFFF;
   color: #0F172A;
   overflow-x: hidden;
+}
+
+::selection {
+  background-color: #E0F2FE;
+  color: #0369A1;
 }
 
 h1,
@@ -209,65 +214,11 @@ h6 {
 
 /* Buttons */
 .btn-industrial {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.875rem 2rem;
-  background: #0F172A;
-  color: white;
-  font-family: 'Lexend', sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
-.btn-industrial::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background: #1A5F7A;
-  /* Vibrant Blue fill on hover */
-  transition: width 0.3s ease;
-  z-index: -1;
-}
-
-.btn-industrial:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(26, 95, 122, 0.25);
-}
-
-.btn-industrial:hover::before {
-  width: 100%;
+  @apply inline-flex items-center justify-center px-8 py-3 bg-industrial-900 text-white rounded font-medium text-sm transition-all duration-300 hover:bg-industrial-800 hover:shadow-lg active:scale-[0.98] uppercase tracking-widest;
 }
 
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.875rem 2rem;
-  background: transparent;
-  color: #334155;
-  border: 1px solid #CBD5E1;
-  font-family: 'Lexend', sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: #F8FAFC;
-  border-color: #94A3B8;
-  color: #0F172A;
+  @apply inline-flex items-center justify-center px-8 py-3 bg-white text-industrial-900 border border-industrial-100 rounded font-medium text-sm transition-all duration-300 hover:bg-industrial-50 hover:shadow-sm active:scale-[0.98] uppercase tracking-widest;
 }
 
 /* Utility Animations */

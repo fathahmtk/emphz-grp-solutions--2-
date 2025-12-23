@@ -338,22 +338,25 @@ export function Layout({ children }: LayoutProps) {
             <img
               src="/logo.png"
               alt="EMPHZ Logo"
-              className={`h-10 md:h-14 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
+              className={`h-12 md:h-16 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 bg-industrial-50/50 p-1 rounded-full border border-industrial-100/50">
+          {/* Desktop Navigation - Minimalist */}
+          <nav className="hidden md:flex items-center gap-2">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300
+                className={`relative px-5 py-2.5 text-sm font-medium transition-all duration-200
                   ${isActive(link.path)
-                    ? 'bg-white text-industrial-900 shadow-sm'
-                    : 'text-industrial-500 hover:text-industrial-900 hover:bg-white/50'}`}
+                    ? 'text-industrial-900'
+                    : 'text-industrial-600 hover:text-industrial-900'}`}
               >
                 {link.label}
+                {isActive(link.path) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-blue" />
+                )}
               </Link>
             ))}
           </nav>
@@ -371,7 +374,7 @@ export function Layout({ children }: LayoutProps) {
               </div>
             </Link>
 
-            <Link to="/rfq" className="hidden sm:flex btn-industrial px-4 md:px-5 py-2 text-[10px] rounded-full shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/40">
+            <Link to="/rfq" className="hidden sm:flex btn-industrial px-6 py-3 text-sm rounded shadow-lg hover:shadow-xl transition-all">
               Get Quote
             </Link>
 
@@ -461,69 +464,70 @@ export function Layout({ children }: LayoutProps) {
       {/* CommandPalette removed from direct layout to keep clean - can be triggered via keybind */}
       <CommandPalette isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      <footer className="footer bg-industrial-900 text-industrial-300 py-12 md:py-16 lg:py-24 border-t border-industrial-800 safe-area-inset-bottom" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
-            <div className="col-span-1 md:col-span-2">
-              <div className="mb-8">
-                <Link to="/" className="flex flex-col group">
-                  <img
-                    src="/logo.png"
-                    alt="EMPHZ Logo"
-                    className="h-20 w-auto brightness-0 invert mb-4 opacity-90 group-hover:opacity-100 transition-all duration-300"
-                  />
-                  <span className="text-[10px] uppercase tracking-[0.4em] text-industrial-600 font-bold">Advanced GRP Engineering</span>
-                </Link>
-              </div>
-              <p className="text-industrial-400 text-sm leading-relaxed max-w-sm mb-8">
-                Specialized manufacturers of GRP/FRP solutions for industrial infrastructure.
-                Engineering-led designs built for extreme durability and environmental resilience.
+      <footer className="bg-white border-t border-industrial-100 py-16 md:py-24" role="contentinfo">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+            {/* Brand Section */}
+            <div className="lg:col-span-5">
+              <Link to="/" className="inline-block mb-8">
+                <img
+                  src="/logo.png"
+                  alt="EMPHZ"
+                  className="h-12 w-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                />
+              </Link>
+              <p className="text-industrial-500 text-base leading-relaxed max-w-md mb-8">
+                Specialized GRP manufacturer delivering high-durability enclosures and modular structures. Engineering-led designs built for extreme environmental resilience.
               </p>
-              <div className="flex flex-col gap-2 p-4 border border-industrial-800 rounded-sm bg-industrial-800/20 max-w-fit">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-industrial-500 font-bold">Trusted Production</span>
-                <span className="text-xs font-medium text-industrial-200">Kerala Managed | Mysuru Manufactured</span>
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-industrial-50 rounded text-xs font-semibold text-industrial-600 uppercase tracking-wider">
+                Kerala Managed | Mysuru Manufactured
               </div>
             </div>
 
-            <div>
-              <h4 className="text-[10px] font-bold text-white uppercase tracking-[0.2em] mb-8">Solutions</h4>
-              <nav className="flex flex-col gap-4 text-sm">
-                <Link to="/products" className="hover:text-white transition-colors">Industrial Enclosures</Link>
-                <Link to="/products" className="hover:text-white transition-colors">Portable Security Cabins</Link>
-                <Link to="/products" className="hover:text-white transition-colors">Modular Food Kiosks</Link>
-                <Link to="/products" className="hover:text-white transition-colors">Sanitary GRP Units</Link>
-                <Link to="/products" className="hover:text-white transition-colors">Infrastructure Shelters</Link>
+            {/* Links Section */}
+            <div className="lg:col-span-3">
+              <h4 className="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Solutions</h4>
+              <nav className="flex flex-col gap-4">
+                {['Industrial Enclosures', 'Security Cabins', 'Modular Kiosks', 'Sanitary Units', 'Infrastructure'].map((item) => (
+                  <Link key={item} to="/products" className="text-industrial-500 hover:text-industrial-900 transition-colors text-sm">
+                    {item}
+                  </Link>
+                ))}
               </nav>
             </div>
 
-            <div>
-              <h4 className="text-[10px] font-bold text-white uppercase tracking-[0.2em] mb-8">Global Outreach</h4>
-              <div className="flex flex-col gap-6 text-sm">
-                <div className="flex items-start gap-3">
-                  <MapPin size={16} className="text-industrial-500 mt-1 flex-shrink-0" />
-                  <p>
-                    <span className="text-industrial-200 block font-medium">Production Hub</span>
+            {/* Contact Section */}
+            <div className="lg:col-span-4">
+              <h4 className="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Get in Touch</h4>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <MapPin size={18} className="text-industrial-300 flex-shrink-0" />
+                  <p className="text-sm text-industrial-500">
+                    <span className="text-industrial-900 font-medium block mb-1">Production Hub</span>
                     KIADB Industrial Area, Mysuru, Karnataka
                   </p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone size={16} className="text-industrial-500 flex-shrink-0" />
-                  <span>+91 9037 874 080</span>
+                <div className="flex items-center gap-4">
+                  <Phone size={18} className="text-industrial-300 flex-shrink-0" />
+                  <span className="text-sm text-industrial-500">+91 9037 874 080</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail size={16} className="text-industrial-500 flex-shrink-0" />
-                  <span>info@emphz.in</span>
+                <div className="flex items-center gap-4">
+                  <Mail size={18} className="text-industrial-300 flex-shrink-0" />
+                  <span className="text-sm text-industrial-500">info@emphz.in</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 md:mt-16 lg:mt-20 pt-6 md:pt-8 border-t border-industrial-800 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-[10px] md:text-[11px] font-medium uppercase tracking-[0.1em] text-industrial-500">
-            <p className="text-center md:text-left">&copy; 2025 Emphz Engineering Private Limited. All Rights Reserved.</p>
-            <div className="flex gap-6 md:gap-8">
-              <Link to="/sitemap" className="hover:text-industrial-300 transition-colors tap-target">Sitemap</Link>
-              <Link to="#" className="hover:text-industrial-300 transition-colors tap-target">Privacy</Link>
-              <Link to="#" className="hover:text-industrial-300 transition-colors tap-target">Terms</Link>
+          {/* Bottom Bar */}
+          <div className="mt-20 pt-8 border-t border-industrial-50 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-xs text-industrial-400">
+              &copy; {new Date().getFullYear()} Emphz Engineering Private Limited.
+            </p>
+            <div className="flex gap-8">
+              <Link to="/sitemap" className="text-xs text-industrial-400 hover:text-industrial-900 transition-colors">Sitemap</Link>
+              <Link to="#" className="text-xs text-industrial-400 hover:text-industrial-900 transition-colors">Privacy</Link>
+              <Link to="#" className="text-xs text-industrial-400 hover:text-industrial-900 transition-colors">Terms</Link>
             </div>
           </div>
         </div>
