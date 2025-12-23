@@ -104,6 +104,56 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Ecosystem – Flagship Concept */}
+      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-accent-blue/5 skew-x-12 translate-x-1/2 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-in">
+              <h2 className="text-[10px] font-bold text-accent-blue uppercase tracking-[0.3em] mb-4">Networked Infrastructure</h2>
+              <h3 className="text-4xl md:text-5xl font-medium text-industrial-900 mb-8 leading-tight">
+                SmartPod Grid™ <br />
+                <span className="text-industrial-400">The Connected Ecosystem.</span>
+              </h3>
+              <p className="text-lg text-industrial-600 mb-10 leading-relaxed font-light">
+                Beyond individual units, SmartPod Grid™ creates a centrally managed, IoT-enabled network of UrbanCell™ pods. Real-time data, remote security, and automated inventory management for large-scale deployments.
+              </p>
+
+              <div className="space-y-6 mb-12">
+                {[
+                  { title: 'IoT-Managed', desc: 'Real-time telemetry and inventory tracking.' },
+                  { title: 'Centralized Control', desc: 'Manage 100+ units from a single ERP dashboard.' },
+                  { title: 'Rapid Scalability', desc: 'Deploy clusters from campuses to entire workforce cities.' }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4">
+                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-industrial-900 mb-1">{item.title}</h4>
+                      <p className="text-sm text-industrial-500">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Link to="/products/emp-uc-grid" className="btn-industrial px-10">
+                Explore The Grid
+              </Link>
+            </div>
+            <div className="relative animate-up">
+              <img
+                src="/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg"
+                alt="SmartPod Grid Ecosystem"
+                className="rounded-sm shadow-2xl"
+                loading="lazy"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-industrial-900 text-white p-8 rounded-sm shadow-xl hidden md:block border-l-4 border-accent-blue">
+                <div className="text-3xl font-medium mb-1">IoT</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-60">Ready Network</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Products – Content First */}
       <section className="py-24 md:py-32 bg-industrial-50">

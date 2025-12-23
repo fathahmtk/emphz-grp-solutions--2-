@@ -92,7 +92,29 @@ export const MOCK_BLOG_POSTS: BlogPost[] = [
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
-  // 1. UrbanCell Infrastructure (Flagship)
+  // 1. UrbanCell™ & SmartPod Grid™ (Flagship Ecosystem)
+  {
+    id: 'emp-uc-grid',
+    name: 'SmartPod Grid™ Ecosystem',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'The intelligent, IoT-managed network of UrbanCell™ infrastructure.',
+    fullDescription: 'EMPHZ SmartPod Grid™ is a deployable, connected network of modular retail and service pods. Designed for campuses, industrial zones, and workforce cities, it provides centralized IoT management for inventory, security, and revenue expansion across multiple physical locations.',
+    whyItExists: 'Managing decentralized infrastructure is complex; SmartPod Grid™ centralizes control into a single IoT dashboard.',
+    typicalUsage: 'Campuses, workforce accommodations, industrial parks, and transport hubs.',
+    recommendedWhen: [
+      'Scaleable retail networks required',
+      'Geographically dispersed service points',
+      'Centralized asset tracking is critical'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1766485994175.jpg',
+    specs: [
+      { label: 'Ecosystem', value: 'Managed IoT Network' },
+      { label: 'Management', value: 'Centralized Remote Dashboard' },
+      { label: 'Connectivity', value: '4G/5G/Satellite Hub' }
+    ],
+    features: ['Real-time inventory data', 'Fleet management analytics', 'Automated security monitoring', 'Revenue expansion tools'],
+    downloads: [{ title: 'SmartPod Grid Technical Paper', type: 'PDF' }]
+  },
   {
     id: 'emp-uc-retail',
     name: 'UrbanCell™ RETAIL',

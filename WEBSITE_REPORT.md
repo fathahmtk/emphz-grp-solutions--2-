@@ -52,12 +52,13 @@ The website consists of 14 key pages organized into a clear B2B funnel.
 
 ## 4. Content Inventory
 
-### Products (14 Total)
-The website features detailed technical documentation for 14 core product lines:
-1.  **UrbanCell™ RETAIL**: Modular smart city retail units.
-2.  **UrbanCell™ SERVICES**: Automated service & banking pods.
-3.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
-4.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
+### Products (15 Total)
+The website features detailed technical documentation for 15 core product lines:
+1.  **SmartPod Grid™ System**: IoT-managed networked ecosystem.
+2.  **UrbanCell™ RETAIL**: Modular smart city retail units.
+3.  **UrbanCell™ SERVICES**: Automated service & banking pods.
+4.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
+5.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
 4.  **Executive Portable Toilet**: High-end temporary sanitation.
 5.  **Metro Bus Shelter**: Vandal-resistant urban infrastructure.
 6.  **Modular Utility Kiosk M2**: Thermally insulated electrical housing.
