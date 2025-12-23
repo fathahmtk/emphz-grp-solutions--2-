@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import Analytics from './components/Analytics';
 // RFQProvider removed - State is now handled by global Zustand store
 import { Loader2 } from 'lucide-react';
 
@@ -34,6 +35,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <Analytics />
         <Layout>
           <Suspense fallback={<PageLoader />}>
             <Routes>
