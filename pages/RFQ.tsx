@@ -98,9 +98,14 @@ const RFQ: React.FC = () => {
 
       setIsSubmitting(true);
 
-      // Simulate API Network Request
-      setTimeout(() => {
-         // Save user details to cookie
+      // In a production environment, you would use a service like Formspree or a custom backend
+      // const FORMSPREE_ENDPOINT = "https://formspree.io/f/your_id"; 
+
+      try {
+         // Simulate API Network Request with a bit of realistic delay
+         await new Promise(resolve => setTimeout(resolve, 2000));
+
+         // Save user details to cookie for future sessions
          setCookie('emphz_user_info', encodeURIComponent(JSON.stringify({
             name: formData.name,
             company: formData.company,
@@ -110,10 +115,14 @@ const RFQ: React.FC = () => {
 
          setSubmitted(true);
          clearCart();
-         setIsSubmitting(false);
-         // Scroll to top
+         // Scroll to top to show the success message
          window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 2000);
+      } catch (error) {
+         console.error("Submission failed:", error);
+         alert("There was an error logging your requirement. Please try again or contact us directly.");
+      } finally {
+         setIsSubmitting(false);
+      }
    };
 
    if (submitted) {

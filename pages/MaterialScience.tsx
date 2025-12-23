@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FlaskConical, TrendingUp, ShieldCheck, Scale, AlertTriangle, CheckCircle2, Factory, Search, Microscope, Layers, Droplet, ArrowRight } from 'lucide-react';
+import { FlaskConical, TrendingUp, ShieldCheck, Scale, AlertTriangle, Search, Microscope, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const MaterialScience: React.FC = () => {
    const [activeTab, setActiveTab] = useState<'comparison' | 'lcc' | 'chemical'>('comparison');
@@ -30,6 +31,10 @@ const MaterialScience: React.FC = () => {
 
    return (
       <div className="bg-slate-50 text-slate-900 min-h-screen font-sans">
+         <SEO
+            title="Material Science | Advanced FRP Engineering | EMPHZ"
+            description="Explore the advanced material science behind our GRP composites, including chemical resistance matrices, lifecycle costing, and physical property benchmarks."
+         />
 
          {/* Hero */}
          <div className="relative py-24 md:py-32 bg-slate-950 text-white overflow-hidden">

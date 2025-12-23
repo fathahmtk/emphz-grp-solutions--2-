@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { label: 'Contact', path: '/contact' },
 ];
 
-export const WHATSAPP_LINK = "https://wa.me/919037874080";
+
 
 export const INDUSTRIES = [
   {

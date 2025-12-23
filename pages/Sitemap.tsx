@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { NAV_LINKS, MOCK_PRODUCTS, MOCK_CASE_STUDIES, MOCK_BLOG_POSTS } from '../constants';
 import { ProductCategory, Product } from '../types';
 import { Box, ChevronRight, Activity, Cpu, Layers, LayoutGrid, Zap, Rss } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Sitemap: React.FC = () => {
    const productsByCategory = Object.values(ProductCategory).reduce((acc, category) => {
@@ -12,6 +13,7 @@ const Sitemap: React.FC = () => {
 
    return (
       <div className="bg-[#050A14] min-h-screen py-16 text-gray-300 relative overflow-hidden font-mono">
+         <SEO title="Sitemap | EMPHZ" description="Navigate through the complete structure of the EMPHZ website." />
          {/* Blueprint Background Grid */}
          <div className="absolute inset-0" style={{
             backgroundImage: 'linear-gradient(rgba(0,173,181,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,173,181,0.05) 1px, transparent 1px)',

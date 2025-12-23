@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, Home, ArrowLeft } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-industrial-900 flex items-center justify-center p-4 relative overflow-hidden text-center">
+      <SEO title="Page Not Found | EMPHZ" description="The requested asset could not be located in our schematics. Signal lost." />
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
       <div className="relative z-10 max-w-lg">
         <div className="inline-flex items-center justify-center w-24 h-24 bg-red-500/10 rounded-full mb-8 border border-red-500/30 animate-pulse">

@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MOCK_BLOG_POSTS } from '../constants';
 import { ArrowRight, Rss, Calendar, Edit } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Blog: React.FC = () => {
   const [featuredPost, ...otherPosts] = MOCK_BLOG_POSTS;
 
   return (
     <div className="bg-emphz-navy text-white">
+      <SEO
+        title="Technical Insights | Emphz Blog"
+        description="Explore the latest in GRP technology, project highlights, and engineering best practices from the Emphz team."
+      />
       {/* Hero */}
       <div className="relative py-24 md:py-32 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>

@@ -1,13 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { MOCK_PRODUCTS, MOCK_BLOG_POSTS, INDUSTRIES, NAV_LINKS } from '../constants.ts';
+import { MOCK_PRODUCTS, MOCK_BLOG_POSTS, NAV_LINKS } from '../constants.ts';
+import { SITE_CONFIG } from '../config.ts';
 
 // ESM dirname shim
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://emphz.noordigital.business';
+const BASE_URL = SITE_CONFIG.baseUrl;
 
 function generateSitemap() {
     const routes = [
