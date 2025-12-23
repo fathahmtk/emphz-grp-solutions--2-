@@ -11,9 +11,9 @@ This document provides a comprehensive structural and textual guide for the EMPH
 *   **Secondary CTA**: [Material Intelligence Hub / Engineering Resources]
 
 ### Navigation Sitemap
-1.  **Home**: Overview, stats, and trust signals.
-2.  **Products**: Searchable catalog of all GRP units.
-3.  **Manufacturing & Technology**: Material science and LCC analysis.
+1.  **Home**: Overview, stats, and flagship **UrbanCell™** showcase.
+2.  **Products**: Searchable catalog including **UrbanCell™**, Enclosures, and Sanitary units.
+3.  **Manufacturing & Technology**: Material science, UrbanCell modularity, and LCC analysis.
 4.  **Industries**: Sector-specific solution mapping.
 5.  **Case Studies**: Proven results and deployment data.
 6.  **Technical Center**: Interactive tools (Thermal, Chemical) and asset downloads.
@@ -75,7 +75,7 @@ This document provides a comprehensive structural and textual guide for the EMPH
     *   **Rail & Metro**: Trackside signaling protection.
     *   **Telecom / 5G**: Radio-transparent antenna shrouds.
     *   **Water Treatment**: Non-porous tanks and walkways.
-    *   **Smart City**: Vandal-resistant kiosks.
+    *   **Smart City**: **UrbanCell™** plug-in infrastructure (Retail, Energy, Cold).
     *   **Oil & Gas**: Anti-static ATEX-certified junction boxes.
 
 ---
@@ -94,8 +94,8 @@ Every product featured on the site follows a standardized B2B data schema:
 ---
 
 ## 4. Technical SEO Metadata
-*   **Primary Keywords**: GRP Manufacturer, FRP Enclosures, Portable Toilets India, Smart Living Pods, ATEX Junction Boxes.
-*   **Meta Description**: "EMPHZ specializes in high-durability GRP/FRP enclosures, kiosks, and pods for industrial and public-sector applications. Engineered for the harshest environments."
+*   **Primary Keywords**: UrbanCell™, GRP Manufacturer, FRP Enclosures, Smart City Infrastructure, EV Charging Hubs.
+*   **Meta Description**: "EMPHZ specializes in UrbanCell™ smart infrastructure, high-durability GRP/FRP enclosures, and modular shelters for industrial and smart-city applications."
 *   **Structured Data**: Integrated JSON-LD for Organization and Product schemas.
 
 ---

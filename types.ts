@@ -3,7 +3,8 @@ export enum ProductCategory {
   PORTABLE_TOILET = 'Portable Toilet Units',
   CABIN = 'Security Cabins',
   KIOSK = 'Modular Kiosks',
-  POD_SHELTER = 'Modular Pods & Shelters',
+  SHELTER = 'Infrastructure Shelters',
+  URBANCELL = 'UrbanCell™ Infrastructure',
   CUSTOM = 'Custom GRP Fabrication'
 }
 

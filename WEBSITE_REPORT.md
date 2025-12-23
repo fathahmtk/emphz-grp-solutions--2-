@@ -52,20 +52,22 @@ The website consists of 14 key pages organized into a clear B2B funnel.
 
 ## 4. Content Inventory
 
-### Products (12 Total)
-The website features detailed technical documentation for 12 core product lines:
-1.  **Xpod X7 Smart Cabin**: Premium GRP monocoque cabin.
-2.  **Executive Portable Toilet**: High-end temporary sanitation.
-3.  **Metro Bus Shelter**: Vandal-resistant urban infrastructure.
-4.  **Modular Utility Kiosk M2**: Thermally insulated electrical housing.
-5.  **Security Guard Villa**: All-weather industrial checkpoint.
-6.  **RedGuard Fire Hose Cabinet**: UV-stable safety equipment housing.
-7.  **Modular GRP Panel Tank**: Potable water storage system.
-8.  **Instrument Sunshade S2**: Hazardous area instrument protection.
-9.  **EV Battery Pack Shield**: Lightweight automotive safety component.
-10. **E-Series Coastal Enclosure**: IP66/IP67 rated coastal protection.
-11. **Heavy Duty Cable Tray**: Pultruded corrosion-proof system.
-12. **Anti-Slip Walkway Grating**: Industrial safety flooring.
+### Products (14 Total)
+The website features detailed technical documentation for 14 core product lines:
+1.  **UrbanCell™ RETAIL**: Modular smart city retail units.
+2.  **UrbanCell™ ENERGY**: Integrated EV charging & solar hub.
+3.  **UrbanCell™ COLD**: Thermally superior modular cold storage.
+4.  **Executive Portable Toilet**: High-end temporary sanitation.
+5.  **Metro Bus Shelter**: Vandal-resistant urban infrastructure.
+6.  **Modular Utility Kiosk M2**: Thermally insulated electrical housing.
+7.  **Security Guard Villa**: All-weather industrial checkpoint.
+8.  **RedGuard Fire Hose Cabinet**: UV-stable safety equipment housing.
+9.  **Modular GRP Panel Tank**: Potable water storage system.
+10. **Instrument Sunshade S2**: Hazardous area instrument protection.
+11. **EV Battery Pack Shield**: Lightweight automotive safety component.
+12. **E-Series Coastal Enclosure**: IP66/IP67 rated coastal protection.
+13. **Heavy Duty Cable Tray**: Pultruded corrosion-proof system.
+14. **Anti-Slip Walkway Grating**: Industrial safety flooring.
 
 ### Case Studies
 - **Coastal Resort Upgrade (Kerala)**: Corrosion solution for hotel infrastructure.

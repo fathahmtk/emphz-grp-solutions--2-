@@ -72,7 +72,7 @@ export const MOCK_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'sustainability-composite-materials',
     title: 'The Sustainability of Composite Materials',
-    category: 'Industry Trends',
+    category: 'Long-Tail',
     date: '2024-09-02',
     author: 'Emphz Research Division',
     summary: 'How long-lifespan composites reduce total carbon footprint compared to frequently replaced metal assets.',
@@ -82,7 +82,7 @@ export const MOCK_BLOG_POSTS: BlogPost[] = [
   {
     slug: 'fire-safety-industrial-enclosures',
     title: 'Critical Fire Safety in Industrial Enclosures',
-    category: 'Safety Standards',
+    category: 'Long-Tail',
     date: '2024-09-10',
     author: 'Emphz Safety Team',
     summary: 'Understanding UL 94 V-0 ratings and why self-extinguishing materials are non-negotiable for electrical housing.',
@@ -198,27 +198,28 @@ export const MOCK_PRODUCTS: Product[] = [
     downloads: [{ title: 'Retail Kiosk Catalog', type: 'PDF' }]
   },
 
-  // 5. Modular Pods & Shelters
+  // 5. Infrastructure Shelters
   {
-    id: 'emp-pod-001',
-    name: 'Xpod X7 Living System',
-    category: ProductCategory.POD_SHELTER,
-    shortDescription: 'Sleeping pods, site offices, equipment shelters, and custom GRP rooms.',
-    fullDescription: 'GRP modular pods and shelters are manufactured for accommodation, site offices, and equipment housing. These units are preferred where quick installation and long service life are required.',
-    whyItExists: 'Lightweight and waterproof alternative to site containers that rust and get too hot.',
-    typicalUsage: 'Sleeping pods, site offices, equipment shelters, and temporary rooms.',
+    id: 'emp-shelter-001',
+    name: 'Metro City Bus Shelter',
+    category: ProductCategory.SHELTER,
+    shortDescription: 'Vandal-resistant GRP bus shelters for urban public transport networks.',
+    fullDescription: 'Our modular GRP bus shelters are designed for the modern smart city. They offer high resistance to vandalism, graffiti, and environmental wear while providing a sleek aesthetic for urban landscapes.',
+    whyItExists: 'Concrete shelters crack and steel shelters rust. GRP offers a permanent, low-maintenance solution for municipal corporations.',
+    typicalUsage: 'City bus stops, metro feeder stations, and campus waiting areas.',
     recommendedWhen: [
-      'Remote sites needing quick housing',
-      'Areas with extreme humidity or rainfall',
-      'Project-specific custom rooms'
+      'High-traffic urban areas',
+      'Coastal cities with salt air',
+      'Municipal projects requiring 20+ year life'
     ],
-    imageUrl: 'https://www.karmod.com/media/products/174/grp-buildings-59281.jpg',
+    imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2023/1/YI/WO/XU/3642603/frp-bus-shelter.jpg',
     specs: [
-      { label: 'Body', value: 'Reinforced GRP' },
-      { label: 'Lifting', value: 'Integrated hook points' }
+      { label: 'Dimensions', value: 'L5000 x W1500 x H2500 mm' },
+      { label: 'Wind Load', value: 'Designed for 180 km/h' },
+      { label: 'Seating', value: 'Integrated GRP Bench' }
     ],
-    features: ['Fully waterproof', 'Well insulated', 'Long life'],
-    downloads: [{ title: 'Xpod X7 Living Guide', type: 'PDF' }]
+    features: ['Graffiti-resistant gelcoat', 'Integrated rain gutter', 'Solar-ready roof'],
+    downloads: [{ title: 'Metro Shelter Specs', type: 'PDF' }]
   },
 
   // 6. Custom GRP Fabrication
@@ -244,29 +245,6 @@ export const MOCK_PRODUCTS: Product[] = [
     downloads: [{ title: 'Radome Design Specs', type: 'PDF' }]
   },
 
-  // 7. Metro Bus Shelter
-  {
-    id: 'emp-shelter-001',
-    name: 'Metro City Bus Shelter',
-    category: ProductCategory.POD_SHELTER,
-    shortDescription: 'Vandal-resistant GRP bus shelters for urban public transport networks.',
-    fullDescription: 'Our modular GRP bus shelters are designed for the modern smart city. They offer high resistance to vandalism, graffiti, and environmental wear while providing a sleek aesthetic for urban landscapes.',
-    whyItExists: 'Concrete shelters crack and steel shelters rust. GRP offers a permanent, low-maintenance solution for municipal corporations.',
-    typicalUsage: 'City bus stops, metro feeder stations, and campus waiting areas.',
-    recommendedWhen: [
-      'High-traffic urban areas',
-      'Coastal cities with salt air',
-      'Municipal projects requiring 20+ year life'
-    ],
-    imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2023/1/YI/WO/XU/3642603/frp-bus-shelter.jpg',
-    specs: [
-      { label: 'Dimensions', value: 'L5000 x W1500 x H2500 mm' },
-      { label: 'Wind Load', value: 'Designed for 180 km/h' },
-      { label: 'Seating', value: 'Integrated GRP Bench' }
-    ],
-    features: ['Graffiti-resistant gelcoat', 'Integrated rain gutter', 'Solar-ready roof'],
-    downloads: [{ title: 'Metro Shelter Specs', type: 'PDF' }]
-  },
 
   // 8. Fire Hose Cabinet
   {
@@ -386,6 +364,73 @@ export const MOCK_PRODUCTS: Product[] = [
     ],
     features: ['Snap-fit covers', 'Electrical transparency', 'Zero maintenance'],
     downloads: [{ title: 'Cable Support Systems', type: 'PDF' }]
+  },
+  // 13. UrbanCell Infrastructure
+  {
+    id: 'emp-uc-retail',
+    name: 'UrbanCell™ RETAIL',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Modular, plug-in retail hubs for smart city environments.',
+    fullDescription: 'UrbanCell RETAIL is a factory-built, plug-in infrastructure cell designed for rapid deployment as retail hubs, shops, or kiosks. Built with high-durability GRP, it features glass facades and integrated thermal management for modern urban commerce.',
+    whyItExists: 'Traditional brick-and-mortar retail takes months to build; UrbanCell deploys in hours with a premium aesthetic.',
+    typicalUsage: 'Pop-up shops, ticket booths, information centers, and urban mini-marts.',
+    recommendedWhen: [
+      'Smart city projects requiring fast ROI',
+      'Areas with limited construction footprints',
+      'High-traffic urban zones needing premium design'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
+    specs: [
+      { label: 'Form Factor', value: 'Modular 3.5m x 4.0m' },
+      { label: 'Shell', value: 'GRP Monocoque' },
+      { label: 'Glass', value: 'Double Glazed Safety' }
+    ],
+    features: ['Plug-and-play electrical', 'Integrated POS ready', 'Smart locks', 'Self-cleaning coating'],
+    downloads: [{ title: 'UrbanCell Retail Specs', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-energy',
+    name: 'UrbanCell™ ENERGY',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Integrated EV charging and solar hub for modern transit.',
+    fullDescription: 'The UrbanCell ENERGY module combines high-capacity EV charging stations with a solar-active roof structure. It serves as both a charging point and a power management hub for smart grid integration.',
+    whyItExists: 'To solve the need for aesthetic, weather-proof, and rapidly deployable EV infrastructure in cities.',
+    typicalUsage: 'Parking lots, highway rest stops, and corporate campuses.',
+    recommendedWhen: [
+      'Transitioning to electric fleets',
+      'Municipal green-energy mandates',
+      'Remote sites requiring off-grid power'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
+    specs: [
+      { label: 'Charger', value: 'Dual 50kW DC Fast Charge' },
+      { label: 'Solar Cap', value: '12-Panel HV Array' },
+      { label: 'Safety', value: 'Non-conductive GRP shell' }
+    ],
+    features: ['Solar integration', 'Battery storage ready', 'Weather-proof GRP housing', 'Remote monitoring'],
+    downloads: [{ title: 'UrbanCell Energy Guide', type: 'PDF' }]
+  },
+  {
+    id: 'emp-uc-cold',
+    name: 'UrbanCell™ COLD',
+    category: ProductCategory.URBANCELL,
+    shortDescription: 'Industrial-grade modular cold storage and delivery hub.',
+    fullDescription: 'UrbanCell COLD provides thermally superior temperature-controlled storage cells. Ideal for last-mile food delivery or medical storage, these units use composite insulation that outperforms traditional sandwich panels.',
+    whyItExists: 'To prevent the "thermal leak" common in metal-sheet cold rooms that rust in humid environments.',
+    typicalUsage: 'Grocery collection points, pharmaceutical storage, and fresh food markets.',
+    recommendedWhen: [
+      'Strict temperature control required',
+      'Coastal or high-humidity regions',
+      'Food-grade hygiene standards'
+    ],
+    imageUrl: '/Users/emphz/.gemini/antigravity/brain/15646346-04bb-4a12-b3af-96ae443e0327/uploaded_image_1_1766484953999.jpg',
+    specs: [
+      { label: 'Operating Temp', value: '-20°C to +10°C' },
+      { label: 'Wall Type', value: 'High-Density Composite PUF' },
+      { label: 'Hygiene', value: 'FDA-compliant Gem-coat' }
+    ],
+    features: ['Algae-free interior', 'High R-Value insulation', 'Integrated defrost', 'Shock-resistant walls'],
+    downloads: [{ title: 'UrbanCell Cold Data', type: 'PDF' }]
   }
 ];
 

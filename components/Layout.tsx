@@ -14,15 +14,15 @@ interface LayoutProps {
 
 const SEO_DATA = {
   '/': {
-    title: 'EMPHZ – GRP/FRP Enclosures, Portable Toilets, Kiosks & Pods | Composite Engineering',
-    description: 'EMPHZ specializes in high-durability GRP/FRP enclosures, portable toilets, security cabins, food kiosks, sleeping pods, villa pods, and bus shelters for industrial and public-sector applications.',
+    title: 'EMPHZ – GRP/FRP Enclosures, Portable Toilets, Kiosks & Shelters | Composite Engineering',
+    description: 'EMPHZ specializes in high-durability GRP/FRP enclosures, portable toilets, security cabins, food kiosks, and bus shelters for industrial and public-sector applications.',
   },
   '/about': {
     title: 'About EMPHZ | Leading GRP/FRP Manufacturer',
-    description: 'Discover EMPHZ — a composite engineering company delivering premium GRP/FRP enclosures, kiosks, pods, and prefab structures built for long-term durability.',
+    description: 'Discover EMPHZ — a composite engineering company delivering premium GRP/FRP enclosures, kiosks, shelters, and prefab structures built for long-term durability.',
   },
   '/products': {
-    title: 'GRP/FRP Product Catalog | Enclosures, Cabins, Pods & More | EMPHZ',
+    title: 'GRP/FRP Product Catalog | Enclosures, Cabins, Shelters & More | EMPHZ',
     description: "Browse our extensive catalog of GRP electrical enclosures, modular kiosks, security cabins, portable toilets, and custom composite structures.",
   },
   '/case-studies': {
@@ -58,9 +58,13 @@ const SEO_DATA = {
       title: 'GRP Food Kiosks | Portable Food Cabins & Retail Units',
       description: 'Durable, hygienic GRP kiosks ideal for F&B outlets, retail pop-ups, and outdoor commercial use.',
     },
-    [ProductCategory.POD_SHELTER]: {
-      title: 'Modular Pods & Shelters | GRP Sleeping Pods & Bus Shelters',
-      description: 'Maintenance-free GRP pods and shelters for tourism, urban mobility, and remote site offices.',
+    [ProductCategory.SHELTER]: {
+      title: 'Infrastructure Shelters | GRP Bus Shelters & Urban Mobility Units',
+      description: 'Maintenance-free GRP shelters for public transport, urban mobility, and remote site protection.',
+    },
+    [ProductCategory.URBANCELL]: {
+      title: 'UrbanCell™ Infrastructure | Modular Smart City Solutions | EMPHZ',
+      description: 'Plug-in infrastructure for smart cities. Modular GRP retail hubs, service kiosks, energy stations, and cold storage units designed for rapid deployment.',
     },
     [ProductCategory.CUSTOM]: {
       title: 'Custom GRP Fabrication | Bespoke FRP Engineering',
@@ -514,7 +518,7 @@ export function Layout({ children }: LayoutProps) {
                 <Link to="/products" className="hover:text-white transition-colors">Portable Security Cabins</Link>
                 <Link to="/products" className="hover:text-white transition-colors">Modular Food Kiosks</Link>
                 <Link to="/products" className="hover:text-white transition-colors">Sanitary GRP Units</Link>
-                <Link to="/products" className="hover:text-white transition-colors">Bespoke GRP Pods</Link>
+                <Link to="/products" className="hover:text-white transition-colors">Infrastructure Shelters</Link>
               </nav>
             </div>
 
