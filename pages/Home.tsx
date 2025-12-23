@@ -22,28 +22,29 @@ const Home: React.FC = () => {
         description="EMPHZ is a leading manufacturer of GRP/FRP enclosures, portable toilets, security cabins, and composite infrastructure solutions in India and the UAE."
       />
       {/* Hero Section – Engineering Precision */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-gradient-to-b from-industrial-50 to-white">
+      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center pt-20 md:pt-24 overflow-hidden bg-gradient-to-b from-industrial-50 to-white">
         {/* Abstract Background Element */}
-        <div className="absolute top-0 right-0 w-[60%] h-full bg-industrial-100/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
           <div className="animate-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-industrial-200 mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-industrial-200 mb-6 md:mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
               <Factory size={12} className="text-accent-blue" />
-              <span>Kerala Managed | Mysuru Manufactured</span>
+              <span className="hidden xs:inline">Kerala Managed | Mysuru Manufactured</span>
+              <span className="xs:hidden">Made in India</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-industrial-900 mb-8">
+            <h1 className="text-4xl xs:text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-industrial-900 mb-6 md:mb-8">
               Composite <br />
               <span className="text-industrial-500">Infrastructure.</span>
             </h1>
-            <p className="text-lg md:text-xl text-industrial-600 max-w-lg leading-relaxed mb-10 font-light">
+            <p className="text-base md:text-lg lg:text-xl text-industrial-600 max-w-lg leading-relaxed mb-8 md:mb-10 font-light">
               Specialized GRP manufacturer delivering high-durability enclosures, cabins, and modular structures designed for aggressive industrial environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/products" className="btn-industrial shadow-lg shadow-accent-blue/20">
+              <Link to="/products" className="btn-industrial shadow-lg shadow-accent-blue/20 touch-ripple">
                 View Solutions
               </Link>
-              <Link to="/technical" className="btn-secondary bg-white/50 backdrop-blur-sm">
+              <Link to="/technical" className="btn-secondary bg-white/50 backdrop-blur-sm touch-ripple">
                 Technical Center <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
                 height="600"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 glass-panel p-8 max-w-[280px] hidden md:block rounded-xl animate-float">
+            <div className="absolute -bottom-8 -left-8 glass-panel p-6 md:p-8 max-w-[240px] md:max-w-[280px] hidden md:block rounded-xl animate-float">
               <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 flex items-center gap-2">
                 <Shield size={12} /> Material Science
               </p>
@@ -71,9 +72,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Engineering Advantages */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid lg:grid-cols-3 gap-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
             <div className="animate-up">
               <div className="w-12 h-12 rounded-sm bg-industrial-50 flex items-center justify-center mb-8 border border-industrial-100">
                 <Shield size={24} className="text-accent-blue" />
@@ -218,7 +219,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {MOCK_PRODUCTS.slice(0, 4).map((product, i) => (
               <TiltCard key={product.id} className="h-full">
                 <Link to={`/products/${product.id}`} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -233,7 +234,7 @@ const Home: React.FC = () => {
                       height="300"
                     />
                   </div>
-                  <div className="p-8 flex flex-col flex-grow relative bg-white/50 backdrop-blur-sm">
+                  <div className="p-6 md:p-8 flex flex-col flex-grow relative bg-white/50 backdrop-blur-sm">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-[9px] font-bold text-accent-blue uppercase tracking-widest border-b border-accent-blue/30 pb-0.5">
                         {product.category}
@@ -256,9 +257,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Trust & Operations */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="animate-up">
               <h2 className="text-[10px] font-bold text-industrial-400 uppercase tracking-[0.3em] mb-6">Operations</h2>
               <h3 className="text-4xl font-medium mb-8 leading-tight">Advanced GRP Manufacturing in Mysuru</h3>
@@ -299,17 +300,17 @@ const Home: React.FC = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="py-24 md:py-32 bg-industrial-900 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-32 bg-industrial-900 relative overflow-hidden safe-area-inset-bottom">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10 animate-up">
-          <h2 className="text-3xl md:text-5xl font-medium text-white mb-8 tracking-tight">Upgrade Your Infrastructure Durability</h2>
-          <p className="text-industrial-400 text-lg mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-medium text-white mb-6 md:mb-8 tracking-tight">Upgrade Your Infrastructure Durability</h2>
+          <p className="text-industrial-400 text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto">
             Contact our engineering team to discuss GRP replacements for your existing steel or concrete assets.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link to="/rfq" className="bg-white text-industrial-900 px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-100 transition-colors">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
+            <Link to="/rfq" className="bg-white text-industrial-900 px-8 md:px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-100 transition-colors touch-ripple">
               Request Technical Quote
             </Link>
-            <Link to="/technical" className="border border-industrial-700 text-white px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-800 transition-colors flex items-center justify-center gap-2">
+            <Link to="/technical" className="border border-industrial-700 text-white px-8 md:px-10 py-4 text-sm font-bold uppercase tracking-wider rounded-sm hover:bg-industrial-800 transition-colors flex items-center justify-center gap-2 touch-ripple">
               <FileText size={16} /> Datasheets
             </Link>
           </div>

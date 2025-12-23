@@ -329,16 +329,16 @@ export function Layout({ children }: LayoutProps) {
         />
       </div>
 
-      <header className={`fixed top-4 left-0 w-full z-50 transition-all duration-300 pointer-events-none flex justify-center px-4`}>
+      <header className={`fixed top-4 left-0 w-full z-50 transition-all duration-300 pointer-events-none flex justify-center px-4 md:px-4`}>
         <div className={`nav-island pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between
-          ${scrolled ? 'w-full max-w-5xl py-2 px-6 bg-white/95 shadow-2xl' : 'w-full max-w-7xl py-4 px-8 bg-white/80'}
+          ${scrolled ? 'w-full max-w-5xl py-2 px-4 md:px-6 bg-white/95 shadow-2xl' : 'w-full max-w-7xl py-3 md:py-4 px-4 md:px-8 bg-white/80'}
           `}>
 
           <Link to="/" className="flex items-center group" onClick={() => setIsMenuOpen(false)}>
             <img
               src="/logo.png"
               alt="EMPHZ Logo"
-              className={`h-14 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
+              className={`h-10 md:h-14 w-auto transition-all duration-500 ease-out group-hover:scale-105`}
             />
           </Link>
 
@@ -358,8 +358,8 @@ export function Layout({ children }: LayoutProps) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <Link to="/rfq" className="hidden sm:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-industrial-500 hover:text-accent-blue transition-colors">
+          <div className="flex items-center gap-2 md:gap-4">
+            <Link to="/rfq" className="hidden sm:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-industrial-500 hover:text-accent-blue transition-colors tap-target">
               <span className="hidden lg:inline">Cart</span>
               <div className="relative">
                 <ShoppingCart size={18} />
@@ -371,13 +371,13 @@ export function Layout({ children }: LayoutProps) {
               </div>
             </Link>
 
-            <Link to="/rfq" className="hidden sm:flex btn-industrial px-5 py-2 text-[10px] rounded-full shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/40">
+            <Link to="/rfq" className="hidden sm:flex btn-industrial px-4 md:px-5 py-2 text-[10px] rounded-full shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/40">
               Get Quote
             </Link>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-industrial-900 bg-industrial-100 rounded-full"
+              className="md:hidden p-2.5 text-industrial-900 bg-industrial-100 rounded-full tap-target touch-ripple active:scale-95 transition-transform"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -385,20 +385,27 @@ export function Layout({ children }: LayoutProps) {
           </div>
         </div>
 
+        {/* Mobile Menu Backdrop */}
+        <div
+          className={`mobile-backdrop md:hidden ${isMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        />
+
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-industrial-100 transition-all duration-300 origin-top shadow-xl ${isMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'}`}>
-          <nav className="flex flex-col p-8 gap-6">
+        <div className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-industrial-100 transition-all duration-300 origin-top shadow-xl safe-area-inset-bottom ${isMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'}`}>
+          <nav className="flex flex-col p-6 md:p-8 gap-5">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`text-lg font-display font-medium ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600'}`}
+                className={`text-lg font-display font-medium py-2 tap-target transition-colors ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600 active:text-accent-blue'}`}
               >
                 {link.label}
               </Link>
             ))}
-            <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="btn-industrial py-4 text-center text-lg mt-2">
+            <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="btn-industrial py-4 text-center text-base mt-2 touch-ripple">
               Request Quote
             </Link>
           </nav>
@@ -454,9 +461,9 @@ export function Layout({ children }: LayoutProps) {
       {/* CommandPalette removed from direct layout to keep clean - can be triggered via keybind */}
       <CommandPalette isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      <footer className="footer bg-industrial-900 text-industrial-300 py-16 md:py-24 border-t border-industrial-800" role="contentinfo">
+      <footer className="footer bg-industrial-900 text-industrial-300 py-12 md:py-16 lg:py-24 border-t border-industrial-800 safe-area-inset-bottom" role="contentinfo">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
             <div className="col-span-1 md:col-span-2">
               <div className="mb-8">
                 <Link to="/" className="flex flex-col group">
@@ -511,12 +518,12 @@ export function Layout({ children }: LayoutProps) {
             </div>
           </div>
 
-          <div className="mt-20 pt-8 border-t border-industrial-800 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium uppercase tracking-[0.1em] text-industrial-500">
-            <p>&copy; 2025 Emphz Engineering Private Limited. All Rights Reserved.</p>
-            <div className="flex gap-8">
-              <Link to="/sitemap" className="hover:text-industrial-300 transition-colors">Sitemap</Link>
-              <Link to="#" className="hover:text-industrial-300 transition-colors">Privacy</Link>
-              <Link to="#" className="hover:text-industrial-300 transition-colors">Terms</Link>
+          <div className="mt-12 md:mt-16 lg:mt-20 pt-6 md:pt-8 border-t border-industrial-800 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-[10px] md:text-[11px] font-medium uppercase tracking-[0.1em] text-industrial-500">
+            <p className="text-center md:text-left">&copy; 2025 Emphz Engineering Private Limited. All Rights Reserved.</p>
+            <div className="flex gap-6 md:gap-8">
+              <Link to="/sitemap" className="hover:text-industrial-300 transition-colors tap-target">Sitemap</Link>
+              <Link to="#" className="hover:text-industrial-300 transition-colors tap-target">Privacy</Link>
+              <Link to="#" className="hover:text-industrial-300 transition-colors tap-target">Terms</Link>
             </div>
           </div>
         </div>
