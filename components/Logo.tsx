@@ -4,6 +4,7 @@ const Logo: React.FC<{ className?: string; variant?: 'light' | 'dark' }> = ({ cl
   return (
     <img
       src="/logo.png"
+      public="/logo.png"
       alt="Emphz Logo"
       className={`${className} object-contain ${variant === 'light' ? 'brightness-0 invert' : ''}`}
     />
