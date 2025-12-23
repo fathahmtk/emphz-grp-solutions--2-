@@ -436,7 +436,7 @@ const TechnicalCenter: React.FC = () => {
           }
         `}</style>
 
-            <div className="bg-slate-900 py-12 relative overflow-hidden border-b border-white/5">
+            <div className="bg-slate-900 pb-12 relative overflow-hidden border-b border-white/5">
                <div className="absolute inset-0 bg-dots opacity-5"></div>
                <div className="max-w-7xl mx-auto px-4 relative z-10 flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -479,7 +479,7 @@ const TechnicalCenter: React.FC = () => {
                </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 h-[calc(100vh-200px)] min-h-[600px]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6 h-[calc(100vh-120px)] min-h-[600px]">
 
                {/* Navigation Sidebar */}
                <div className="lg:col-span-3 flex flex-col gap-4">

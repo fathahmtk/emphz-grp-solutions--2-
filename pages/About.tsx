@@ -16,7 +16,7 @@ import SEO from '../components/SEO';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-white min-h-screen pt-24">
+    <div className="bg-white min-h-screen">
       <SEO
         title="About Us"
         description="Learn about EMPHZ GRP Solutions, a Mysuru-based manufacturer of high-quality composite infrastructure. ISO 9001:2015 certified."

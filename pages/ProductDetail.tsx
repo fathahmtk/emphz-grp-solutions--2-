@@ -73,7 +73,7 @@ const ProductDetail: React.FC = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen pt-32">
+    <div className="bg-white min-h-screen">
       <SEO
         title={product.name}
         description={product.shortDescription}

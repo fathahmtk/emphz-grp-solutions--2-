@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const items = useRFQStore((state: any) => state.items);
+    const items = useRFQStore((state) => state.items);
 
     useEffect(() => {
         if (isMenuOpen) {

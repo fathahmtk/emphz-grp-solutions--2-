@@ -37,7 +37,7 @@ const MaterialScience: React.FC = () => {
          />
 
          {/* Hero */}
-         <div className="relative py-24 md:py-32 bg-slate-950 text-white overflow-hidden">
+         <div className="relative pb-24 md:pb-32 bg-slate-950 text-white overflow-hidden">
             <div className="absolute inset-0 bg-dots opacity-5"></div>
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none translate-x-1/4 -translate-y-1/4"></div>
 
@@ -67,7 +67,7 @@ const MaterialScience: React.FC = () => {
          </div>
 
          {/* Navigation Tabs */}
-         <div className="sticky top-[72px] z-30 bg-white/80 backdrop-blur-md border-b border-slate-200">
+         <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200">
             <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
                <div className="flex space-x-8 min-w-max">
                   {[
