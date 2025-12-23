@@ -337,13 +337,13 @@ const ProductDetail: React.FC = () => {
     <>
       <div className="bg-white min-h-screen text-slate-900 pb-24">
         {/* Hero for Product - Keep Dark for Impact */}
-        <div className="relative h-[500px] lg:h-[700px] bg-[#050A14] overflow-hidden group">
+        <div className="relative h-[500px] lg:h-[700px] bg-slate-950 overflow-hidden group">
 
           <div className="absolute top-24 right-4 md:right-8 z-30 flex flex-col gap-3">
             {is3DAvailable && (
               <button
                 onClick={() => setViewMode(prev => prev === '3D' ? 'IMAGE' : '3D')}
-                className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2.5 rounded-full font-bold text-xs hover:bg-emphz-teal hover:border-emphz-teal transition-all shadow-xl flex items-center justify-center gap-2 group/toggle uppercase tracking-wide"
+                className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2.5 rounded-xl font-semibold text-xs hover:bg-white/20 transition-all shadow-xl flex items-center justify-center gap-2 group/toggle uppercase tracking-wide"
                 title="Toggle 3D/Photo"
               >
                 {viewMode === '3D' ? (
@@ -359,12 +359,12 @@ const ProductDetail: React.FC = () => {
                 )}
               </button>
             )}
-            <button onClick={() => setIsLightboxOpen(true)} className="bg-white/5 backdrop-blur-md border border-white/10 text-white p-2.5 rounded-full hover:bg-white/20 transition-all shadow-lg" title="Fullscreen">
+            <button onClick={() => setIsLightboxOpen(true)} className="bg-white/5 backdrop-blur-md border border-white/10 text-white p-2.5 rounded-xl hover:bg-white/20 transition-all shadow-lg" title="Fullscreen">
               <Maximize size={18} />
             </button>
             <button
               onClick={() => setIsShareModalOpen(true)}
-              className="bg-white/5 backdrop-blur-md border border-white/10 text-white p-2.5 rounded-full hover:bg-white/20 transition-all shadow-lg"
+              className="bg-white/5 backdrop-blur-md border border-white/10 text-white p-2.5 rounded-xl hover:bg-white/20 transition-all shadow-lg"
               title="Share"
             >
               <Share2 size={18} />
@@ -481,23 +481,23 @@ const ProductDetail: React.FC = () => {
             <div className="lg:col-span-2">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-10">
                 {product.specs.slice(0, 4).map((s, i) => (
-                  <div key={i} className="bg-white border border-gray-100 p-5 rounded-2xl text-center hover:bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="text-[9px] text-slate-500 uppercase font-bold mb-2 font-display tracking-widest">{s.label}</div>
-                    <div className="text-sm font-bold text-emphz-navy font-mono break-words">{s.value}</div>
+                  <div key={i} className="glass border border-slate-200 p-5 rounded-2xl text-center hover:bg-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="text-[10px] text-slate-500 uppercase font-semibold mb-2 tracking-widest">{s.label}</div>
+                    <div className="text-sm font-bold text-slate-900 font-mono break-words">{s.value}</div>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-4 my-10 p-8 bg-gradient-to-br from-blue-50 to-white rounded-3xl border border-blue-100 shadow-sm justify-between items-center">
+              <div className="flex flex-wrap gap-4 my-10 p-8 glass rounded-3xl border border-blue-50 justify-between items-center transition-all hover:shadow-lg">
                 <div>
-                  <h4 className="font-bold text-emphz-navy font-display mb-1">Technical Documentation</h4>
-                  <p className="text-xs text-gray-500">Official datasheets and CAD drawings.</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">Technical Documentation</h4>
+                  <p className="text-xs text-slate-500">Official engineering datasheets and CAD drawings.</p>
                 </div>
                 <div className="flex gap-3 w-full sm:w-auto mt-4 sm:mt-0">
-                  <button onClick={() => handleDownloadClick({ title: product.downloads[0].title, type: 'PDF' })} className="flex-1 sm:flex-none flex items-center bg-emphz-navy text-white px-5 py-3 rounded-xl font-bold text-xs hover:bg-emphz-teal transition-all duration-300 shadow-lg shadow-emphz-navy/20 font-display tracking-wide uppercase">
+                  <button onClick={() => handleDownloadClick({ title: product.downloads[0].title, type: 'PDF' })} className="flex-1 sm:flex-none flex items-center bg-slate-900 text-white px-5 py-3 rounded-xl font-semibold text-xs hover:bg-slate-800 transition-all shadow-lg uppercase tracking-wide">
                     <Download size={14} className="mr-2" /> PDF
                   </button>
-                  <button onClick={() => handleDownloadClick({ title: "Engineer's Pack", type: 'ZIP' })} className="flex-1 sm:flex-none flex items-center bg-white border border-gray-200 text-emphz-navy px-5 py-3 rounded-xl font-bold text-xs hover:border-emphz-navy transition-all duration-300 font-display tracking-wide uppercase">
+                  <button onClick={() => handleDownloadClick({ title: "Engineer's Pack", type: 'ZIP' })} className="flex-1 sm:flex-none flex items-center glass border border-slate-300 text-slate-900 px-5 py-3 rounded-xl font-semibold text-xs hover:bg-white transition-all uppercase tracking-wide">
                     <Package size={14} className="mr-2" /> ZIP
                   </button>
                 </div>
@@ -666,29 +666,29 @@ const ProductDetail: React.FC = () => {
 
             {/* Sidebar Sticky Panel */}
             <div className="lg:col-span-1 hidden lg:block">
-              <div className="bg-white p-8 rounded-3xl sticky top-28 border border-gray-100 shadow-xl shadow-gray-200/50">
-                <h3 className="text-xs font-bold text-gray-400 uppercase mb-6 tracking-[0.2em] font-display">Configure & Quote</h3>
+              <div className="glass p-8 rounded-3xl sticky top-28 border border-slate-200 shadow-xl shadow-slate-200/50 bg-white/60">
+                <h3 className="text-xs font-bold text-slate-400 uppercase mb-6 tracking-[0.2em]">Configure & Quote</h3>
 
-                <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-100">
-                  <div className="text-3xl font-black text-emphz-navy font-display tracking-tight">RFQ</div>
-                  <div className="text-green-600 text-[10px] font-bold flex items-center bg-green-50 px-3 py-1.5 rounded-full border border-green-100 font-mono uppercase tracking-wide">
-                    <Check size={10} className="mr-1" /> Available
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-100">
+                  <div className="text-3xl font-semibold text-slate-900 tracking-tight">RFQ Manifest</div>
+                  <div className="text-blue-600 text-[10px] font-bold flex items-center bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100 font-mono uppercase tracking-wide">
+                    <Check size={10} className="mr-1" /> Active Site
                   </div>
                 </div>
 
                 {is3DAvailable && (
-                  <div className="mb-8 border-b border-gray-100 pb-8">
-                    <h4 className="text-[10px] text-gray-400 font-bold uppercase mb-4 block font-display tracking-wider">Configuration</h4>
+                  <div className="mb-8 border-b border-slate-100 pb-8">
+                    <h4 className="text-[10px] text-slate-400 font-bold uppercase mb-4 block tracking-wider">Configuration</h4>
 
                     {/* Color Picker */}
                     <div className="mb-4">
                       <label className="text-[9px] text-slate-500 font-bold uppercase block mb-2 font-mono">Panel Color</label>
                       <div className="flex flex-wrap gap-2">
-                        {['#dddddd', '#1a1a1a', '#00ADB5', '#FF5733', '#33FF57'].map((col) => (
+                        {['#dddddd', '#1a1a1a', '#1e40af', '#0097a7', '#10b981'].map((col) => (
                           <button
                             key={col}
                             onClick={() => setProductConfig({ ...productConfig, color: col })}
-                            className={`w-8 h-8 rounded-full border-2 transition-transform hover:scale-110 ${productConfig.color === col ? 'border-emphz-navy scale-110 ring-2 ring-offset-2 ring-emphz-navy/20' : 'border-gray-200'}`}
+                            className={`w-8 h-8 rounded-full border-2 transition-transform hover:scale-110 ${productConfig.color === col ? 'border-slate-900 scale-110 ring-2 ring-offset-2 ring-slate-900/20' : 'border-slate-200'}`}
                             style={{ backgroundColor: col }}
                             title={col}
                           />
@@ -704,7 +704,7 @@ const ProductDetail: React.FC = () => {
                           <button
                             key={finish}
                             onClick={() => setProductConfig({ ...productConfig, finish })}
-                            className={`px-3 py-1.5 text-[10px] font-bold uppercase rounded border transition-colors ${productConfig.finish === finish ? 'bg-emphz-navy text-white border-emphz-navy' : 'bg-white text-gray-500 border-gray-200 hover:border-gray-300'}`}
+                            className={`px-3 py-1.5 text-[10px] font-bold uppercase rounded-lg border transition-colors ${productConfig.finish === finish ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300'}`}
                           >
                             {finish}
                           </button>
@@ -716,8 +716,8 @@ const ProductDetail: React.FC = () => {
 
                 <div className="space-y-6">
                   <div>
-                    <label className="text-[10px] text-gray-400 font-bold uppercase mb-3 block font-display tracking-wider">Select Quantity</label>
-                    <div className="flex items-center bg-gray-50 rounded-xl border border-gray-200 p-1">
+                    <label className="text-[10px] text-slate-400 font-bold uppercase mb-3 block tracking-wider">Select Quantity</label>
+                    <div className="flex items-center bg-slate-50/50 rounded-xl border border-slate-200 p-1">
                       <button
                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
                         className="p-4 hover:bg-white hover:shadow-sm rounded-lg text-slate-600 transition-all"
@@ -729,7 +729,7 @@ const ProductDetail: React.FC = () => {
                         type="text"
                         readOnly
                         value={quantity}
-                        className="flex-1 bg-transparent text-center text-emphz-navy font-bold focus:outline-none font-mono text-lg"
+                        className="flex-1 bg-transparent text-center text-slate-900 font-bold focus:outline-none font-mono text-lg"
                         aria-label="Quantity"
                       />
                       <button
@@ -742,16 +742,16 @@ const ProductDetail: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 p-4 rounded-xl text-center">
-                    <p className="text-[10px] text-slate-500 font-mono mb-2">{'Bulk pricing applies for orders > 50 units.'}</p>
+                  <div className="bg-slate-50 p-4 rounded-xl text-center">
+                    <p className="text-[10px] text-slate-500 font-mono mb-2">{'Standard production cycles apply.'}</p>
                   </div>
 
                   <button
                     onClick={handleAddToRFQ}
                     disabled={isAdded}
-                    className={`w-full font-black py-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-widest font-display transform flex items-center justify-center gap-2 ${isAdded
-                      ? 'bg-green-500 text-white shadow-green-500/20 scale-100'
-                      : 'bg-emphz-navy text-white hover:bg-emphz-teal hover:shadow-emphz-teal/40 hover:-translate-y-1'
+                    className={`w-full font-semibold py-4 rounded-xl transition-all shadow-xl text-xs uppercase tracking-widest transform flex items-center justify-center gap-2 ${isAdded
+                      ? 'bg-blue-600 text-white shadow-blue-500/20 scale-100'
+                      : 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-slate-900/40 hover:-translate-y-1'
                       }`}
                   >
                     {isAdded ? (
@@ -765,13 +765,13 @@ const ProductDetail: React.FC = () => {
 
                   <button
                     onClick={() => handleDownloadClick({ title: product.downloads[0].title, type: product.downloads[0].type })}
-                    className="w-full border-2 border-gray-100 text-gray-500 font-bold py-3.5 rounded-xl hover:border-emphz-teal hover:text-emphz-teal transition-all text-xs uppercase tracking-widest flex items-center justify-center group font-display bg-transparent hover:bg-white"
+                    className="w-full border border-slate-300 text-slate-600 font-bold py-3.5 rounded-xl hover:bg-white hover:text-slate-900 transition-all text-xs uppercase tracking-widest flex items-center justify-center group bg-transparent"
                   >
-                    <Download size={14} className="mr-2 group-hover:scale-110 transition-transform" /> Datasheet
+                    <Download size={14} className="mr-2 group-hover:scale-110 transition-transform" /> Download Matrix
                   </button>
 
-                  <p className="text-[10px] text-gray-400 text-center font-mono leading-relaxed">
-                    Need custom specs? Use the <Link to="/technical" className="text-emphz-teal hover:underline">Technical Assistant</Link>.
+                  <p className="text-[10px] text-slate-400 text-center font-mono leading-relaxed">
+                    Custom engineering? Visit the <Link to="/technical" className="text-blue-700 hover:underline">Technical Center</Link>.
                   </p>
                 </div>
               </div>

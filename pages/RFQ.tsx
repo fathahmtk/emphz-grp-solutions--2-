@@ -89,45 +89,44 @@ const RFQ: React.FC = () => {
    };
 
    const getPriorityColor = () => {
-      if (leadScore < 40) return 'text-gray-400 bg-gray-100';
+      if (leadScore < 40) return 'text-slate-400 bg-slate-100';
       if (leadScore < 70) return 'text-blue-500 bg-blue-500/10';
-      return 'text-emphz-teal bg-emphz-teal/10';
+      return 'text-blue-600 bg-blue-600/10';
    };
 
    if (submitted) {
       return (
-         <div className="min-h-screen bg-emphz-navy flex items-center justify-center p-4 relative overflow-hidden">
-            {/* Abstract Background */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+         <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4 relative overflow-hidden font-sans">
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-12 rounded-3xl max-w-lg w-full text-center relative z-10 shadow-2xl">
-               <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_30px_#22c55e]">
+            <div className="glass p-8 md:p-12 rounded-3xl max-w-lg w-full text-center relative z-10 shadow-2xl bg-white/10 border-white/20">
+               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_30px_#1e40af]">
                   <CheckCircle className="w-10 h-10 text-white" />
                </div>
-               <h2 className="text-3xl font-black text-white mb-2 font-display tracking-tight">TRANSMISSION RECEIVED</h2>
-               <div className="text-green-400 font-mono text-xs uppercase tracking-[0.2em] mb-8">Ref ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</div>
+               <h2 className="text-3xl font-semibold text-white mb-2 tracking-tight">Request Received</h2>
+               <div className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em] mb-8">Ref ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</div>
 
                <div className="bg-white/5 rounded-xl p-6 mb-8 border border-white/5">
                   <div className="flex justify-between text-sm mb-2">
-                     <span className="text-gray-400 font-mono">Routing Target:</span>
-                     <span className="text-emphz-teal font-bold font-mono">
-                        {formData.region === 'Kerala' ? 'Vadakara Ops Center' : 'Mysore Factory HQ'}
+                     <span className="text-slate-400 font-mono">Routing:</span>
+                     <span className="text-blue-400 font-bold font-mono">
+                        {formData.region === 'Kerala' ? 'Vadakara Ops Center' : 'Central Factory HQ'}
                      </span>
                   </div>
                   <div className="flex justify-between text-sm">
-                     <span className="text-gray-400 font-mono">Priority Level:</span>
-                     <span className={`font-bold font-mono ${leadScore > 60 ? 'text-red-400' : 'text-blue-400'}`}>
-                        {leadScore > 60 ? 'HIGH VELOCITY' : 'STANDARD QUEUE'}
+                     <span className="text-slate-400 font-mono">Priority:</span>
+                     <span className={`font-bold font-mono ${leadScore > 60 ? 'text-blue-400' : 'text-slate-400'}`}>
+                        {leadScore > 60 ? 'HIGH VELOCITY' : 'STANDARD'}
                      </span>
                   </div>
                </div>
 
-               <p className="text-gray-300 text-sm mb-8 leading-relaxed font-sans">
+               <p className="text-slate-300 text-sm mb-8 leading-relaxed">
                   Our engineering team has received your manifest. A formal quotation and technical datasheet package will be dispatched to <span className="text-white font-bold">{formData.email}</span> within 24 hours.
                </p>
 
-               <Link to="/" className="inline-flex items-center justify-center w-full bg-emphz-teal text-emphz-navy font-bold py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest text-xs font-display">
-                  Return to Command Center
+               <Link to="/" className="inline-flex items-center justify-center w-full bg-white text-slate-900 font-bold py-4 rounded-xl hover:bg-blue-600 hover:text-white transition-all uppercase tracking-widest text-xs">
+                  Return to Home
                </Link>
             </div>
          </div>
@@ -138,50 +137,50 @@ const RFQ: React.FC = () => {
       <div className="min-h-screen bg-white flex flex-col lg:flex-row font-sans">
 
          {/* Left Panel: The Manifest (Dark Mode) */}
-         <div className="w-full lg:w-5/12 bg-emphz-navy text-white relative overflow-hidden flex flex-col order-2 lg:order-1">
-            <div className="absolute inset-0 bg-carbon-fibre opacity-20"></div>
-            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-emphz-navy to-transparent"></div>
+         <div className="w-full lg:w-5/12 bg-slate-950 text-white relative overflow-hidden flex flex-col order-2 lg:order-1">
+            <div className="absolute inset-0 bg-dots opacity-10"></div>
+            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-slate-950 to-transparent"></div>
 
             <div className="p-8 lg:p-12 relative z-10 flex-grow flex flex-col">
-               <Link to="/products" className="inline-flex items-center text-gray-400 hover:text-white mb-8 text-xs font-bold uppercase tracking-widest font-display transition-colors">
-                  ← Modify Configuration
+               <Link to="/products" className="inline-flex items-center text-slate-400 hover:text-white mb-8 text-xs font-bold uppercase tracking-widest transition-colors">
+                  ← Modify Parameters
                </Link>
 
-               <h1 className="text-4xl lg:text-5xl font-black font-display mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-                  PROJECT <br /> MANIFEST
+               <h1 className="text-4xl lg:text-5xl font-semibold mb-2 tracking-tight">
+                  Bill of <br /> Materials
                </h1>
-               <p className="text-emphz-teal font-mono text-xs uppercase tracking-wider mb-10">
-                  {'// QUANTITY_CHECK // SPEC_VALIDATION'}
+               <p className="text-blue-500 font-mono text-xs uppercase tracking-wider mb-10">
+                  {'// AUDIT_PENDING // SPEC_SECURE'}
                </p>
 
-               <div className="flex-grow space-y-4 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-700">
+               <div className="flex-grow space-y-4 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-800">
                   {items.length === 0 ? (
                      <div className="p-8 border-2 border-dashed border-white/10 rounded-2xl text-center">
-                        <p className="text-gray-500 text-sm mb-4">No assets configured.</p>
-                        <Link to="/products" className="text-emphz-teal font-bold text-xs hover:underline uppercase tracking-wide">Browse Solutions</Link>
+                        <p className="text-slate-500 text-sm mb-4">No systems selected.</p>
+                        <Link to="/products" className="text-blue-500 font-bold text-xs hover:underline uppercase tracking-wide">Configure Products</Link>
                      </div>
                   ) : (
                      items.map((item, i) => (
-                        <div key={i} className="bg-white/5 border border-white/10 p-4 rounded-xl flex items-center justify-between group hover:bg-white/10 transition-colors">
+                        <div key={i} className="glass border border-white/10 p-4 rounded-xl flex items-center justify-between group hover:bg-white/10 transition-colors bg-white/5">
                            <div>
-                              <div className="text-white font-bold font-display text-sm">{item.name}</div>
+                              <div className="text-white font-semibold text-sm">{item.name}</div>
                               {item.configuration && (
                                  <div className="flex gap-2 mt-1.5">
-                                    <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-gray-300 font-mono flex items-center gap-1.5">
+                                    <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-slate-300 font-mono flex items-center gap-1.5">
                                        <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: item.configuration.color }}></span>
                                        {item.configuration.finish}
                                     </span>
                                  </div>
                               )}
-                              <div className="text-[10px] text-gray-500 font-mono mt-1">ID: {item.id}</div>
+                              <div className="text-[10px] text-slate-500 font-mono mt-1">UUID: {item.id.substring(0, 8)}</div>
                            </div>
                            <div className="flex items-center gap-4">
-                              <div className="bg-black/40 px-3 py-1 rounded text-xs font-mono text-emphz-teal border border-white/5">
-                                 x{item.quantity}
+                              <div className="bg-black/40 px-3 py-1 rounded text-xs font-mono text-blue-500 border border-white/5">
+                                 QTY: {item.quantity}
                               </div>
                               <button
                                  onClick={() => removeItem(item.cartId || item.id)}
-                                 className="text-gray-600 hover:text-red-400 transition-colors"
+                                 className="text-slate-600 hover:text-red-400 transition-colors"
                                  aria-label="Remove item"
                               >
                                  <Trash2 size={16} />
@@ -193,37 +192,37 @@ const RFQ: React.FC = () => {
                </div>
 
                <div className="mt-8 pt-8 border-t border-white/10">
-                  <div className="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider font-bold text-gray-500 mb-6 font-display">
+                  <div className="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-wider font-bold text-slate-500 mb-6">
                      <div className="flex items-center gap-2">
-                        <ShieldCheck size={14} className="text-emphz-teal" /> Verified Specs
+                        <ShieldCheck size={14} className="text-blue-500" /> ISO Certified
                      </div>
                      <div className="flex items-center gap-2">
-                        <Zap size={14} className="text-emphz-teal" /> Fast Track RFQ
+                        <Zap size={14} className="text-blue-500" /> Fast Response
                      </div>
                      <div className="flex items-center gap-2">
-                        <Globe size={14} className="text-emphz-teal" /> Global Export
+                        <Globe size={14} className="text-blue-500" /> Export Ready
                      </div>
                      <div className="flex items-center gap-2">
-                        <Cpu size={14} className="text-emphz-teal" /> Precision Engineered
+                        <Cpu size={14} className="text-blue-500" /> Spec Compliant
                      </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-emphz-teal to-cyan-500 h-1 w-full rounded-full opacity-20"></div>
+                  <div className="bg-blue-600 h-1 w-full rounded-full opacity-20"></div>
                </div>
             </div>
          </div>
 
          {/* Right Panel: Logistics Data (Light Mode) */}
-         <div className="w-full lg:w-7/12 bg-gray-50 p-8 lg:p-12 overflow-y-auto order-1 lg:order-2">
+         <div className="w-full lg:w-7/12 bg-slate-50 p-8 lg:p-12 overflow-y-auto order-1 lg:order-2">
             <div className="max-w-2xl mx-auto">
                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl font-bold text-emphz-navy font-display">Procurement Details</h2>
+                  <h2 className="text-2xl font-semibold text-slate-900">Procurement Logistics</h2>
 
                   {/* Lead Score Indicator */}
                   <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-bold font-mono transition-all duration-500 ${getPriorityColor()}`}>
                      <div className="relative w-2 h-2">
-                        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${leadScore > 60 ? 'bg-red-400' : 'bg-blue-400'}`}></span>
-                        <span className={`relative inline-flex rounded-full h-2 w-2 ${leadScore > 60 ? 'bg-red-500' : 'bg-blue-500'}`}></span>
+                        <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${leadScore > 60 ? 'bg-blue-400' : 'bg-slate-400'}`}></span>
+                        <span className={`relative inline-flex rounded-full h-2 w-2 ${leadScore > 60 ? 'bg-blue-500' : 'bg-slate-500'}`}></span>
                      </div>
                      <span>PRIORITY: {leadScore}%</span>
                   </div>
@@ -231,18 +230,18 @@ const RFQ: React.FC = () => {
 
                <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Section 1: Context */}
-                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 font-display flex items-center">
-                        <Briefcase size={14} className="mr-2" /> Project Context
+                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
+                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
+                        <Briefcase size={14} className="mr-2" /> Sector Context
                      </h3>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                           <label className="block text-[10px] font-bold text-emphz-navy uppercase mb-1 font-mono">Industry Sector</label>
+                           <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Industry Segment</label>
                            <select
                               name="industry"
                               value={formData.industry}
                               onChange={handleChange}
-                              className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm text-emphz-navy font-medium focus:ring-2 focus:ring-emphz-teal focus:border-transparent outline-none transition-all"
+                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
                            >
                               <option value="Construction">Construction / Civil</option>
                               <option value="Utilities">Power & Utilities</option>
@@ -252,118 +251,115 @@ const RFQ: React.FC = () => {
                            </select>
                         </div>
                         <div>
-                           <label className="block text-[10px] font-bold text-emphz-navy uppercase mb-1 font-mono">Urgency / Timeline</label>
+                           <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Timeline / Volume</label>
                            <select
                               name="urgency"
                               value={formData.urgency}
                               onChange={handleChange}
-                              className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm text-emphz-navy font-medium focus:ring-2 focus:ring-emphz-teal focus:border-transparent outline-none transition-all"
+                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
                            >
                               <option value="Standard">Standard (4-6 Weeks)</option>
                               <option value="Immediate">Immediate (Stock Check)</option>
-                              <option value="OneMonth">Project Planning (1-3 Mo)</option>
-                              <option value="Budget">Budgetary Only</option>
+                              <option value="OneMonth">Planning (1-3 Mo)</option>
+                              <option value="Budget">Budgetary Quote Only</option>
                            </select>
                         </div>
                      </div>
                   </div>
 
                   {/* Section 2: Contact */}
-                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 font-display flex items-center">
-                        <MapPin size={14} className="mr-2" /> Destination & Contact
+                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
+                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
+                        <MapPin size={14} className="mr-2" /> Distribution Target
                      </h3>
 
                      <div className="mb-6">
-                        <label className="block text-[10px] font-bold text-emphz-navy uppercase mb-1 font-mono">Region / Routing</label>
+                        <label className="block text-[10px] font-bold text-slate-900 uppercase mb-1 font-mono">Region / Logistics Hub</label>
                         <div className="relative">
                            <select
                               name="region"
                               value={formData.region}
                               onChange={handleChange}
-                              className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm text-emphz-navy font-medium focus:ring-2 focus:ring-emphz-teal focus:border-transparent outline-none transition-all appearance-none"
+                              className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm text-slate-900 font-medium focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all appearance-none"
                            >
                               <option value="Kerala">Kerala (Vadakara Hub)</option>
-                              <option value="Karnataka">Karnataka (Mysore HQ)</option>
-                              <option value="TamilNadu">Tamil Nadu</option>
-                              <option value="RestOfIndia">Rest of India</option>
-                              <option value="International">International Export</option>
+                              <option value="Karnataka">Karnataka (Mysore Central)</option>
+                              <option value="TamilNadu">Tamil Nadu Region</option>
+                              <option value="RestOfIndia">Domestic India</option>
+                              <option value="International">Export Division</option>
                            </select>
-                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
                               <MapPin size={16} />
                            </div>
                         </div>
-                        <p className="text-[10px] text-emphz-teal mt-2 font-mono">
-                           * Routing: {formData.region === 'Kerala' ? 'Direct to Kerala Ops Team' : 'Direct to Central Manufacturing'}
-                        </p>
                      </div>
 
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <input
                            type="text"
                            name="name"
-                           placeholder="Full Name *"
+                           placeholder="Primary Contact Name *"
                            required
                            value={formData.name}
                            onChange={handleChange}
-                           className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emphz-teal outline-none"
+                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
                         />
                         <input
                            type="text"
                            name="company"
-                           placeholder="Company Name *"
+                           placeholder="Organization Name *"
                            required
                            value={formData.company}
                            onChange={handleChange}
-                           className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emphz-teal outline-none"
+                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
                         />
                      </div>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input
                            type="email"
                            name="email"
-                           placeholder="Work Email *"
+                           placeholder="Corporate Email Alias *"
                            required
                            value={formData.email}
                            onChange={handleChange}
-                           className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emphz-teal outline-none"
+                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
                         />
                         <input
                            type="tel"
                            name="phone"
-                           placeholder="Phone Number *"
+                           placeholder="Contact Number *"
                            required
                            value={formData.phone}
                            onChange={handleChange}
-                           className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emphz-teal outline-none"
+                           className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
                         />
                      </div>
                   </div>
 
                   {/* Section 3: Notes */}
-                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 font-display">Custom Requirements</h3>
+                  <div className="bg-white glass p-6 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50">
+                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Technical Annotations</h3>
                      <textarea
                         name="message"
                         rows={3}
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Enter specific dimensional constraints, IP rating requirements, or custom color codes..."
-                        className="w-full bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emphz-teal outline-none"
+                        placeholder="Dimensional constraints, IP ratings, resin preferences..."
+                        className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none"
                      ></textarea>
                   </div>
 
                   <button
                      type="submit"
                      disabled={items.length === 0}
-                     className="w-full bg-emphz-navy text-white font-black py-5 rounded-xl hover:bg-emphz-teal transition-all shadow-xl shadow-emphz-navy/20 hover:shadow-emphz-teal/40 text-sm uppercase tracking-[0.2em] font-display transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
+                     className="w-full bg-slate-900 text-white font-bold py-5 rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/10 hover:shadow-blue-600/30 text-xs uppercase tracking-[0.2em] transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
                   >
-                     <Send size={18} /> Initialize Request
+                     <Send size={18} /> Initialize RFQ Transmission
                   </button>
 
-                  <p className="text-center text-[10px] text-gray-400 font-mono">
+                  <p className="text-center text-[10px] text-slate-400 font-mono">
                      <Clock size={10} className="inline mr-1" />
-                     Average response time: &lt; 4 Hours during business hours.
+                     SLA: Response guaranteed &lt; 4 Hours during Business Cycles.
                   </p>
                </form>
             </div>

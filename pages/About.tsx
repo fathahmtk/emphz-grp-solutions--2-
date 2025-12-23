@@ -94,50 +94,50 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white text-emphz-navy">
+    <div className="bg-slate-50 text-slate-900 font-sans">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-gradient-to-br from-emphz-navy via-emphz-dark to-emphz-navy overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581092921462-6870002878b6?q=80&w=2670&auto=format&fit=crop')" }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-emphz-navy via-emphz-navy/70 to-transparent"></div>
-        <div className="absolute inset-0 bg-dots opacity-10"></div>
+      <section className="relative py-24 md:py-32 bg-slate-950 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581092921462-6870002878b6?q=80&w=2670&auto=format&fit=crop')" }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-dots opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-4xl md:text-7xl font-black mb-4 md:mb-6 max-w-4xl leading-tight font-display text-white uppercase">
-            Kerala Managed. <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emphz-cyan to-white animate-gradient">Mysore Manufactured.</span>
+          <h1 className="text-4xl md:text-7xl font-semibold mb-4 md:mb-6 max-w-4xl leading-tight text-white tracking-tight">
+            Kerala Roots.<br /> <span className="text-blue-500">Mysore Manufactured.</span>
           </h1>
-          <p className="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light border-l-4 border-emphz-teal pl-4 md:pl-6 font-sans">
-            EMPHZ GRP Solutions is a Kerala-managed enterprise with a dedicated manufacturing hub in Mysore. Our mission is to solve the corrosion crisis in Indian infrastructure using advanced GRP technology.
+          <p className="text-base md:text-xl text-slate-400 max-w-2xl leading-relaxed font-light border-l-2 border-blue-600 pl-4 md:pl-6">
+            EMPHZ GRP Solutions is an engineering-driven enterprise manufacturing critical infrastructure components. We solve the corrosion crisis using advanced GRP material science.
           </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-xs md:text-sm font-bold text-emphz-teal tracking-widest uppercase mb-3 md:mb-4 font-display">About EMPHZ GRP Solutions</h2>
-              <h3 className="text-3xl md:text-5xl font-black text-emphz-navy mb-6 font-display leading-[1.1]">Serving India's Infrastructure.</h3>
-              <p className="text-gray-600 leading-relaxed text-base md:text-lg font-sans mb-8">
-                EMPHZ GRP Solutions is an Indian manufacturer of GRP / FRP products serving electrical, telecom, industrial, and infrastructure sectors. The company is managed from Kerala, with manufacturing operations located in Mysuru, Karnataka.
+              <h2 className="text-xs md:text-sm font-semibold text-blue-600 tracking-widest uppercase mb-3 md:mb-4">Corporate Overview</h2>
+              <h3 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-6 leading-tight">Serving Critical Infrastructure.</h3>
+              <p className="text-slate-600 leading-relaxed text-base md:text-lg mb-8">
+                EMPHZ GRP Solutions manufactures composite systems for electrical, telecom, and industrial sectors. With operations based in Mysore, Karnataka, we provide end-to-end fabrication from design to delivery.
               </p>
-              <p className="text-gray-600 leading-relaxed text-base md:text-lg font-sans">
-                We focus on practical product design, consistent manufacturing quality, and reliable delivery for project-based requirements.
+              <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                Our focus is on industrial reliability, using consistent molding processes to deliver products that survive in the most aggressive environments.
               </p>
             </div>
-            <div className="lg:w-1/2 bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100">
-              <h4 className="text-xl font-bold text-emphz-navy mb-8 font-display border-b border-gray-100 pb-4 uppercase tracking-wider">What We Do</h4>
+            <div className="lg:w-1/2 glass p-8 md:p-12 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 bg-white/60 backdrop-blur-md">
+              <h4 className="text-xl font-semibold text-slate-900 mb-8 border-b border-slate-100 pb-4 uppercase tracking-wider">Manufacturing Focus</h4>
               <ul className="space-y-6">
                 {[
-                  { title: "Manufacturing", desc: "Manufacture GRP enclosures, cabins, kiosks, and modular units" },
-                  { title: "Custom Fabrication", desc: "Undertake custom GRP fabrication as per drawings" },
-                  { title: "Infrastructure Supply", desc: "Supply products for infrastructure and industrial use" }
+                  { title: "Material Science", desc: "Manufacture high-spec GRP enclosures and modular units" },
+                  { title: "Custom Fabrication", desc: "Bespoke engineering based on approved technical drawings" },
+                  { title: "Project Delivery", desc: "Integrated supply chain for large-scale infrastructure projects" }
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-4 group">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emphz-teal/10 flex items-center justify-center group-hover:bg-emphz-teal transition-colors">
-                      <Check size={14} className="text-emphz-teal group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                      <Check size={14} className="text-blue-600 group-hover:text-white transition-colors" />
                     </div>
-                    <p className="text-slate-600 font-sans text-sm md:text-base leading-snug">
-                      <span className="font-bold text-emphz-navy">{item.title}:</span> {item.desc}
+                    <p className="text-slate-600 text-sm md:text-base leading-snug">
+                      <span className="font-bold text-slate-900">{item.title}:</span> {item.desc}
                     </p>
                   </li>
                 ))}
@@ -150,15 +150,34 @@ const About: React.FC = () => {
       {/* Our Values Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 md:mb-4 font-display">Our Core Values</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-emphz-navy mb-8 md:mb-12 font-display">The Principles That Guide Us.</h3>
+          <h2 className="text-xs md:text-sm font-semibold text-blue-700 tracking-widest uppercase mb-3 md:mb-4">Operating Principles</h2>
+          <h3 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-8 md:mb-12">Built for the Long Term.</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {values.map((value, i) => (
-              <div key={i} className="bg-gray-50 p-6 md:p-8 rounded-xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center">
-                {value.icon}
-                <h4 className="text-lg md:text-xl font-bold my-3 md:my-4 font-display">{value.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed font-sans mb-6 flex-grow">{value.description}</p>
-                <div className="mt-auto pt-6 border-t border-gray-200 w-full">
+            {[
+              {
+                icon: <Anchor className="w-8 h-8 text-blue-600" />,
+                title: "Asset Longevity",
+                description: "Systems designed for 25+ years of operational life without corrosive degradation or structural fatigue.",
+                statistic: { value: 25, suffix: '+ Year', label: 'Service Life' }
+              },
+              {
+                icon: <Lightbulb className="w-8 h-8 text-blue-600" />,
+                title: "Logistics Efficiency",
+                description: "GRP composites provide a 75% weight reduction compared to steel, simplifying site handling and installation.",
+                statistic: { value: 40, suffix: '%', label: 'Lighter Than Steel' }
+              },
+              {
+                icon: <Users className="w-8 h-8 text-blue-600" />,
+                title: "Site Partnership",
+                description: "Direct collaboration with engineering teams to ensure precise alignment with project-specific schematics.",
+                statistic: { value: 500, suffix: '+', label: 'Projects Completed' }
+              },
+            ].map((value, i) => (
+              <div key={i} className="glass p-6 md:p-8 rounded-2xl border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-center bg-slate-50/50">
+                <div className="mb-4 bg-white p-4 rounded-2xl shadow-sm">{value.icon}</div>
+                <h4 className="text-lg md:text-xl font-semibold text-slate-900 my-3 md:my-4">{value.title}</h4>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">{value.description}</p>
+                <div className="mt-auto pt-6 border-t border-slate-200 w-full">
                   <AnimatedStatistic
                     endValue={value.statistic.value}
                     suffix={value.statistic.suffix}
@@ -171,42 +190,42 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* NEW: Manufacturing Excellence Section */}
-      <section className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
+      {/* Manufacturing Excellence Section */}
+      <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 md:mb-4 font-display">How We Build</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-emphz-navy mb-4 md:mb-6 font-display">Mysore Factory Setup.</h3>
-              <p className="text-base md:text-lg text-gray-600 mb-6 font-light font-sans">
-                At our Mysore facility, we employ multiple advanced composite manufacturing techniques to ensure every product meets specific structural and aesthetic requirements.
+              <h2 className="text-xs md:text-sm font-semibold text-blue-700 tracking-widest uppercase mb-3 md:mb-4">Manufacturing Hub</h2>
+              <h3 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 md:mb-6">Precision Composite Casting.</h3>
+              <p className="text-base md:text-lg text-slate-600 mb-6 font-light">
+                Our Mysore facility utilizes industrial-grade molding techniques to maintain tight dimensional tolerances and uniform material density.
               </p>
 
               <div className="space-y-6 md:space-y-8 mt-6 md:mt-8">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">01</div>
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center font-bold font-mono text-sm md:text-base">01</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Hand Layup & SMC Press</h4>
-                    <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      We use hot press molding for volume enclosures and hand layup for custom structural parts. This allows us to handle both standard junction boxes and bespoke cabins.
+                    <h4 className="font-semibold text-lg md:text-xl text-slate-900 mb-1 md:mb-2 text-blue-600">SMC Press & Hand Layup</h4>
+                    <p className="text-xs md:text-sm text-slate-600">
+                      High-tonnage hot press molding for standard enclosures and multi-axial layup for structural modular units.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">02</div>
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center font-bold font-mono text-sm md:text-base">02</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Pultrusion Line</h4>
-                    <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      Our factory has pultrusion lines for manufacturing GRP profiles, angles, and cable trays. These profiles are used where high strength is needed for frame support.
+                    <h4 className="font-semibold text-lg md:text-xl text-slate-900 mb-1 md:mb-2 text-blue-600">Automated Pultrusion</h4>
+                    <p className="text-xs md:text-sm text-slate-600">
+                      Continuous profile manufacturing for high-strength beams, cable management systems, and structural framing.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emphz-navy text-white rounded-lg flex items-center justify-center font-bold font-mono text-sm md:text-base">03</div>
+                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center font-bold font-mono text-sm md:text-base">03</div>
                   <div>
-                    <h4 className="font-bold text-lg md:text-xl text-emphz-navy mb-1 md:mb-2 font-display">Assembly & Finishing</h4>
-                    <p className="text-xs md:text-sm text-gray-600 font-sans">
-                      Cabins and Kiosks are assembled at the Mysore plant. Every unit is fitted with electricals and plumbing as per the order before it is packed for dispatch.
+                    <h4 className="font-semibold text-lg md:text-xl text-slate-900 mb-1 md:mb-2 text-blue-600">Final Assembly</h4>
+                    <p className="text-xs md:text-sm text-slate-600">
+                      Integrated fitting of electrical components, sealing systems, and structural hardware before rigorous QA dispatch.
                     </p>
                   </div>
                 </div>
@@ -215,22 +234,22 @@ const About: React.FC = () => {
 
             <div className="lg:w-1/2 w-full">
               <div className="grid grid-cols-2 gap-3 md:gap-4">
-                <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                  <Factory className="w-8 h-8 md:w-12 md:h-12 text-gray-400 mb-3 md:mb-4" />
-                  <div className="font-bold text-xl md:text-2xl text-emphz-navy font-display">50,000+</div>
-                  <div className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1 font-display">Sq. Ft. Factory</div>
+                <div className="glass p-4 md:p-6 rounded-2xl border border-slate-200 flex flex-col items-center text-center bg-white/40">
+                  <Factory className="w-8 h-8 md:w-12 md:h-12 text-slate-400 mb-3 md:mb-4" />
+                  <div className="font-bold text-xl md:text-2xl text-slate-900">50,000+</div>
+                  <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">Sq. Ft. Facility</div>
                 </div>
-                <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                  <Users className="w-8 h-8 md:w-12 md:h-12 text-gray-400 mb-3 md:mb-4" />
-                  <div className="font-bold text-xl md:text-2xl text-emphz-navy font-display">120+</div>
-                  <div className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest mt-1 font-display">Skilled Technicians</div>
+                <div className="glass p-4 md:p-6 rounded-2xl border border-slate-200 flex flex-col items-center text-center bg-white/40">
+                  <Users className="w-8 h-8 md:w-12 md:h-12 text-slate-400 mb-3 md:mb-4" />
+                  <div className="font-bold text-xl md:text-2xl text-slate-900">120+</div>
+                  <div className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">Technicians</div>
                 </div>
-                <div className="col-span-2 bg-emphz-navy text-white p-6 md:p-8 rounded-xl flex items-center justify-between">
+                <div className="col-span-2 bg-slate-900 text-white p-6 md:p-8 rounded-2xl flex items-center justify-between shadow-xl">
                   <div>
-                    <div className="font-bold text-xl md:text-2xl font-display">ISO 9001:2015</div>
-                    <div className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mt-1 font-display">Certified Facility</div>
+                    <div className="font-bold text-xl md:text-2xl">ISO Cert.</div>
+                    <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">Quality Management System</div>
                   </div>
-                  <Award className="w-10 h-10 md:w-12 md:h-12 text-emphz-teal" />
+                  <Award className="w-10 h-10 md:w-12 md:h-12 text-blue-500" />
                 </div>
               </div>
             </div>
@@ -238,98 +257,96 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* NEW: Quality Assurance Section */}
-      {/* NEW: Batch Testing & Standards Section */}
-      <section className="py-16 md:py-24 bg-white border-t border-gray-200">
+      {/* Quality Assurance Section */}
+      <section className="py-16 md:py-24 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="md:w-1/3 text-center md:text-left">
-              <h2 className="text-xs md:text-sm font-bold text-emphz-teal-dark tracking-widest uppercase mb-3 md:mb-4 font-display">Strict Standards</h2>
-              <h3 className="text-3xl font-bold text-emphz-navy mb-3 md:mb-4 font-display">Batch Testing.</h3>
-              <p className="text-gray-600 text-sm md:text-base font-sans">
-                We don't just manufacture; we test. Our Mysore facility includes a dedicated Quality Assurance lab where batches are rigorously tested against international standards.
+              <h2 className="text-xs md:text-sm font-semibold text-blue-700 tracking-widest uppercase mb-3 md:mb-4">Internal Controls</h2>
+              <h3 className="text-3xl font-semibold text-slate-900 mb-3 md:mb-4">Matrix Testing.</h3>
+              <p className="text-slate-600 text-sm md:text-base font-light">
+                Our facility maintains a dedicated compliance lab where every production batch is validated against international standards for structural integrity.
               </p>
             </div>
             <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 w-full">
-              <div className="bg-gray-50 p-4 md:p-6 rounded-lg border border-gray-100">
-                <Microscope className="w-6 h-6 md:w-8 md:h-8 text-emphz-navy mb-2 md:mb-3" />
-                <h4 className="font-bold text-emphz-navy text-sm mb-1 md:mb-2 font-display">Hydrostatic Pressure</h4>
-                <p className="text-[10px] md:text-xs text-gray-500 font-sans">Testing water tanks and enclosures for leaks under high pressure loads.</p>
+              <div className="glass p-4 md:p-6 rounded-xl border border-slate-100 bg-slate-50/50">
+                <Microscope className="w-6 h-6 md:w-8 md:h-8 text-slate-900 mb-2 md:mb-3" />
+                <h4 className="font-semibold text-slate-900 text-sm mb-1 md:mb-2">Hydraulic Loading</h4>
+                <p className="text-[10px] md:text-xs text-slate-500">Validation of load-bearing structures and IP-rated enclosures under extreme pressure.</p>
               </div>
-              <div className="bg-gray-50 p-4 md:p-6 rounded-lg border border-gray-100">
-                <Sun className="w-6 h-6 md:w-8 md:h-8 text-emphz-navy mb-2 md:mb-3" />
-                <h4 className="font-bold text-emphz-navy text-sm mb-1 md:mb-2 font-display">UV Aging Chamber</h4>
-                <p className="text-[10px] md:text-xs text-gray-500 font-sans">Simulating years of solar exposure to ensure color stability and structural integrity.</p>
+              <div className="glass p-4 md:p-6 rounded-xl border border-slate-100 bg-slate-50/50">
+                <Sun className="w-6 h-6 md:w-8 md:h-8 text-slate-900 mb-2 md:mb-3" />
+                <h4 className="font-semibold text-slate-900 text-sm mb-1 md:mb-2">Accelerated Weathering</h4>
+                <p className="text-[10px] md:text-xs text-slate-500">UV simulation to verify color fastness and resin stability for outdoor installations.</p>
               </div>
-              <div className="bg-gray-50 p-4 md:p-6 rounded-lg border border-gray-100">
-                <Hammer className="w-6 h-6 md:w-8 md:h-8 text-emphz-navy mb-2 md:mb-3" />
-                <h4 className="font-bold text-emphz-navy text-sm mb-1 md:mb-2 font-display">Impact Testing</h4>
-                <p className="text-[10px] md:text-xs text-gray-500 font-sans">Drop tests to verify IK10 impact resistance ratings for heavy-duty enclosures.</p>
+              <div className="glass p-4 md:p-6 rounded-xl border border-slate-100 bg-slate-50/50">
+                <Hammer className="w-6 h-6 md:w-8 md:h-8 text-slate-900 mb-2 md:mb-3" />
+                <h4 className="font-semibold text-slate-900 text-sm mb-1 md:mb-2">IK10 Impact Tests</h4>
+                <p className="text-[10px] md:text-xs text-slate-500">Standardized drop tests to ensure high protection ratings against mechanical impact.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NEW: Sustainability Section */}
-      <section className="py-16 md:py-24 bg-green-50">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <Leaf className="w-10 h-10 md:w-12 md:h-12 text-green-600 mx-auto mb-3 md:mb-4" />
-          <h2 className="text-3xl font-bold text-emphz-navy mb-3 md:mb-4 font-display">Sustainable Infrastructure</h2>
-          <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 font-light font-sans">
-            Sustainability isn't just about recycling—it's about longevity. By installing an Emphz GRP product that lasts 40 years instead of a steel one that needs replacement every 5 years, you reduce manufacturing carbon footprint by up to 600% over the asset lifecycle.
+      {/* Sustainability Section */}
+      <section className="py-16 md:py-24 bg-slate-100 border-t border-slate-200 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+          <Leaf className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+          <h2 className="text-3xl font-semibold text-slate-900 mb-3 md:mb-4">Sustainable Lifecycle</h2>
+          <p className="text-base md:text-lg text-slate-600 mb-6 md:mb-8 font-light italic">
+            "Sustainability through durability. GRP systems drastically reduce the replacement frequency compared to mild steel, lowering the total carbon footprint of national infrastructure."
           </p>
-          <div className="inline-flex items-center bg-white px-5 py-2 md:px-6 md:py-3 rounded-full shadow-sm border border-green-200 text-green-700 font-bold text-xs md:text-sm font-display">
-            <Recycle className="mr-2 w-4 h-4" /> 100% Recyclable via Cement Kiln Processing
+          <div className="inline-flex items-center glass px-5 py-2 md:px-6 md:py-3 rounded-full border border-slate-200 text-slate-700 font-semibold text-xs md:text-sm bg-white/60">
+            <Recycle className="mr-2 w-4 h-4 text-blue-600" /> Circular Processing: Recyclable via Cement Kiln Co-processing
           </div>
         </div>
       </section>
 
       {/* CEO Message Section */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-gray-50/50 skew-y-3 transform origin-top-left -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             {/* Image Side */}
             <div className="w-full lg:w-1/2 relative group">
-              <div className="absolute inset-0 bg-emphz-teal/20 rounded-2xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 bg-blue-600/10 rounded-2xl transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
                   alt="Muhammed Rashik P - Managing Director"
-                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-[500px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emphz-navy/80 via-transparent to-transparent opacity-60"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="font-display font-bold text-xl">Muhammed Rashik P</p>
-                  <p className="font-sans text-xs uppercase tracking-widest opacity-80">Managing Director</p>
+                <div className="absolute inset-x-0 bottom-0 p-8 glass bg-slate-900/40 border-t border-white/10">
+                  <p className="font-semibold text-white text-xl">Muhammed Rashik P</p>
+                  <p className="text-blue-400 text-xs uppercase tracking-widest font-mono">Managing Director</p>
                 </div>
               </div>
             </div>
 
             {/* Content Side */}
             <div className="w-full lg:w-1/2">
-              <Quote className="text-emphz-teal w-12 h-12 md:w-16 md:h-16 mb-6 opacity-20" />
-              <h2 className="text-3xl md:text-5xl font-black text-emphz-navy mb-8 font-display leading-tight">
-                Building Resilience for a Changing World.
+              <Quote className="text-blue-600 w-12 h-12 mb-6 opacity-20" />
+              <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-8 leading-tight">
+                Architectural Resilience.
               </h2>
-              <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-light font-sans italic">
+              <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-light">
                 <p>
-                  "Our objective is to manufacture GRP products that work reliably in real site conditions, without unnecessary complexity."
+                  "Our core objective is to build GRP systems that perform reliably in aggressive site conditions. Engineering simplicity is the ultimate sophistication."
                 </p>
-                <div className="pt-4 non-italic font-normal">
-                  <p className="text-sm">
-                    As a Kerala-managed company with manufacturing roots in Mysuru, we combine engineering vision with manufacturing scale. We focus on providing durable, corrosion-resistant infrastructure solutions for India's demanding environments.
+                <div className="pt-4 text-sm non-italic text-slate-500 border-l-2 border-blue-600 pl-6">
+                  <p>
+                    As a Kerala-managed entity with production in Mysore, we merge strategic engineering vision with manufacturing capacity. We are committed to securing India's industrial assets against the elements.
                   </p>
                 </div>
               </div>
-              <div className="mt-10 pt-8 border-t border-gray-200 flex items-center justify-between">
+              <div className="mt-10 pt-8 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <div className="font-display text-xl text-emphz-navy italic font-bold">Muhammed Rashik P</div>
+                  <div className="text-xl text-slate-900 font-semibold font-mono">EMPHZ_MD_001</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs font-bold text-emphz-teal-text uppercase tracking-widest">Emphz Engineering</div>
-                  <div className="text-[10px] text-gray-400 font-mono">EST. 2020</div>
+                  <div className="text-xs font-bold text-blue-700 uppercase tracking-widest">Emphz Engineering</div>
+                  <div className="text-[10px] text-slate-400 font-mono">CODE: CORE_DYN</div>
                 </div>
               </div>
             </div>
@@ -338,18 +355,19 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-emphz-navy">
-        <div className="max-w-5xl mx-auto px-4 py-16 md:py-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-4 md:mb-6 font-display">Ready to Build with Confidence?</h2>
-          <p className="text-base md:text-lg text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto font-sans">
-            Partner with us to leverage the power of GRP for your next project. Let's create infrastructure that lasts.
+      <section className="bg-slate-950 py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-5"></div>
+        <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 md:mb-6 tracking-tight">Scale Your Engineering Standards.</h2>
+          <p className="text-base md:text-lg text-slate-400 mb-8 md:mb-12 max-w-2xl mx-auto">
+            Collaborate with our technical team to implement composite solutions tailored to your operational environment.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/rfq" className="bg-emphz-teal text-emphz-navy px-8 py-4 rounded-full font-bold text-base shadow-2xl hover:scale-105 transition-transform font-display uppercase tracking-wider">
-              Request a Consultation
+            <Link to="/rfq" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-blue-700 transition-all uppercase tracking-widest shadow-xl shadow-blue-600/20">
+              Initiate Technical Review
             </Link>
-            <Link to="/case-studies" className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold text-base hover:bg-white/20 transition-all font-display uppercase tracking-wider">
-              See Our Work
+            <Link to="/catalog" className="glass bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-sm hover:bg-white/20 transition-all uppercase tracking-widest">
+              View Product Matrix
             </Link>
           </div>
         </div>

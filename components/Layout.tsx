@@ -354,144 +354,63 @@ export function Layout({ children }: LayoutProps) {
         />
       </div>
 
-      <header
-        className={`${headerBaseClass} ${headerBgClass}`}
-        aria-label="Site Header"
-      >
-        <div className="w-full px-6 md:px-12">
-          <div className="flex justify-between items-center h-full">
-            <Link to="/" className="group z-50 relative block py-2" aria-label="Emphz Home" onClick={() => setIsMenuOpen(false)}>
-              <Logo className="h-8 md:h-10 w-auto transition-transform duration-300 group-hover:scale-105" variant="light" />
+      <header className="fixed top-4 left-1/2 z-50 w-[94%] -translate-x-1/2 rounded-2xl glass transition-all duration-300">
+        <div className="flex items-center justify-between px-6 py-4">
+          <Link to="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+            <div className="font-semibold text-lg text-slate-900 tracking-tight">EMPHZ</div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex gap-8 text-sm font-medium">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`transition-colors duration-300 ${isActive(link.path) ? 'text-blue-700' : 'text-slate-600 hover:text-slate-900'}`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <Link to="/rfq" className="relative p-2 text-slate-600 hover:text-slate-900">
+              <ShoppingCart size={20} />
+              {items.length > 0 && (
+                <span className="absolute -top-1 -right-1 h-5 w-5 bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-md">
+                  {items.length}
+                </span>
+              )}
             </Link>
-
-            {/* Desktop Navigation - JS Gated to prevent overlap if CSS fails */}
-            {!isMobile && (
-              <nav className={`hidden md:flex items-center space-x-8 px-8 py-2 rounded-full transition-all duration-500 ${navPillClass}`} aria-label="Main Navigation">
-                {NAV_LINKS.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className={`text-xs tracking-[0.15em] uppercase transition-all duration-300 font-display relative group ${isActive(link.path) ? activeLinkClass : navLinkClass
-                      }`}
-                    aria-current={isActive(link.path) ? 'page' : undefined}
-                  >
-                    {link.label}
-                    <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-emphz-teal transform origin-left transition-transform duration-300 ${isActive(link.path) ? 'scale-x-100 shadow-[0_0_10px_#00ADB5]' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
-                  </Link>
-                ))}
-              </nav>
-            )}
-
-            {/* Desktop Actions - JS Gated */}
-            {!isMobile && (
-              <div className="hidden md:flex items-center space-x-5">
-                <button
-                  onClick={() => setIsSearchOpen(true)}
-                  className={`relative p-2 transition-colors group ${iconColorClass}`}
-                  aria-label="Search (Cmd+K)"
-                  title="Search (Cmd+K)"
-                >
-                  <Search size={20} className="group-hover:scale-110 transition-transform" />
-                </button>
-
-                <Link to="/rfq" className={`relative p-2 transition-colors group ${iconColorClass}`} aria-label={`View RFQ Cart, ${items.length} items`}>
-                  <ShoppingCart size={20} aria-hidden="true" className="group-hover:scale-110 transition-transform" />
-                  {items.length > 0 && (
-                    <span className="absolute -top-1 -right-1 h-5 w-5 bg-emphz-teal text-emphz-navy text-[10px] font-bold flex items-center justify-center rounded-full shadow-md ring-2 ring-emphz-navy animate-pulse">
-                      {items.length}
-                    </span>
-                  )}
-                </Link>
-                <Link to="/rfq" className="bg-gradient-to-r from-emphz-teal to-emphz-cyan text-white px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:shadow-lg hover:shadow-emphz-teal/50 transition-all transform hover:-translate-y-0.5 font-display border border-white/20 animate-pulse-glow">
-                  GET QUOTE
-                </Link>
-              </div>
-            )}
-
-            {/* Mobile Actions - JS Gated */}
-            {isMobile && (
-              <div className="md:hidden flex items-center z-50 gap-4">
-                <button
-                  onClick={() => setIsSearchOpen(true)}
-                  className={`relative p-2 transition-colors ${iconColorClass}`}
-                  aria-label="Search"
-                >
-                  <Search size={22} />
-                </button>
-
-                <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className={`relative p-2 transition-colors ${iconColorClass}`} aria-label={`View RFQ Cart`}>
-                  <ShoppingCart size={22} aria-hidden="true" />
-                  {items.length > 0 && (
-                    <span className="absolute -top-1 -right-1 h-4 w-4 bg-emphz-teal text-emphz-navy text-[9px] font-bold flex items-center justify-center rounded-full shadow-md ring-1 ring-emphz-navy">
-                      {items.length}
-                    </span>
-                  )}
-                </Link>
-                <button
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="p-2 focus:outline-none text-white hover:text-emphz-teal rounded-full transition-all"
-                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                  aria-expanded={isMenuOpen}
-                  aria-controls="mobile-menu-panel"
-                >
-                  {isMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
-                </button>
-              </div>
-            )}
+            <Link to="/rfq" className="hidden sm:block rounded-xl bg-slate-900 px-6 py-2.5 text-white text-sm font-medium transition-transform hover:scale-105 active:scale-95">
+              Get Quote
+            </Link>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-slate-900"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
 
-        <div
-          id="mobile-menu-panel"
-          className={`fixed inset-0 bg-[#050A14]/95 backdrop-blur-2xl z-[60] flex flex-col justify-center px-8 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-            }`}
-          // Inline style enforcement for visibility if CSS classes fail
-          style={{
-            visibility: isMenuOpen ? 'visible' : 'hidden',
-            opacity: isMenuOpen ? 1 : 0
-          }}
-          role="dialog"
-          aria-modal="true"
-        >
-          <nav className="space-y-6" aria-label="Mobile Navigation">
-            {NAV_LINKS.map((link, index) => (
-              <div
+        {/* Mobile Menu */}
+        <div className={`md:hidden absolute top-full left-0 w-full mt-2 rounded-2xl glass transition-all duration-300 origin-top ${isMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'}`}>
+          <nav className="flex flex-col p-6 gap-4">
+            {NAV_LINKS.map((link) => (
+              <Link
                 key={link.path}
-                className={`transform transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
-                  }`}
-                style={{ transitionDelay: isMenuOpen ? `${150 + (index * 80)}ms` : '0ms' }}
+                to={link.path}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-lg font-medium ${isActive(link.path) ? 'text-blue-700' : 'text-slate-600'}`}
               >
-                <Link
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block text-4xl sm:text-5xl font-black tracking-tight font-display group transition-colors duration-300 ${isActive(link.path)
-                    ? 'text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-cyan-200 drop-shadow-[0_2px_4px_rgba(0,173,181,0.4)]'
-                    : 'text-gray-200 hover:text-white'
-                    }`}
-                >
-                  <span className="inline-block group-active:scale-95 transition-transform origin-left">{link.label}</span>
-                </Link>
-              </div>
-            ))}
-
-            <div
-              className={`pt-12 border-t border-white/10 transition-all duration-700 delay-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-            >
-              <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-between w-full bg-emphz-teal text-emphz-navy px-8 py-5 rounded-2xl font-bold text-lg sm:text-xl font-display shadow-[0_10px_40px_-10px_rgba(0,173,181,0.5)] active:scale-95 transition-transform">
-                <span>Review RFQ Cart</span>
-                <span className="bg-black/20 text-white px-4 py-1 rounded-full text-sm font-mono">{items.length} items</span>
+                {link.label}
               </Link>
-
-              <div className="mt-8 flex justify-center gap-8 text-white/50">
-                <a href="mailto:info@emphz.in" className="hover:text-emphz-teal transition-colors"><Mail size={24} /></a>
-                <a href="tel:+919037874080" className="hover:text-emphz-teal transition-colors"><Phone size={24} /></a>
-                <a href="#" className="hover:text-emphz-teal transition-colors"><MapPin size={24} /></a>
-              </div>
-            </div>
+            ))}
+            <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="mt-4 rounded-xl bg-slate-900 px-6 py-3 text-white text-center font-medium">
+              Get Quote
+            </Link>
           </nav>
-
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-emphz-teal/20 rounded-full blur-[100px] pointer-events-none"></div>
-          <div className="absolute top-20 -left-20 w-60 h-60 bg-blue-600/20 rounded-full blur-[80px] pointer-events-none"></div>
         </div>
       </header>
 
