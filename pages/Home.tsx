@@ -268,7 +268,7 @@ const Home: React.FC = () => {
 
                 <h4 className="text-2xl font-black mb-4 text-white font-display">Zero UV Degradation Drift</h4>
                 <p className="text-gray-400 leading-relaxed text-sm font-medium font-sans mb-6 flex-grow">
-                  Accelerated aging testing validates color stability and mechanical retention over 5000+ UV exposure hours. Our resin formulation maintains structural integrity within rated lifecycle window with <5% property variance.
+                  Accelerated aging testing validates color stability and mechanical retention over 5000+ UV exposure hours. Our resin formulation maintains structural integrity within rated lifecycle window with &lt;5% property variance.
                 </p>
 
                 <div className="border-t border-white/10 pt-6 mt-auto">
