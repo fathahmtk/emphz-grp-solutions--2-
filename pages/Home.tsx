@@ -21,36 +21,58 @@ const Home: React.FC = () => {
         title="Home"
         description="EMPHZ is a leading manufacturer of GRP/FRP enclosures, portable toilets, security cabins, and composite infrastructure solutions in India and the UAE."
       />
-      {/* Hero Section – Engineering Precision */}
+      {/* Hero Section – Engineering Precision with Animated Carousel */}
       <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center pt-20 md:pt-24 overflow-hidden bg-gradient-to-b from-industrial-50 to-white">
-        {/* Abstract Background Element */}
-        <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
+        {/* Animated Background Carousel */}
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            {/* Image 1 */}
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 animate-[fadeInOut_10s_ease-in-out_infinite]"
+              style={{
+                backgroundImage: "url('/hero-1.jpg')",
+              }}
+            />
+            {/* Image 2 */}
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 animate-[fadeInOut_10s_ease-in-out_infinite_5s]"
+              style={{
+                backgroundImage: "url('/hero-2.jpg')",
+              }}
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-industrial-900/80 via-industrial-900/60 to-transparent" />
+          </div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/20 -skew-x-12 translate-x-1/4 pointer-events-none z-10" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-20">
           <div className="animate-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-industrial-200 mb-6 md:mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-industrial-200 mb-6 md:mb-8 font-bold text-[10px] text-accent-blue uppercase tracking-widest shadow-sm">
               <Factory size={12} className="text-accent-blue" />
               <span className="hidden xs:inline">Kerala Managed | Mysuru Manufactured</span>
               <span className="xs:hidden">Made in India</span>
             </div>
-            <h1 className="text-4xl xs:text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-industrial-900 mb-6 md:mb-8">
+            <h1 className="text-4xl xs:text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-white mb-6 md:mb-8 drop-shadow-lg">
               Composite <br />
-              <span className="text-industrial-500">Infrastructure.</span>
+              <span className="text-industrial-200">Infrastructure.</span>
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-industrial-600 max-w-lg leading-relaxed mb-8 md:mb-10 font-light">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-lg leading-relaxed mb-8 md:mb-10 font-light drop-shadow-md">
               Specialized GRP manufacturer delivering high-durability enclosures, cabins, and modular structures designed for aggressive industrial environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/products" className="btn-industrial shadow-lg shadow-accent-blue/20 touch-ripple">
                 View Solutions
               </Link>
-              <Link to="/technical" className="btn-secondary bg-white/50 backdrop-blur-sm touch-ripple">
+              <Link to="/technical" className="bg-white/90 backdrop-blur-sm text-industrial-900 px-8 py-4 rounded-sm font-bold text-sm uppercase tracking-wider hover:bg-white transition-colors touch-ripple flex items-center justify-center gap-2">
                 Technical Center <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>
           </div>
-          <div className="relative animate-in">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-industrial-200 shadow-2xl bg-white relative group">
+          <div className="relative animate-in hidden lg:block">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-white/10 backdrop-blur-sm relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/10 to-transparent pointer-events-none z-10" />
               <img
                 src="https://lh3.googleusercontent.com/pw/AP1GczO1hJQxalyxfSiUQD0Co6FyBl4at4jQbtoB5T0iOeOeUi112a4SbR1tk_s2zWjJvOeAIVTf-yU1vM_e-rFFCArb6KZpbArxSR3skWuBDM9tznEyxLQ59jc-h5zaCkL-UVeoUwYtDr7Oo6R8654X6D4Htw=w1563-h879-s-no-gm?authuser=0"
@@ -61,7 +83,7 @@ const Home: React.FC = () => {
                 height="600"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 glass-panel p-6 md:p-8 max-w-[240px] md:max-w-[280px] hidden md:block rounded-xl animate-float">
+            <div className="absolute -bottom-8 -left-8 glass-panel p-6 md:p-8 max-w-[240px] md:max-w-[280px] rounded-xl animate-float">
               <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 flex items-center gap-2">
                 <Shield size={12} /> Material Science
               </p>

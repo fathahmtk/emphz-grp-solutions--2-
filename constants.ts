@@ -346,7 +346,14 @@ export const MOCK_PRODUCTS: Product[] = [
     notRecommendedWhen: [
       'Permanent brick-and-mortar requirements'
     ],
-    imageUrl: 'https://tiimg.tistatic.com/fp/1/004/995/grp-single-portable-toilet-082.jpg',
+    imageUrl: '/portable-toilet.jpg',
+    gallery: [
+      '/portable-toilet.jpg',
+      'https://lh3.googleusercontent.com/pw/AP1GczNflc3SRp2gYEInU7lZELUN8Jnn_g1f33VxbVxTakvnUd1Fo8vLuAmkakM7-VI6IAFDjlwj3Qbx6SSoHTdwWidcGwutrihjdzZT2sxzfH3qOFKrFqPqd91l3439BHIsQ7JQXVXbrii582OgFakqDxMRVw=w1536-h1024-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczMPrF-TWF_ZnCDWFxcGdBDAimpA9r_OC7lPni2nihaZrWmeJFaVKVDi04JIHYEojH0t3GiRHzQff2rF6HRVaFL4jtdhU2UrY2M_Eacoeo5BKEgaTjsbpdrs8SbhSlYnhUTm7GDbMDJ8H4dJmDgHQB45XQ=w948-h1422-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczOQCBCGPhZmf_8ilQ0TED_VfO2Yh2GRgUiIbZ3WB3tbtea5rCI43cIVGHNUo-dy4zyOJV3QYL3YAxSUbZsCHr7EVEWRq4SmPiNCEIlMzxIiE6FRwBb5S9HtFn-08vgOPxWVTNSMLnmdTyuEeIMgtX7iYA=w1024-h1024-s-no-gm?authuser=0',
+      'https://lh3.googleusercontent.com/pw/AP1GczMiUWr28EvL9AR0wHUKbdlqB-OzkN2RnyqTWlol49aDF3TSLfES9aV28WaY_oQkctCSLi0zXcelw3ag9vAjfSjHO39whwyMxVM9AbSq6B2YCLGfMNEcycXPdHTzJwCuRtp6VOH4ZwqjpzrFOaNMv59Mwg=w948-h1422-s-no-gm?authuser=0'
+    ],
     specs: [
       { label: 'Size', value: '1100 x 1100 x 2300 mm' },
       { label: 'Surface', value: 'Glossy Gelcoat Finish' },
