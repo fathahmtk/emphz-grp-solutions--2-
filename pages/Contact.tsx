@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ArrowRight, CheckCircle, HelpCircle, Globe, ChevronDown, User, Book, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, CheckCircle, HelpCircle, ChevronDown, Loader2 } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -73,205 +73,181 @@ const Contact: React.FC = () => {
 
 
     return (
-        <div className="bg-slate-50 min-h-screen text-slate-900 font-sans selection:bg-blue-600 selection:text-white pb-24">
+        <div className="bg-white min-h-screen pb-24">
+            <SEO
+                title="Contact Engineering"
+                description="Connect with EMPHZ engineering team for technical support, project inquiries, and custom GRP manufacturing solutions."
+            />
 
-            {/* Hero Section */}
-            <div className="relative bg-slate-950 text-white pt-32 pb-64 overflow-hidden">
-                <div className="absolute inset-0 bg-dots opacity-5"></div>
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/4"></div>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md shadow-lg">
-                        <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-300">Technical Support Hub</span>
+            {/* Hero Section - Minimalist */}
+            <div className="pt-32 pb-64 overflow-hidden bg-white border-b border-industrial-100">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-industrial-50 border border-industrial-100 mb-8">
+                        <span className="w-2 h-2 rounded-full bg-accent-blue animate-pulse"></span>
+                        <span className="text-xs font-bold uppercase tracking-[0.2em] text-industrial-600">Technical Hub</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-semibold mb-6 tracking-tight leading-tight">
-                        Contact <br /><span className="text-blue-500">Engineering.</span>
+                    <h1 className="text-5xl md:text-7xl font-medium mb-8 tracking-tight text-industrial-900 leading-[1.1]">
+                        Contact <br /><span className="text-industrial-400">Engineering.</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-                        For technical datasheets, custom fabrication quotes, or site-specific requirements, our primary engineering hub is ready to assist.
+                    <p className="text-lg md:text-xl text-industrial-500 max-w-2xl mx-auto font-light leading-relaxed">
+                        For technical specifications, custom fabrication quotes, or site-specific requirements, our primary engineering hub is ready to assist.
                     </p>
                 </div>
             </div>
 
             {/* Main Content Container */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-32">
-                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[800px] border border-slate-200/50">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 -mt-32">
+                <div className="bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[800px] border border-industrial-100">
 
-                    {/* Sidebar */}
-                    <div className="lg:w-5/12 bg-slate-950 text-white p-10 md:p-14 flex flex-col justify-between relative overflow-hidden">
-                        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-blue-600/10 to-transparent"></div>
-
+                    {/* Sidebar - Industrial Navy */}
+                    <div className="lg:w-5/12 bg-industrial-900 text-white p-12 md:p-16 flex flex-col justify-between relative overflow-hidden">
                         <div className="relative z-10">
-                            <h2 className="text-xs font-bold text-blue-500 uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
-                                <span className="w-8 h-[1px] bg-blue-600"></span> Logistical Data
+                            <h2 className="text-xs font-bold text-accent-blue uppercase tracking-[0.2em] mb-10 flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-accent-blue"></span> Logistical Data
                             </h2>
-                            <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-white">Built for Reliability.</h3>
-                            <p className="text-slate-400 text-sm mb-12 font-light leading-relaxed">
+                            <h3 className="text-3xl md:text-4xl font-medium mb-6 text-white leading-tight">Built for Reliability.</h3>
+                            <p className="text-industrial-400 text-sm mb-12 font-light leading-relaxed max-w-sm">
                                 Reach out directly to our manufacturing hub. We typically respond to technical and project queries within 4 business hours.
                             </p>
 
                             <div className="space-y-6">
                                 {/* Info Cards */}
-                                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start group p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform flex-shrink-0 shadow-lg">
-                                        <MapPin size={20} className="text-blue-500" />
+                                <a href="#" className="flex items-start group p-6 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 hover:border-accent-blue transition-all duration-300">
+                                    <div className="w-12 h-12 rounded bg-industrial-800 border border-white/10 flex items-center justify-center mr-5 transition-transform flex-shrink-0">
+                                        <MapPin size={22} className="text-accent-blue" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors uppercase tracking-wide">Manufacturing HQ</h4>
-                                        <p className="text-slate-400 text-xs font-mono leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
+                                        <h4 className="font-bold text-white text-sm mb-1 transition-colors uppercase tracking-widest text-xs">Production Hub</h4>
+                                        <p className="text-industrial-400 text-xs font-mono leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">
                                             KIADB Industrial Area, Phase 2<br />
-                                            Mysore, Karnataka - 570018<br />
-                                            India
+                                            Mysuru, Karnataka - India
                                         </p>
                                     </div>
                                 </a>
 
-                                <a href="mailto:info@emphz.in" className="flex items-start group p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform flex-shrink-0 shadow-lg">
-                                        <Mail size={20} className="text-blue-500" />
+                                <a href="mailto:info@emphz.in" className="flex items-start group p-6 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 hover:border-accent-blue transition-all duration-300">
+                                    <div className="w-12 h-12 rounded bg-industrial-800 border border-white/10 flex items-center justify-center mr-5 transition-transform flex-shrink-0">
+                                        <Mail size={22} className="text-accent-blue" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors uppercase tracking-wide">General Inquiry</h4>
-                                        <p className="text-slate-400 text-xs font-mono opacity-80 group-hover:opacity-100 transition-opacity">info@emphz.in</p>
-                                        <p className="text-slate-500 text-[10px] font-mono mt-1">For RFQs & Technical Support</p>
+                                        <h4 className="font-bold text-white text-sm mb-1 transition-colors uppercase tracking-widest text-xs">Engineering Support</h4>
+                                        <p className="text-industrial-400 text-xs font-mono opacity-80 group-hover:opacity-100 transition-opacity">info@emphz.in</p>
                                     </div>
                                 </a>
 
-                                <a href="tel:+919037874080" className="flex items-start group p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform flex-shrink-0 shadow-lg">
-                                        <Phone size={20} className="text-blue-500" />
+                                <a href="tel:+919037874080" className="flex items-start group p-6 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 hover:border-accent-blue transition-all duration-300">
+                                    <div className="w-12 h-12 rounded bg-industrial-800 border border-white/10 flex items-center justify-center mr-5 transition-transform flex-shrink-0">
+                                        <Phone size={22} className="text-accent-blue" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-white text-sm mb-1 group-hover:text-blue-400 transition-colors uppercase tracking-wide">Operations Line</h4>
-                                        <p className="text-slate-400 text-xs font-mono opacity-80 group-hover:opacity-100 transition-opacity">+91 9037 874 080</p>
-                                        <p className="text-gray-500 text-[10px] font-mono mt-1">Mon-Sat, 09:00 - 18:00 IST</p>
+                                        <h4 className="font-bold text-white text-sm mb-1 transition-colors uppercase tracking-widest text-xs">Operations Line</h4>
+                                        <p className="text-industrial-400 text-xs font-mono opacity-80 group-hover:opacity-100 transition-opacity">+91 9037 874 080</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
 
-                        {/* Bottom Social/Links */}
-                        <div className="relative z-10 pt-8 mt-auto border-t border-white/10 flex justify-between items-center">
-                            <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">EST: 2020 // Mysore</span>
-                            <div className="flex gap-3">
-                                <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400 border border-white/5">
-                                    <Globe size={16} />
-                                </a>
-                                <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400 border border-white/5">
-                                    <MessageSquare size={16} />
-                                </a>
-                            </div>
+                        <div className="relative z-10 pt-10 mt-auto border-t border-white/10 flex justify-between items-center text-[10px] text-industrial-500 uppercase tracking-widest font-mono">
+                            <span>EST: 2020 // INDIA</span>
                         </div>
                     </div>
 
-                    {/* Form Side */}
-                    <div className="lg:w-7/12 p-10 md:p-16 bg-white relative">
+                    {/* Form Side - Minimalist */}
+                    <div className="lg:w-7/12 p-12 md:p-16 bg-white relative">
                         {isSubmitting && (
                             <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-20 flex flex-col items-center justify-center">
-                                <Loader2 className="w-12 h-12 text-blue-600 animate-spin" />
-                                <p className="mt-4 font-bold text-slate-900 tracking-widest font-mono">TRANSMITTING...</p>
+                                <Loader2 className="w-12 h-12 text-accent-blue animate-spin" />
+                                <p className="mt-4 font-bold text-industrial-900 tracking-widest uppercase text-xs">Transmitting...</p>
                             </div>
                         )}
                         {isSuccess ? (
-                            // Success State
-                            <div className="h-full flex flex-col items-center justify-center text-center py-20">
-                                <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6 border border-blue-100 shadow-xl shadow-blue-500/10">
-                                    <CheckCircle className="w-12 h-12 text-blue-600" />
+                            <div className="h-full flex flex-col items-center justify-center text-center py-20 animate-up">
+                                <div className="w-24 h-24 bg-industrial-50 rounded-full flex items-center justify-center mb-8 border border-industrial-100 shadow-xl">
+                                    <CheckCircle className="w-12 h-12 text-accent-blue" />
                                 </div>
-                                <h3 className="text-3xl font-semibold text-slate-900 mb-4 tracking-tight">Transmission Received.</h3>
-                                <p className="text-slate-500 max-w-sm mx-auto mb-10 text-base leading-relaxed font-light">
-                                    A project engineer has been assigned to your inquiry. We will contact you shortly via the provided credentials.
+                                <h3 className="text-3xl font-medium text-industrial-900 mb-6 tracking-tight leading-tight">Transmission Received.</h3>
+                                <p className="text-industrial-500 max-w-sm mx-auto mb-10 text-base leading-relaxed font-light">
+                                    Your inquiry has been securely routed. A project engineer will contact you shortly via the provided credentials.
                                 </p>
                                 <button
                                     onClick={() => { setIsSuccess(false); setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); }}
-                                    className="text-white bg-slate-950 px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg"
+                                    className="btn-industrial px-12 py-4"
                                 >
-                                    New Transmission
+                                    New Inquiry
                                 </button>
                             </div>
                         ) : (
-                            // Form
-                            <form onSubmit={handleSubmit} className={`h-full flex flex-col justify-center transition-all ${isSubmitting ? 'blur-sm' : ''}`}>
-                                <div className="mb-10">
-                                    <h3 className="text-3xl font-semibold text-slate-900 mb-2 tracking-tight">Direct Channel</h3>
-                                    <p className="text-slate-500 text-sm font-light">Enter project parameters for technical evaluation.</p>
+                            <form onSubmit={handleSubmit} className="h-full flex flex-col justify-center animate-in">
+                                <div className="mb-12">
+                                    <h3 className="text-3xl font-medium text-industrial-900 mb-3 tracking-tight leading-tight">Direct Channel</h3>
+                                    <p className="text-industrial-500 text-sm font-light">Specify project parameters for technical evaluation.</p>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mb-6">
-                                    <div>
-                                        <label htmlFor="name" className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">Full Name</label>
-                                        <div className="relative group">
-                                            <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                                <div className="space-y-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="space-y-3">
+                                            <label htmlFor="name" className="block text-xs font-bold text-industrial-500 uppercase tracking-widest">Full Name</label>
                                             <input
                                                 type="text" name="name" id="name" value={formData.name} onChange={handleChange} required
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3.5 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-slate-900 placeholder-slate-400 text-sm"
+                                                className="w-full bg-industrial-50/50 border border-industrial-100 rounded p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all text-industrial-900 placeholder-industrial-300"
                                                 placeholder="e.g. Robert Smith"
                                             />
                                         </div>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email" className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">Corporate Email</label>
-                                        <div className="relative group">
-                                            <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                                        <div className="space-y-3">
+                                            <label htmlFor="email" className="block text-xs font-bold text-industrial-500 uppercase tracking-widest">Corporate Email</label>
                                             <input
                                                 type="email" name="email" id="email" value={formData.email} onChange={handleChange} onBlur={handleEmailBlur} required
-                                                className={`w-full bg-slate-50 border ${emailError ? 'border-red-400' : 'border-slate-200'} rounded-xl pl-10 pr-4 py-3.5 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-slate-900 placeholder-slate-400 text-sm`}
+                                                className={`w-full bg-industrial-50/50 border ${emailError ? 'border-red-400' : 'border-industrial-100'} rounded p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all text-industrial-900 placeholder-industrial-300`}
                                                 placeholder="name@company.com"
                                             />
+                                            {emailError && <p className="text-red-500 text-[10px] font-bold uppercase tracking-wide mt-2">{emailError}</p>}
                                         </div>
-                                        {emailError && <p className="text-red-500 text-[10px] mt-2 font-mono uppercase">{emailError}</p>}
                                     </div>
-                                </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 mb-6">
-                                    <div>
-                                        <label htmlFor="phone" className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">Contact Number</label>
-                                        <div className="relative group">
-                                            <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="space-y-3">
+                                            <label htmlFor="phone" className="block text-xs font-bold text-industrial-500 uppercase tracking-widest">Contact Number</label>
                                             <input
                                                 type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange}
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3.5 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-slate-900 placeholder-slate-400 text-sm"
-                                                placeholder="+91 000 000 0000"
+                                                className="w-full bg-industrial-50/50 border border-industrial-100 rounded p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all text-industrial-900 placeholder-industrial-300"
+                                                placeholder="+91..."
                                             />
                                         </div>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="subject" className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">Inquiry Type</label>
-                                        <div className="relative group">
-                                            <Book className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
-                                            <select
-                                                name="subject" id="subject" value={formData.subject} onChange={handleChange}
-                                                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-8 py-3.5 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-slate-900 cursor-pointer appearance-none text-sm font-medium"
-                                            >
-                                                <option value="">Select Category...</option>
-                                                <option value="Sales">Core Project Inquiry</option>
-                                                <option value="Technical">Material Data Request</option>
-                                                <option value="Technical">SMC Molding Support</option>
-                                                <option value="Other">Other Logistical Query</option>
-                                            </select>
-                                            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4 pointer-events-none" />
+                                        <div className="space-y-3">
+                                            <label htmlFor="subject" className="block text-xs font-bold text-industrial-500 uppercase tracking-widest">Inquiry Type</label>
+                                            <div className="relative">
+                                                <select
+                                                    name="subject" id="subject" value={formData.subject} onChange={handleChange}
+                                                    className="w-full bg-industrial-50/50 border border-industrial-100 rounded p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all text-industrial-900 appearance-none cursor-pointer"
+                                                >
+                                                    <option value="">Select Category...</option>
+                                                    <option value="Sales">Core Project Inquiry</option>
+                                                    <option value="Technical">Material Data Request</option>
+                                                    <option value="Other">Other Query</option>
+                                                </select>
+                                                <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-industrial-300 pointer-events-none" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div className="mb-8">
-                                    <label htmlFor="message" className="block text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wider">Project Description</label>
-                                    <textarea
-                                        name="message" id="message" value={formData.message} onChange={handleChange} required
-                                        rows={4}
-                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-slate-900 placeholder-slate-400 resize-none text-sm"
-                                        placeholder="Describe technical requirements, quantities, and environmental factors..."
-                                    ></textarea>
-                                </div>
+                                    <div className="space-y-3">
+                                        <label htmlFor="message" className="block text-xs font-bold text-industrial-500 uppercase tracking-widest">Project Description</label>
+                                        <textarea
+                                            name="message" id="message" value={formData.message} onChange={handleChange} required
+                                            rows={5}
+                                            className="w-full bg-industrial-50/50 border border-industrial-100 rounded p-4 text-sm focus:border-accent-blue focus:ring-1 focus:ring-accent-blue outline-none transition-all text-industrial-900 placeholder-industrial-300 resize-none"
+                                            placeholder="Describe requirements, quantities, and site conditions..."
+                                        ></textarea>
+                                    </div>
 
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group w-full md:w-auto"
-                                >
-                                    Execute Transmission <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                                </button>
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="btn-industrial w-full md:w-auto px-12 py-5 shadow-xl shadow-industrial-900/10"
+                                    >
+                                        Transmit Requisition <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
                             </form>
                         )}
                     </div>

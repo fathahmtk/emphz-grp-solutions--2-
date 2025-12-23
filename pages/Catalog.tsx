@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   Filter,
   Download,
-  Scale,
-  X,
   ChevronRight,
   ChevronDown,
   LayoutGrid,
@@ -23,7 +21,7 @@ const FilterItem: React.FC<{
   isSelected: boolean;
   onClick: () => void;
   type?: 'radio' | 'checkbox';
-}> = ({ label, count, isSelected, onClick, type = 'radio' }) => (
+}> = ({ label, count, isSelected, onClick }) => (
   <button
     onClick={onClick}
     className={`flex items-center justify-between w-full py-2 group transition-all ${isSelected ? 'text-accent-blue font-bold' : 'text-industrial-500 hover:text-industrial-900'
@@ -70,31 +68,31 @@ const Catalog: React.FC = () => {
   }, [filteredProducts, sortBy]);
 
   return (
-    <div className="bg-industrial-50 min-h-screen pt-24">
+    <div className="bg-white min-h-screen pt-32">
       <SEO
         title="Products"
         description="Explore the EMPHZ product catalog: GRP Enclosures, Modular Cabins, Security Kiosks, and Industrial Toilets. Engineered for durability."
       />
       {/* Header Section */}
-      <section className="bg-white border-b border-industrial-100 py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-10">
+      <section className="bg-white border-b border-industrial-100 py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-12">
             <div className="animate-up">
-              <nav className="flex items-center gap-2 mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-industrial-400">
-                <Link to="/" className="hover:text-industrial-900">Home</Link>
-                <ChevronRight size={10} />
+              <nav className="flex items-center gap-2 mb-8 text-xs font-bold uppercase tracking-[0.2em] text-industrial-400">
+                <Link to="/" className="hover:text-industrial-900 transition-colors">Home</Link>
+                <ChevronRight size={12} className="text-industrial-300" />
                 <span className="text-industrial-900">Catalog</span>
               </nav>
-              <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-industrial-900 mb-6">
+              <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-industrial-900 mb-8 leading-[1.1]">
                 Product Matrix
               </h1>
-              <p className="max-w-2xl text-lg text-industrial-600 leading-relaxed font-light">
-                High-performance GRP solutions specialized for industrial infrastructure. Standardized designs engineered for durability.
+              <p className="max-w-2xl text-lg text-industrial-500 leading-relaxed font-light">
+                High-performance GRP solutions specialized for industrial infrastructure. Standardized designs engineered for durability and longevity.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-              <button className="btn-secondary px-8 py-4 text-[10px] font-bold uppercase tracking-widest flex items-center justify-center gap-3">
-                <Download size={14} /> Technical Guide (PDF)
+              <button className="btn-secondary px-8 py-4 flex items-center justify-center gap-3">
+                <Download size={16} /> Technical Guide
               </button>
             </div>
           </div>
@@ -102,23 +100,23 @@ const Catalog: React.FC = () => {
       </section>
 
       {/* Main Catalog Area */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Sidebar Filters */}
-          <aside className="w-full lg:w-64 flex-shrink-0 animate-in">
-            <div className="sticky top-28 glass-panel p-8 rounded-xl">
-              <div className="flex items-center gap-2 mb-8 pb-4 border-b border-industrial-100/50">
-                <Filter size={14} className="text-industrial-400" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-industrial-900">Filters</span>
-                <span className="ml-auto text-[10px] font-bold text-industrial-300 tabular-nums">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+        <div className="flex flex-col lg:flex-row gap-16">
+          {/* Sidebar Filters - Minimalist */}
+          <aside className="w-full lg:w-72 flex-shrink-0 animate-in">
+            <div className="sticky top-32">
+              <div className="flex items-center gap-2 mb-10 pb-4 border-b border-industrial-100">
+                <Filter size={16} className="text-industrial-400" />
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-industrial-900">Filters</span>
+                <span className="ml-auto text-xs font-semibold text-industrial-300 tabular-nums">
                   {filteredProducts.length} Results
                 </span>
               </div>
 
-              <div className="space-y-10">
+              <div className="space-y-12">
                 <div>
-                  <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-industrial-400 mb-5">By Category</h3>
-                  <div className="space-y-1">
+                  <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-industrial-400 mb-6">By Category</h3>
+                  <div className="space-y-2">
                     {categories.map(cat => (
                       <FilterItem
                         key={cat}
@@ -132,9 +130,9 @@ const Catalog: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-[10px] font-display font-medium uppercase tracking-widest text-industrial-400 mb-5 text-[10px]">Resources</h3>
-                  <Link to="/technical" className="flex items-center gap-3 text-industrial-500 hover:text-industrial-900 text-[11px] uppercase tracking-wider group">
-                    <FileText size={14} className="text-industrial-300 group-hover:text-accent-blue" />
+                  <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-industrial-400 mb-6">Resources</h3>
+                  <Link to="/technical" className="flex items-center gap-3 text-industrial-500 hover:text-industrial-900 text-xs font-medium uppercase tracking-wider group transition-colors">
+                    <FileText size={16} className="text-industrial-300 group-hover:text-accent-blue" />
                     Technical Center
                   </Link>
                 </div>
@@ -143,7 +141,7 @@ const Catalog: React.FC = () => {
               {selectedCategory !== 'All' && (
                 <button
                   onClick={() => setSelectedCategory('All')}
-                  className="w-full mt-10 pt-6 border-t border-industrial-100/50 text-[10px] font-bold uppercase tracking-widest text-industrial-400 hover:text-red-500 transition-colors"
+                  className="w-full mt-12 py-4 border border-industrial-100 rounded text-xs font-bold uppercase tracking-widest text-industrial-400 hover:text-red-500 hover:border-red-100 transition-all"
                 >
                   Clear Selection
                 </button>

@@ -117,35 +117,34 @@ const RFQ: React.FC = () => {
 
    if (submitted) {
       return (
-         <div className="min-h-screen bg-industrial-50 flex items-center justify-center p-4 pt-24">
-            <div className="bg-white p-12 md:p-16 rounded-sm max-w-lg w-full text-center shadow-2xl border border-industrial-100 animate-fade-up">
-               <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8 border border-green-100 shadow-sm">
-                  <CheckCircle className="w-10 h-10 text-green-600" />
+         <div className="min-h-screen bg-white flex items-center justify-center p-6 pt-32">
+            <div className="bg-white p-12 md:p-20 rounded-xl max-w-xl w-full text-center shadow-2xl border border-industrial-100 animate-up">
+               <div className="w-24 h-24 bg-industrial-50 rounded-full flex items-center justify-center mx-auto mb-10 border border-industrial-100">
+                  <CheckCircle className="w-12 h-12 text-accent-blue" />
                </div>
-               <h2 className="text-3xl font-medium text-industrial-900 mb-2 tracking-tight">Requirement Logged</h2>
-               <div className="text-industrial-400 font-mono text-[10px] uppercase tracking-widest mb-10">
+               <h2 className="text-4xl font-medium text-industrial-900 mb-2 tracking-tight">Requirement Logged</h2>
+               <div className="text-xs font-bold text-industrial-400 uppercase tracking-widest mb-12">
                   Ref ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}
                </div>
 
-               <div className="bg-industrial-50 rounded-sm p-6 mb-8 border border-industrial-100 text-left relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-industrial-200/20 rounded-bl-full pointer-events-none"></div>
-                  <div className="flex justify-between text-xs mb-4 relative z-10">
-                     <span className="text-industrial-500 font-bold uppercase tracking-wider">Routing</span>
-                     <span className="text-industrial-900 font-mono font-bold">
-                        {formData.region === 'International' ? 'Export Division' : 'Domestic Ops Center'}
+               <div className="bg-industrial-50/50 rounded-lg p-8 mb-10 border border-industrial-100 text-left">
+                  <div className="flex justify-between text-xs mb-4">
+                     <span className="text-industrial-400 font-bold uppercase tracking-wider">Routing Destination</span>
+                     <span className="text-industrial-900 font-bold">
+                        {formData.region === 'International' ? 'Export Division' : 'Domestic Operations'}
                      </span>
                   </div>
-                  <div className="flex justify-between text-xs relative z-10">
-                     <span className="text-industrial-500 font-bold uppercase tracking-wider">Status</span>
-                     <span className="text-accent-blue font-bold font-mono bg-accent-blue/10 px-2 py-0.5 rounded-sm">QUEUED_FOR_ENGINEERING</span>
+                  <div className="flex justify-between text-xs">
+                     <span className="text-industrial-400 font-bold uppercase tracking-wider">Process Status</span>
+                     <span className="text-accent-blue font-bold tracking-wide">QUEUED FOR REVIEW</span>
                   </div>
                </div>
 
-               <p className="text-industrial-600 text-sm mb-10 leading-relaxed font-light">
-                  Your manifest has been securely transmitted to our engineering team. A formal technical evaluation and commercial proposal will be sent to <span className="font-semibold text-industrial-900">{formData.email}</span> within 24 business hours.
+               <p className="text-industrial-500 text-lg mb-12 leading-relaxed font-light">
+                  Transmission received. A formal technical evaluation for <span className="font-medium text-industrial-900">{formData.email}</span> will be issued within 24 business hours.
                </p>
 
-               <Link to="/" className="inline-flex items-center justify-center w-full bg-industrial-900 text-white font-bold py-4 rounded-sm hover:bg-accent-blue transition-all uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-industrial-900/20">
+               <Link to="/" className="btn-industrial w-full py-5">
                   Return to Dashboard
                </Link>
             </div>
@@ -154,13 +153,13 @@ const RFQ: React.FC = () => {
    }
 
    return (
-      <div className="min-h-screen bg-white flex flex-col lg:flex-row font-sans pt-20">
+      <div className="min-h-screen bg-white flex flex-col lg:flex-row pt-32">
 
          {/* Loading Overlay */}
          {isSubmitting && (
-            <div className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center">
-               <Loader2 className="w-12 h-12 text-accent-blue animate-spin mb-4" />
-               <p className="text-xs font-bold uppercase tracking-[0.3em] text-industrial-900 animate-pulse">Transmitting Manifest...</p>
+            <div className="fixed inset-0 bg-white/90 backdrop-blur-md z-50 flex flex-col items-center justify-center">
+               <Loader2 className="w-12 h-12 text-accent-blue animate-spin mb-6" />
+               <p className="text-xs font-bold uppercase tracking-[0.4em] text-industrial-900 animate-pulse">Transmitting Manifest...</p>
             </div>
          )}
 
