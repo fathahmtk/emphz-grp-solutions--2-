@@ -114,32 +114,39 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
+          import TiltCard from '../components/TiltCard';
+
+          // ... (inside the component)
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {MOCK_PRODUCTS.slice(0, 3).map((product, i) => (
-              <Link to={`/products/${product.id}`} key={product.id} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="aspect-video overflow-hidden bg-industrial-100">
-                  <img
-                    src={product.imageUrl}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-[9px] font-bold text-accent-blue uppercase tracking-widest border-b border-accent-blue/30 pb-0.5">
-                      {product.category}
-                    </span>
+              <TiltCard key={product.id} className="h-full">
+                <Link to={`/products/${product.id}`} className="industrial-card group flex flex-col h-full animate-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                  <div className="aspect-video overflow-hidden bg-industrial-100 relative">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
                   </div>
-                  <h4 className="text-xl font-medium text-industrial-900 mb-3">{product.name}</h4>
-                  <p className="text-sm text-industrial-500 leading-relaxed mb-8 flex-grow">
-                    {product.shortDescription}
-                  </p>
-                  <div className="flex items-center justify-between pt-6 border-t border-industrial-100">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical Brief</span>
-                    <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-1 transition-all" />
+                  <div className="p-8 flex flex-col flex-grow relative bg-white/50 backdrop-blur-sm">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-[9px] font-bold text-accent-blue uppercase tracking-widest border-b border-accent-blue/30 pb-0.5">
+                        {product.category}
+                      </span>
+                    </div>
+                    <h4 className="text-xl font-medium text-industrial-900 mb-3 group-hover:text-accent-blue transition-colors">{product.name}</h4>
+                    <p className="text-sm text-industrial-500 leading-relaxed mb-8 flex-grow">
+                      {product.shortDescription}
+                    </p>
+                    <div className="flex items-center justify-between pt-6 border-t border-industrial-100">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical Brief</span>
+                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-1 transition-all" />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </TiltCard>
             ))}
           </div>
         </div>

@@ -345,6 +345,13 @@ export function Layout({ children }: LayoutProps) {
 
       <div className="global-noise"></div>
 
+      {/* Mesh Gradient Background */}
+      <div className="mesh-bg fixed inset-0 pointer-events-none">
+        <div className="mesh-blob mesh-blob-1"></div>
+        <div className="mesh-blob mesh-blob-2"></div>
+        <div className="mesh-blob mesh-blob-3"></div>
+      </div>
+
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
       <div className="fixed top-0 left-0 w-full h-1 z-[60] pointer-events-none">
@@ -354,50 +361,59 @@ export function Layout({ children }: LayoutProps) {
         />
       </div>
 
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-3' : 'bg-transparent py-5'}`}>
-        <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
+      <header className={`fixed top-4 left-0 w-full z-50 transition-all duration-300 pointer-events-none flex justify-center px-4`}>
+        <div className={`nav-island pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between
+          ${scrolled ? 'w-full max-w-5xl py-2 px-6 bg-white/95 shadow-2xl' : 'w-full max-w-7xl py-4 px-8 bg-white/80'}
+          `}>
+
           <Link to="/" className="flex items-center group" onClick={() => setIsMenuOpen(false)}>
+            <div className={`w-8 h-8 rounded-lg bg-gradient-to-br from-industrial-900 to-industrial-800 flex items-center justify-center mr-3 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+              <span className="text-white font-bold font-display text-sm tracking-tighter">EM</span>
+            </div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl tracking-tight text-industrial-900 group-hover:text-accent-blue transition-colors">EMPHZ</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-industrial-500 font-medium">Composite Engineering</span>
+              <span className="font-bold font-display text-lg tracking-tight text-industrial-900 group-hover:text-accent-blue transition-colors">EMPHZ</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-1 bg-industrial-50/50 p-1 rounded-full border border-industrial-100/50">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-display font-medium transition-all duration-200 relative group py-2 
-                  ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600 hover:text-industrial-900'}`}
+                className={`relative px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300
+                  ${isActive(link.path)
+                    ? 'bg-white text-industrial-900 shadow-sm'
+                    : 'text-industrial-500 hover:text-industrial-900 hover:bg-white/50'}`}
               >
                 {link.label}
-                {isActive(link.path) && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-blue animate-in fade-in" />
-                )}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-6">
-            <Link to="/rfq" className="relative p-2 text-industrial-500 hover:text-accent-blue transition-colors">
-              <ShoppingCart size={20} />
-              {items.length > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-accent-blue text-white text-[9px] font-bold flex items-center justify-center rounded-full">
-                  {items.length}
-                </span>
-              )}
+          <div className="flex items-center gap-4">
+            <Link to="/rfq" className="hidden sm:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-industrial-500 hover:text-accent-blue transition-colors">
+              <span className="hidden lg:inline">Cart</span>
+              <div className="relative">
+                <ShoppingCart size={18} />
+                {items.length > 0 && (
+                  <span className="absolute -top-1.5 -right-1.5 h-3.5 w-3.5 bg-accent-blue text-white text-[8px] font-bold flex items-center justify-center rounded-full shadow-glow">
+                    {items.length}
+                  </span>
+                )}
+              </div>
             </Link>
-            <Link to="/rfq" className="hidden sm:block btn-industrial px-6 py-2 text-sm">
-              Request Quote
+
+            <Link to="/rfq" className="hidden sm:flex btn-industrial px-5 py-2 text-[10px] rounded-full shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/40">
+              Get Quote
             </Link>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-industrial-900"
+              className="md:hidden p-2 text-industrial-900 bg-industrial-100 rounded-full"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
