@@ -369,7 +369,7 @@ export function Layout({ children }: LayoutProps) {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-all duration-200 relative group py-2 
+                className={`text-sm font-display font-medium transition-all duration-200 relative group py-2 
                   ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600 hover:text-industrial-900'}`}
               >
                 {link.label}
@@ -410,7 +410,7 @@ export function Layout({ children }: LayoutProps) {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`text-lg font-medium ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600'}`}
+                className={`text-lg font-display font-medium ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600'}`}
               >
                 {link.label}
               </Link>

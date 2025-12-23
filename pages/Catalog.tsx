@@ -106,8 +106,8 @@ const Catalog: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar Filters */}
           <aside className="w-full lg:w-64 flex-shrink-0 animate-in">
-            <div className="sticky top-28 bg-white p-8 border border-industrial-100 shadow-subtle rounded-sm">
-              <div className="flex items-center gap-2 mb-8 pb-4 border-b border-industrial-50">
+            <div className="sticky top-28 glass-panel p-8 rounded-xl">
+              <div className="flex items-center gap-2 mb-8 pb-4 border-b border-industrial-100/50">
                 <Filter size={14} className="text-industrial-400" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-industrial-900">Filters</span>
                 <span className="ml-auto text-[10px] font-bold text-industrial-300 tabular-nums">
@@ -132,7 +132,7 @@ const Catalog: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-industrial-400 mb-5">Resources</h3>
+                  <h3 className="text-[10px] font-display font-medium uppercase tracking-widest text-industrial-400 mb-5 text-[10px]">Resources</h3>
                   <Link to="/technical" className="flex items-center gap-3 text-industrial-500 hover:text-industrial-900 text-[11px] uppercase tracking-wider group">
                     <FileText size={14} className="text-industrial-300 group-hover:text-accent-blue" />
                     Technical Center
@@ -143,7 +143,7 @@ const Catalog: React.FC = () => {
               {selectedCategory !== 'All' && (
                 <button
                   onClick={() => setSelectedCategory('All')}
-                  className="w-full mt-10 pt-6 border-t border-industrial-50 text-[10px] font-bold uppercase tracking-widest text-industrial-400 hover:text-red-500 transition-colors"
+                  className="w-full mt-10 pt-6 border-t border-industrial-100/50 text-[10px] font-bold uppercase tracking-widest text-industrial-400 hover:text-red-500 transition-colors"
                 >
                   Clear Selection
                 </button>
@@ -155,16 +155,16 @@ const Catalog: React.FC = () => {
           <main className="flex-1">
             <div className="flex items-center justify-between mb-8 pb-6 border-b border-industrial-100 flex-wrap gap-4">
               <div className="flex items-center gap-6">
-                <div className="flex items-center bg-industrial-100 p-1 rounded-sm gap-1">
+                <div className="flex items-center bg-white p-1 rounded-lg border border-industrial-200 gap-1 shadow-sm">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-1.5 transition-all ${viewMode === 'grid' ? 'bg-white shadow-sm text-industrial-900' : 'text-industrial-400 hover:text-industrial-600'}`}
+                    className={`p-1.5 rounded transition-all ${viewMode === 'grid' ? 'bg-industrial-100 text-industrial-900 shadow-inner' : 'text-industrial-400 hover:text-industrial-600'}`}
                   >
                     <LayoutGrid size={16} />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-1.5 transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-industrial-900' : 'text-industrial-400 hover:text-industrial-600'}`}
+                    className={`p-1.5 rounded transition-all ${viewMode === 'list' ? 'bg-industrial-100 text-industrial-900 shadow-inner' : 'text-industrial-400 hover:text-industrial-600'}`}
                   >
                     <List size={16} />
                   </button>
@@ -180,7 +180,7 @@ const Catalog: React.FC = () => {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="appearance-none bg-white border border-industrial-200 text-[10px] font-bold uppercase tracking-widest py-2 pl-4 pr-10 rounded-sm focus:outline-none focus:border-accent-blue cursor-pointer"
+                    className="appearance-none bg-white border border-industrial-200 text-[10px] font-bold uppercase tracking-widest py-2 pl-4 pr-10 rounded-lg focus:outline-none focus:border-accent-blue cursor-pointer shadow-sm hover:border-industrial-300 transition-colors"
                   >
                     <option value="default">Featured</option>
                     <option value="name-asc">Name A-Z</option>
@@ -200,7 +200,7 @@ const Catalog: React.FC = () => {
                   className={`industrial-card group animate-up flex ${viewMode === 'list' ? 'flex-row items-center gap-8 p-4' : 'flex-col h-full'}`}
                   style={{ animationDelay: `${i * 0.05}s` }}
                 >
-                  <div className={`${viewMode === 'list' ? 'w-40 h-28' : 'aspect-video'} overflow-hidden bg-industrial-100 flex-shrink-0`}>
+                  <div className={`${viewMode === 'list' ? 'w-40 h-28' : 'aspect-video'} overflow-hidden bg-white/50 flex-shrink-0 relative`}>
                     <img
                       src={product.imageUrl}
                       alt={product.name}
