@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { MOCK_CASE_STUDIES } from '../constants';
-import { MapPin, ArrowRight, Calendar, Building2, CheckCircle2, TrendingUp } from 'lucide-react';
+import { MapPin, ArrowRight, Building2, CheckCircle2, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 

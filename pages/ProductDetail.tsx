@@ -16,6 +16,7 @@ import {
 import { MOCK_PRODUCTS } from '../constants';
 import { useRFQStore } from '../stores/rfqStore';
 import SEO from '../components/SEO';
+import GatedDownloadModal from '../components/GatedDownloadModal';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,6 +27,8 @@ const ProductDetail: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'specs' | 'desc' | 'downloads'>('specs');
   const [activeImage, setActiveImage] = useState<string>('');
   const [isAdded, setIsAdded] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const [fileToDownload, setFileToDownload] = useState<{ title: string; type: string } | null>(null);
 
   useEffect(() => {
     if (product) {
@@ -55,6 +58,11 @@ const ProductDetail: React.FC = () => {
     });
     setIsAdded(true);
     setTimeout(() => setIsAdded(false), 2000);
+  };
+
+  const handleDownloadClick = (file: { title: string; type: string }) => {
+    setFileToDownload(file);
+    setIsDownloadModalOpen(true);
   };
 
   const specIcons: { [key: string]: React.ReactElement } = {
@@ -157,7 +165,10 @@ const ProductDetail: React.FC = () => {
                   >
                     {isAdded ? 'Added to Manifest' : 'Add to RFQ List'}
                   </button>
-                  <button className="px-8 py-4 border border-industrial-200 text-[10px] font-bold uppercase tracking-[0.2em] text-industrial-600 hover:border-industrial-900 rounded-sm transition-all flex items-center justify-center gap-3">
+                  <button
+                    onClick={() => handleDownloadClick({ title: `${product.name} Spec Sheet`, type: 'PDF' })}
+                    className="px-8 py-4 border border-industrial-200 text-[10px] font-bold uppercase tracking-[0.2em] text-industrial-600 hover:border-industrial-900 rounded-sm transition-all flex items-center justify-center gap-3"
+                  >
                     <Download size={14} /> Spec Sheet
                   </button>
                 </div>
@@ -232,6 +243,7 @@ const ProductDetail: React.FC = () => {
               {product.downloads.map((dl, i) => (
                 <button
                   key={i}
+                  onClick={() => handleDownloadClick({ title: dl.title, type: dl.type })}
                   className="p-6 bg-white border border-industrial-100 rounded-sm text-left group hover:border-accent-blue transition-all"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -246,6 +258,12 @@ const ProductDetail: React.FC = () => {
           )}
         </div>
       </section>
+
+      <GatedDownloadModal
+        isOpen={isDownloadModalOpen}
+        onClose={() => setIsDownloadModalOpen(false)}
+        fileToDownload={fileToDownload}
+      />
     </div>
   );
 };
