@@ -354,40 +354,48 @@ export function Layout({ children }: LayoutProps) {
         />
       </div>
 
-      <header className="fixed top-4 left-1/2 z-50 w-[94%] -translate-x-1/2 rounded-2xl glass transition-all duration-300">
-        <div className="flex items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
-            <div className="font-semibold text-lg text-slate-900 tracking-tight">EMPHZ</div>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-3' : 'bg-transparent py-5'}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
+          <Link to="/" className="flex items-center group" onClick={() => setIsMenuOpen(false)}>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl tracking-tight text-industrial-900 group-hover:text-accent-blue transition-colors">EMPHZ</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-industrial-500 font-medium">Composite Engineering</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`transition-colors duration-300 ${isActive(link.path) ? 'text-blue-700' : 'text-slate-600 hover:text-slate-900'}`}
+                className={`text-sm font-medium transition-all duration-200 relative group py-2 
+                  ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600 hover:text-industrial-900'}`}
               >
                 {link.label}
+                {isActive(link.path) && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-blue animate-in fade-in" />
+                )}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <Link to="/rfq" className="relative p-2 text-slate-600 hover:text-slate-900">
+          <div className="flex items-center gap-6">
+            <Link to="/rfq" className="relative p-2 text-industrial-500 hover:text-accent-blue transition-colors">
               <ShoppingCart size={20} />
               {items.length > 0 && (
-                <span className="absolute -top-1 -right-1 h-5 w-5 bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-md">
+                <span className="absolute -top-0.5 -right-0.5 h-4 w-4 bg-accent-blue text-white text-[9px] font-bold flex items-center justify-center rounded-full">
                   {items.length}
                 </span>
               )}
             </Link>
-            <Link to="/rfq" className="hidden sm:block rounded-xl bg-slate-900 px-6 py-2.5 text-white text-sm font-medium transition-transform hover:scale-105 active:scale-95">
-              Get Quote
+            <Link to="/rfq" className="hidden sm:block btn-industrial px-6 py-2 text-sm">
+              Request Quote
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-slate-900"
+              className="md:hidden p-2 text-industrial-900"
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -395,20 +403,20 @@ export function Layout({ children }: LayoutProps) {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-full left-0 w-full mt-2 rounded-2xl glass transition-all duration-300 origin-top ${isMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'}`}>
-          <nav className="flex flex-col p-6 gap-4">
+        <div className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-industrial-100 transition-all duration-300 origin-top shadow-xl ${isMenuOpen ? 'scale-y-100 opacity-100 visible' : 'scale-y-0 opacity-0 invisible'}`}>
+          <nav className="flex flex-col p-8 gap-6">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`text-lg font-medium ${isActive(link.path) ? 'text-blue-700' : 'text-slate-600'}`}
+                className={`text-lg font-medium ${isActive(link.path) ? 'text-accent-blue' : 'text-industrial-600'}`}
               >
                 {link.label}
               </Link>
             ))}
-            <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="mt-4 rounded-xl bg-slate-900 px-6 py-3 text-white text-center font-medium">
-              Get Quote
+            <Link to="/rfq" onClick={() => setIsMenuOpen(false)} className="btn-industrial py-4 text-center text-lg mt-2">
+              Request Quote
             </Link>
           </nav>
         </div>
@@ -416,26 +424,23 @@ export function Layout({ children }: LayoutProps) {
 
       <main
         id="main-content"
-        className={`flex-grow relative min-h-[calc(100vh-400px)] ${isHome ? '' : 'pt-24'} transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'blur-sm scale-[0.98] opacity-40 grayscale-[50%]' : ''}`}
+        className={`flex-grow relative ${isHome ? '' : 'pt-24'} transition-all duration-500 ${isMenuOpen ? 'blur-sm opacity-50' : ''}`}
         role="main"
         tabIndex={-1}
       >
         {!isHome && breadcrumbs.length > 0 && (
-          <div className="w-full bg-gray-50/90 backdrop-blur-md border-b border-gray-200 sticky top-[72px] md:top-[88px] z-30 shadow-sm transition-all duration-300">
-            <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-6 md:px-8 py-4 animate-fade-in">
-              <ol className="flex items-center space-x-2 text-xs font-mono tracking-wide">
+          <div className="w-full bg-industrial-50/80 backdrop-blur-sm border-b border-industrial-100 sticky top-16 z-30">
+            <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-6 md:px-8 py-3">
+              <ol className="flex items-center space-x-2 text-[11px] text-industrial-400 font-medium uppercase tracking-widest">
                 {breadcrumbs.map((crumb, index) => (
                   <li key={`${crumb.path}-${crumb.name}`} className="flex items-center">
-                    {index > 0 && <ChevronRight size={12} className="text-gray-400 mx-2" />}
+                    {index > 0 && <ChevronRight size={10} className="mx-2 opacity-50" />}
                     {crumb.isCurrent ? (
-                      <span className="text-emphz-navy font-bold truncate px-2 py-0.5 rounded bg-white border border-gray-200 shadow-sm" aria-current="page">
+                      <span className="text-industrial-900" aria-current="page">
                         {crumb.name}
                       </span>
                     ) : (
-                      <Link
-                        to={crumb.path}
-                        className="text-gray-500 hover:text-emphz-teal hover:underline transition-colors truncate"
-                      >
+                      <Link to={crumb.path} className="hover:text-accent-blue transition-colors">
                         {crumb.name}
                       </Link>
                     )}
@@ -448,97 +453,90 @@ export function Layout({ children }: LayoutProps) {
         {children}
       </main>
 
-      <div className={`fixed bottom-6 left-6 z-30 flex flex-col gap-3 transition-all duration-500 ${isMenuOpen ? 'opacity-0 translate-y-10 pointer-events-none' : 'opacity-100 translate-y-0'}`}>
+      <div className={`fixed bottom-8 right-8 z-30 flex flex-col gap-4 transition-all duration-500 ${isMenuOpen ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
         <a
           href="https://wa.me/919037874080"
           target="_blank"
           rel="noreferrer"
-          className="bg-[#25D366] text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-[#25D366]/40 hover:scale-110 transition-all flex items-center justify-center group relative border-2 border-white/20"
+          className="bg-white text-industrial-900 p-4 rounded-full shadow-subtle hover:text-accent-blue transition-all group relative border border-industrial-100"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle size={24} fill="white" className="w-5 h-5 md:w-6 md:h-6" />
-          <span className="absolute right-full mr-4 bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none font-sans hidden md:block transform translate-x-2 group-hover:translate-x-0">
-            Chat with Engineer
+          <MessageCircle size={24} className="group-hover:scale-110 transition-transform" />
+          <span className="absolute right-full mr-4 bg-industrial-900 text-white text-[10px] font-bold px-3 py-1.5 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap pointer-events-none hidden md:block">
+            Consult Engineer
           </span>
         </a>
-        <Link
-          to="/technical"
-          className="bg-white border-2 border-gray-100 text-emphz-navy p-3 md:p-4 rounded-full shadow-lg hover:border-emphz-teal hover:text-emphz-teal hover:scale-110 transition-all flex items-center justify-center group relative"
-          aria-label="Technical Specs"
-        >
-          <FileText size={24} className="w-5 h-5 md:w-6 md:h-6" />
-          <span className="absolute right-full mr-4 bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none font-sans hidden md:block transform translate-x-2 group-hover:translate-x-0">
-            Datasheets
-          </span>
-        </Link>
       </div>
 
-      <LiveChatWidget />
-
+      {/* CommandPalette removed from direct layout to keep clean - can be triggered via keybind */}
       <CommandPalette isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      <footer className={`bg-emphz-navy text-white pt-20 pb-10 md:pt-28 md:pb-12 relative overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'blur-sm opacity-40' : ''}`} role="contentinfo">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none overflow-hidden">
-          <div className="absolute -right-20 top-0 w-[400px] h-[400px] bg-emphz-teal rounded-full blur-[150px] animate-float" style={{ animationDuration: '8s' }}></div>
-          <div className="absolute -left-20 bottom-0 w-[300px] h-[300px] bg-blue-600 rounded-full blur-[120px] animate-float" style={{ animationDuration: '10s' }}></div>
-          <div className="absolute inset-0 bg-carbon-fibre opacity-20"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-16 md:mb-20">
-            <div className="col-span-1 md:col-span-2 pr-0 md:pr-12">
+      <footer className="footer bg-industrial-900 text-industrial-300 py-16 md:py-24 border-t border-industrial-800" role="contentinfo">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+            <div className="col-span-1 md:col-span-2">
               <div className="mb-8">
-                <Link to="/" aria-label="Emphz Home">
-                  <Logo className="h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity" variant="light" />
+                <Link to="/" className="flex flex-col">
+                  <span className="font-bold text-2xl text-white tracking-tight">EMPHZ</span>
+                  <span className="text-xs uppercase tracking-[0.3em] text-industrial-500">Corporate HQ</span>
                 </Link>
               </div>
-              <h3 className="text-xl md:text-2xl font-display font-bold mb-2 leading-tight max-w-lg text-white uppercase tracking-wider">
-                GRP / FRP Product Manufacturer
-              </h3>
-              <div className="flex flex-col gap-1 mb-8">
-                <p className="text-emphz-teal text-xs md:text-sm font-bold tracking-[0.2em] uppercase font-display">Kerala Managed | Mysuru Manufactured</p>
-                <p className="text-gray-400 text-sm font-sans border-l-2 border-white/10 pl-4 mt-2">Serving Infrastructure Projects Across India</p>
+              <p className="text-industrial-400 text-sm leading-relaxed max-w-sm mb-8">
+                Specialized manufacturers of GRP/FRP solutions for industrial infrastructure.
+                Engineering-led designs built for extreme durability and environmental resilience.
+              </p>
+              <div className="flex flex-col gap-2 p-4 border border-industrial-800 rounded-sm bg-industrial-800/20 max-w-fit">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-industrial-500 font-bold">Trusted Production</span>
+                <span className="text-xs font-medium text-industrial-200">Kerala Managed | Mysuru Manufactured</span>
               </div>
             </div>
 
             <div>
-              <h4 className="text-xs font-bold text-emphz-teal uppercase tracking-[0.2em] mb-6 font-display">Products</h4>
-              <ul className="space-y-4 text-sm font-medium text-gray-400">
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Enclosures</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Cabins & Guard Rooms</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Modular Kiosks</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Portable Toilets</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors flex items-center group py-1"><ChevronRight size={14} className="mr-2 text-emphz-teal" /> Pods & Shelters</Link></li>
-              </ul>
+              <h4 className="text-[10px] font-bold text-white uppercase tracking-[0.2em] mb-8">Solutions</h4>
+              <nav className="flex flex-col gap-4 text-sm">
+                <Link to="/products" className="hover:text-white transition-colors">Industrial Enclosures</Link>
+                <Link to="/products" className="hover:text-white transition-colors">Portable Security Cabins</Link>
+                <Link to="/products" className="hover:text-white transition-colors">Modular Food Kiosks</Link>
+                <Link to="/products" className="hover:text-white transition-colors">Sanitary GRP Units</Link>
+                <Link to="/products" className="hover:text-white transition-colors">Bespoke GRP Pods</Link>
+              </nav>
             </div>
 
             <div>
-              <h4 className="text-xs font-bold text-emphz-teal uppercase tracking-[0.2em] mb-6 font-display">Connect</h4>
-              <ul className="space-y-4 text-sm font-medium text-gray-400">
-                <li className="flex items-start group py-1">
-                  <MapPin size={18} className="mr-3 mt-0.5 text-emphz-navy bg-gray-200 rounded-full p-0.5 group-hover:bg-white transition-colors flex-shrink-0" />
-                  <span>Mysore Factory <br /><span className="text-xs text-gray-500">KIADB Industrial Area</span></span>
-                </li>
-                <li className="flex items-start group py-1">
-                  <MapPin size={18} className="mr-3 mt-0.5 text-emphz-teal bg-white/10 rounded-full p-0.5 group-hover:bg-white transition-colors flex-shrink-0" />
-                  <span>Kerala Ops <br /><span className="text-xs text-gray-500">Vadakara HQ</span></span>
-                </li>
-                <li className="flex items-center group hover:text-white transition-colors py-1"><Phone size={16} className="mr-3 text-gray-500 group-hover:text-emphz-teal" /> +91 9037 874 080</li>
-                <li className="flex items-center group hover:text-white transition-colors py-1"><Mail size={16} className="mr-3 text-gray-500 group-hover:text-emphz-teal" /> info@emphz.in</li>
-              </ul>
+              <h4 className="text-[10px] font-bold text-white uppercase tracking-[0.2em] mb-8">Global Outreach</h4>
+              <div className="flex flex-col gap-6 text-sm">
+                <div className="flex items-start gap-3">
+                  <MapPin size={16} className="text-industrial-500 mt-1 flex-shrink-0" />
+                  <p>
+                    <span className="text-industrial-200 block font-medium">Production Hub</span>
+                    KIADB Industrial Area, Mysuru, Karnataka
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone size={16} className="text-industrial-500 flex-shrink-0" />
+                  <span>+91 9037 874 080</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={16} className="text-industrial-500 flex-shrink-0" />
+                  <span>info@emphz.in</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-6">
-            <p>&copy; 2025 Emphz Engineering Pvt Ltd. Factory Hub: Mysuru, Karnataka.</p>
-            <div className="flex space-x-8 font-bold uppercase tracking-widest text-[10px]">
-              <Link to="#" className="hover:text-emphz-teal transition-colors">Privacy Policy</Link>
-              <Link to="#" className="hover:text-emphz-teal transition-colors">Terms of Use</Link>
-              <Link to="/sitemap" className="hover:text-emphz-teal transition-colors">Sitemap</Link>
+          <div className="mt-20 pt-8 border-t border-industrial-800 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium uppercase tracking-[0.1em] text-industrial-500">
+            <p>&copy; 2025 Emphz Engineering Private Limited. All Rights Reserved.</p>
+            <div className="flex gap-8">
+              <Link to="/sitemap" className="hover:text-industrial-300 transition-colors">Sitemap</Link>
+              <Link to="#" className="hover:text-industrial-300 transition-colors">Privacy</Link>
+              <Link to="#" className="hover:text-industrial-300 transition-colors">Terms</Link>
             </div>
           </div>
         </div>
       </footer>
     </div>
+  );
+}
+    </div >
   );
 }
