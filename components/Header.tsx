@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingCart, Search } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 import { useRFQStore } from '../stores/rfqStore';
+import Logo from './Logo';
 
 interface HeaderProps {
     isActive: (path: string) => boolean;
@@ -47,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
                 <div className="h-full flex flex-col p-8 md:p-20 overflow-y-auto">
                     <div className="flex justify-between items-center mb-16">
                         <Link to="/" onClick={() => setIsMenuOpen(false)} className="group">
-                            <img src="/logo.png" alt="EMPHZ Logo" className="h-12 md:h-20 w-auto transition-transform duration-500 group-hover:scale-105" />
+                            <Logo size="lg" withTagline={true} />
                         </Link>
                     </div>
 
@@ -91,9 +92,8 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
                     </div>
                 </div>
 
-                {/* Decorative Background Logo */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none">
-                    <img src="/logo.png" alt="" className="w-[80vw] grayscale" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
+                    <Logo size="xl" variant="grayscale" withTagline={true} />
                 </div>
             </div>
         </header>
