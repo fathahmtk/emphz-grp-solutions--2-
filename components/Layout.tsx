@@ -13,7 +13,6 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
   const { pathname } = location;
@@ -52,8 +51,6 @@ export function Layout({ children }: LayoutProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      if (isScrolled !== scrolled) setScrolled(isScrolled);
       const totalScroll = document.documentElement.scrollTop;
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       if (windowHeight > 0) setScrollProgress(totalScroll / windowHeight);
@@ -61,7 +58,7 @@ export function Layout({ children }: LayoutProps) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHome, scrolled]);
+  }, [isHome]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -77,7 +74,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-white text-emphz-navy font-sans selection:bg-emphz-teal selection:text-white relative">
       <style>{`
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        html { scroll-behavior: smooth; }
         .global-noise {
           position: fixed; top: 0; left: 0; width: 100%; height: 100%;
           pointer-events: none; z-index: 9999; opacity: 0.03;
@@ -102,9 +99,9 @@ export function Layout({ children }: LayoutProps) {
         <div className="h-full bg-emphz-teal shadow-[0_0_10px_#3B82F6]" style={{ width: `${scrollProgress * 100}%`, transition: 'width 0.1s ease-out' }} />
       </div>
 
-      <Header scrolled={scrolled} isActive={isActive} onSearchClick={() => setIsSearchOpen(true)} />
+      <Header isActive={isActive} onSearchClick={() => setIsSearchOpen(true)} />
 
-      <main id="main-content" className={`flex-grow relative ${isHome ? '' : 'pt-24'} transition-all duration-500`}>
+      <main id="main-content" className={`flex-grow relative transition-all duration-500`}>
         {!isHome && <Breadcrumbs items={breadcrumbs} />}
         {children}
       </main>
