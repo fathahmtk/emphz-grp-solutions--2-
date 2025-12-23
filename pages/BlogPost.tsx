@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { MOCK_BLOG_POSTS } from '../constants';
-import { ArrowLeft, Calendar, Edit, Clock, Rss, Share2, Linkedin, Twitter, Mail, Copy } from 'lucide-react';
+import { ArrowLeft, Calendar, Edit, Clock, Linkedin, Twitter, Mail, Copy } from 'lucide-react';
 import NotFound from './NotFound';
 import SEO from '../components/SEO';
 
