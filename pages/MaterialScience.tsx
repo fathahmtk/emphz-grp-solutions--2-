@@ -41,6 +41,15 @@ const MaterialScience: React.FC = () => {
             <div className="absolute inset-0 bg-dots opacity-5"></div>
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none translate-x-1/4 -translate-y-1/4"></div>
 
+            {/* Conceptual Blueprint Layer */}
+            <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+               <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path d="M0 20 L100 20 M20 0 L20 100" stroke="currentColor" strokeWidth="0.1" className="text-blue-500" />
+                  <circle cx="20" cy="20" r="10" fill="none" stroke="currentColor" strokeWidth="0.05" className="text-blue-400" />
+                  <text x="22" y="18" fontSize="1" className="fill-blue-400 font-mono">REF_SYS_MODULAR_v4</text>
+               </svg>
+            </div>
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                <div className="flex flex-col md:flex-row items-end justify-between gap-8">
                   <div className="max-w-3xl">

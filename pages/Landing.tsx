@@ -42,6 +42,7 @@ import TechnicalVetter from '../components/TechnicalVetter';
 import FeatureAnatomy from '../components/FeatureAnatomy';
 import LaminateStack from '../components/LaminateStack';
 import TechnicalBlueprint from '../components/TechnicalBlueprint';
+import FutureVision from '../components/FutureVision';
 import { LayoutContextType } from '../components/MainLayout';
 
 const Landing: React.FC = () => {
@@ -91,6 +92,7 @@ const Landing: React.FC = () => {
             {/* Corporate Trust Matrix */}
             <Industries />
             <InnovationHub />
+            <FutureVision />
             <Manifesto />
             <Projects />
             <Clients />

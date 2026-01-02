@@ -44,7 +44,28 @@ const Preloader: React.FC = () => {
 
     return (
         <div className="fixed inset-0 z-[1000] bg-emphz-darker flex flex-col items-center justify-center p-6 transition-opacity duration-1000">
-            <div className="w-full max-w-md">
+            {/* Conceptual Pattern Background */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
+                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <pattern id="hexagons" width="10" height="17.32" patternUnits="userSpaceOnUse" patternTransform="scale(2) rotate(30)">
+                        <path d="M5 0 L10 2.88 L10 8.66 L5 11.54 L0 8.66 L0 2.88 Z" fill="none" stroke="currentColor" strokeWidth="0.1" className="text-emphz-teal" />
+                    </pattern>
+                    <rect width="100" height="100" fill="url(#hexagons)" className="animate-pulse" />
+                </svg>
+            </div>
+
+            <div className="w-full max-w-md relative z-10">
+                <div className="flex justify-center mb-16">
+                    {/* Conceptual Material Molecule */}
+                    <div className="relative w-24 h-24">
+                        <div className="absolute inset-0 border-2 border-emphz-teal/20 rounded-full animate-ping"></div>
+                        <div className="absolute inset-2 border border-emphz-teal/40 rounded-full animate-spin-slow"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-8 h-8 bg-emphz-teal rotate-45 animate-pulse shadow-[0_0_30px_rgba(13,148,136,0.5)]"></div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="flex justify-between items-end mb-4">
                     <div>
                         <span className="text-emphz-teal font-mono text-[10px] uppercase tracking-[0.4em] block mb-1">EMPHZ SYSTEM_BOOT</span>
@@ -75,6 +96,16 @@ const Preloader: React.FC = () => {
                     High Performance Modular Infrastructure
                 </p>
             </div>
+
+            <style>{`
+                @keyframes spin-slow {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                .animate-spin-slow {
+                    animation: spin-slow 10s linear infinite;
+                }
+            `}</style>
         </div>
     );
 };
