@@ -13,6 +13,9 @@ import {
 import { MOCK_PRODUCTS } from '../constants';
 import SEO from '../components/SEO';
 import TiltCard from '../components/TiltCard';
+import StatsSection from '../components/StatsSection';
+import GlowCard from '../components/GlowCard';
+import FadeInSection from '../components/FadeInSection';
 
 const Home: React.FC = () => {
   return (
@@ -93,47 +96,53 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
+      {/* Stats Section with Animated Counters */}
+      <StatsSection />
+
       {/* Engineering Advantages */}
-      <section className="py-24 md:py-32 bg-industrial-50/20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mb-20 animate-up">
-            <h2 className="text-xs font-bold text-accent-blue uppercase tracking-[0.3em] mb-4">Engineering Precision</h2>
-            <h3 className="text-4xl md:text-5xl font-medium text-industrial-900 leading-[1.1]">
-              Engineered for the <br />
-              <span className="text-industrial-400">Extreme Environment.</span>
-            </h3>
+      <FadeInSection direction="up">
+        <section className="py-24 md:py-32 bg-industrial-50/20">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="max-w-3xl mb-20 animate-up">
+              <h2 className="text-xs font-bold text-accent-blue uppercase tracking-[0.3em] mb-4">Engineering Precision</h2>
+              <h3 className="text-4xl md:text-5xl font-medium text-industrial-900 leading-[1.1]">
+                Engineered for the <br />
+                <span className="text-industrial-400">Extreme Environment.</span>
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+              <div className="animate-up">
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
+                  <Shield size={24} className="text-accent-blue" />
+                </div>
+                <h3 className="text-xl font-medium mb-4">Chemical Resilience</h3>
+                <p className="text-industrial-500 text-sm leading-relaxed">
+                  Inherently resistant to acid rain, coastal salinity, and industrial effluents. Zero risk of oxidation or structural leaching.
+                </p>
+              </div>
+              <div className="animate-up" style={{ animationDelay: '0.1s' }}>
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
+                  <Zap size={24} className="text-accent-blue" />
+                </div>
+                <h3 className="text-xl font-medium mb-4">Dielectric Safety</h3>
+                <p className="text-industrial-500 text-sm leading-relaxed">
+                  Non-conductive properties eliminate the need for grounding in electrical installations, ensuring total operator safety.
+                </p>
+              </div>
+              <div className="animate-up" style={{ animationDelay: '0.2s' }}>
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
+                  <Award size={24} className="text-accent-blue" />
+                </div>
+                <h3 className="text-xl font-medium mb-4">Zero Maintenance</h3>
+                <p className="text-industrial-500 text-sm leading-relaxed">
+                  UV-stabilized gel coats provide permanent color and finish. No painting, scraping, or rust treatment required.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="animate-up">
-              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                <Shield size={24} className="text-accent-blue" />
-              </div>
-              <h3 className="text-xl font-medium mb-4">Chemical Resilience</h3>
-              <p className="text-industrial-500 text-sm leading-relaxed">
-                Inherently resistant to acid rain, coastal salinity, and industrial effluents. Zero risk of oxidation or structural leaching.
-              </p>
-            </div>
-            <div className="animate-up" style={{ animationDelay: '0.1s' }}>
-              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                <Zap size={24} className="text-accent-blue" />
-              </div>
-              <h3 className="text-xl font-medium mb-4">Dielectric Safety</h3>
-              <p className="text-industrial-500 text-sm leading-relaxed">
-                Non-conductive properties eliminate the need for grounding in electrical installations, ensuring total operator safety.
-              </p>
-            </div>
-            <div className="animate-up" style={{ animationDelay: '0.2s' }}>
-              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                <Award size={24} className="text-accent-blue" />
-              </div>
-              <h3 className="text-xl font-medium mb-4">Zero Maintenance</h3>
-              <p className="text-industrial-500 text-sm leading-relaxed">
-                UV-stabilized gel coats provide permanent color and finish. No painting, scraping, or rust treatment required.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </FadeInSection>
 
       {/* Ecosystem – Flagship Concept */}
       <section className="py-24 md:py-32 bg-white relative overflow-hidden">
@@ -345,7 +354,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 
