@@ -151,18 +151,18 @@ const ThermalCalculator: React.FC = () => {
    };
 
    return (
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 md:p-8 font-mono h-full flex flex-col">
-         <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 md:p-8 font-mono h-full flex flex-col">
+         <div className="flex items-center justify-between mb-8 pb-4 border-b border-neutral-800">
             <div className="flex items-center gap-3">
                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-500">
                   <Thermometer size={20} />
                </div>
                <div>
                   <h3 className="text-white font-bold text-lg leading-none">Thermal Sizing</h3>
-                  <span className="text-xs text-slate-500">Heat Transfer Simulation</span>
+                  <span className="text-xs text-neutral-500">Heat Transfer Simulation</span>
                </div>
             </div>
-            <div className="text-[10px] text-slate-600 border border-slate-800 px-2 py-1 rounded bg-black">
+            <div className="text-[10px] text-neutral-600 border border-neutral-800 px-2 py-1 rounded bg-black">
                VER 2.1.2
             </div>
          </div>
@@ -174,43 +174,43 @@ const ThermalCalculator: React.FC = () => {
                   <label className="text-xs text-blue-500 font-bold uppercase tracking-wider block">Dimensions (mm)</label>
                   <div className="grid grid-cols-3 gap-3">
                      <div>
-                        <span className="text-[10px] text-slate-500 block mb-1">HEIGHT</span>
-                        <input type="number" value={dims.h || ''} onChange={e => handleDimChange('h', e.target.value)} className="w-full bg-black border border-slate-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
+                        <span className="text-[10px] text-neutral-500 block mb-1">HEIGHT</span>
+                        <input type="number" value={dims.h || ''} onChange={e => handleDimChange('h', e.target.value)} className="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
                      </div>
                      <div>
-                        <span className="text-[10px] text-slate-500 block mb-1">WIDTH</span>
-                        <input type="number" value={dims.w || ''} onChange={e => handleDimChange('w', e.target.value)} className="w-full bg-black border border-slate-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
+                        <span className="text-[10px] text-neutral-500 block mb-1">WIDTH</span>
+                        <input type="number" value={dims.w || ''} onChange={e => handleDimChange('w', e.target.value)} className="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
                      </div>
                      <div>
-                        <span className="text-[10px] text-slate-500 block mb-1">DEPTH</span>
-                        <input type="number" value={dims.d || ''} onChange={e => handleDimChange('d', e.target.value)} className="w-full bg-black border border-slate-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
+                        <span className="text-[10px] text-neutral-500 block mb-1">DEPTH</span>
+                        <input type="number" value={dims.d || ''} onChange={e => handleDimChange('d', e.target.value)} className="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm focus:border-blue-500 outline-none" placeholder="0" />
                      </div>
                   </div>
                </div>
 
                <div>
                   <label className="text-xs text-blue-500 font-bold uppercase tracking-wider block mb-3">Thermal Load</label>
-                  <div className="flex items-center gap-4 bg-slate-950 p-3 rounded border border-slate-800">
+                  <div className="flex items-center gap-4 bg-neutral-950 p-3 rounded border border-neutral-800">
                      <div className="flex-1">
-                        <span className="text-[10px] text-slate-500 block mb-1">INTERNAL HEAT (WATTS)</span>
+                        <span className="text-[10px] text-neutral-500 block mb-1">INTERNAL HEAT (WATTS)</span>
                         <input type="number" value={heatLoad} onChange={e => setHeatLoad(Number(e.target.value))} className="w-full bg-transparent border-none p-0 text-white font-bold text-lg focus:ring-0" />
                      </div>
-                     <Activity className="text-slate-600" size={20} />
+                     <Activity className="text-neutral-600" size={20} />
                   </div>
                   <input
                      type="range" min="0" max="500" value={heatLoad} onChange={e => setHeatLoad(Number(e.target.value))}
-                     className="w-full mt-3 h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                     className="w-full mt-3 h-1 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   />
                </div>
 
                <div className="grid grid-cols-2 gap-4">
                   <div>
-                     <label className="text-[10px] text-slate-500 block mb-1 uppercase">Ambient Temp (°C)</label>
-                     <input type="number" value={ambient} onChange={e => setAmbient(Number(e.target.value))} className="w-full bg-black border border-slate-700 rounded p-2 text-white text-sm" />
+                     <label className="text-[10px] text-neutral-500 block mb-1 uppercase">Ambient Temp (°C)</label>
+                     <input type="number" value={ambient} onChange={e => setAmbient(Number(e.target.value))} className="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm" />
                   </div>
                   <div>
-                     <label className="text-[10px] text-slate-500 block mb-1 uppercase">Mounting</label>
-                     <select value={install} onChange={e => setInstall(e.target.value as 'wall' | 'free')} className="w-full bg-black border border-slate-700 rounded p-2 text-white text-sm focus:ring-1 focus:ring-blue-600 outline-none">
+                     <label className="text-[10px] text-neutral-500 block mb-1 uppercase">Mounting</label>
+                     <select value={install} onChange={e => setInstall(e.target.value as 'wall' | 'free')} className="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm focus:ring-1 focus:ring-blue-600 outline-none">
                         <option value="wall">Wall Mount</option>
                         <option value="free">Free Standing</option>
                      </select>
@@ -219,24 +219,24 @@ const ThermalCalculator: React.FC = () => {
             </div>
 
             {/* Results */}
-            <div className="bg-black/40 rounded-xl border border-slate-800 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div className="bg-black/40 rounded-xl border border-neutral-800 p-6 flex flex-col justify-between relative overflow-hidden">
                {/* Scanline effect for result box */}
                <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.02)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none"></div>
 
                <div>
-                  <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-6">Simulation Results</h4>
+                  <h4 className="text-neutral-400 text-xs font-bold uppercase tracking-widest mb-6">Simulation Results</h4>
 
                   <div className="space-y-4">
-                     <div className="flex justify-between items-end border-b border-slate-800 pb-2">
-                        <span className="text-xs text-slate-500">Effective Surface Area</span>
+                     <div className="flex justify-between items-end border-b border-neutral-800 pb-2">
+                        <span className="text-xs text-neutral-500">Effective Surface Area</span>
                         <span className="text-sm font-bold text-white">{result.area} m²</span>
                      </div>
-                     <div className="flex justify-between items-end border-b border-slate-800 pb-2">
-                        <span className="text-xs text-slate-500">Temp Rise (ΔT)</span>
+                     <div className="flex justify-between items-end border-b border-neutral-800 pb-2">
+                        <span className="text-xs text-neutral-500">Temp Rise (ΔT)</span>
                         <span className="text-sm font-bold text-blue-500">+{result.dt} °C</span>
                      </div>
                      <div className="flex justify-between items-end pb-2">
-                        <span className="text-xs text-slate-500">Final Internal Temp</span>
+                        <span className="text-xs text-neutral-500">Final Internal Temp</span>
                         <span className={`text-2xl font-black ${result.safe ? 'text-green-500' : 'text-red-500'}`}>{result.internalTemp} °C</span>
                      </div>
                   </div>
@@ -248,7 +248,7 @@ const ThermalCalculator: React.FC = () => {
                      <span className={`block text-xs font-bold mb-1 ${result.safe ? 'text-green-400' : 'text-red-400'}`}>
                         {result.safe ? 'PASS: THERMAL INTEGRITY OK' : 'WARNING: CRITICAL TEMP EXCEEDED'}
                      </span>
-                     <p className="text-[10px] text-slate-400 leading-relaxed">
+                     <p className="text-[10px] text-neutral-400 leading-relaxed">
                         {result.safe
                            ? 'Passive heat dissipation via GRP surface is sufficient.'
                            : 'Internal temperature exceeds 55°C limit. Add ventilation.'}
@@ -271,27 +271,27 @@ const ChemicalFinder: React.FC = () => {
    );
 
    return (
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 md:p-8 font-mono h-full flex flex-col">
-         <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 md:p-8 font-mono h-full flex flex-col">
+         <div className="flex items-center justify-between mb-8 pb-4 border-b border-neutral-800">
             <div className="flex items-center gap-3">
                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-500">
                   <FlaskConical size={20} />
                </div>
                <div>
                   <h3 className="text-white font-bold text-lg leading-none">Chemical Compatibility</h3>
-                  <span className="text-xs text-slate-500">Resin Selection Matrix (ASTM C581)</span>
+                  <span className="text-xs text-neutral-500">Resin Selection Matrix (ASTM C581)</span>
                </div>
             </div>
          </div>
 
          <div className="mb-6 relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 w-4 h-4" />
             <input
                type="text"
                placeholder="Search chemical..."
                value={query}
                onChange={(e) => setQuery(e.target.value)}
-               className="w-full bg-black border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
+               className="w-full bg-black border border-neutral-700 rounded-lg py-3 pl-10 pr-4 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
             />
             {query && (
                <button onClick={() => setQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white">
@@ -300,25 +300,25 @@ const ChemicalFinder: React.FC = () => {
             )}
          </div>
 
-         <div className="flex-grow overflow-hidden rounded-xl border border-slate-800 bg-black/20">
-            <div className="overflow-y-auto h-full scrollbar-thin scrollbar-thumb-slate-700">
+         <div className="flex-grow overflow-hidden rounded-xl border border-neutral-800 bg-black/20">
+            <div className="overflow-y-auto h-full scrollbar-thin scrollbar-thumb-neutral-700">
                <table className="w-full text-left text-xs">
-                  <thead className="bg-slate-900/50 sticky top-0 text-slate-400 font-bold uppercase tracking-wider backdrop-blur-md">
+                  <thead className="bg-neutral-900/50 sticky top-0 text-neutral-400 font-bold uppercase tracking-wider backdrop-blur-md">
                      <tr>
-                        <th className="p-4 border-b border-slate-800">Medium</th>
-                        <th className="p-4 border-b border-slate-800">Conc.</th>
-                        <th className="p-4 border-b border-slate-800">Max Temp</th>
-                        <th className="p-4 border-b border-slate-800">Resin Rec.</th>
-                        <th className="p-4 border-b border-slate-800 text-right">Status</th>
+                        <th className="p-4 border-b border-neutral-800">Medium</th>
+                        <th className="p-4 border-b border-neutral-800">Conc.</th>
+                        <th className="p-4 border-b border-neutral-800">Max Temp</th>
+                        <th className="p-4 border-b border-neutral-800">Resin Rec.</th>
+                        <th className="p-4 border-b border-neutral-800 text-right">Status</th>
                      </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-800/50">
+                  <tbody className="divide-y divide-neutral-800/50">
                      {filtered.length > 0 ? (
                         filtered.map((item, i) => (
                            <tr key={i} className="hover:bg-white/5 transition-colors group">
                               <td className="p-4 font-bold text-white">{item.name}</td>
-                              <td className="p-4 text-slate-400">{item.conc}</td>
-                              <td className="p-4 text-slate-400">{item.temp}</td>
+                              <td className="p-4 text-neutral-400">{item.conc}</td>
+                              <td className="p-4 text-neutral-400">{item.temp}</td>
                               <td className="p-4 text-blue-500 font-semibold">{item.resin}</td>
                               <td className="p-4 text-right">
                                  <span className={`inline-flex items-center px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wide border ${item.rating === 'Recommended' ? 'bg-green-500/10 text-green-500 border-green-500/20' :
@@ -335,7 +335,7 @@ const ChemicalFinder: React.FC = () => {
                         ))
                      ) : (
                         <tr>
-                           <td colSpan={5} className="p-8 text-center text-slate-500 italic">
+                           <td colSpan={5} className="p-8 text-center text-neutral-500 italic">
                               No chemicals found matching &quot;{query}&quot;. <br />
                               <span className="text-[10px] not-italic text-blue-500 cursor-pointer hover:underline" onClick={() => setQuery('')}>Clear search</span>
                            </td>
@@ -346,7 +346,7 @@ const ChemicalFinder: React.FC = () => {
             </div>
          </div>
 
-         <div className="mt-4 text-[10px] text-slate-600 flex justify-between items-center">
+         <div className="mt-4 text-[10px] text-neutral-600 flex justify-between items-center">
             <span>SOURCE: ASTM C581-15 COMPLIANCE MATRIX</span>
             <span>{filtered.length} RECORDS</span>
          </div>
@@ -417,7 +417,7 @@ const TechnicalCenter: React.FC = () => {
             title="Technical Center | Datasheets & Support"
             description="Access our Technical Center for GRP datasheets, installation guides, chemical resistance matrices, and direct consultation with our engineering assistant."
          />
-         <div className="bg-slate-950 min-h-screen text-slate-300 font-mono">
+         <div className="bg-neutral-950 min-h-screen text-neutral-300 font-mono">
             <style>{`
           .scanline {
             width: 100%;
@@ -436,7 +436,7 @@ const TechnicalCenter: React.FC = () => {
           }
         `}</style>
 
-            <div className="bg-slate-900 pb-12 relative overflow-hidden border-b border-white/5">
+            <div className="bg-neutral-900 pb-12 relative overflow-hidden border-b border-white/5">
                <div className="absolute inset-0 bg-dots opacity-5"></div>
                <div className="max-w-7xl mx-auto px-4 relative z-10 flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -450,7 +450,7 @@ const TechnicalCenter: React.FC = () => {
                         </p>
                      </div>
                   </div>
-                  <div className="hidden md:flex items-center gap-6 text-[10px] text-slate-500 font-mono">
+                  <div className="hidden md:flex items-center gap-6 text-[10px] text-neutral-500 font-mono">
                      <div className="flex items-center gap-2">
                         <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${apiKey ? 'bg-blue-500' : 'bg-red-500'}`}></div>
                         {apiKey ? 'ENCRYPTION: ACTIVE' : 'ENCRYPTION: OFFLINE'}
@@ -484,30 +484,30 @@ const TechnicalCenter: React.FC = () => {
                {/* Navigation Sidebar */}
                <div className="lg:col-span-3 flex flex-col gap-4">
                   {/* Module Selector */}
-                  <div className="bg-slate-900/50 rounded-xl border border-slate-800 p-2 space-y-1 backdrop-blur-md">
+                  <div className="bg-neutral-900/50 rounded-xl border border-neutral-800 p-2 space-y-1 backdrop-blur-md">
                      <button
                         onClick={() => setActiveModule('terminal')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'terminal' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'terminal' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
                      >
                         <Terminal size={16} /> KNOWLEDGE_BASE
                      </button>
-                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-slate-600 uppercase tracking-widest">Calculators</div>
+                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Calculators</div>
                      <button
                         onClick={() => setActiveModule('thermal')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'thermal' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'thermal' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
                      >
                         <Thermometer size={16} /> THERMAL_LOAD
                      </button>
                      <button
                         onClick={() => setActiveModule('chemical')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'chemical' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'chemical' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
                      >
                         <FlaskConical size={16} /> CHEM_RESIST
                      </button>
-                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-slate-600 uppercase tracking-widest">Resources</div>
+                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Resources</div>
                      <button
                         onClick={() => setActiveModule('library')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'library' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'library' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
                      >
                         <Server size={16} /> ASSET_LIBRARY
                      </button>
@@ -571,23 +571,23 @@ const TechnicalCenter: React.FC = () => {
 
                   {/* View Switching */}
                   {activeModule === 'terminal' && (
-                     <div className="bg-black rounded-xl shadow-2xl border border-slate-800 flex flex-col h-full overflow-hidden relative z-10">
-                        <div className="bg-slate-900/50 p-3 flex items-center justify-between border-b border-slate-800 backdrop-blur-sm">
-                           <div className="flex items-center text-xs font-mono font-bold text-slate-400">
+                     <div className="bg-black rounded-xl shadow-2xl border border-neutral-800 flex flex-col h-full overflow-hidden relative z-10">
+                        <div className="bg-neutral-900/50 p-3 flex items-center justify-between border-b border-neutral-800 backdrop-blur-sm">
+                           <div className="flex items-center text-xs font-mono font-bold text-neutral-400">
                               <Terminal size={12} className="mr-2 text-blue-500" /> KNOWLEDGE_BASE_STREAM
                            </div>
                         </div>
 
-                        <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-slate-800">
+                        <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-neutral-800">
                            {messages.map((msg, idx) => (
                               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                  <div className={`max-w-[85%] ${msg.role === 'user' ? 'text-right' : 'text-left'}`}>
-                                    <span className={`text-[10px] uppercase font-bold mb-1 block tracking-widest ${msg.role === 'user' ? 'text-blue-500' : 'text-slate-500'}`}>
+                                    <span className={`text-[10px] uppercase font-bold mb-1 block tracking-widest ${msg.role === 'user' ? 'text-blue-500' : 'text-neutral-500'}`}>
                                        {msg.role === 'user' ? 'USER_QUERY' : 'DOC_OUTPUT'}
                                     </span>
                                     <div className={`inline-block p-4 rounded-lg text-xs leading-relaxed border shadow-lg ${msg.role === 'user'
-                                       ? 'bg-blue-600/10 border-blue-500/30 text-slate-300'
-                                       : 'bg-slate-900/80 border-slate-700 text-blue-400 font-medium'
+                                       ? 'bg-blue-600/10 border-blue-500/30 text-neutral-300'
+                                       : 'bg-neutral-900/80 border-neutral-700 text-blue-400 font-medium'
                                        }`}>
                                        {msg.role === 'model' && idx === 0 ? <TypewriterText text={msg.text} /> : msg.text}
                                     </div>
@@ -596,7 +596,7 @@ const TechnicalCenter: React.FC = () => {
                            ))}
                            {isLoading && (
                               <div className="flex justify-start">
-                                 <div className="bg-slate-900 border border-slate-800 p-3 rounded-md flex items-center text-blue-500 text-xs shadow-[0_0_15px_rgba(30,64,175,0.1)]">
+                                 <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-md flex items-center text-blue-500 text-xs shadow-[0_0_15px_rgba(30,64,175,0.1)]">
                                     <Loader2 className="animate-spin h-3 w-3 mr-2" />
                                     <span className="animate-pulse">QUERYING_DB...</span>
                                  </div>
@@ -605,8 +605,8 @@ const TechnicalCenter: React.FC = () => {
                            <div ref={messagesEndRef} />
                         </div>
 
-                        <div className="p-4 bg-slate-900/80 border-t border-slate-800 backdrop-blur-sm">
-                           <div className="relative flex items-center bg-black border border-slate-700 rounded-md px-3 focus-within:border-blue-500 transition-all">
+                        <div className="p-4 bg-neutral-900/80 border-t border-neutral-800 backdrop-blur-sm">
+                           <div className="relative flex items-center bg-black border border-neutral-700 rounded-md px-3 focus-within:border-blue-500 transition-all">
                               <span className="text-blue-500 font-bold mr-2 text-sm animate-pulse">$</span>
                               <input
                                  type="text"
@@ -614,13 +614,13 @@ const TechnicalCenter: React.FC = () => {
                                  onChange={(e) => setInput(e.target.value)}
                                  onKeyDown={handleKeyDown}
                                  placeholder="Type a technical question..."
-                                 className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder-slate-600 outline-none text-sm h-12 font-mono"
+                                 className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder-neutral-600 outline-none text-sm h-12 font-mono"
                                  autoComplete="off"
                               />
                               <button
                                  onClick={handleSend}
                                  disabled={isLoading || !input.trim()}
-                                 className="text-slate-500 hover:text-blue-500 disabled:opacity-30 transition-colors p-2"
+                                 className="text-neutral-500 hover:text-blue-500 disabled:opacity-30 transition-colors p-2"
                               >
                                  <Send size={16} />
                               </button>
@@ -643,33 +643,33 @@ const TechnicalCenter: React.FC = () => {
 
                   {activeModule === 'library' && (
                      <div className="flex flex-col h-full z-10 relative animate-fade-in">
-                        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 h-full flex flex-col">
-                           <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 h-full flex flex-col">
+                           <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-800">
                               <h3 className="text-white font-bold text-lg">{activeCategory}</h3>
-                              <span className="text-xs text-slate-500 font-mono">{RESOURCES_DB.filter(r => r.category === activeCategory).length} FILES FOUND</span>
+                              <span className="text-xs text-neutral-500 font-mono">{RESOURCES_DB.filter(r => r.category === activeCategory).length} FILES FOUND</span>
                            </div>
 
                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto pr-2 custom-scrollbar">
                               {RESOURCES_DB.filter(r => r.category === activeCategory).map((file) => (
-                                 <div key={file.id} className="bg-black/40 border border-slate-800 rounded-lg p-4 hover:border-blue-500/50 transition-colors group relative overflow-hidden">
+                                 <div key={file.id} className="bg-black/40 border border-neutral-800 rounded-lg p-4 hover:border-blue-500/50 transition-colors group relative overflow-hidden">
                                     <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                     <div className="relative flex justify-between items-start">
                                        <div className="flex items-start gap-4">
-                                          <div className="p-3 bg-slate-900 rounded-lg border border-slate-800 text-slate-400 group-hover:text-blue-500 group-hover:border-blue-500/30 transition-all">
+                                          <div className="p-3 bg-neutral-900 rounded-lg border border-neutral-800 text-neutral-400 group-hover:text-blue-500 group-hover:border-blue-500/30 transition-all">
                                              {file.format === 'PDF' && <FileText size={20} />}
                                              {file.format === 'ZIP' && <Server size={20} />}
                                           </div>
                                           <div>
-                                             <h4 className="text-sm font-bold text-slate-200 group-hover:text-white mb-1 transition-colors pr-8">{file.title}</h4>
-                                             <div className="flex items-center gap-3 text-[10px] text-slate-500 font-mono">
-                                                <span className="bg-slate-900 px-1.5 py-0.5 rounded uppercase">{file.format}</span>
+                                             <h4 className="text-sm font-bold text-neutral-200 group-hover:text-white mb-1 transition-colors pr-8">{file.title}</h4>
+                                             <div className="flex items-center gap-3 text-[10px] text-neutral-500 font-mono">
+                                                <span className="bg-neutral-900 px-1.5 py-0.5 rounded uppercase">{file.format}</span>
                                                 <span>{file.size}</span>
                                              </div>
                                           </div>
                                        </div>
                                        <button
                                           onClick={() => handleDownloadClick({ title: file.title, type: file.format })}
-                                          className="p-2 text-slate-500 hover:text-blue-400 bg-slate-900 rounded-lg border border-transparent hover:border-blue-500/30 transition-all"
+                                          className="p-2 text-neutral-500 hover:text-blue-400 bg-neutral-900 rounded-lg border border-transparent hover:border-blue-500/30 transition-all"
                                        >
                                           <Download size={16} />
                                        </button>

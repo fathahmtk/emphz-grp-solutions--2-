@@ -16,29 +16,36 @@ export default {
       },
       colors: {
         industrial: {
-          50: '#F8FAFC', // Crisp Slate - Cleaner than simple white
-          100: '#F1F5F9',
-          200: '#E2E8F0',
-          300: '#CBD5E1',
-          400: '#94A3B8',
-          500: '#64748B',
-          600: '#475569',
-          700: '#334155',
-          800: '#1E293B',
-          900: '#0F172A', // Deepest Navy
+          50: '#FFFEF7',
+          100: '#FFF8E1',
+          200: '#FFECB3',
+          300: '#FFE082',
+          400: '#FFD54F',
+          500: '#FFCA3B', // Primary Yellow
+          600: '#FDB000',
+          700: '#EDA000',
+          800: '#333333',
+          900: '#1F1F1F', // Deepest Asphalt matches theme
         },
         accent: {
-          blue: '#1A5F7A', // Brand Petrol Teal (from logo bolt)
-          'blue-hover': '#164E63', // Deeper shade for hover
-          teal: '#0D9488', // Secondary Eco color
+          yellow: '#FFCA3B',
+          'yellow-hover': '#FDB000',
+          dark: '#1F1F1F',
         },
-        'emphz-teal': '#1A5F7A',
-        'emphz-navy': '#0F172A',
+        primary: '#FFCA3B',
+        secondary: '#1F1F1F',
+
+        // Legacy Aliases for Instant Theming
+        'emphz-blue': '#1F1F1F',    // Was Blue -> Now Dark Asphalt
+        'emphz-navy': '#1F1F1F',    // Was Navy -> Now Dark Asphalt
+        'emphz-teal': '#FFCA3B',    // Was Teal -> Now Yellow (Accent)
+        'emphz-silver': '#F2F2F2',  // Keep silver as a neutral gray for some backgrounds
+        'emphz-amber': '#FFCA3B',   // Was Amber -> Now Yellow (Primary)
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Lexend', 'Inter', 'sans-serif'], // Lexend for confident headers
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
         'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
