@@ -107,14 +107,14 @@ const Contact: React.FC<ContactProps> = ({ quoteItems = [] }) => {
                     <div className="space-y-2">
                       <label className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest px-1">Full Name</label>
                       <div className="relative">
-                        <User className="absolute left-4 top-1/2 -tranneutral-y-1/2 w-4 h-4 text-neutral-600" />
+                        <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-600" />
                         <input type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-2xl text-white px-12 py-4 focus:outline-none focus:border-emphz-silver transition-all" />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest px-1">Organization</label>
                       <div className="relative">
-                        <Building className="absolute left-4 top-1/2 -tranneutral-y-1/2 w-4 h-4 text-neutral-600" />
+                        <Building className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-600" />
                         <input type="text" placeholder="Corp ID" className="w-full bg-white/5 border border-white/10 rounded-2xl text-white px-12 py-4 focus:outline-none focus:border-emphz-silver transition-all" />
                       </div>
                     </div>
@@ -131,7 +131,7 @@ const Contact: React.FC<ContactProps> = ({ quoteItems = [] }) => {
                   </div>
 
                   <button type="submit" className="w-full bg-emphz-silver text-emphz-blue rounded-full font-bold py-6 mt-4 tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-4 group hover:bg-white shadow-2xl shadow-neutral-700/20">
-                    TRANSMIT REQUEST <Send className="w-5 h-5 group-hover:tranneutral-x-2 group-hover:-tranneutral-y-1 transition-transform" />
+                    TRANSMIT REQUEST <Send className="w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform" />
                   </button>
                 </form>
               </div>

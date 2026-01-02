@@ -103,7 +103,7 @@ const Products: React.FC<ProductsProps> = ({ addToQuote, quoteItems }) => {
           {filtered.map((product) => (
             <div 
               key={product.id} 
-              className="group bg-white rounded-[3rem] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.06)] border border-neutral-50 p-8 hover:-tranneutral-y-2 hover:shadow-2xl transition-all duration-700 flex flex-col h-full"
+              className="group bg-white rounded-[3rem] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.06)] border border-neutral-50 p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-700 flex flex-col h-full"
             >
               <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-10 shadow-xl shrink-0">
                 <img src={product.image} alt={product.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[20%]" />

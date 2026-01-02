@@ -285,7 +285,7 @@ const ChemicalFinder: React.FC = () => {
          </div>
 
          <div className="mb-6 relative">
-            <Search className="absolute left-3 top-1/2 -tranneutral-y-1/2 text-neutral-500 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 w-4 h-4" />
             <input
                type="text"
                placeholder="Search chemical..."
@@ -294,7 +294,7 @@ const ChemicalFinder: React.FC = () => {
                className="w-full bg-black border border-neutral-700 rounded-lg py-3 pl-10 pr-4 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
             />
             {query && (
-               <button onClick={() => setQuery('')} className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-gray-500 hover:text-white">
+               <button onClick={() => setQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white">
                   <X size={14} />
                </button>
             )}

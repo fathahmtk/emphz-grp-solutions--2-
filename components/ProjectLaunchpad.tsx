@@ -42,7 +42,7 @@ const ProjectLaunchpad: React.FC = () => {
               </div>
 
               <div className="lg:w-2/5 w-full">
-                 <div className="bg-white p-12 md:p-16 rounded-[3.5rem] shadow-2xl transform group-hover:-tranneutral-y-2 transition-all duration-700">
+                 <div className="bg-white p-12 md:p-16 rounded-[3.5rem] shadow-2xl transform group-hover:-translate-y-2 transition-all duration-700">
                     <h3 className="text-3xl font-bold text-emphz-darker mb-4 uppercase tracking-tight">Launch Ticket</h3>
                     <p className="text-neutral-500 mb-10 font-light">Enter your corporate email to receive our 2024 Technical Compendium.</p>
                     

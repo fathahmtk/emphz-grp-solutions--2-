@@ -19,7 +19,7 @@ const QuoteDrawer: React.FC<QuoteDrawerProps> = ({ isOpen, onClose, items, remov
       ></div>
 
       {/* Drawer */}
-      <div className={`fixed inset-y-0 right-0 w-full md:w-[450px] z-[210] bg-emphz-darker border-l border-white/10 shadow-2xl flex flex-col transition-transform duration-700 ease-in-out ${isOpen ? 'tranneutral-x-0' : 'tranneutral-x-full'}`}>
+      <div className={`fixed inset-y-0 right-0 w-full md:w-[450px] z-[210] bg-emphz-darker border-l border-white/10 shadow-2xl flex flex-col transition-transform duration-700 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-8 bg-emphz-dark border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-emphz-teal/10 flex items-center justify-center text-emphz-teal border border-emphz-teal/20">

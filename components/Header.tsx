@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
         <React.Fragment>
             {/* Dynamic Island Navbar */}
             <header
-                className={`fixed top-4 left-0 right-0 z-[100] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isHidden && !isMenuOpen ? '-tranneutral-y-32' : 'tranneutral-y-0'}`}
+                className={`fixed top-4 left-0 right-0 z-[100] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isHidden && !isMenuOpen ? '-translate-y-32' : 'translate-y-0'}`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div className="nav-island px-6 py-3 flex items-center justify-between">
@@ -126,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
                                     <Link
                                         to={link.path}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className={`block text-4xl md:text-6xl font-display font-medium tracking-tight hover:text-accent-blue transition-all duration-500 transform ${isMenuOpen ? 'tranneutral-y-0 opacity-100' : 'tranneutral-y-full opacity-0'}`}
+                                        className={`block text-4xl md:text-6xl font-display font-medium tracking-tight hover:text-accent-blue transition-all duration-500 transform ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
                                         style={{ transitionDelay: `${index * 100}ms` }}
                                     >
                                         {link.label}
@@ -136,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
                         </nav>
 
                         {/* Recent Products / Featured */}
-                        <div className={`hidden md:flex flex-col justify-center transition-all duration-700 delay-300 ${isMenuOpen ? 'tranneutral-y-0 opacity-100' : 'tranneutral-y-20 opacity-0'}`}>
+                        <div className={`hidden md:flex flex-col justify-center transition-all duration-700 delay-300 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
                             <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-industrial-400 mb-8">Featured Solutions</h3>
                             <div className="grid gap-6">
                                 <Link to="/products/emp-uc-grid" onClick={() => setIsMenuOpen(false)} className="group flex gap-6 items-center p-4 rounded-xl hover:bg-industrial-50 transition-colors border border-transparent hover:border-industrial-100">

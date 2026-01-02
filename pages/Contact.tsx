@@ -225,7 +225,7 @@ const Contact: React.FC = () => {
                                                     <option value="Technical">Material Data Request</option>
                                                     <option value="Other">Other Query</option>
                                                 </select>
-                                                <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-industrial-300 pointer-events-none" />
+                                                <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-industrial-300 pointer-events-none" />
                                             </div>
                                         </div>
                                     </div>
@@ -245,7 +245,7 @@ const Contact: React.FC = () => {
                                         disabled={isSubmitting}
                                         className="btn-industrial w-full md:w-auto px-12 py-5 shadow-xl shadow-industrial-900/10"
                                     >
-                                        Transmit Requisition <ArrowRight size={18} className="ml-3 group-hover:tranneutral-x-1 transition-transform" />
+                                        Transmit Requisition <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </div>
                             </form>

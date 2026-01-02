@@ -41,7 +41,7 @@ const SustainabilityLedger: React.FC = () => {
             </div>
 
             <button className="flex items-center gap-3 font-mono text-[10px] font-bold text-green-600 uppercase tracking-[0.3em] hover:text-emphz-blue transition-colors group">
-              REQUEST FULL LCA REPORT <ArrowRight className="w-4 h-4 group-hover:tranneutral-x-2 transition-transform" />
+              REQUEST FULL LCA REPORT <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </button>
           </div>
 

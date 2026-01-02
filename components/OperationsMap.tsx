@@ -64,7 +64,7 @@ const OperationsMap: React.FC = () => {
            {NETWORK_NODES.map((node) => (
              <div 
                key={node.id}
-               className="absolute transform -tranneutral-x-1/2 -tranneutral-y-1/2 cursor-pointer z-20"
+               className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20"
                style={{ left: `${node.x}%`, top: `${node.y}%` }}
                onMouseEnter={() => setHoveredNode(node)}
                onMouseLeave={() => setHoveredNode(null)}
@@ -81,7 +81,7 @@ const OperationsMap: React.FC = () => {
            ))}
 
            {/* Dynamic Node Info HUD */}
-           <div className={`absolute bottom-12 right-12 w-80 p-10 bg-emphz-blue/90 backdrop-blur-2xl border border-white/10 rounded-[3rem] shadow-2xl transition-all duration-700 ${hoveredNode ? 'opacity-100 tranneutral-y-0 scale-100' : 'opacity-0 tranneutral-y-10 scale-95 pointer-events-none'}`}>
+           <div className={`absolute bottom-12 right-12 w-80 p-10 bg-emphz-blue/90 backdrop-blur-2xl border border-white/10 rounded-[3rem] shadow-2xl transition-all duration-700 ${hoveredNode ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95 pointer-events-none'}`}>
               <div className="flex items-center justify-between mb-8">
                  <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-2xl bg-emphz-silver/20 flex items-center justify-center text-emphz-silver">

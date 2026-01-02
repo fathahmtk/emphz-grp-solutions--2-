@@ -98,7 +98,7 @@ const SolutionArchitect: React.FC = () => {
                     ))}
                     <div className="bg-emphz-teal text-white p-8 rounded-2xl shadow-xl shadow-emphz-teal/10 flex flex-col justify-center items-center text-center cursor-pointer hover:bg-emphz-darker transition-all group">
                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase mb-1">REQUEST</span>
-                       <span className="font-bold text-xs tracking-widest uppercase group-hover:tranneutral-x-1 transition-transform">CUSTOM GRP ARCHITECTURE →</span>
+                       <span className="font-bold text-xs tracking-widest uppercase group-hover:translate-x-1 transition-transform">CUSTOM GRP ARCHITECTURE →</span>
                     </div>
                  </div>
               </div>

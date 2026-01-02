@@ -117,7 +117,7 @@ const SiteReadinessDiagnostic: React.FC = () => {
                            : "Moderate environment. Standard Isophthalic GRP systems will provide zero-maintenance service for 50+ years."}
                       </p>
                       <button className="flex items-center gap-3 text-[9px] font-bold text-emphz-silver uppercase tracking-[0.3em] hover:text-white transition-colors group">
-                        GET FULL SPECIFICATION <ArrowRight className="w-4 h-4 group-hover:tranneutral-x-2 transition-transform" />
+                        GET FULL SPECIFICATION <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                       </button>
                    </div>
                 </div>

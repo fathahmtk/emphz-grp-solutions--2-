@@ -67,7 +67,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
           </button>
           
           <div className="relative border-b-2 border-white/20 focus-within:border-emphz-teal transition-colors">
-             <Search className="absolute left-0 top-1/2 -tranneutral-y-1/2 w-6 h-6 text-neutral-500" />
+             <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-6 text-neutral-500" />
              <input 
                autoFocus
                type="text" 

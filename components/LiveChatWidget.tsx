@@ -168,11 +168,11 @@ const LiveChatWidget: React.FC = () => {
               />
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -tranneutral-y-1/2 w-9 h-9 bg-emphz-teal text-white rounded-full flex items-center justify-center hover:bg-[#00D4DE] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 w-9 h-9 bg-emphz-teal text-white rounded-full flex items-center justify-center hover:bg-[#00D4DE] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                 disabled={!inputValue.trim() || isTyping}
                 aria-label="Send message"
               >
-                <Send size={16} className={inputValue.trim() ? "tranneutral-x-0.5" : ""} />
+                <Send size={16} className={inputValue.trim() ? "translate-x-0.5" : ""} />
               </button>
             </div>
             <div className="text-[9px] text-gray-600 text-center mt-2 font-mono">

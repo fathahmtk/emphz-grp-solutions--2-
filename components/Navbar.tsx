@@ -88,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ quoteCount, openConsultant, openQuoteDr
         </div>
 
         {/* Mobile Navigation Drawer */}
-        <div className={`lg:hidden fixed inset-0 z-[90] bg-emphz-darker/98 backdrop-blur-2xl transition-transform duration-500 transform ${isOpen ? 'tranneutral-x-0' : 'tranneutral-x-full'}`}>
+        <div className={`lg:hidden fixed inset-0 z-[90] bg-emphz-darker/98 backdrop-blur-2xl transition-transform duration-500 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
            <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link) => (
                 <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white tracking-[0.2em] hover:text-emphz-amber transition-colors">{link.name}</a>

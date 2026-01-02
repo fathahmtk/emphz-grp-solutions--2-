@@ -23,7 +23,7 @@ const Industries: React.FC = () => {
           {SECTORS.map((sector) => (
             <div 
               key={sector.id}
-              className="group relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl hover:-tranneutral-y-3 transition-all duration-700 cursor-pointer border border-white"
+              className="group relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl hover:-translate-y-3 transition-all duration-700 cursor-pointer border border-white"
             >
               {/* Background gradient from the sector data (e.g. from-blue-900 to-neutral-900) */}
               <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} opacity-90 transition-opacity duration-700 group-hover:opacity-100`}></div>
@@ -45,7 +45,7 @@ const Industries: React.FC = () => {
                      {sector.desc}
                    </p>
                    
-                   <ul className="space-y-3 mb-8 opacity-0 group-hover:opacity-100 tranneutral-y-4 group-hover:tranneutral-y-0 transition-all duration-500">
+                   <ul className="space-y-3 mb-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                       {sector.items.slice(0, 3).map((item, idx) => (
                         <li key={idx} className="flex items-center gap-3 text-white/80 text-[10px] font-bold uppercase tracking-widest">
                            <div className="w-1.5 h-1.5 bg-emphz-teal rounded-full"></div>

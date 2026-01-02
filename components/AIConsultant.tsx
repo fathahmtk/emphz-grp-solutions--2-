@@ -154,7 +154,7 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
       {/* Control Panel */}
       <div className="p-6 bg-emphz-blue-mid border-t border-white/10">
         <div className="relative group">
-          <div className="absolute -left-4 top-1/2 -tranneutral-y-1/2 w-1 h-8 bg-emphz-silver scale-0 group-focus-within:scale-100 transition-transform"></div>
+          <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-emphz-silver scale-0 group-focus-within:scale-100 transition-transform"></div>
           <input 
             type="text" 
             placeholder="Transmit technical inquiry..." 
@@ -166,7 +166,7 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
           <button 
             onClick={handleSendMessage}
             disabled={isLoading || !input.trim()}
-            className="absolute right-4 top-1/2 -tranneutral-y-1/2 p-2 text-emphz-silver hover:text-white disabled:opacity-20 transition-all hover:scale-110 active:scale-95"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-emphz-silver hover:text-white disabled:opacity-20 transition-all hover:scale-110 active:scale-95"
           >
             <Send className="w-6 h-6" />
           </button>

@@ -85,7 +85,7 @@ const ModularVelocity: React.FC = () => {
                   className="absolute top-0 bottom-0 w-px bg-white/20"
                   style={{ left: `${(m.day / 6) * 100}%` }}
                 >
-                  <div className={`absolute -bottom-10 left-1/2 -tranneutral-x-1/2 whitespace-nowrap text-[10px] font-mono uppercase tracking-widest transition-opacity duration-500 ${progress >= (m.day / 6) * 100 ? 'text-emphz-teal opacity-100' : 'text-neutral-600 opacity-40'}`}>
+                  <div className={`absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-mono uppercase tracking-widest transition-opacity duration-500 ${progress >= (m.day / 6) * 100 ? 'text-emphz-teal opacity-100' : 'text-neutral-600 opacity-40'}`}>
                     {m.label} <br/> <span className="text-white">Day {m.day}</span>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const ModularVelocity: React.FC = () => {
                   className="absolute top-0 bottom-0 w-px bg-white/10"
                   style={{ left: `${(m.traditionalDay / 45) * 100}%` }}
                 >
-                  <div className="absolute -bottom-10 left-1/2 -tranneutral-x-1/2 whitespace-nowrap text-[10px] font-mono uppercase tracking-widest text-neutral-600">
+                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-mono uppercase tracking-widest text-neutral-600">
                     {m.label} <br/> Day {m.traditionalDay}
                   </div>
                 </div>

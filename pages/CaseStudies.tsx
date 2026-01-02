@@ -180,7 +180,7 @@ const CaseStudies: React.FC = () => {
         <div className="mt-20 text-center">
           <p className="text-gray-400 mb-6 font-light">Have a challenging environment? Let's engineer a solution.</p>
           <Link to="/contact" className="inline-flex items-center text-emphz-teal hover:text-white font-bold tracking-widest uppercase text-sm transition-colors group">
-            Contact Engineering Team <ArrowRight className="ml-2 group-hover:tranneutral-x-1 transition-transform" />
+            Contact Engineering Team <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

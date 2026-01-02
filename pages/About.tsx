@@ -145,7 +145,7 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-accent-blue/5 skew-x-[-15deg] tranneutral-x-1/4"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-accent-blue/5 skew-x-[-15deg] translate-x-1/4"></div>
         </div>
       </section>
     </div>

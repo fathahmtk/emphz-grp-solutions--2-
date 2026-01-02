@@ -148,7 +148,7 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="relative">
-              <User className="absolute left-3.5 top-1/2 -tranneutral-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+              <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
               <input
                 ref={firstInputRef}
                 type="text" name="name" value={formData.name} onChange={handleChange}
@@ -157,7 +157,7 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
               />
             </div>
             <div className="relative">
-              <Building className="absolute left-3.5 top-1/2 -tranneutral-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+              <Building className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
               <input
                 type="text" name="company" value={formData.company} onChange={handleChange}
                 placeholder="Company Name" required
@@ -165,7 +165,7 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
               />
             </div>
             <div className="relative">
-              <Mail className="absolute left-3.5 top-1/2 -tranneutral-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
+              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
               <input
                 type="email" name="email" value={formData.email} onChange={handleChange}
                 placeholder="Business Email" required

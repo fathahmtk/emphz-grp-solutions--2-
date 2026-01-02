@@ -44,7 +44,7 @@ const Manifesto: React.FC = () => {
 
               <div className="mt-12">
                  <button className="flex items-center gap-3 font-mono text-[10px] font-bold text-emphz-teal uppercase tracking-[0.3em] hover:text-emphz-darker transition-colors group">
-                    VIEW ESG REPORT <ArrowRight className="w-4 h-4 group-hover:tranneutral-x-2 transition-transform" />
+                    VIEW ESG REPORT <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                  </button>
               </div>
            </div>

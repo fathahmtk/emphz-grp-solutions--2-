@@ -27,7 +27,7 @@ const Sustainability: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                  {SUSTAINABILITY_STATS.map((stat, idx) => (
-                   <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-neutral-100 hover:shadow-xl hover:-tranneutral-y-2 transition-all duration-500 text-center">
+                   <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-neutral-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 text-center">
                       <div className="text-emerald-500 mb-4 flex justify-center">{stat.icon}</div>
                       <span className="block text-3xl font-bold text-emphz-darker mb-1 tracking-tighter">{stat.value}</span>
                       <span className="text-[9px] font-mono text-neutral-400 uppercase tracking-widest font-bold">{stat.label}</span>

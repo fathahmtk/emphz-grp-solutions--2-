@@ -88,7 +88,7 @@ const TechnicalBlueprint: React.FC = () => {
                     <div className={`w-3 h-3 rounded-full transition-all duration-300 relative z-20 ${hoveredNote === note.label ? 'bg-white scale-125' : 'bg-emphz-teal'}`}></div>
                     
                     {/* Tooltip */}
-                    <div className={`absolute left-8 top-1/2 -tranneutral-y-1/2 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-neutral-200 shadow-2xl transition-all duration-500 w-48 z-30 ${hoveredNote === note.label ? 'opacity-100 tranneutral-x-0' : 'opacity-0 -tranneutral-x-4 pointer-events-none'}`}>
+                    <div className={`absolute left-8 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-neutral-200 shadow-2xl transition-all duration-500 w-48 z-30 ${hoveredNote === note.label ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}>
                        <h5 className="text-[10px] font-bold text-emphz-darker uppercase tracking-wider mb-1">{note.label}</h5>
                        <p className="text-[9px] text-neutral-500 font-mono leading-relaxed">{note.detail}</p>
                     </div>

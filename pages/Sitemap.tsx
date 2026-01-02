@@ -48,7 +48,7 @@ const Sitemap: React.FC = () => {
                         <div key={link.path} className="relative pl-6">
                            {/* Horizontal Connector */}
                            <div className="absolute left-[7px] top-1/2 w-4 h-px bg-gray-800"></div>
-                           <div className="absolute left-[5px] top-1/2 -tranneutral-y-1/2 w-1.5 h-1.5 bg-gray-700 rounded-full border border-gray-900"></div>
+                           <div className="absolute left-[5px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-gray-700 rounded-full border border-gray-900"></div>
 
                            <Link to={link.path} className="block bg-gray-900/50 border border-gray-800 hover:border-emphz-teal p-3 rounded text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-all group">
                               <span className="font-bold group-hover:text-emphz-teal transition-colors">{link.label}</span>

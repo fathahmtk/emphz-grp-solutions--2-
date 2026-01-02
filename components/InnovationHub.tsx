@@ -76,10 +76,10 @@ const InnovationHub: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-12 left-12 right-12">
-                   <div className="p-10 bg-emphz-teal/90 backdrop-blur-xl rounded-[2.5rem] shadow-2xl transform group-hover:-tranneutral-y-2 transition-transform duration-700">
+                   <div className="p-10 bg-emphz-teal/90 backdrop-blur-xl rounded-[2.5rem] shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-700">
                       <h5 className="text-2xl font-bold text-white mb-4 uppercase tracking-tight">Vision 2030</h5>
                       <p className="text-white/80 text-sm font-light leading-relaxed mb-6">"Our goal is to reduce on-site assembly time for a 100-unit facility to under 72 hours."</p>
-                      <button className="flex items-center gap-3 text-[10px] font-bold text-white uppercase tracking-[0.3em] hover:tranneutral-x-2 transition-transform">
+                      <button className="flex items-center gap-3 text-[10px] font-bold text-white uppercase tracking-[0.3em] hover:translate-x-2 transition-transform">
                         EXPLORE THE FUTURE <ArrowRight className="w-4 h-4" />
                       </button>
                    </div>

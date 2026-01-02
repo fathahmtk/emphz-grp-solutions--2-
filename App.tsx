@@ -65,7 +65,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen text-neutral-100 font-sans selection:bg-emphz-silver selection:text-emphz-blue">
+    <div className="min-h-screen text-neutral-900 font-sans selection:bg-emphz-silver selection:text-emphz-blue">
       <Navbar 
         quoteCount={quoteItems.length} 
         openConsultant={() => setIsConsultantOpen(true)} 

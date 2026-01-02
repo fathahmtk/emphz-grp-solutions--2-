@@ -39,7 +39,7 @@ const MaterialScience: React.FC = () => {
          {/* Hero */}
          <div className="relative pb-24 md:pb-32 bg-neutral-950 text-white overflow-hidden">
             <div className="absolute inset-0 bg-dots opacity-5"></div>
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none tranneutral-x-1/4 -tranneutral-y-1/4"></div>
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none translate-x-1/4 -translate-y-1/4"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                <div className="flex flex-col md:flex-row items-end justify-between gap-8">
@@ -183,11 +183,11 @@ const MaterialScience: React.FC = () => {
 
                               {/* GRP Line (Flat) */}
                               <div className="absolute bottom-1/4 left-0 w-full h-0.5 bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
-                              <div className="absolute bottom-1/4 right-0 transform tranneutral-x-2 -tranneutral-y-4 text-blue-400 font-bold text-[10px] font-mono">GRP_COMPOSITE</div>
+                              <div className="absolute bottom-1/4 right-0 transform translate-x-2 -translate-y-4 text-blue-400 font-bold text-[10px] font-mono">GRP_COMPOSITE</div>
 
                               {/* Steel Line (Steep) */}
                               <div className="absolute bottom-0 left-0 w-full h-[85%] border-t-2 border-neutral-500 transform origin-bottom-left skew-y-[-28deg] opacity-70"></div>
-                              <div className="absolute top-0 right-0 transform tranneutral-x-2 text-neutral-400 font-bold text-[10px] font-mono">METALLIC_STD</div>
+                              <div className="absolute top-0 right-0 transform translate-x-2 text-neutral-400 font-bold text-[10px] font-mono">METALLIC_STD</div>
 
                               {/* Crossover Point */}
                               <div className="absolute bottom-[28%] left-[22%] w-3 h-3 bg-blue-600 rounded-full border-2 border-neutral-900 z-10 shadow-lg shadow-blue-500/50"></div>
@@ -286,7 +286,7 @@ const MaterialScience: React.FC = () => {
             <div className="relative z-10">
                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-8 tracking-tight">Requirement Technical Review?</h3>
                <Link to="/contact" className="inline-flex items-center justify-center bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 group">
-                  Contact Laboratory <ArrowRight size={16} className="ml-2 group-hover:tranneutral-x-1 transition-transform" />
+                  Contact Laboratory <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                </Link>
             </div>
          </div>

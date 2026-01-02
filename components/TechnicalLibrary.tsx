@@ -71,7 +71,7 @@ const TechnicalLibrary: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
            {filtered.map((doc) => (
-             <div key={doc.id} className="group bg-white p-10 rounded-[3rem] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.05)] hover:-tranneutral-y-3 transition-all duration-700 border border-neutral-50 flex flex-col h-[380px]">
+             <div key={doc.id} className="group bg-white p-10 rounded-[3rem] shadow-[0_40px_100px_-30px_rgba(0,0,0,0.05)] hover:-translate-y-3 transition-all duration-700 border border-neutral-50 flex flex-col h-[380px]">
                 <div className="flex justify-between items-start mb-10">
                    <div className="w-16 h-16 rounded-2xl bg-neutral-50 flex items-center justify-center text-emphz-teal border border-neutral-100 group-hover:bg-emphz-teal group-hover:text-white transition-all duration-500">
                       {doc.type === 'CAD' ? <FileCode className="w-7 h-7" /> : <FileText className="w-7 h-7" />}
@@ -99,7 +99,7 @@ const TechnicalLibrary: React.FC = () => {
                       <span className="text-[9px] font-mono text-neutral-400 uppercase tracking-widest font-bold">Vetted Spec</span>
                    </div>
                    <button className="flex items-center gap-3 text-[10px] font-bold text-emphz-darker hover:text-emphz-teal transition-colors tracking-[0.3em] uppercase group/btn">
-                      DOWNLOAD <Download className="w-4 h-4 group-hover/btn:tranneutral-y-1 transition-transform" />
+                      DOWNLOAD <Download className="w-4 h-4 group-hover/btn:translate-y-1 transition-transform" />
                    </button>
                 </div>
              </div>

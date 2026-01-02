@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
 
           {/* Featured Visual Component */}
           <div className="lg:w-2/5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full aspect-[4/5] max-w-sm rounded-[3rem] overflow-hidden border-[12px] border-white/10 shadow-2xl group cursor-pointer hover:-tranneutral-y-2 transition-all duration-700 ease-out">
+            <div className="relative w-full aspect-[4/5] max-w-sm rounded-[3rem] overflow-hidden border-[12px] border-white/10 shadow-2xl group cursor-pointer hover:-translate-y-2 transition-all duration-700 ease-out">
                <img 
                  src={SITE_IMAGES.about} 
                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 grayscale-[30%] group-hover:grayscale-0"
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
                />
                <div className="absolute inset-0 bg-gradient-to-t from-emphz-blue/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
                <div className="absolute bottom-10 left-10 right-10">
-                 <div className="bg-emphz-silver/90 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl transform group-hover:tranneutral-y-[-4px] transition-transform duration-500">
+                 <div className="bg-emphz-silver/90 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl transform group-hover:translate-y-[-4px] transition-transform duration-500">
                    <p className="text-emphz-blue text-[10px] font-bold tracking-[0.3em] uppercase mb-2">READY FOR DEPLOYMENT</p>
                    <p className="text-emphz-blue text-lg font-bold leading-tight uppercase">Vetted GRP Composite Systems</p>
                  </div>
@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
 
       {/* Elegant Curved Background Transition */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-30">
-        <svg className="relative block w-[200%] h-32 md:h-64 tranneutral-x-[-25%]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg className="relative block w-[200%] h-32 md:h-64 translate-x-[-25%]" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" fill="#F8FAFC"></path>
         </svg>
       </div>

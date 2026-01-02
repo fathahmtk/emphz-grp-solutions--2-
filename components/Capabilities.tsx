@@ -44,7 +44,7 @@ const Capabilities: React.FC = () => {
                     <span className="font-mono text-[9px] uppercase opacity-70 tracking-widest">{cap.id}</span>
                   </div>
                 </div>
-                <ArrowRight className={`w-5 h-5 transition-transform ${activeTab.id === cap.id ? 'tranneutral-x-0' : '-tranneutral-x-4 opacity-0'}`} />
+                <ArrowRight className={`w-5 h-5 transition-transform ${activeTab.id === cap.id ? 'translate-x-0' : '-translate-x-4 opacity-0'}`} />
               </button>
             ))}
           </div>

@@ -106,11 +106,11 @@ const LaminateStack: React.FC = () => {
                 })}
 
                 {/* Vertical Connector Line */}
-                <div className="absolute w-px h-64 bg-gradient-to-t from-transparent via-emphz-teal/30 to-transparent left-1/2 -tranneutral-x-1/2"></div>
+                <div className="absolute w-px h-64 bg-gradient-to-t from-transparent via-emphz-teal/30 to-transparent left-1/2 -translate-x-1/2"></div>
                 
                 {/* HUD Markers */}
                 {hovered && (
-                  <div className="absolute -right-24 top-1/2 -tranneutral-y-1/2 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl animate-in zoom-in-95">
+                  <div className="absolute -right-24 top-1/2 -translate-y-1/2 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl animate-in zoom-in-95">
                      <div className="flex items-center gap-3 mb-2">
                         <CheckCircle2 className="w-4 h-4 text-emphz-teal" />
                         <span className="text-[9px] font-mono text-white uppercase tracking-widest">LAYER_SYNCED</span>
