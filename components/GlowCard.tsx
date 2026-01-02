@@ -9,7 +9,7 @@ interface GlowCardProps {
 const GlowCard: React.FC<GlowCardProps> = ({
     children,
     className = '',
-    glowColor = 'rgba(26, 95, 122, 0.4)'
+    glowColor = 'rgba(20, 184, 166, 0.15)'
 }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [glowPosition, setGlowPosition] = useState({ x: 50, y: 50 });
@@ -33,7 +33,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
-            {/* Glow effect */}
+            {/* Radial Glow */}
             <div
                 className="absolute inset-0 pointer-events-none transition-opacity duration-300"
                 style={{
@@ -42,8 +42,13 @@ const GlowCard: React.FC<GlowCardProps> = ({
                 }}
             />
 
+            {/* Border glow */}
+            <div
+                className="absolute inset-0 border border-white/5 group-hover:border-emphz-teal/30 transition-colors duration-500 rounded-inherit"
+            />
+
             {/* Content */}
-            <div className="relative z-10">
+            <div className="relative z-10 h-full">
                 {children}
             </div>
         </div>

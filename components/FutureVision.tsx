@@ -1,6 +1,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Box, Cpu, Globe, Zap } from 'lucide-react';
+import SectionHeader from './SectionHeader';
+import GlowCard from './GlowCard';
 
 const FutureVision: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -42,14 +44,13 @@ const FutureVision: React.FC = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-                <div className="parallax-element inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full mb-12" data-speed="0.5">
-                    <span className="text-emphz-teal font-mono text-[10px] uppercase tracking-[0.5em] font-bold">Concept_Vision_2030</span>
-                </div>
-
-                <h2 className="text-6xl md:text-9xl font-bold text-white mb-12 tracking-tighter leading-tight">
-                    Evolution of <br />
-                    <span className="text-emphz-silver italic">Resilience.</span>
-                </h2>
+                <SectionHeader
+                    number="16"
+                    category="CONCEPTUAL PROTOCOL"
+                    title="The Evolution of Resilience"
+                    subtitle="Engineering at the polymer level to reorganize structural bonds for century-scale thresholds. Moving from static infrastructure to responsive ecosystems."
+                    align="center"
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 text-left">
                     {[
@@ -69,14 +70,14 @@ const FutureVision: React.FC = () => {
                             icon: <Box className="text-emphz-teal mb-6" size={32} />
                         }
                     ].map((item, i) => (
-                        <div key={i} className="parallax-element p-10 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] hover:bg-white/10 transition-all duration-700 group cursor-none" data-speed={1 + i * 0.2}>
+                        <GlowCard key={i} className="parallax-element p-10 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] hover:bg-white/10 transition-all duration-700 group cursor-none h-full" data-speed={1 + i * 0.2}>
                             {item.icon}
                             <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-widest">{item.title}</h3>
                             <p className="text-neutral-400 text-sm leading-relaxed font-light opacity-80 mb-8">{item.desc}</p>
-                            <div className="flex items-center gap-2 text-emphz-teal font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="flex items-center gap-2 text-emphz-teal font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity mt-auto">
                                 EXPLORE CONCEPT <ArrowRight size={12} />
                             </div>
-                        </div>
+                        </GlowCard>
                     ))}
                 </div>
             </div>

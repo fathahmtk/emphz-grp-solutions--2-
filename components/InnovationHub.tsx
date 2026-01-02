@@ -2,6 +2,8 @@
 import React from 'react';
 import { Cpu, FlaskConical, Globe, Zap, ArrowRight, Layers } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
+import SectionHeader from './SectionHeader';
+import GlowCard from './GlowCard';
 
 const InnovationHub: React.FC = () => {
   return (
@@ -14,14 +16,12 @@ const InnovationHub: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20 items-center">
 
           <div className="lg:w-1/2">
-            <span className="font-mono text-emphz-teal text-xs font-bold tracking-[0.5em] uppercase mb-4 block">15 / R&D PIPELINE</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
-              The Innovation <br /><span className="text-emphz-teal">Engine.</span>
-            </h2>
-            <p className="text-neutral-400 text-lg leading-relaxed mb-12 font-light max-w-xl">
-              Our Bangalore Innovation Center is dedicated to pushing the boundaries of material science.
-              We are currently piloting AI-assisted laminate layup and 3D-printed GRP structural cores.
-            </p>
+            <SectionHeader
+              number="15"
+              category="R&D PIPELINE"
+              title="Material Intelligence Engine"
+              subtitle="Our Bangalore Innovation Center is dedicated to pushing the boundaries of composite science, piloting AI-assisted laminate layup and topologically optimized structural cores."
+            />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
@@ -46,14 +46,13 @@ const InnovationHub: React.FC = () => {
                   icon: <Layers className="w-5 h-5 text-emphz-teal" />
                 }
               ].map((item, idx) => (
-                <div key={idx} className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-emphz-teal/40 transition-all duration-500 relative overflow-hidden">
-                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:left-[100%] transition-all duration-1000"></div>
+                <GlowCard key={idx} className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-emphz-teal/40 transition-all duration-500 relative overflow-hidden">
                   <div className="mb-6 inline-flex p-3 bg-emphz-teal/10 rounded-2xl group-hover:bg-emphz-teal group-hover:text-white transition-all duration-500">
                     {item.icon}
                   </div>
-                  <h4 className="text-xl font-bold mb-3 uppercase tracking-tight">{item.title}</h4>
+                  <h4 className="text-xl font-bold mb-3 uppercase tracking-tight text-white">{item.title}</h4>
                   <p className="text-xs text-neutral-500 font-mono uppercase tracking-widest leading-relaxed">{item.desc}</p>
-                </div>
+                </GlowCard>
               ))}
             </div>
           </div>
