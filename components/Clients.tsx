@@ -11,7 +11,7 @@ const Clients: React.FC = () => {
            <div>
              <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">07 / Ecosystem</span>
              <h2 className="text-4xl font-bold text-white">TRUSTED BY</h2>
-             <p className="text-slate-400 mt-4 max-w-xl">
+             <p className="text-neutral-400 mt-4 max-w-xl">
                Pre-qualified and approved by leading government bodies, utility corporations, and infrastructure developers across the nation.
              </p>
            </div>
@@ -37,7 +37,7 @@ const Clients: React.FC = () => {
                       <span className="px-2 py-1 bg-emphz-teal/20 text-emphz-teal text-[10px] font-mono uppercase tracking-widest rounded">
                         {client.type}
                       </span>
-                      <span className="text-[10px] font-mono text-slate-500">ID: {client.id}</span>
+                      <span className="text-[10px] font-mono text-neutral-500">ID: {client.id}</span>
                    </div>
 
                    <h3 className="text-xl font-bold text-white mb-2">{client.name}</h3>
@@ -56,7 +56,7 @@ const Clients: React.FC = () => {
         
         {/* Marquee effect for smaller partners could go here, staying static for industrial feel */}
         <div className="mt-16 pt-8 border-t border-white/5 text-center">
-           <p className="text-slate-500 font-mono text-xs uppercase tracking-widest">
+           <p className="text-neutral-500 font-mono text-xs uppercase tracking-widest">
              + 150 more registered EPC contractors & private developers
            </p>
         </div>

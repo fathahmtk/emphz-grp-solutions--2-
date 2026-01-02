@@ -21,7 +21,7 @@ const EngineeringDesk: React.FC = () => {
           <div className="lg:w-1/2">
             <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">12 / Technical Support</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">ENGINEERING DESK</h2>
-            <p className="text-slate-400 text-lg leading-relaxed mb-10">
+            <p className="text-neutral-400 text-lg leading-relaxed mb-10">
               Direct access to our design department for project-specific engineering assets. We provide verified technical documentation for consultant approvals.
             </p>
 
@@ -40,12 +40,12 @@ const EngineeringDesk: React.FC = () => {
                     : 'bg-white/5 border-white/10 hover:border-white/30'
                   }`}
                 >
-                  <div className={`p-3 rounded ${formType === item.type ? 'bg-emphz-teal text-white' : 'bg-white/5 text-slate-500'}`}>
+                  <div className={`p-3 rounded ${formType === item.type ? 'bg-emphz-teal text-white' : 'bg-white/5 text-neutral-500'}`}>
                     {item.icon}
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1 uppercase tracking-wider">{item.title}</h4>
-                    <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
+                    <p className="text-xs text-neutral-500 leading-relaxed">{item.desc}</p>
                   </div>
                 </button>
               ))}
@@ -60,7 +60,7 @@ const EngineeringDesk: React.FC = () => {
                     <CheckCircle2 className="w-10 h-10 text-emphz-teal" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-widest">Request Transmitted</h3>
-                  <p className="text-slate-400 max-w-sm">
+                  <p className="text-neutral-400 max-w-sm">
                     Technical Requisition #ENG-{Math.floor(Math.random() * 10000)} has been queued. An engineer will respond within 4 business hours.
                   </p>
                 </div>
@@ -72,17 +72,17 @@ const EngineeringDesk: React.FC = () => {
 
                   <div className="grid grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-[10px] font-mono text-slate-600 uppercase mb-2">Project Reference</label>
+                      <label className="block text-[10px] font-mono text-neutral-600 uppercase mb-2">Project Reference</label>
                       <input type="text" required placeholder="PRJ-XXXX" className="w-full bg-emphz-dark border border-white/10 p-3 text-sm text-white focus:border-emphz-teal outline-none transition-colors font-mono" />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-mono text-slate-600 uppercase mb-2">Consultant Name</label>
+                      <label className="block text-[10px] font-mono text-neutral-600 uppercase mb-2">Consultant Name</label>
                       <input type="text" required placeholder="Organization ID" className="w-full bg-emphz-dark border border-white/10 p-3 text-sm text-white focus:border-emphz-teal outline-none transition-colors font-mono" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-mono text-slate-600 uppercase mb-2">Technical Specification</label>
+                    <label className="block text-[10px] font-mono text-neutral-600 uppercase mb-2">Technical Specification</label>
                     <textarea 
                       required
                       rows={4} 
@@ -92,7 +92,7 @@ const EngineeringDesk: React.FC = () => {
                   </div>
 
                   <div className="p-4 bg-white/5 border border-dashed border-white/10 rounded-sm">
-                    <p className="text-[10px] text-slate-500 italic leading-relaxed">
+                    <p className="text-[10px] text-neutral-500 italic leading-relaxed">
                       All assets provided are EMPHZ Intellectual Property. Distribution is permitted only for project-specific planning and procurement cycles.
                     </p>
                   </div>

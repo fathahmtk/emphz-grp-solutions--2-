@@ -18,7 +18,7 @@ const Logistics: React.FC = () => {
   };
 
   return (
-    <section id="logistics" className="py-24 md:py-32 bg-slate-50 text-emphz-darker relative overflow-hidden">
+    <section id="logistics" className="py-24 md:py-32 bg-neutral-50 text-emphz-darker relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20 items-stretch">
           
@@ -29,7 +29,7 @@ const Logistics: React.FC = () => {
                  Supply <br/>
                  <span className="text-emphz-teal">Matrix.</span>
                </h2>
-               <p className="text-slate-500 text-lg leading-relaxed mb-10 font-light">
+               <p className="text-neutral-500 text-lg leading-relaxed mb-10 font-light">
                  Integrated supply chain spanning major industrial hubs. Our modular GRP units are flat-packed for optimized cargo density and rapid multi-modal transport.
                </p>
                
@@ -49,13 +49,13 @@ const Logistics: React.FC = () => {
              </div>
 
              <div className="grid grid-cols-2 gap-4">
-               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-neutral-100">
                   <span className="block text-4xl font-bold text-emphz-darker mb-1">07</span>
-                  <span className="text-[9px] uppercase text-slate-400 font-mono tracking-widest font-bold">Active Hubs</span>
+                  <span className="text-[9px] uppercase text-neutral-400 font-mono tracking-widest font-bold">Active Hubs</span>
                </div>
-               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-neutral-100">
                   <span className="block text-4xl font-bold text-emphz-darker mb-1">~48h</span>
-                  <span className="text-[9px] uppercase text-slate-400 font-mono tracking-widest font-bold">Transit Lead</span>
+                  <span className="text-[9px] uppercase text-neutral-400 font-mono tracking-widest font-bold">Transit Lead</span>
                </div>
              </div>
           </div>
@@ -86,13 +86,13 @@ const Logistics: React.FC = () => {
                 {NETWORK_NODES.map((node) => (
                   <div 
                     key={node.id}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group/node"
+                    className="absolute transform -tranneutral-x-1/2 -tranneutral-y-1/2 group/node"
                     style={{ left: `${node.x}%`, top: `${node.y}%` }}
                   >
-                    <div className={`w-3 h-3 rounded-full border-2 transition-all duration-500 ${node.type === 'hub' ? 'bg-emphz-teal border-white scale-125' : 'bg-white border-slate-800'} group-hover/node:scale-150 shadow-[0_0_15px_rgba(24,154,158,0.5)]`}></div>
+                    <div className={`w-3 h-3 rounded-full border-2 transition-all duration-500 ${node.type === 'hub' ? 'bg-emphz-teal border-white scale-125' : 'bg-white border-neutral-800'} group-hover/node:scale-150 shadow-[0_0_15px_rgba(24,154,158,0.5)]`}></div>
                     
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 group-hover/node:opacity-100 transition-all duration-300 z-50">
-                       <div className="bg-white/95 backdrop-blur-md border border-slate-100 px-4 py-2 rounded-full shadow-2xl">
+                    <div className="absolute top-full left-1/2 -tranneutral-x-1/2 mt-3 opacity-0 group-hover/node:opacity-100 transition-all duration-300 z-50">
+                       <div className="bg-white/95 backdrop-blur-md border border-neutral-100 px-4 py-2 rounded-full shadow-2xl">
                           <span className="text-[9px] font-mono text-emphz-darker font-bold uppercase tracking-widest whitespace-nowrap">{node.city}</span>
                        </div>
                     </div>

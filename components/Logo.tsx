@@ -20,14 +20,14 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-10", size, withTaglin
       <path
         d="M0 0H23V6H7V14H21V20H7V28H23V34H0V0Z"
         fill="white"
-        className="transition-colors duration-300 group-hover:fill-slate-200"
+        className="transition-colors duration-300 group-hover:fill-neutral-200"
       />
 
       {/* M */}
       <path
         d="M29 0H37L44.5 18L52 0H60V34H53V12L44.5 30L36 12V34H29V0Z"
         fill="white"
-        className="transition-colors duration-300 group-hover:fill-slate-200"
+        className="transition-colors duration-300 group-hover:fill-neutral-200"
       />
 
       {/* P - Brand Accent Letter */}
@@ -41,14 +41,14 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-10", size, withTaglin
       <path
         d="M98 0H105V14H118V0H125V34H118V20H105V34H98V0Z"
         fill="white"
-        className="transition-colors duration-300 group-hover:fill-slate-200"
+        className="transition-colors duration-300 group-hover:fill-neutral-200"
       />
 
       {/* Z */}
       <path
         d="M131 0H154V6L139 28H154V34H131V28L146 6H131V0Z"
         fill="white"
-        className="transition-colors duration-300 group-hover:fill-slate-200"
+        className="transition-colors duration-300 group-hover:fill-neutral-200"
       />
     </svg>
   );

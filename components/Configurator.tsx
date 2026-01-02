@@ -39,7 +39,7 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">06 / Engineering</span>
           <h2 className="text-4xl font-bold text-white mb-6 uppercase tracking-tighter">SPECIFICATION BUILDER</h2>
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-neutral-400 max-w-2xl text-lg">
             Generate a technical requisition for custom GRP enclosures. Our engineering team will review your parameters for structural compliance.
           </p>
         </div>
@@ -52,9 +52,9 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
                 <button 
                   key={s.id}
                   onClick={() => setStep(s.id)}
-                  className={`flex items-center gap-2 transition-all ${step === s.id ? 'text-emphz-teal' : 'text-slate-600 hover:text-slate-400'}`}
+                  className={`flex items-center gap-2 transition-all ${step === s.id ? 'text-emphz-teal' : 'text-neutral-600 hover:text-neutral-400'}`}
                 >
-                  <span className={`w-6 h-6 rounded-full border flex items-center justify-center text-[10px] font-mono ${step === s.id ? 'border-emphz-teal bg-emphz-teal/10' : 'border-slate-800'}`}>
+                  <span className={`w-6 h-6 rounded-full border flex items-center justify-center text-[10px] font-mono ${step === s.id ? 'border-emphz-teal bg-emphz-teal/10' : 'border-neutral-800'}`}>
                     {s.id}
                   </span>
                   <span className="hidden md:block font-mono text-[10px] uppercase tracking-widest">{s.name}</span>
@@ -72,7 +72,7 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
                       className={`p-6 border text-left transition-all rounded-xl ${config.type === t ? 'border-emphz-teal bg-emphz-teal/5' : 'border-white/5 hover:border-white/20'}`}
                     >
                       <h4 className="text-white font-bold mb-1">{t}</h4>
-                      <p className="text-slate-500 text-[10px] font-mono uppercase">Standard Industrial Series</p>
+                      <p className="text-neutral-500 text-[10px] font-mono uppercase">Standard Industrial Series</p>
                     </button>
                   ))}
                 </div>
@@ -101,7 +101,7 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
                       className={`p-6 border text-left transition-all rounded-xl ${config.rating === r.split(' ')[0] ? 'border-emphz-teal bg-emphz-teal/5' : 'border-white/5 hover:border-white/20'}`}
                     >
                       <h4 className="text-white font-bold mb-1">{r.split(' ')[0]}</h4>
-                      <p className="text-slate-500 text-[10px] font-mono uppercase">{r.split(' (')[1].replace(')', '')}</p>
+                      <p className="text-neutral-500 text-[10px] font-mono uppercase">{r.split(' (')[1].replace(')', '')}</p>
                     </button>
                   ))}
                 </div>
@@ -116,7 +116,7 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
                         onClick={() => setConfig({...config, color: c})}
                         className={`p-4 border text-center transition-all rounded-xl ${config.color.includes(c) ? 'border-emphz-teal bg-emphz-teal/5' : 'border-white/5 hover:border-white/20'}`}
                       >
-                        <div className={`w-full h-8 mb-2 rounded-sm ${c === 'RAL 7035' ? 'bg-slate-300' : c === 'RAL 7032' ? 'bg-slate-400' : 'bg-white'}`}></div>
+                        <div className={`w-full h-8 mb-2 rounded-sm ${c === 'RAL 7035' ? 'bg-neutral-300' : c === 'RAL 7032' ? 'bg-neutral-400' : 'bg-white'}`}></div>
                         <span className="text-white font-mono text-[10px]">{c}</span>
                       </button>
                     ))}
@@ -158,21 +158,21 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
 
                    <div className="space-y-8">
                       <div>
-                         <span className="text-[10px] font-mono text-slate-500 uppercase block mb-1">System Architecture</span>
+                         <span className="text-[10px] font-mono text-neutral-500 uppercase block mb-1">System Architecture</span>
                          <span className="text-white font-bold tracking-wide">{config.type}</span>
                       </div>
                       <div className="flex justify-between">
                          <div>
-                            <span className="text-[10px] font-mono text-slate-500 uppercase block mb-1">Dimensions</span>
+                            <span className="text-[10px] font-mono text-neutral-500 uppercase block mb-1">Dimensions</span>
                             <span className="text-white font-bold tracking-wide">{config.size}</span>
                          </div>
                          <div className="text-right">
-                            <span className="text-[10px] font-mono text-slate-500 uppercase block mb-1">Protection</span>
+                            <span className="text-[10px] font-mono text-neutral-500 uppercase block mb-1">Protection</span>
                             <span className="text-white font-bold tracking-wide">{config.rating}</span>
                          </div>
                       </div>
                       <div>
-                         <span className="text-[10px] font-mono text-slate-500 uppercase block mb-1">Surface Finish</span>
+                         <span className="text-[10px] font-mono text-neutral-500 uppercase block mb-1">Surface Finish</span>
                          <span className="text-white font-bold tracking-wide">{config.color}</span>
                       </div>
                    </div>
@@ -182,7 +182,7 @@ const Configurator: React.FC<ConfiguratorProps> = ({ addToQuote, quoteItems }) =
                          <CheckCircle2 className="w-4 h-4" />
                          <span className="text-[10px] font-mono uppercase tracking-widest">Structural Integrity Validated</span>
                       </div>
-                      <p className="text-[10px] text-slate-500 font-mono leading-relaxed uppercase">
+                      <p className="text-[10px] text-neutral-500 font-mono leading-relaxed uppercase">
                          This configuration complies with IEC 62208 standards for empty enclosures in electrical installations.
                       </p>
                    </div>

@@ -44,7 +44,7 @@ const StatsSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-cyan-50 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-neutral-50 via-white to-cyan-50 relative overflow-hidden">
             {/* Animated Background Blobs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="mesh-blob mesh-blob-1 opacity-30" />
@@ -53,10 +53,10 @@ const StatsSection: React.FC = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
                         Proven <span className="text-gradient-animated">Excellence</span>
                     </h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
                         Numbers that speak to our commitment to quality and innovation
                     </p>
                 </div>
@@ -71,7 +71,7 @@ const StatsSection: React.FC = () => {
                                 <div className="mb-4 text-emphz-teal group-hover:scale-110 transition-transform duration-300">
                                     {stat.icon}
                                 </div>
-                                <div className="text-5xl font-bold text-slate-900 mb-2">
+                                <div className="text-5xl font-bold text-neutral-900 mb-2">
                                     <AnimatedCounter
                                         end={stat.value}
                                         duration={2500}
@@ -80,7 +80,7 @@ const StatsSection: React.FC = () => {
                                         decimals={stat.decimals}
                                     />
                                 </div>
-                                <p className="text-sm font-semibold text-slate-600 uppercase tracking-wider">
+                                <p className="text-sm font-semibold text-neutral-600 uppercase tracking-wider">
                                     {stat.label}
                                 </p>
                             </div>

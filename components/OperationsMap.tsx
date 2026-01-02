@@ -17,7 +17,7 @@ const OperationsMap: React.FC = () => {
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                 Global <br/><span className="text-emphz-silver">Command.</span>
               </h2>
-              <p className="text-slate-500 font-light text-lg">
+              <p className="text-neutral-500 font-light text-lg">
                 Tracking the reach of EMPHZ Vetted GRP systems. From national power grids to remote offshore installations, our logistics backbone ensures zero-delay deployment.
               </p>
            </div>
@@ -64,7 +64,7 @@ const OperationsMap: React.FC = () => {
            {NETWORK_NODES.map((node) => (
              <div 
                key={node.id}
-               className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20"
+               className="absolute transform -tranneutral-x-1/2 -tranneutral-y-1/2 cursor-pointer z-20"
                style={{ left: `${node.x}%`, top: `${node.y}%` }}
                onMouseEnter={() => setHoveredNode(node)}
                onMouseLeave={() => setHoveredNode(null)}
@@ -81,7 +81,7 @@ const OperationsMap: React.FC = () => {
            ))}
 
            {/* Dynamic Node Info HUD */}
-           <div className={`absolute bottom-12 right-12 w-80 p-10 bg-emphz-blue/90 backdrop-blur-2xl border border-white/10 rounded-[3rem] shadow-2xl transition-all duration-700 ${hoveredNode ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95 pointer-events-none'}`}>
+           <div className={`absolute bottom-12 right-12 w-80 p-10 bg-emphz-blue/90 backdrop-blur-2xl border border-white/10 rounded-[3rem] shadow-2xl transition-all duration-700 ${hoveredNode ? 'opacity-100 tranneutral-y-0 scale-100' : 'opacity-0 tranneutral-y-10 scale-95 pointer-events-none'}`}>
               <div className="flex items-center justify-between mb-8">
                  <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-2xl bg-emphz-silver/20 flex items-center justify-center text-emphz-silver">
@@ -89,21 +89,21 @@ const OperationsMap: React.FC = () => {
                     </div>
                     <div>
                        <h5 className="text-white font-bold text-lg uppercase tracking-tight leading-none">{hoveredNode?.city}</h5>
-                       <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest font-bold">{hoveredNode?.type} STATUS: ACTIVE</span>
+                       <span className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold">{hoveredNode?.type} STATUS: ACTIVE</span>
                     </div>
                  </div>
               </div>
 
               <div className="space-y-6 mb-10">
                  <div className="flex justify-between items-center">
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Inventory Level</span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">Inventory Level</span>
                     <span className="text-[10px] font-bold text-white">92%</span>
                  </div>
                  <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                     <div className="h-full bg-emphz-silver" style={{ width: '92%' }}></div>
                  </div>
                  <div className="flex justify-between items-center">
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Active Dispatches</span>
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">Active Dispatches</span>
                     <span className="text-[10px] font-bold text-white">12 Units</span>
                  </div>
               </div>

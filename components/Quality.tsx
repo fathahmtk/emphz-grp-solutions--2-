@@ -71,7 +71,7 @@ const Quality: React.FC = () => {
                   <div className="inline-block border-l-2 border-emphz-teal pl-3 mb-3">
                     <span className="font-mono text-xs text-emphz-teal uppercase tracking-wider">{item.spec}</span>
                   </div>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-neutral-400 text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -86,8 +86,8 @@ const Quality: React.FC = () => {
         {/* Bottom Banner */}
         <div className="mt-16 p-8 bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
            <div className="flex items-center gap-4">
-              <Scale className="w-8 h-8 text-slate-500" />
-              <p className="text-slate-300 text-sm max-w-lg">
+              <Scale className="w-8 h-8 text-neutral-500" />
+              <p className="text-neutral-300 text-sm max-w-lg">
                 <strong className="text-white block mb-1">Built for Scale. Designed to Last.</strong>
                 All structures undergo stress testing for wind load, impact resistance, and water tightness before dispatch.
               </p>

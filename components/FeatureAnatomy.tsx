@@ -19,12 +19,12 @@ const FeatureAnatomy: React.FC = () => {
           <span className="font-mono text-emphz-teal text-xs font-bold tracking-[0.5em] uppercase mb-4 block">16 / SHOWCASE DETAIL</span>
           <h2 className="text-4xl md:text-6xl font-bold text-emphz-darker mb-10 tracking-tighter uppercase">Anatomy of <span className="text-emphz-teal">Resilience.</span></h2>
           <div className="w-24 h-1 bg-emphz-teal mx-auto mb-10 rounded-full"></div>
-          <p className="text-slate-500 max-w-2xl mx-auto font-light text-lg leading-relaxed">
+          <p className="text-neutral-500 max-w-2xl mx-auto font-light text-lg leading-relaxed">
             Deconstructing the EMPHZ Diamond Series Enclosure—engineered to survive where metal and concrete fail.
           </p>
         </div>
 
-        <div className="relative aspect-video w-full bg-slate-50 rounded-[3.5rem] overflow-hidden border border-slate-100 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] group">
+        <div className="relative aspect-video w-full bg-neutral-50 rounded-[3.5rem] overflow-hidden border border-neutral-100 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.08)] group">
            {/* Technical Grid Background */}
            <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
@@ -65,17 +65,17 @@ const FeatureAnatomy: React.FC = () => {
 
                  {/* Information Overlay Panel */}
                  {activeSpot && (
-                    <div className="absolute bottom-12 right-12 w-80 p-10 bg-white/95 backdrop-blur-xl rounded-[2.5rem] border border-slate-200 shadow-2xl animate-in zoom-in-95 duration-500 z-50">
+                    <div className="absolute bottom-12 right-12 w-80 p-10 bg-white/95 backdrop-blur-xl rounded-[2.5rem] border border-neutral-200 shadow-2xl animate-in zoom-in-95 duration-500 z-50">
                        <div className="flex items-center gap-4 mb-6">
                           <div className="w-12 h-12 rounded-2xl bg-emphz-teal/10 flex items-center justify-center text-emphz-teal">
                              {activeSpot.icon}
                           </div>
                           <h5 className="text-xl font-bold text-emphz-darker tracking-tight uppercase leading-none">{activeSpot.title}</h5>
                        </div>
-                       <p className="text-[11px] text-slate-500 leading-relaxed font-mono uppercase tracking-widest">{activeSpot.desc}</p>
-                       <div className="mt-8 pt-8 border-t border-slate-100 flex justify-between items-center">
+                       <p className="text-[11px] text-neutral-500 leading-relaxed font-mono uppercase tracking-widest">{activeSpot.desc}</p>
+                       <div className="mt-8 pt-8 border-t border-neutral-100 flex justify-between items-center">
                           <span className="text-[9px] font-bold text-emphz-teal uppercase tracking-widest">Spec Verified</span>
-                          <ArrowUpRight className="w-4 h-4 text-slate-300" />
+                          <ArrowUpRight className="w-4 h-4 text-neutral-300" />
                        </div>
                     </div>
                  )}
@@ -89,7 +89,7 @@ const FeatureAnatomy: React.FC = () => {
               </div>
               <div>
                  <p className="text-emphz-darker font-bold text-sm uppercase tracking-widest">DIAMOND_V2_BLUEPRINT</p>
-                 <p className="text-slate-400 font-mono text-[9px] uppercase">Ref: EMPHZ_MOD_2024</p>
+                 <p className="text-neutral-400 font-mono text-[9px] uppercase">Ref: EMPHZ_MOD_2024</p>
               </div>
            </div>
 
@@ -106,13 +106,13 @@ const FeatureAnatomy: React.FC = () => {
              { title: 'Thermal Control', icon: <Wind className="w-6 h-6" />, desc: 'Passive ventilation louvers optimized for heat dissipation.' },
              { title: 'Visible Access', icon: <Eye className="w-6 h-6" />, desc: 'Optional polycarbonate viewing windows with IP66 seals.' }
            ].map((feat, i) => (
-             <div key={i} className="group bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 flex items-start gap-6">
+             <div key={i} className="group bg-neutral-50 p-10 rounded-[2.5rem] border border-neutral-100 hover:shadow-xl transition-all duration-500 flex items-start gap-6">
                 <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-emphz-teal shadow-sm group-hover:bg-emphz-teal group-hover:text-white transition-all">
                    {feat.icon}
                 </div>
                 <div>
                    <h4 className="text-xl font-bold text-emphz-darker mb-3 uppercase tracking-tight">{feat.title}</h4>
-                   <p className="text-[11px] text-slate-400 font-mono leading-relaxed uppercase tracking-widest">{feat.desc}</p>
+                   <p className="text-[11px] text-neutral-400 font-mono leading-relaxed uppercase tracking-widest">{feat.desc}</p>
                 </div>
              </div>
            ))}

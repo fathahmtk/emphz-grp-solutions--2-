@@ -52,7 +52,7 @@ const EngineeringProtocol: React.FC = () => {
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">09 / Operational Lifecycle</span>
           <h2 className="text-4xl font-bold text-white mb-6 uppercase tracking-tighter">THE EMPHZ PROTOCOL</h2>
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-neutral-400 max-w-2xl text-lg">
             Our end-to-end industrial workflow ensures that every modular unit meets the world-class standards of global utility and infrastructure projects.
           </p>
         </div>
@@ -67,7 +67,7 @@ const EngineeringProtocol: React.FC = () => {
                 className={`flex items-center gap-6 p-6 text-left border-l-2 transition-all duration-300 ${
                   activeStep === idx 
                   ? 'bg-emphz-teal/10 border-emphz-teal text-white' 
-                  : 'bg-transparent border-white/5 text-slate-500 hover:bg-white/5 hover:text-slate-300'
+                  : 'bg-transparent border-white/5 text-neutral-500 hover:bg-white/5 hover:text-neutral-300'
                 }`}
               >
                 <div className={`transition-transform duration-300 ${activeStep === idx ? 'scale-110 text-emphz-teal' : 'opacity-40'}`}>
@@ -88,13 +88,13 @@ const EngineeringProtocol: React.FC = () => {
                 <div className="relative z-10 animate-in fade-in slide-in-from-right-4 duration-500" key={activeStep}>
                    <div className="w-16 h-1 bg-emphz-teal mb-10"></div>
                    <h3 className="text-3xl font-bold text-white mb-6 uppercase tracking-wider">{steps[activeStep].title.replace('_', ' ')}</h3>
-                   <p className="text-slate-300 text-xl leading-relaxed mb-10 max-w-xl">
+                   <p className="text-neutral-300 text-xl leading-relaxed mb-10 max-w-xl">
                       {steps[activeStep].desc}
                    </p>
 
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10 border-t border-white/5">
                       {steps[activeStep].details.map((detail, i) => (
-                        <div key={i} className="flex items-center gap-3 text-slate-400 font-mono text-xs uppercase tracking-widest">
+                        <div key={i} className="flex items-center gap-3 text-neutral-400 font-mono text-xs uppercase tracking-widest">
                            <div className="w-1.5 h-1.5 bg-emphz-teal rounded-full"></div>
                            {detail}
                         </div>
@@ -103,7 +103,7 @@ const EngineeringProtocol: React.FC = () => {
 
                    <div className="mt-16 flex items-center gap-4 p-4 bg-white/5 border border-white/5 rounded-xl">
                       <ShieldCheck className="w-5 h-5 text-emphz-teal" />
-                      <span className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em]">Verified Protocol Compliance // ISO 9001:2024</span>
+                      <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-[0.2em]">Verified Protocol Compliance // ISO 9001:2024</span>
                    </div>
                 </div>
              </div>

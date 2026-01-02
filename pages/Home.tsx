@@ -49,7 +49,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Abstract Background Element */}
-        <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/20 -skew-x-12 translate-x-1/4 pointer-events-none z-10" />
+        <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/20 -skew-x-12 tranneutral-x-1/4 pointer-events-none z-10" />
 
         <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-20">
           <div className="animate-up">
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
 
       {/* Ecosystem – Flagship Concept */}
       <section className="py-24 md:py-32 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-industrial-50/50 skew-x-12 translate-x-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-industrial-50/50 skew-x-12 tranneutral-x-1/2 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="animate-in">
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
               <h3 className="text-3xl md:text-4xl font-medium text-industrial-900">Standardized Industrial Solutions</h3>
             </div>
             <Link to="/products" className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-industrial-900 hover:text-accent-blue transition-colors group">
-              Full Catalog <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              Full Catalog <ArrowRight size={16} className="group-hover:tranneutral-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -285,7 +285,7 @@ const Home: React.FC = () => {
                     </p>
                     <div className="flex items-center justify-between pt-6 border-t border-industrial-100">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical Brief</span>
-                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-1 transition-all" />
+                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:tranneutral-x-1 transition-all" />
                     </div>
                   </div>
                 </Link>

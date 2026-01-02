@@ -12,7 +12,7 @@ const News: React.FC = () => {
              <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">08 / Media</span>
              <h2 className="text-4xl font-bold text-white">LATEST UPDATES</h2>
            </div>
-           <a href="#" className="hidden md:flex items-center gap-2 text-sm font-mono text-slate-400 hover:text-white transition-colors">
+           <a href="#" className="hidden md:flex items-center gap-2 text-sm font-mono text-neutral-400 hover:text-white transition-colors">
              VIEW ARCHIVE <ArrowRight className="w-4 h-4" />
            </a>
         </div>
@@ -34,7 +34,7 @@ const News: React.FC = () => {
               </div>
               
               <div className="p-8">
-                <div className="flex items-center gap-2 text-slate-500 mb-4">
+                <div className="flex items-center gap-2 text-neutral-500 mb-4">
                   <Calendar className="w-3 h-3" />
                   <span className="font-mono text-xs uppercase">{item.date}</span>
                 </div>
@@ -43,7 +43,7 @@ const News: React.FC = () => {
                   {item.title}
                 </h3>
                 
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                <p className="text-neutral-400 text-sm leading-relaxed mb-6 line-clamp-3">
                   {item.excerpt}
                 </p>
 
@@ -56,7 +56,7 @@ const News: React.FC = () => {
         </div>
 
         <div className="mt-8 md:hidden text-center">
-           <a href="#" className="inline-block text-sm font-mono text-slate-400">VIEW ARCHIVE</a>
+           <a href="#" className="inline-block text-sm font-mono text-neutral-400">VIEW ARCHIVE</a>
         </div>
 
       </div>

@@ -40,7 +40,7 @@ const DigitalTwin: React.FC = () => {
               Smart <br/><span className="text-emphz-silver">Integrity.</span>
             </h2>
             
-            <p className="text-slate-400 text-lg leading-relaxed mb-12 font-light max-w-xl">
+            <p className="text-neutral-400 text-lg leading-relaxed mb-12 font-light max-w-xl">
               EMPHZ modules are designed for IOT-integration. Our Vetted Systems can be deployed with embedded sensors providing a 24/7 digital twin of structural performance in extreme utility environments.
             </p>
 
@@ -53,7 +53,7 @@ const DigitalTwin: React.FC = () => {
                ].map((item, i) => (
                  <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-[2rem] hover:bg-white/[0.08] transition-all duration-500">
                     <div className="mb-6">{item.icon}</div>
-                    <span className="block text-[9px] font-mono text-slate-500 uppercase tracking-widest font-bold mb-2">{item.label}</span>
+                    <span className="block text-[9px] font-mono text-neutral-500 uppercase tracking-widest font-bold mb-2">{item.label}</span>
                     <span className="text-2xl font-bold text-white tracking-tighter">{item.value}</span>
                  </div>
                ))}

@@ -4,7 +4,7 @@ import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-emphz-blue text-slate-400 py-24 border-t border-white/5 overflow-hidden">
+    <footer className="bg-emphz-blue text-neutral-400 py-24 border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           

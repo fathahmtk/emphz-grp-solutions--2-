@@ -31,7 +31,7 @@ const ScrollReveal: React.FC<{ children: React.ReactNode; delay?: number }> = ({
     <div
       ref={ref}
       className={`transition-all duration-1000 ease-out transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        isVisible ? 'opacity-100 tranneutral-y-0' : 'opacity-0 tranneutral-y-12'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >

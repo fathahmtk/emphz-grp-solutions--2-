@@ -225,7 +225,7 @@ const Contact: React.FC = () => {
                                                     <option value="Technical">Material Data Request</option>
                                                     <option value="Other">Other Query</option>
                                                 </select>
-                                                <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-industrial-300 pointer-events-none" />
+                                                <ChevronDown size={14} className="absolute right-4 top-1/2 -tranneutral-y-1/2 text-industrial-300 pointer-events-none" />
                                             </div>
                                         </div>
                                     </div>
@@ -245,7 +245,7 @@ const Contact: React.FC = () => {
                                         disabled={isSubmitting}
                                         className="btn-industrial w-full md:w-auto px-12 py-5 shadow-xl shadow-industrial-900/10"
                                     >
-                                        Transmit Requisition <ArrowRight size={18} className="ml-3 group-hover:translate-x-1 transition-transform" />
+                                        Transmit Requisition <ArrowRight size={18} className="ml-3 group-hover:tranneutral-x-1 transition-transform" />
                                     </button>
                                 </div>
                             </form>
@@ -261,33 +261,33 @@ const Contact: React.FC = () => {
                             <span className="text-xs font-bold text-blue-700 uppercase tracking-[0.2em]">Compliance & Logistics</span>
                             <span className="w-8 h-[1px] bg-blue-600"></span>
                         </div>
-                        <h3 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight">Technical FAQ</h3>
+                        <h3 className="text-3xl md:text-4xl font-semibold text-neutral-900 tracking-tight">Technical FAQ</h3>
                     </div>
 
                     <div className="space-y-4 max-w-4xl mx-auto">
                         {faqs.map((faq, i) => (
-                            <div key={i} className={`glass rounded-2xl border transition-all duration-300 ${openFaq === i ? 'border-blue-200 bg-white shadow-xl' : 'border-slate-100 hover:border-slate-200 bg-white/40'}`}>
+                            <div key={i} className={`glass rounded-2xl border transition-all duration-300 ${openFaq === i ? 'border-blue-200 bg-white shadow-xl' : 'border-neutral-100 hover:border-neutral-200 bg-white/40'}`}>
                                 <button
                                     onClick={() => toggleFaq(i)}
                                     className="w-full flex items-center justify-between p-6 text-left cursor-pointer focus:outline-none"
                                     aria-expanded={openFaq === i}
                                 >
                                     <div className="flex items-center">
-                                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 transition-colors ${openFaq === i ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-500'}`}>
+                                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 transition-colors ${openFaq === i ? 'bg-blue-600 text-white' : 'bg-neutral-100 text-neutral-500'}`}>
                                             <HelpCircle size={20} />
                                         </div>
-                                        <h4 className={`font-semibold text-base transition-colors ${openFaq === i ? 'text-blue-700' : 'text-slate-900'}`}>{faq.question}</h4>
+                                        <h4 className={`font-semibold text-base transition-colors ${openFaq === i ? 'text-blue-700' : 'text-neutral-900'}`}>{faq.question}</h4>
                                     </div>
                                     <ChevronDown
                                         size={20}
-                                        className={`text-slate-400 transition-transform duration-300 ${openFaq === i ? 'rotate-180 text-blue-600' : ''}`}
+                                        className={`text-neutral-400 transition-transform duration-300 ${openFaq === i ? 'rotate-180 text-blue-600' : ''}`}
                                     />
                                 </button>
                                 <div
                                     className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                                 >
                                     <div className="px-6 pb-6 pl-20">
-                                        <p className="text-sm text-slate-500 leading-relaxed font-light border-l-2 border-blue-100 pl-4">{faq.answer}</p>
+                                        <p className="text-sm text-neutral-500 leading-relaxed font-light border-l-2 border-blue-100 pl-4">{faq.answer}</p>
                                     </div>
                                 </div>
                             </div>

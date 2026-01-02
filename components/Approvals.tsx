@@ -18,7 +18,7 @@ const Approvals: React.FC = () => {
            <div className="max-w-2xl">
               <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">08 / Compliance</span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tighter">AUTHORITY APPROVALS</h2>
-              <p className="text-slate-400 text-lg">
+              <p className="text-neutral-400 text-lg">
                 EMPHZ products are pre-qualified and listed as approved vendors for major national utility providers and government infrastructure bodies.
               </p>
            </div>
@@ -27,7 +27,7 @@ const Approvals: React.FC = () => {
               <ShieldCheck className="w-8 h-8 text-emphz-teal" />
               <div>
                  <span className="block text-white font-bold text-sm tracking-widest">VENDOR CLASS A</span>
-                 <span className="text-[10px] text-slate-500 font-mono uppercase">Certified Priority Supplier</span>
+                 <span className="text-[10px] text-neutral-500 font-mono uppercase">Certified Priority Supplier</span>
               </div>
            </div>
         </div>
@@ -44,7 +44,7 @@ const Approvals: React.FC = () => {
 
                 <ul className="space-y-4">
                    {cat.items.map((item, j) => (
-                     <li key={j} className="flex items-center justify-between text-slate-400 group-hover:text-slate-200 transition-colors">
+                     <li key={j} className="flex items-center justify-between text-neutral-400 group-hover:text-neutral-200 transition-colors">
                         <span className="text-sm font-mono uppercase tracking-tight">{item}</span>
                         <div className="w-2 h-2 rounded-full bg-emerald-500/50"></div>
                      </li>
@@ -56,7 +56,7 @@ const Approvals: React.FC = () => {
 
         {/* Logo Grid Mimic */}
         <div className="p-12 bg-white/[0.02] border border-white/5 rounded-[2.5rem]">
-           <p className="text-center font-mono text-[10px] text-slate-600 uppercase tracking-[0.3em] mb-12">Authorized Supply Chain Partner For</p>
+           <p className="text-center font-mono text-[10px] text-neutral-600 uppercase tracking-[0.3em] mb-12">Authorized Supply Chain Partner For</p>
            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center justify-items-center opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-700">
               {/* Monochromatic representation of industry logos */}
               <div className="text-white font-bold text-lg tracking-tighter">POWERGRID</div>

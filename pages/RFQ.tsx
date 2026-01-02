@@ -303,7 +303,7 @@ const RFQ: React.FC = () => {
                                  <option value="Telecom">Telecom / Data</option>
                                  <option value="Hospitality">Hospitality / Resorts</option>
                               </select>
-                              <Briefcase size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
+                              <Briefcase size={14} className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-industrial-400 pointer-events-none" />
                            </div>
                         </div>
                         <div className="group">
@@ -320,7 +320,7 @@ const RFQ: React.FC = () => {
                                  <option value="OneMonth">Planning (1-3 Mo)</option>
                                  <option value="Budget">Budgetary Quote Only</option>
                               </select>
-                              <Clock size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
+                              <Clock size={14} className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-industrial-400 pointer-events-none" />
                            </div>
                         </div>
                      </div>
@@ -347,7 +347,7 @@ const RFQ: React.FC = () => {
                               <option value="RestOfIndia">Domestic India</option>
                               <option value="International">Export Division</option>
                            </select>
-                           <MapPin size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-400 pointer-events-none" />
+                           <MapPin size={14} className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-industrial-400 pointer-events-none" />
                         </div>
                      </div>
 

@@ -111,7 +111,7 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
             </div>
           </div>
         </div>
-        <button onClick={onClose} className="p-2 text-slate-500 hover:text-white transition-all hover:rotate-90">
+        <button onClick={onClose} className="p-2 text-neutral-500 hover:text-white transition-all hover:rotate-90">
           <X className="w-6 h-6" />
         </button>
       </div>
@@ -123,16 +123,16 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
           <div key={idx} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
             <div className={`max-w-[90%] flex gap-4 ${m.role === 'user' ? 'flex-row-reverse' : ''}`}>
               <div className={`w-8 h-8 rounded shrink-0 flex items-center justify-center border ${m.role === 'user' ? 'bg-white/5 border-white/10' : 'bg-emphz-silver/10 border-emphz-silver/30'}`}>
-                {m.role === 'user' ? <User className="w-4 h-4 text-slate-400" /> : <Terminal className="w-4 h-4 text-emphz-silver" />}
+                {m.role === 'user' ? <User className="w-4 h-4 text-neutral-400" /> : <Terminal className="w-4 h-4 text-emphz-silver" />}
               </div>
-              <div className={`p-5 text-xs leading-relaxed font-mono ${m.role === 'user' ? 'bg-white/[0.03] text-slate-300 border border-white/5' : 'bg-emphz-blue-mid text-slate-100 border border-emphz-silver/10 shadow-lg'}`}>
+              <div className={`p-5 text-xs leading-relaxed font-mono ${m.role === 'user' ? 'bg-white/[0.03] text-neutral-300 border border-white/5' : 'bg-emphz-blue-mid text-neutral-100 border border-emphz-silver/10 shadow-lg'}`}>
                 {m.text.split('\n').map((line, i) => (
                   <p key={i} className={i > 0 ? 'mt-3' : ''}>
                     {line.startsWith('-') ? <span className="text-emphz-silver mr-2">■</span> : ''}
                     {line}
                   </p>
                 ))}
-                <span className="block mt-4 text-[8px] text-slate-600 opacity-50 uppercase tracking-widest">{m.timestamp.toLocaleTimeString()} // LOG_ID_{idx.toString().padStart(3, '0')}</span>
+                <span className="block mt-4 text-[8px] text-neutral-600 opacity-50 uppercase tracking-widest">{m.timestamp.toLocaleTimeString()} // LOG_ID_{idx.toString().padStart(3, '0')}</span>
               </div>
             </div>
           </div>
@@ -154,11 +154,11 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
       {/* Control Panel */}
       <div className="p-6 bg-emphz-blue-mid border-t border-white/10">
         <div className="relative group">
-          <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-emphz-silver scale-0 group-focus-within:scale-100 transition-transform"></div>
+          <div className="absolute -left-4 top-1/2 -tranneutral-y-1/2 w-1 h-8 bg-emphz-silver scale-0 group-focus-within:scale-100 transition-transform"></div>
           <input 
             type="text" 
             placeholder="Transmit technical inquiry..." 
-            className="w-full bg-emphz-blue border border-white/10 p-5 pr-14 text-sm text-white font-mono placeholder:text-slate-700 focus:outline-none focus:border-emphz-silver/50 transition-all shadow-inner"
+            className="w-full bg-emphz-blue border border-white/10 p-5 pr-14 text-sm text-white font-mono placeholder:text-neutral-700 focus:outline-none focus:border-emphz-silver/50 transition-all shadow-inner"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
@@ -166,12 +166,12 @@ const AIConsultant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOp
           <button 
             onClick={handleSendMessage}
             disabled={isLoading || !input.trim()}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-emphz-silver hover:text-white disabled:opacity-20 transition-all hover:scale-110 active:scale-95"
+            className="absolute right-4 top-1/2 -tranneutral-y-1/2 p-2 text-emphz-silver hover:text-white disabled:opacity-20 transition-all hover:scale-110 active:scale-95"
           >
             <Send className="w-6 h-6" />
           </button>
         </div>
-        <div className="mt-5 flex gap-6 text-[9px] font-mono uppercase text-slate-600 justify-center tracking-[0.2em]">
+        <div className="mt-5 flex gap-6 text-[9px] font-mono uppercase text-neutral-600 justify-center tracking-[0.2em]">
           <button onClick={() => setInput("Explain BS 476 Class 1 rating.")} className="hover:text-emphz-silver transition-colors">FIRE_STRESS</button>
           <div className="w-px h-2 bg-white/5 self-center"></div>
           <button onClick={() => setInput("How does GRP weight compare to steel?")} className="hover:text-emphz-silver transition-colors">WEIGHT_DATA</button>

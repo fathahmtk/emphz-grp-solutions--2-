@@ -5,7 +5,7 @@ import { Recycle, Sun, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const Sustainability: React.FC = () => {
   return (
-    <section className="relative bg-slate-50 py-32 overflow-hidden border-t border-slate-100">
+    <section className="relative bg-neutral-50 py-32 overflow-hidden border-t border-neutral-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
            
@@ -20,17 +20,17 @@ const Sustainability: React.FC = () => {
                 <span className="text-emerald-500">By Design.</span>
               </h2>
               
-              <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
+              <p className="text-neutral-600 text-lg leading-relaxed mb-12 font-light">
                 Composite infrastructure eliminates the heavy environmental toll of corrosion maintenance and premature replacement. 
                 Our GRP ecosystems are built for a 50+ year circular lifecycle.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                  {SUSTAINABILITY_STATS.map((stat, idx) => (
-                   <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 text-center">
+                   <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-neutral-100 hover:shadow-xl hover:-tranneutral-y-2 transition-all duration-500 text-center">
                       <div className="text-emerald-500 mb-4 flex justify-center">{stat.icon}</div>
                       <span className="block text-3xl font-bold text-emphz-darker mb-1 tracking-tighter">{stat.value}</span>
-                      <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-bold">{stat.label}</span>
+                      <span className="text-[9px] font-mono text-neutral-400 uppercase tracking-widest font-bold">{stat.label}</span>
                    </div>
                  ))}
               </div>
@@ -56,7 +56,7 @@ const Sustainability: React.FC = () => {
                        </div>
                        <div>
                           <p className="text-emphz-darker font-bold text-lg leading-tight uppercase tracking-tight">Zero-Waste Protocol</p>
-                          <p className="text-slate-500 text-xs font-light">100% material recovery in fabrication.</p>
+                          <p className="text-neutral-500 text-xs font-light">100% material recovery in fabrication.</p>
                        </div>
                     </div>
                  </div>

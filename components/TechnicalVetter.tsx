@@ -44,13 +44,13 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
               COMPOSITE <br/><span className="text-emphz-teal">PRE-QUAL.</span>
             </h2>
-            <p className="text-slate-400 font-light text-lg leading-relaxed mb-12">
+            <p className="text-neutral-400 font-light text-lg leading-relaxed mb-12">
               Standardize your GRP procurement. Run the diagnostic to receive a vetted composite bill for your specific site stressors.
             </p>
             
             <div className="bg-black/20 backdrop-blur-md rounded-2xl border border-white/5 p-6 space-y-4">
                <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-widest">
-                 <span className="text-slate-500">GRP_Vetting_Progress</span>
+                 <span className="text-neutral-500">GRP_Vetting_Progress</span>
                  <span className="text-white">Step 0{step} / 03</span>
                </div>
                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
@@ -60,7 +60,7 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
                   ></div>
                </div>
                <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-widest">
-                 <span className="text-slate-500">Validation_Node</span>
+                 <span className="text-neutral-500">Validation_Node</span>
                  <span className="text-emerald-500">Active_Sync</span>
                </div>
             </div>
@@ -75,7 +75,7 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
                      <div className="flex flex-col items-center justify-center text-center py-20 animate-pulse">
                         <Activity className="w-16 h-16 text-emphz-teal mb-8" />
                         <h3 className="text-white font-bold text-2xl uppercase tracking-tighter">Analyzing GRP Stressors...</h3>
-                        <p className="text-slate-500 font-mono text-[10px] uppercase tracking-widest mt-4">Calibrating Resin Matrix Components</p>
+                        <p className="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-4">Calibrating Resin Matrix Components</p>
                      </div>
                    ) : (
                      <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
@@ -95,7 +95,7 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
                                     <div className={`${env === e.id ? 'text-white' : 'text-emphz-teal'} transition-colors`}>{e.icon}</div>
                                     <div>
                                        <span className="block font-bold text-sm text-white tracking-widest uppercase mb-1">{e.title}</span>
-                                       <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{e.stress} GRP Stressor</span>
+                                       <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">{e.stress} GRP Stressor</span>
                                     </div>
                                  </button>
                                ))}
@@ -127,7 +127,7 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
                                   <div className="space-y-4">
                                      {['Dielectric Resistance Check', 'Thermal Expansion Quotient', 'Acid/Saline Defense Matrix'].map((l, i) => (
                                        <div key={i} className="flex items-center justify-between group">
-                                          <span className="text-[11px] text-slate-400 font-mono uppercase tracking-widest">{l}</span>
+                                          <span className="text-[11px] text-neutral-400 font-mono uppercase tracking-widest">{l}</span>
                                           <span className="text-emerald-500 font-bold text-[11px]">GRP_VALIDATED</span>
                                        </div>
                                      ))}
@@ -161,15 +161,15 @@ const TechnicalVetter: React.FC<TechnicalVetterProps> = ({ addToQuote, quoteItem
 
                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                                 <div className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-all group">
-                                   <span className="block text-[10px] text-slate-500 font-mono uppercase tracking-widest mb-3">Laminate Matrix</span>
+                                   <span className="block text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-3">Laminate Matrix</span>
                                    <span className="text-white font-bold text-lg uppercase tracking-tight group-hover:text-emphz-teal transition-colors">Vinyl Ester GRP Base</span>
                                 </div>
                                 <div className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-all group">
-                                   <span className="block text-[10px] text-slate-500 font-mono uppercase tracking-widest mb-3">Seal Integrity</span>
+                                   <span className="block text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-3">Seal Integrity</span>
                                    <span className="text-white font-bold text-lg uppercase tracking-tight group-hover:text-emphz-teal transition-colors">IP67 GRP Gasketing</span>
                                 </div>
                                 <div className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-all group md:col-span-2">
-                                   <span className="block text-[10px] text-slate-500 font-mono uppercase tracking-widest mb-3">Hardware Spec</span>
+                                   <span className="block text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-3">Hardware Spec</span>
                                    <span className="text-white font-bold text-lg uppercase tracking-tight group-hover:text-emphz-teal transition-colors">SS316 Electropolished (GRP Vetted)</span>
                                 </div>
                              </div>

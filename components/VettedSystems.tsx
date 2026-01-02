@@ -44,7 +44,7 @@ const VettedSystems: React.FC = () => {
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                 Qualified <br/><span className="text-emphz-silver">GRP Modules.</span>
               </h2>
-              <p className="text-slate-500 font-light text-lg">
+              <p className="text-neutral-500 font-light text-lg">
                 Our "Vetted Systems" refer to GRP configurations that have undergone third-party validation and are listed as approved standards for major utility and government bodies.
               </p>
            </div>
@@ -73,7 +73,7 @@ const VettedSystems: React.FC = () => {
                 <ul className="space-y-6 relative z-10">
                    {cat.items.map((item, j) => (
                      <li key={j} className="flex flex-col gap-1">
-                        <span className="text-sm font-bold text-slate-200 uppercase tracking-tight">{item.name}</span>
+                        <span className="text-sm font-bold text-neutral-200 uppercase tracking-tight">{item.name}</span>
                         <div className="flex items-center gap-2">
                            <CheckCircle className="w-3 h-3 text-green-400" />
                            <span className="text-[9px] font-mono text-green-400 uppercase font-bold tracking-widest">{item.status}</span>
@@ -86,7 +86,7 @@ const VettedSystems: React.FC = () => {
         </div>
 
         <div className="mt-20 p-12 bg-white/[0.02] border border-white/5 rounded-[3rem] text-center">
-           <p className="font-mono text-[10px] text-slate-500 uppercase tracking-[0.4em] mb-4">Direct Procurement Ready</p>
+           <p className="font-mono text-[10px] text-neutral-500 uppercase tracking-[0.4em] mb-4">Direct Procurement Ready</p>
            <h4 className="text-white text-xl font-bold uppercase tracking-tight">Verified GRP Solution for 150+ EPC Partners</h4>
         </div>
       </div>

@@ -17,7 +17,7 @@ const ValueProp: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             ENGINEERED FOR EXTREMES
           </h2>
-          <p className="text-slate-300 text-lg leading-relaxed">
+          <p className="text-neutral-300 text-lg leading-relaxed">
             Every EMPHZ product is built to withstand the harshest environments while maintaining structural integrity and aesthetic finish for decades.
           </p>
         </div>
@@ -48,7 +48,7 @@ const ValueProp: React.FC = () => {
             <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 hover:bg-emphz-silver/10 hover:border-emphz-silver transition-all duration-300 group">
               <div className="text-white mb-6 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
               <h3 className="text-white font-bold font-mono text-sm tracking-wide mb-3">{item.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <p className="text-neutral-400 text-sm leading-relaxed">
                 {item.text}
               </p>
             </div>

@@ -21,22 +21,22 @@ const Manifesto: React.FC = () => {
               </h2>
 
               <div className="space-y-8">
-                 <div className="group border-l-4 border-slate-100 hover:border-emphz-teal pl-8 py-4 transition-all duration-500">
+                 <div className="group border-l-4 border-neutral-100 hover:border-emphz-teal pl-8 py-4 transition-all duration-500">
                     <div className="flex items-center gap-4 mb-3">
                        <Compass className="w-5 h-5 text-emphz-teal" />
                        <h4 className="text-lg font-bold uppercase tracking-tight">The Horizon</h4>
                     </div>
-                    <p className="text-slate-500 text-lg leading-relaxed font-light">
+                    <p className="text-neutral-500 text-lg leading-relaxed font-light">
                       To become the global benchmark for high-resilience modular infrastructure—powering sustainable development through composite science.
                     </p>
                  </div>
 
-                 <div className="group border-l-4 border-slate-100 hover:border-emphz-teal pl-8 py-4 transition-all duration-500">
+                 <div className="group border-l-4 border-neutral-100 hover:border-emphz-teal pl-8 py-4 transition-all duration-500">
                     <div className="flex items-center gap-4 mb-3">
                        <Target className="w-5 h-5 text-emphz-teal" />
                        <h4 className="text-lg font-bold uppercase tracking-tight">The Mission</h4>
                     </div>
-                    <p className="text-slate-500 text-lg leading-relaxed font-light">
+                    <p className="text-neutral-500 text-lg leading-relaxed font-light">
                       Replacing inefficient, high-maintenance construction with precision-engineered GRP systems that deliver speed and safety.
                     </p>
                  </div>
@@ -44,13 +44,13 @@ const Manifesto: React.FC = () => {
 
               <div className="mt-12">
                  <button className="flex items-center gap-3 font-mono text-[10px] font-bold text-emphz-teal uppercase tracking-[0.3em] hover:text-emphz-darker transition-colors group">
-                    VIEW ESG REPORT <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    VIEW ESG REPORT <ArrowRight className="w-4 h-4 group-hover:tranneutral-x-2 transition-transform" />
                  </button>
               </div>
            </div>
 
            <div className="lg:w-1/2 relative">
-              <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-slate-50 group">
+              <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-neutral-50 group">
                  <img 
                    src={SITE_IMAGES.manifesto} 
                    className="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"

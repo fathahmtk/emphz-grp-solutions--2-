@@ -48,7 +48,7 @@ const LaminateStack: React.FC = () => {
              <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tighter uppercase leading-[0.9]">
                Diamond <br/><span className="text-emphz-teal">GRP Matrix.</span>
              </h2>
-             <p className="text-slate-400 text-lg leading-relaxed mb-12 font-light">
+             <p className="text-neutral-400 text-lg leading-relaxed mb-12 font-light">
                Our proprietary composite layup is engineered to survive the world's most aggressive climates. 
                By varying the resin-to-reinforcement ratio, we optimize each module for its specific site stressor.
              </p>
@@ -63,7 +63,7 @@ const LaminateStack: React.FC = () => {
                   >
                     <div className="flex items-center justify-between mb-2">
                        <div className="flex items-center gap-4">
-                          <div className={`p-2 rounded-lg ${hovered === layer.id ? 'bg-emphz-teal text-white' : 'bg-white/5 text-slate-500'}`}>
+                          <div className={`p-2 rounded-lg ${hovered === layer.id ? 'bg-emphz-teal text-white' : 'bg-white/5 text-neutral-500'}`}>
                              {layer.icon}
                           </div>
                           <h4 className="font-bold text-xs text-white uppercase tracking-widest">{layer.title}</h4>
@@ -71,7 +71,7 @@ const LaminateStack: React.FC = () => {
                        <span className="font-mono text-[9px] text-emphz-teal font-bold">{layer.thickness}</span>
                     </div>
                     {hovered === layer.id && (
-                       <p className="text-[10px] text-slate-400 font-mono uppercase leading-relaxed animate-in fade-in slide-in-from-left-2 duration-300">
+                       <p className="text-[10px] text-neutral-400 font-mono uppercase leading-relaxed animate-in fade-in slide-in-from-left-2 duration-300">
                           {layer.desc}
                        </p>
                     )}
@@ -106,11 +106,11 @@ const LaminateStack: React.FC = () => {
                 })}
 
                 {/* Vertical Connector Line */}
-                <div className="absolute w-px h-64 bg-gradient-to-t from-transparent via-emphz-teal/30 to-transparent left-1/2 -translate-x-1/2"></div>
+                <div className="absolute w-px h-64 bg-gradient-to-t from-transparent via-emphz-teal/30 to-transparent left-1/2 -tranneutral-x-1/2"></div>
                 
                 {/* HUD Markers */}
                 {hovered && (
-                  <div className="absolute -right-24 top-1/2 -translate-y-1/2 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl animate-in zoom-in-95">
+                  <div className="absolute -right-24 top-1/2 -tranneutral-y-1/2 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl animate-in zoom-in-95">
                      <div className="flex items-center gap-3 mb-2">
                         <CheckCircle2 className="w-4 h-4 text-emphz-teal" />
                         <span className="text-[9px] font-mono text-white uppercase tracking-widest">LAYER_SYNCED</span>

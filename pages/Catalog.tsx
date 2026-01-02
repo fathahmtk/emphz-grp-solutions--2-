@@ -184,7 +184,7 @@ const Catalog: React.FC = () => {
                     <option value="name-asc">Name A-Z</option>
                     <option value="name-desc">Name Z-A</option>
                   </select>
-                  <ChevronDown size={12} className="absolute right-3 top-1/2 -translate-y-1/2 text-industrial-300 pointer-events-none" />
+                  <ChevronDown size={12} className="absolute right-3 top-1/2 -tranneutral-y-1/2 text-industrial-300 pointer-events-none" />
                 </div>
               </div>
             </div>
@@ -221,10 +221,10 @@ const Catalog: React.FC = () => {
                     )}
                     <div className={`flex items-center justify-between pt-6 border-industrial-100 ${viewMode === 'list' ? 'hidden' : 'border-t'}`}>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical Details</span>
-                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-1 transition-all" />
+                      <ChevronRight size={16} className="text-industrial-300 group-hover:text-accent-blue group-hover:tranneutral-x-1 transition-all" />
                     </div>
                     {viewMode === 'list' && (
-                      <ArrowRight size={18} className="text-industrial-300 group-hover:text-accent-blue group-hover:translate-x-2 transition-all ml-auto" />
+                      <ArrowRight size={18} className="text-industrial-300 group-hover:text-accent-blue group-hover:tranneutral-x-2 transition-all ml-auto" />
                     )}
                   </div>
                 </Link>

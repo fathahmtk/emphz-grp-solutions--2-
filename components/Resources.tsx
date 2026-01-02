@@ -14,25 +14,25 @@ const Resources: React.FC = () => {
             <div className="mb-10">
               <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">09 / Library</span>
               <h2 className="text-3xl font-bold text-white mb-2">DOWNLOAD CENTER</h2>
-              <p className="text-slate-400 text-sm">Access technical specifications, installation guides, and product catalogues.</p>
+              <p className="text-neutral-400 text-sm">Access technical specifications, installation guides, and product catalogues.</p>
             </div>
 
             <div className="space-y-4">
               {DOWNLOADS.map((file, idx) => (
                 <div key={idx} className="group flex items-center justify-between p-6 bg-emphz-darker border border-white/5 hover:border-emphz-teal/30 hover:bg-white/[0.02] transition-all cursor-pointer">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-white/5 rounded text-slate-400 group-hover:text-emphz-teal transition-colors">
+                    <div className="p-3 bg-white/5 rounded text-neutral-400 group-hover:text-emphz-teal transition-colors">
                       <FileText className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="text-white font-bold text-sm mb-1 group-hover:text-emphz-teal transition-colors">{file.title}</h4>
                       <div className="flex items-center gap-3">
-                        <span className="text-[10px] font-mono text-slate-500 uppercase bg-white/5 px-1 rounded">{file.id}</span>
-                        <span className="text-[10px] font-mono text-slate-500 uppercase">{file.type} • {file.size}</span>
+                        <span className="text-[10px] font-mono text-neutral-500 uppercase bg-white/5 px-1 rounded">{file.id}</span>
+                        <span className="text-[10px] font-mono text-neutral-500 uppercase">{file.type} • {file.size}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="text-slate-600 group-hover:text-white transition-colors">
+                  <div className="text-neutral-600 group-hover:text-white transition-colors">
                     <Download className="w-5 h-5" />
                   </div>
                 </div>
@@ -60,25 +60,25 @@ const Resources: React.FC = () => {
                 <div className="grid grid-cols-2 gap-6">
                    <div className="p-4 border border-white/10 bg-black/20 text-center">
                       <span className="block text-3xl font-bold text-white mb-1">ISO</span>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase">9001:2015 Certified</span>
+                      <span className="text-[10px] font-mono text-neutral-400 uppercase">9001:2015 Certified</span>
                    </div>
                    <div className="p-4 border border-white/10 bg-black/20 text-center">
                       <span className="block text-3xl font-bold text-white mb-1">IP</span>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase">65/67 Rated</span>
+                      <span className="text-[10px] font-mono text-neutral-400 uppercase">65/67 Rated</span>
                    </div>
                    <div className="p-4 border border-white/10 bg-black/20 text-center">
                       <span className="block text-3xl font-bold text-white mb-1">UL</span>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase">Compliant Materials</span>
+                      <span className="text-[10px] font-mono text-neutral-400 uppercase">Compliant Materials</span>
                    </div>
                    <div className="p-4 border border-white/10 bg-black/20 text-center">
                       <span className="block text-3xl font-bold text-white mb-1">CE</span>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase">Marked Components</span>
+                      <span className="text-[10px] font-mono text-neutral-400 uppercase">Marked Components</span>
                    </div>
                 </div>
 
                 <div className="mt-10 p-4 bg-emphz-teal/10 border border-emphz-teal/20 flex items-start gap-4">
                    <ShieldCheck className="w-6 h-6 text-emphz-teal flex-shrink-0" />
-                   <p className="text-xs text-slate-300 leading-relaxed">
+                   <p className="text-xs text-neutral-300 leading-relaxed">
                      Our manufacturing facility is audited annually to ensure strict adherence to international quality management and safety protocols.
                    </p>
                 </div>

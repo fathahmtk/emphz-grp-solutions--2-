@@ -91,7 +91,7 @@ const ResilienceLab: React.FC = () => {
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">05 / Material Testing</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tighter">RESILIENCE LAB</h2>
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-neutral-400 max-w-2xl text-lg">
             Verify structural durability under simulated environmental stressors.
           </p>
         </div>
@@ -99,14 +99,14 @@ const ResilienceLab: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-8 bg-emphz-dark border border-white/10 p-8">
           <div className="space-y-8">
             <div>
-              <h4 className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-4">Material Target</h4>
+              <h4 className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-4">Material Target</h4>
               <div className="grid gap-2">
                 {(['GRP', 'Steel', 'Concrete'] as Material[]).map((m) => (
                   <button
                     key={m}
                     onClick={() => setActiveMaterial(m)}
                     className={`p-4 border font-mono text-xs tracking-widest text-left flex justify-between items-center transition-all ${
-                      activeMaterial === m ? 'bg-emphz-teal text-white border-emphz-teal' : 'bg-white/5 text-slate-400 border-white/5 hover:border-white/20'
+                      activeMaterial === m ? 'bg-emphz-teal text-white border-emphz-teal' : 'bg-white/5 text-neutral-400 border-white/5 hover:border-white/20'
                     }`}
                   >
                     {m} UNIT_TEST
@@ -117,14 +117,14 @@ const ResilienceLab: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-4">Stress Environment</h4>
+              <h4 className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-4">Stress Environment</h4>
               <div className="flex gap-2">
                 {(['Corrosion', 'UV', 'Impact'] as Stress[]).map((s) => (
                   <button
                     key={s}
                     onClick={() => setActiveStress(s)}
                     className={`flex-1 p-4 border transition-all flex flex-col items-center gap-2 ${
-                      activeStress === s ? 'bg-emphz-teal/20 text-emphz-teal border-emphz-teal' : 'bg-white/5 text-slate-500 border-white/5 hover:border-white/20'
+                      activeStress === s ? 'bg-emphz-teal/20 text-emphz-teal border-emphz-teal' : 'bg-white/5 text-neutral-500 border-white/5 hover:border-white/20'
                     }`}
                   >
                     <span className="text-[9px] font-mono uppercase">{s}</span>
@@ -150,11 +150,11 @@ const ResilienceLab: React.FC = () => {
                <div className="relative z-10 flex justify-between items-start mb-8">
                   <div>
                     <h3 className="text-white font-bold text-xl mb-1 uppercase tracking-wider">{activeMaterial} System State</h3>
-                    <p className="text-slate-500 text-xs max-w-xs">{materials[activeMaterial].desc}</p>
+                    <p className="text-neutral-500 text-xs max-w-xs">{materials[activeMaterial].desc}</p>
                   </div>
                   <div className="text-right">
                     <span className="block text-4xl font-mono font-bold text-white">{integrity}%</span>
-                    <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Structural_Health</span>
+                    <span className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest">Structural_Health</span>
                   </div>
                </div>
 
@@ -169,7 +169,7 @@ const ResilienceLab: React.FC = () => {
 
                <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {materials[activeMaterial].specs.map((spec, i) => (
-                    <div key={i} className="flex items-center gap-2 text-[9px] font-mono text-slate-400 uppercase">
+                    <div key={i} className="flex items-center gap-2 text-[9px] font-mono text-neutral-400 uppercase">
                        <CheckCircle2 className="w-3 h-3 text-emphz-teal" /> {spec}
                     </div>
                   ))}
@@ -182,7 +182,7 @@ const ResilienceLab: React.FC = () => {
                           {integrity > 80 ? <CheckCircle2 className="w-6 h-6 text-emphz-teal" /> : <AlertCircle className="w-6 h-6 text-amber-500" />}
                        </div>
                        <h4 className="text-white font-bold text-lg mb-2 uppercase tracking-widest">Test Complete</h4>
-                       <p className="text-slate-400 text-xs mb-6 font-mono leading-relaxed">
+                       <p className="text-neutral-400 text-xs mb-6 font-mono leading-relaxed">
                           {activeMaterial} integrity calibrated to {integrity}%. 
                           {activeMaterial === 'GRP' ? ' Zero structural fatigue detected.' : ' Degradation indicates potential field failure.'}
                        </p>

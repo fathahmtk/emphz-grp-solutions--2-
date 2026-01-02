@@ -55,7 +55,7 @@ const BlogPost: React.FC = () => {
           <div className="md:col-span-2">
             <div className="sticky top-28">
               <button onClick={() => navigate(-1)} className="flex items-center text-sm text-gray-500 hover:text-emphz-navy font-bold group mb-8">
-                <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back
+                <ArrowLeft size={16} className="mr-2 group-hover:-tranneutral-x-1 transition-transform" /> Back
               </button>
               <div className="space-y-3">
                 <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-blue-600 hover:text-white transition-colors">

@@ -11,7 +11,7 @@ const Comparison: React.FC = () => {
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">05 / Analysis</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">MATERIAL ADVANTAGE</h2>
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-neutral-400 max-w-2xl text-lg">
             Engineering data confirms GRP composites outperform traditional construction materials in total cost of ownership and longevity.
           </p>
         </div>
@@ -20,12 +20,12 @@ const Comparison: React.FC = () => {
           <div className="min-w-[800px]">
             {/* Table Header */}
             <div className="grid grid-cols-4 gap-4 mb-6 px-6 py-4 bg-white/5 border border-white/10 rounded-t-sm">
-              <div className="font-mono text-slate-500 text-xs uppercase tracking-widest">Performance Criteria</div>
+              <div className="font-mono text-neutral-500 text-xs uppercase tracking-widest">Performance Criteria</div>
               <div className="font-mono text-emphz-teal font-bold text-xs uppercase tracking-widest flex items-center gap-2">
                 <Layers className="w-4 h-4" /> EMPHZ GRP
               </div>
-              <div className="font-mono text-slate-500 text-xs uppercase tracking-widest">Galvanized Steel</div>
-              <div className="font-mono text-slate-500 text-xs uppercase tracking-widest">Reinforced Concrete</div>
+              <div className="font-mono text-neutral-500 text-xs uppercase tracking-widest">Galvanized Steel</div>
+              <div className="font-mono text-neutral-500 text-xs uppercase tracking-widest">Reinforced Concrete</div>
             </div>
 
             {/* Table Body */}
@@ -46,8 +46,8 @@ const Comparison: React.FC = () => {
                     <div className="absolute -right-4 -top-5 -bottom-5 w-[1px] bg-emphz-teal/20 group-hover:bg-emphz-teal/50 transition-colors"></div>
                   </div>
                   
-                  <div className="text-slate-400 text-sm">{row.steel}</div>
-                  <div className="text-slate-400 text-sm">{row.concrete}</div>
+                  <div className="text-neutral-400 text-sm">{row.steel}</div>
+                  <div className="text-neutral-400 text-sm">{row.concrete}</div>
                 </div>
               ))}
             </div>
@@ -56,15 +56,15 @@ const Comparison: React.FC = () => {
             <div className="mt-8 grid grid-cols-3 gap-4">
               <div className="col-span-1 border-t-2 border-emphz-teal pt-4">
                 <p className="text-emphz-teal font-mono text-xs uppercase tracking-widest mb-1">Conclusion</p>
-                <p className="text-slate-300 text-sm">Lowest Total Cost of Ownership</p>
+                <p className="text-neutral-300 text-sm">Lowest Total Cost of Ownership</p>
               </div>
-              <div className="col-span-1 border-t-2 border-slate-700 pt-4 opacity-50">
-                <p className="text-slate-500 font-mono text-xs uppercase tracking-widest mb-1">Conclusion</p>
-                <p className="text-slate-400 text-sm">High Maintenance Liability</p>
+              <div className="col-span-1 border-t-2 border-neutral-700 pt-4 opacity-50">
+                <p className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-1">Conclusion</p>
+                <p className="text-neutral-400 text-sm">High Maintenance Liability</p>
               </div>
-              <div className="col-span-1 border-t-2 border-slate-700 pt-4 opacity-50">
-                <p className="text-slate-500 font-mono text-xs uppercase tracking-widest mb-1">Conclusion</p>
-                <p className="text-slate-400 text-sm">Heavy Logistic Burden</p>
+              <div className="col-span-1 border-t-2 border-neutral-700 pt-4 opacity-50">
+                <p className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-1">Conclusion</p>
+                <p className="text-neutral-400 text-sm">Heavy Logistic Burden</p>
               </div>
             </div>
 

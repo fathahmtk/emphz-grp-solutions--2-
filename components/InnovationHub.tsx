@@ -18,7 +18,7 @@ const InnovationHub: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
               The Innovation <br/><span className="text-emphz-teal">Engine.</span>
             </h2>
-            <p className="text-slate-400 text-lg leading-relaxed mb-12 font-light max-w-xl">
+            <p className="text-neutral-400 text-lg leading-relaxed mb-12 font-light max-w-xl">
               Our Bangalore Innovation Center is dedicated to pushing the boundaries of material science. 
               We are currently piloting AI-assisted laminate layup and 3D-printed GRP structural cores.
             </p>
@@ -51,7 +51,7 @@ const InnovationHub: React.FC = () => {
                     {item.icon}
                   </div>
                   <h4 className="text-xl font-bold mb-3 uppercase tracking-tight">{item.title}</h4>
-                  <p className="text-xs text-slate-500 font-mono uppercase tracking-widest leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-neutral-500 font-mono uppercase tracking-widest leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -76,10 +76,10 @@ const InnovationHub: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-12 left-12 right-12">
-                   <div className="p-10 bg-emphz-teal/90 backdrop-blur-xl rounded-[2.5rem] shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-700">
+                   <div className="p-10 bg-emphz-teal/90 backdrop-blur-xl rounded-[2.5rem] shadow-2xl transform group-hover:-tranneutral-y-2 transition-transform duration-700">
                       <h5 className="text-2xl font-bold text-white mb-4 uppercase tracking-tight">Vision 2030</h5>
                       <p className="text-white/80 text-sm font-light leading-relaxed mb-6">"Our goal is to reduce on-site assembly time for a 100-unit facility to under 72 hours."</p>
-                      <button className="flex items-center gap-3 text-[10px] font-bold text-white uppercase tracking-[0.3em] hover:translate-x-2 transition-transform">
+                      <button className="flex items-center gap-3 text-[10px] font-bold text-white uppercase tracking-[0.3em] hover:tranneutral-x-2 transition-transform">
                         EXPLORE THE FUTURE <ArrowRight className="w-4 h-4" />
                       </button>
                    </div>

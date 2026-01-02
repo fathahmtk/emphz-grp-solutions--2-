@@ -20,28 +20,28 @@ const SustainabilityLedger: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-emphz-blue mb-8 tracking-tighter uppercase leading-[0.9]">
               The Carbon <br/><span className="text-green-600">Ledger.</span>
             </h2>
-            <p className="text-slate-500 text-lg leading-relaxed mb-12 font-light">
+            <p className="text-neutral-500 text-lg leading-relaxed mb-12 font-light">
               Quantify your infrastructure's environmental footprint. Vetted GRP systems reduce cumulative CO2 emissions by eliminating maintenance heavy-cycles and premature corrosion-led replacement.
             </p>
 
-            <div className="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm mb-12">
+            <div className="bg-neutral-50 p-10 rounded-[3rem] border border-neutral-100 shadow-sm mb-12">
                <div className="flex justify-between items-center mb-6">
-                  <label className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-bold">Project Scale (Metric Tons)</label>
+                  <label className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest font-bold">Project Scale (Metric Tons)</label>
                   <span className="text-2xl font-bold text-emphz-blue">{projectSize} MT</span>
                </div>
                <input 
                  type="range" min="10" max="1000" value={projectSize} 
                  onChange={(e) => setProjectSize(parseInt(e.target.value))}
-                 className="w-full h-1.5 bg-slate-200 appearance-none cursor-pointer accent-green-500 rounded-full"
+                 className="w-full h-1.5 bg-neutral-200 appearance-none cursor-pointer accent-green-500 rounded-full"
                />
-               <div className="flex justify-between mt-4 font-mono text-[9px] text-slate-400 font-bold uppercase tracking-widest">
+               <div className="flex justify-between mt-4 font-mono text-[9px] text-neutral-400 font-bold uppercase tracking-widest">
                   <span>Small Scale</span>
                   <span>Industrial Grid</span>
                </div>
             </div>
 
             <button className="flex items-center gap-3 font-mono text-[10px] font-bold text-green-600 uppercase tracking-[0.3em] hover:text-emphz-blue transition-colors group">
-              REQUEST FULL LCA REPORT <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              REQUEST FULL LCA REPORT <ArrowRight className="w-4 h-4 group-hover:tranneutral-x-2 transition-transform" />
             </button>
           </div>
 
@@ -62,13 +62,13 @@ const SustainabilityLedger: React.FC = () => {
                       <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
                          <TrendingDown className="w-8 h-8 text-green-500 mb-2" />
                          <span className="block text-white font-bold text-xl tracking-tight">64% Savings</span>
-                         <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Lifecycle Impact</span>
+                         <span className="text-[9px] font-mono text-neutral-500 uppercase tracking-widest">Lifecycle Impact</span>
                       </div>
                    </div>
 
                    <div className="space-y-12 mb-20">
                       <div className="group">
-                        <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest font-bold text-slate-500 mb-4">
+                        <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest font-bold text-neutral-500 mb-4">
                           <span>EMPHZ GRP Ecosystem</span>
                           <span className="text-green-400">Low Maintenance Path</span>
                         </div>
@@ -81,13 +81,13 @@ const SustainabilityLedger: React.FC = () => {
                       </div>
 
                       <div className="group">
-                        <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest font-bold text-slate-500 mb-4">
+                        <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest font-bold text-neutral-500 mb-4">
                           <span>Galvanized Steel Cycle</span>
-                          <span className="text-slate-400">High Replacement Burden</span>
+                          <span className="text-neutral-400">High Replacement Burden</span>
                         </div>
                         <div className="h-4 bg-white/5 rounded-full relative overflow-hidden border border-white/5">
                            <div 
-                             className="h-full bg-slate-500 transition-all duration-1000 ease-out opacity-40"
+                             className="h-full bg-neutral-500 transition-all duration-1000 ease-out opacity-40"
                              style={{ width: `100%` }}
                            ></div>
                         </div>
@@ -99,17 +99,17 @@ const SustainabilityLedger: React.FC = () => {
                    <div className="space-y-2">
                       <Recycle className="w-5 h-5 text-green-500" />
                       <span className="block text-white font-bold text-sm uppercase tracking-tight">Circular</span>
-                      <p className="text-[9px] text-slate-500 font-mono leading-relaxed">Recyclable composite recovery systems.</p>
+                      <p className="text-[9px] text-neutral-500 font-mono leading-relaxed">Recyclable composite recovery systems.</p>
                    </div>
                    <div className="space-y-2">
                       <Zap className="w-5 h-5 text-green-500" />
                       <span className="block text-white font-bold text-sm uppercase tracking-tight">Efficient</span>
-                      <p className="text-[9px] text-slate-500 font-mono leading-relaxed">80% lighter logistics footprint.</p>
+                      <p className="text-[9px] text-neutral-500 font-mono leading-relaxed">80% lighter logistics footprint.</p>
                    </div>
                    <div className="space-y-2 hidden md:block">
                       <Wind className="w-5 h-5 text-green-500" />
                       <span className="block text-white font-bold text-sm uppercase tracking-tight">Clean</span>
-                      <p className="text-[9px] text-slate-500 font-mono leading-relaxed">Zero harmful chemical leaching.</p>
+                      <p className="text-[9px] text-neutral-500 font-mono leading-relaxed">Zero harmful chemical leaching.</p>
                    </div>
                 </div>
              </div>

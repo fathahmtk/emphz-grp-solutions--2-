@@ -5,7 +5,7 @@ import { ArrowRight, Landmark, Zap, Factory, Cpu, RadioTower, Building2 } from '
 
 const Industries: React.FC = () => {
   return (
-    <section id="industries" className="py-24 md:py-32 bg-slate-50 text-emphz-darker relative overflow-hidden">
+    <section id="industries" className="py-24 md:py-32 bg-neutral-50 text-emphz-darker relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
            <div className="max-w-2xl">
@@ -14,7 +14,7 @@ const Industries: React.FC = () => {
                 Engineered for <br/><span className="text-emphz-teal">Diverse Resilience.</span>
               </h2>
            </div>
-           <p className="text-slate-500 font-light text-lg max-w-sm mb-2">
+           <p className="text-neutral-500 font-light text-lg max-w-sm mb-2">
              EMPHZ modular engineering adapts to the critical compliance and durability needs of the world's most demanding sectors.
            </p>
         </div>
@@ -23,9 +23,9 @@ const Industries: React.FC = () => {
           {SECTORS.map((sector) => (
             <div 
               key={sector.id}
-              className="group relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl hover:-translate-y-3 transition-all duration-700 cursor-pointer border border-white"
+              className="group relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl hover:-tranneutral-y-3 transition-all duration-700 cursor-pointer border border-white"
             >
-              {/* Background gradient from the sector data (e.g. from-blue-900 to-slate-900) */}
+              {/* Background gradient from the sector data (e.g. from-blue-900 to-neutral-900) */}
               <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} opacity-90 transition-opacity duration-700 group-hover:opacity-100`}></div>
               <div className="absolute inset-0 bg-grid opacity-10"></div>
               
@@ -45,7 +45,7 @@ const Industries: React.FC = () => {
                      {sector.desc}
                    </p>
                    
-                   <ul className="space-y-3 mb-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                   <ul className="space-y-3 mb-8 opacity-0 group-hover:opacity-100 tranneutral-y-4 group-hover:tranneutral-y-0 transition-all duration-500">
                       {sector.items.slice(0, 3).map((item, idx) => (
                         <li key={idx} className="flex items-center gap-3 text-white/80 text-[10px] font-bold uppercase tracking-widest">
                            <div className="w-1.5 h-1.5 bg-emphz-teal rounded-full"></div>
@@ -64,20 +64,20 @@ const Industries: React.FC = () => {
         </div>
 
         <div className="mt-24 text-center">
-           <div className="inline-flex items-center gap-12 p-10 bg-white rounded-[2.5rem] shadow-2xl border border-slate-100">
+           <div className="inline-flex items-center gap-12 p-10 bg-white rounded-[2.5rem] shadow-2xl border border-neutral-100">
               <div className="text-left">
                 <span className="block text-4xl font-bold text-emphz-darker tracking-tighter">150+</span>
-                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-bold">Industry Partners</span>
+                <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest font-bold">Industry Partners</span>
               </div>
-              <div className="w-px h-12 bg-slate-100"></div>
+              <div className="w-px h-12 bg-neutral-100"></div>
               <div className="text-left">
                 <span className="block text-4xl font-bold text-emphz-darker tracking-tighter">12+</span>
-                <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest font-bold">Govt Pre-Quals</span>
+                <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest font-bold">Govt Pre-Quals</span>
               </div>
-              <div className="w-px h-12 bg-slate-100"></div>
+              <div className="w-px h-12 bg-neutral-100"></div>
               <div className="flex -space-x-4">
                  {[...Array(4)].map((_, i) => (
-                   <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-slate-200 overflow-hidden">
+                   <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-neutral-200 overflow-hidden">
                       <img src={`https://i.pravatar.cc/100?u=${i}`} alt="Partner" />
                    </div>
                  ))}

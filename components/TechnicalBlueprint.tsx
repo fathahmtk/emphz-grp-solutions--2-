@@ -39,7 +39,7 @@ const TechnicalBlueprint: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase leading-[0.9]">
               The Design <br/><span className="text-emphz-teal">Blueprint.</span>
             </h2>
-            <p className="text-slate-500 font-light text-lg">
+            <p className="text-neutral-500 font-light text-lg">
               Precision CAD schematics for engineering integration. Downloadable blocks available in the Technical Library.
             </p>
           </div>
@@ -49,7 +49,7 @@ const TechnicalBlueprint: React.FC = () => {
               <button
                 key={bp.id}
                 onClick={() => setActive(bp)}
-                className={`px-6 py-3 rounded-xl text-[10px] font-bold tracking-widest uppercase transition-all ${active.id === bp.id ? 'bg-emphz-teal text-white shadow-xl shadow-emphz-teal/20' : 'text-slate-500 hover:text-white'}`}
+                className={`px-6 py-3 rounded-xl text-[10px] font-bold tracking-widest uppercase transition-all ${active.id === bp.id ? 'bg-emphz-teal text-white shadow-xl shadow-emphz-teal/20' : 'text-neutral-500 hover:text-white'}`}
               >
                 {bp.id}
               </button>
@@ -88,9 +88,9 @@ const TechnicalBlueprint: React.FC = () => {
                     <div className={`w-3 h-3 rounded-full transition-all duration-300 relative z-20 ${hoveredNote === note.label ? 'bg-white scale-125' : 'bg-emphz-teal'}`}></div>
                     
                     {/* Tooltip */}
-                    <div className={`absolute left-8 top-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200 shadow-2xl transition-all duration-500 w-48 z-30 ${hoveredNote === note.label ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}>
+                    <div className={`absolute left-8 top-1/2 -tranneutral-y-1/2 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-neutral-200 shadow-2xl transition-all duration-500 w-48 z-30 ${hoveredNote === note.label ? 'opacity-100 tranneutral-x-0' : 'opacity-0 -tranneutral-x-4 pointer-events-none'}`}>
                        <h5 className="text-[10px] font-bold text-emphz-darker uppercase tracking-wider mb-1">{note.label}</h5>
-                       <p className="text-[9px] text-slate-500 font-mono leading-relaxed">{note.detail}</p>
+                       <p className="text-[9px] text-neutral-500 font-mono leading-relaxed">{note.detail}</p>
                     </div>
                  </div>
               </div>
@@ -121,7 +121,7 @@ const TechnicalBlueprint: React.FC = () => {
                      { label: 'Standard', value: 'IEC 62208' },
                    ].map((item, i) => (
                      <div key={i} className="flex justify-between items-center border-b border-white/5 pb-4">
-                        <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">{item.label}</span>
+                        <span className="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">{item.label}</span>
                         <span className="text-[10px] text-white font-mono">{item.value}</span>
                      </div>
                    ))}
@@ -129,7 +129,7 @@ const TechnicalBlueprint: React.FC = () => {
 
                 <div className="mt-12 flex items-center gap-4 p-4 bg-emphz-teal/5 border border-emphz-teal/20 rounded-xl">
                    <Layers className="w-5 h-5 text-emphz-teal" />
-                   <p className="text-[9px] text-slate-400 font-mono uppercase leading-relaxed">System supports flat-pack or fully-assembled logistics configurations.</p>
+                   <p className="text-[9px] text-neutral-400 font-mono uppercase leading-relaxed">System supports flat-pack or fully-assembled logistics configurations.</p>
                 </div>
              </div>
 
@@ -141,7 +141,7 @@ const TechnicalBlueprint: React.FC = () => {
                    <ChevronRight className="w-5 h-5 text-white/50 group-hover:text-emphz-darker" />
                 </div>
                 <h4 className="text-white group-hover:text-emphz-darker font-bold text-xl uppercase tracking-tight mb-2">Request DXF/STEP</h4>
-                <p className="text-white/60 group-hover:text-slate-500 text-[10px] font-mono uppercase tracking-widest font-bold">Direct sync with project CAD blocks.</p>
+                <p className="text-white/60 group-hover:text-neutral-500 text-[10px] font-mono uppercase tracking-widest font-bold">Direct sync with project CAD blocks.</p>
              </div>
           </div>
         </div>

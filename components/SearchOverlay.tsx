@@ -61,18 +61,18 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
         <div className="relative mb-12">
           <button 
             onClick={onClose}
-            className="absolute -top-16 right-0 md:-right-16 text-slate-400 hover:text-white p-2"
+            className="absolute -top-16 right-0 md:-right-16 text-neutral-400 hover:text-white p-2"
           >
             <X className="w-8 h-8" />
           </button>
           
           <div className="relative border-b-2 border-white/20 focus-within:border-emphz-teal transition-colors">
-             <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-6 text-slate-500" />
+             <Search className="absolute left-0 top-1/2 -tranneutral-y-1/2 w-6 h-6 text-neutral-500" />
              <input 
                autoFocus
                type="text" 
                placeholder="SEARCH CATALOGUE, SPECS, NEWS..." 
-               className="w-full bg-transparent py-4 pl-12 pr-4 text-2xl md:text-3xl font-bold text-white placeholder:text-slate-600 focus:outline-none font-mono uppercase"
+               className="w-full bg-transparent py-4 pl-12 pr-4 text-2xl md:text-3xl font-bold text-white placeholder:text-neutral-600 focus:outline-none font-mono uppercase"
                value={query}
                onChange={(e) => setQuery(e.target.value)}
              />
@@ -83,7 +83,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
         <div className="flex-grow overflow-y-auto pb-20 custom-scrollbar">
            
            {!query && (
-             <div className="text-center text-slate-600 mt-20">
+             <div className="text-center text-neutral-600 mt-20">
                 <p className="font-mono text-sm uppercase tracking-widest">Type to search the global database</p>
              </div>
            )}
@@ -98,9 +98,9 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                        <img src={p.image} alt={p.title} className="w-16 h-16 object-cover opacity-60 group-hover:opacity-100" />
                        <div>
                           <h5 className="text-white font-bold group-hover:text-emphz-teal transition-colors">{p.title}</h5>
-                          <p className="text-xs text-slate-400 font-mono">{p.category} // {p.subtitle}</p>
+                          <p className="text-xs text-neutral-400 font-mono">{p.category} // {p.subtitle}</p>
                        </div>
-                       <ArrowUpRight className="w-4 h-4 text-slate-500 ml-auto group-hover:text-white" />
+                       <ArrowUpRight className="w-4 h-4 text-neutral-500 ml-auto group-hover:text-white" />
                     </a>
                   ))}
                </div>
@@ -114,9 +114,9 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                <div className="space-y-2">
                  {results.downloads.map((d, i) => (
                    <a key={i} href="#resources" onClick={onClose} className="flex items-center gap-4 p-3 hover:bg-white/5 transition-colors group">
-                      <FileText className="w-5 h-5 text-slate-500 group-hover:text-emphz-teal" />
-                      <span className="text-slate-300 text-sm font-mono group-hover:text-white">{d.title}</span>
-                      <span className="text-[10px] text-slate-600 bg-white/5 px-2 py-0.5 rounded ml-auto">{d.type}</span>
+                      <FileText className="w-5 h-5 text-neutral-500 group-hover:text-emphz-teal" />
+                      <span className="text-neutral-300 text-sm font-mono group-hover:text-white">{d.title}</span>
+                      <span className="text-[10px] text-neutral-600 bg-white/5 px-2 py-0.5 rounded ml-auto">{d.type}</span>
                    </a>
                  ))}
                </div>
@@ -133,7 +133,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                       <div className="w-1 h-full bg-emphz-teal/20"></div>
                       <div>
                         <h5 className="text-white font-bold text-sm mb-1">{n.title}</h5>
-                        <p className="text-xs text-slate-500 font-mono">{n.date} • {n.category}</p>
+                        <p className="text-xs text-neutral-500 font-mono">{n.date} • {n.category}</p>
                       </div>
                    </div>
                  ))}
@@ -142,7 +142,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
            )}
 
            {query && results.products.length === 0 && results.downloads.length === 0 && results.news.length === 0 && (
-              <div className="text-slate-500 font-mono text-sm">No results found for "{query}".</div>
+              <div className="text-neutral-500 font-mono text-sm">No results found for "{query}".</div>
            )}
 
         </div>

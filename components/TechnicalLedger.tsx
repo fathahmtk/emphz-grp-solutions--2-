@@ -19,7 +19,7 @@ const TechnicalLedger: React.FC = () => {
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">07 / Lab Reports</span>
           <h2 className="text-4xl font-bold text-white mb-6 uppercase tracking-tighter">PHYSICAL PROPERTIES LEDGER</h2>
-          <p className="text-slate-400 max-w-2xl text-lg">
+          <p className="text-neutral-400 max-w-2xl text-lg">
             Standardized testing data for our proprietary GRP laminates. All tests performed at NABL accredited third-party laboratories.
           </p>
         </div>
@@ -27,7 +27,7 @@ const TechnicalLedger: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Data Table */}
           <div className="space-y-1">
-            <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-white/5 border border-white/10 text-[10px] font-mono text-slate-500 uppercase tracking-widest rounded-t-xl">
+            <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-white/5 border border-white/10 text-[10px] font-mono text-neutral-500 uppercase tracking-widest rounded-t-xl">
               <span>Property</span>
               <span>Observed Value</span>
               <span>Test Method</span>
@@ -38,8 +38,8 @@ const TechnicalLedger: React.FC = () => {
                   <span className="text-emphz-teal opacity-50 group-hover:opacity-100 transition-opacity">{row.icon}</span>
                   <span className="text-sm text-white font-bold">{row.property}</span>
                 </div>
-                <div className="text-sm text-slate-300 font-mono">{row.value}</div>
-                <div className="text-[10px] text-slate-500 font-mono self-center">{row.method}</div>
+                <div className="text-sm text-neutral-300 font-mono">{row.value}</div>
+                <div className="text-[10px] text-neutral-500 font-mono self-center">{row.method}</div>
               </div>
             ))}
           </div>
@@ -60,7 +60,7 @@ const TechnicalLedger: React.FC = () => {
                   { chem: 'Saline Environments', rating: 'Immune' },
                 ].map((c, idx) => (
                   <div key={idx} className="flex justify-between items-center border-b border-white/5 pb-4">
-                    <span className="text-sm text-slate-400 font-mono uppercase">{c.chem}</span>
+                    <span className="text-sm text-neutral-400 font-mono uppercase">{c.chem}</span>
                     <span className="text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 font-bold tracking-widest rounded-full">
                       {c.rating}
                     </span>
@@ -68,7 +68,7 @@ const TechnicalLedger: React.FC = () => {
                 ))}
              </div>
 
-             <div className="mt-12 p-6 bg-emphz-teal/5 border border-dashed border-emphz-teal/20 text-xs text-slate-400 leading-relaxed italic rounded-xl">
+             <div className="mt-12 p-6 bg-emphz-teal/5 border border-dashed border-emphz-teal/20 text-xs text-neutral-400 leading-relaxed italic rounded-xl">
                Note: For specific chemical concentrations and temperature variations, please consult our engineering department for a detailed compatibility certificate.
              </div>
           </div>

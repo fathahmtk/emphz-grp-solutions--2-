@@ -27,7 +27,7 @@ const MaterialAgingSim: React.FC = () => {
         <div className="text-center mb-20">
           <span className="font-mono text-emphz-silver text-xs font-bold tracking-[0.5em] uppercase mb-4 block">20 / DURABILITY LAB</span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter uppercase">The 50-Year <br/><span className="text-emphz-silver">Time Machine.</span></h2>
-          <p className="text-slate-500 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-neutral-500 max-w-2xl mx-auto font-light text-lg">
             Drag the cursor to witness the structural delta between traditional steel and vetted GRP composites in aggressive industrial climates.
           </p>
         </div>
@@ -39,11 +39,11 @@ const MaterialAgingSim: React.FC = () => {
             {/* Steel Specimen */}
             <div className="bg-emphz-blue-mid rounded-[3rem] p-10 border border-white/5 relative overflow-hidden group">
                <div className="flex justify-between items-start mb-12">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-slate-500">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-neutral-500">
                     <Activity className="w-6 h-6" />
                   </div>
                   <div className="text-right">
-                    <span className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest font-bold">Specimen_ID</span>
+                    <span className="block text-[10px] font-mono text-neutral-500 uppercase tracking-widest font-bold">Specimen_ID</span>
                     <span className="text-white font-mono text-xs font-bold">GALV_STEEL_Q235</span>
                   </div>
                </div>
@@ -65,8 +65,8 @@ const MaterialAgingSim: React.FC = () => {
 
                <div className="space-y-4">
                   <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-widest">
-                     <span className="text-slate-500">Structural Status</span>
-                     <span className={year > 35 ? 'text-red-500 font-bold animate-pulse' : 'text-slate-300'}>{getSteelState(year)}</span>
+                     <span className="text-neutral-500">Structural Status</span>
+                     <span className={year > 35 ? 'text-red-500 font-bold animate-pulse' : 'text-neutral-300'}>{getSteelState(year)}</span>
                   </div>
                   <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                      <div 
@@ -126,15 +126,15 @@ const MaterialAgingSim: React.FC = () => {
                      onChange={(e) => setYear(parseInt(e.target.value))}
                      className="w-full h-1.5 bg-white/10 appearance-none cursor-pointer accent-emphz-silver rounded-full"
                    />
-                   <div className="flex justify-between mt-4 font-mono text-[9px] text-slate-500 uppercase tracking-widest font-bold">
+                   <div className="flex justify-between mt-4 font-mono text-[9px] text-neutral-500 uppercase tracking-widest font-bold">
                       <span>Deployment</span>
                       <span>Decommission</span>
                    </div>
                 </div>
 
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/5 text-left">
-                   <span className="block text-[8px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-3">Analysis_Note</span>
-                   <p className="text-[10px] text-slate-300 leading-relaxed font-mono uppercase">
+                   <span className="block text-[8px] font-mono text-neutral-500 uppercase tracking-[0.3em] mb-3">Analysis_Note</span>
+                   <p className="text-[10px] text-neutral-300 leading-relaxed font-mono uppercase">
                      {year > 20 ? "Significant cathodic protection required for Steel. GRP remains functionally inert." : "Initial coatings performing on both. Maintenance costs beginning to diverge."}
                    </p>
                 </div>

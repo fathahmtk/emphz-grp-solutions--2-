@@ -86,7 +86,7 @@ const Industries: React.FC = () => {
                                         to="/products"
                                         className="inline-flex items-center text-[10px] font-bold text-industrial-900 uppercase tracking-widest hover:text-accent-blue transition-colors"
                                     >
-                                        View Solutions <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                        View Solutions <ArrowRight size={14} className="ml-2 group-hover:tranneutral-x-1 transition-transform" />
                                     </Link>
                                 </div>
                             </div>

@@ -55,7 +55,7 @@ const FeatureSpotlight: React.FC = () => {
         <div className="text-center mb-20">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">13 / Material DNA</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 uppercase tracking-tighter">THE GRP ADVANTAGE</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
             Engineering a superior alternative to traditional materials through the precise science of composite laminates.
           </p>
         </div>
@@ -70,7 +70,7 @@ const FeatureSpotlight: React.FC = () => {
                 className={`w-full p-6 text-left border transition-all duration-300 group ${
                   active.id === item.id 
                   ? 'bg-emphz-teal border-emphz-teal text-white' 
-                  : 'bg-white/5 border-white/5 text-slate-400 hover:border-white/20'
+                  : 'bg-white/5 border-white/5 text-neutral-400 hover:border-white/20'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -98,13 +98,13 @@ const FeatureSpotlight: React.FC = () => {
                   {active.stat}
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-6 tracking-wide uppercase">{active.title}</h3>
-                <p className="text-slate-300 text-xl leading-relaxed mb-10 max-w-md">
+                <p className="text-neutral-300 text-xl leading-relaxed mb-10 max-w-md">
                   {active.desc}
                 </p>
                 
                 <div className="space-y-4 pt-10 border-t border-white/10">
                   {active.details.map((detail, idx) => (
-                    <div key={idx} className="flex items-center gap-3 font-mono text-xs text-slate-500 uppercase tracking-widest">
+                    <div key={idx} className="flex items-center gap-3 font-mono text-xs text-neutral-500 uppercase tracking-widest">
                        <div className="w-1.5 h-1.5 bg-emphz-teal rounded-full"></div>
                        {detail}
                     </div>

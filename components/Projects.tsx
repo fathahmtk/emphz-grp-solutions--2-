@@ -15,12 +15,12 @@ const Projects: React.FC = () => {
            <div className="flex gap-4 mt-6 md:mt-0">
              <div className="text-right">
                 <span className="block text-2xl font-bold text-white">2,500+</span>
-                <span className="text-xs font-mono text-slate-500 uppercase">Units Deployed</span>
+                <span className="text-xs font-mono text-neutral-500 uppercase">Units Deployed</span>
              </div>
              <div className="w-px h-10 bg-white/10"></div>
              <div className="text-right">
                 <span className="block text-2xl font-bold text-white">12+</span>
-                <span className="text-xs font-mono text-slate-500 uppercase">States Covered</span>
+                <span className="text-xs font-mono text-neutral-500 uppercase">States Covered</span>
              </div>
            </div>
         </div>
@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-1 group-hover:text-emphz-teal transition-colors">
                         {project.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-slate-400 text-xs mb-6">
+                      <div className="flex items-center gap-2 text-neutral-400 text-xs mb-6">
                          <MapPin className="w-3 h-3" /> {project.location}
                       </div>
 
@@ -63,11 +63,11 @@ const Projects: React.FC = () => {
                       <div className="h-0 group-hover:h-24 overflow-hidden transition-all duration-500 ease-out border-t border-white/0 group-hover:border-white/10">
                          <div className="pt-4 grid grid-cols-2 gap-4">
                             <div>
-                               <span className="block text-[10px] text-slate-500 uppercase">Volume</span>
+                               <span className="block text-[10px] text-neutral-500 uppercase">Volume</span>
                                <span className="text-white font-mono text-sm">{project.stats.units}</span>
                             </div>
                             <div>
-                               <span className="block text-[10px] text-slate-500 uppercase">System</span>
+                               <span className="block text-[10px] text-neutral-500 uppercase">System</span>
                                <span className="text-white font-mono text-sm">{project.stats.product}</span>
                             </div>
                          </div>
