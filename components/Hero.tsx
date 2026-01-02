@@ -1,31 +1,53 @@
 
-import React from 'react';
-import { ArrowRight, Star, ArrowUpRight } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, Star, ArrowUpRight, Cpu, Activity, Globe, Shield } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
 
 const Hero: React.FC = () => {
+  const [bootProgress, setBootProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBootProgress(prev => (prev < 100 ? prev + 1 : 100));
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center bg-emphz-blue overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center bg-[#0B0F1A] overflow-hidden">
       {/* Background Visual Layer */}
       <div className="absolute inset-0">
         <img
           src={SITE_IMAGES.hero}
           alt="EMPHZ Infrastructure"
-          className="w-full h-full object-cover opacity-20 scale-105"
+          className="w-full h-full object-cover opacity-10 scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-emphz-blue/90 via-emphz-blue/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-grid opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F1A] via-[#0B0F1A]/80 to-transparent"></div>
+        <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-[#0B0F1A] to-transparent"></div>
+        <div className="absolute inset-0 bg-grid opacity-5 pointer-events-none"></div>
 
-        {/* Margin HUD Elements */}
-        <div className="absolute top-40 left-12 hidden xl:block animate-pulse duration-[3000ms]">
-          <div className="flex flex-col gap-8 opacity-20">
+        {/* Animated Mesh Overlay */}
+        <div className="absolute inset-0 mesh-bg opacity-20 pointer-events-none"></div>
+
+        {/* Global HUD Elements */}
+        <div className="absolute top-40 left-12 hidden xl:block">
+          <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
-              <span className="text-white font-mono text-[8px] tracking-[0.4em] uppercase">SYSTEM_STATE:</span>
-              <span className="text-emphz-teal font-mono text-[8px] tracking-[0.2em] uppercase">INTEGRITY_VERIFIED_99.8%</span>
+              <div className="flex items-center gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-emphz-teal animate-pulse"></div>
+                <span className="text-white font-mono text-[8px] tracking-[0.4em] uppercase opacity-40">NODE_SYNC_ACTIVE:</span>
+              </div>
+              <span className="text-emphz-teal font-mono text-[9px] tracking-[0.2em] uppercase font-bold ml-4">120.44.29.11</span>
             </div>
+
             <div className="flex flex-col gap-2">
-              <span className="text-white font-mono text-[8px] tracking-[0.4em] uppercase">LATITUDE_REF:</span>
-              <span className="text-emphz-teal font-mono text-[8px] tracking-[0.2em] uppercase">12.9716° N</span>
+              <span className="text-white font-mono text-[8px] tracking-[0.4em] uppercase opacity-40">COMPOSITE_STATUS:</span>
+              <div className="flex items-center gap-2 ml-4">
+                <div className="h-1 w-24 bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full bg-emphz-teal transition-all duration-1000" style={{ width: `${bootProgress}%` }}></div>
+                </div>
+                <span className="text-white font-mono text-[8px] uppercase">{bootProgress}%</span>
+              </div>
             </div>
           </div>
         </div>
@@ -36,93 +58,106 @@ const Hero: React.FC = () => {
 
           {/* Hero Text Content */}
           <div className="lg:w-3/5 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-              <span className="w-8 h-px bg-emphz-silver"></span>
-              <span className="font-mono text-emphz-silver text-xs tracking-[0.5em] uppercase font-bold">
-                GRP MODULAR ENGINEERING
+            <div className="inline-flex items-center gap-4 mb-8 bg-white/5 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
+              <div className="flex gap-1">
+                <div className="w-1 h-1 rounded-full bg-emphz-teal"></div>
+                <div className="w-1 h-1 rounded-full bg-emphz-teal opacity-40"></div>
+                <div className="w-1 h-1 rounded-full bg-emphz-teal opacity-20"></div>
+              </div>
+              <span className="font-mono text-emphz-teal text-[9px] tracking-[0.5em] uppercase font-bold">
+                NEXT-GEN GRP ARCHITECTURE
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-8 tracking-tighter animate-flicker">
-              The Best GRP <br />
-              <span className="text-emphz-silver">Industrial</span> Solutions.
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-white leading-[0.95] mb-10 tracking-tighter">
+              Intelligent <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10">Composite</span> <br />
+              Systems.
             </h1>
 
-            <p className="text-neutral-300 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-light opacity-90 mx-auto lg:mx-0">
-              Transforming critical infrastructure with next-gen GRP composites.
-              Built for Scale. Designed to Last. Engineered for modern utilities.
+            <p className="text-neutral-400 text-lg md:text-xl max-w-xl mb-12 leading-relaxed font-light opacity-80 mx-auto lg:mx-0">
+              EMPHZ manufactures mission-critical GRP infrastructure for global utilities.
+              Engineering durability through advanced polymer science and structural precision.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-5">
-              <a href="#products" className="bg-emphz-silver text-emphz-blue px-10 py-5 rounded-full text-xs font-bold tracking-[0.2em] hover:bg-white transition-all duration-500 uppercase flex items-center gap-3 shadow-2xl shadow-emphz-silver/20">
-                BOOK CONSULTATION <ArrowRight className="w-4 h-4" />
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+              <a href="#products" className="group relative px-10 py-5 bg-emphz-teal text-white rounded-full text-xs font-bold tracking-[0.3em] overflow-hidden transition-all shadow-2xl shadow-emphz-teal/20">
+                <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                <span className="relative z-10 group-hover:text-emphz-dark transition-colors flex items-center gap-3">
+                  INITIATE CONFIGURATION <ArrowRight className="w-4 h-4" />
+                </span>
               </a>
-              <a href="#about" className="bg-white/5 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full text-xs font-bold tracking-[0.2em] hover:bg-white/20 transition-all duration-500 uppercase flex items-center gap-3">
-                EXPLORE NOW <ArrowUpRight className="w-4 h-4" />
+              <a href="#about" className="px-10 py-5 bg-white/5 backdrop-blur-xl text-white border border-white/10 rounded-full text-xs font-bold tracking-[0.3em] hover:bg-white/10 transition-all uppercase flex items-center gap-3">
+                SYSTEM_OVERVIEW <ArrowUpRight className="w-4 h-4 opacity-40" />
               </a>
             </div>
 
             {/* Floating Information Bar */}
-            <div className="mt-16 inline-flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 bg-white backdrop-blur-2xl rounded-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/10 group">
-              <div className="text-left px-4">
-                <span className="block text-[9px] font-mono text-neutral-400 uppercase tracking-widest mb-1">Design Life From</span>
-                <div className="flex items-baseline">
-                  <span className="text-3xl font-bold text-emphz-blue">50</span>
-                  <span className="text-neutral-400 text-sm font-bold ml-1 tracking-widest">+ YEARS</span>
+            <div className="mt-20 inline-flex flex-col md:flex-row items-center gap-12 p-10 bg-white/[0.02] backdrop-blur-3xl rounded-[3rem] border border-white/5">
+              <div className="flex items-center gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-emphz-teal/10 flex items-center justify-center text-emphz-teal">
+                  <Activity className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="block text-[8px] font-mono text-neutral-500 uppercase tracking-widest mb-1">DESIGN LIFE</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-bold text-white">50</span>
+                    <span className="text-neutral-600 text-[10px] font-bold tracking-widest font-mono">YEARS</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="hidden md:block w-px h-12 bg-neutral-200"></div>
+              <div className="hidden md:block w-px h-10 bg-white/10"></div>
 
-              <div className="text-left px-4">
-                <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 text-emphz-blue fill-emphz-blue" />)}
+              <div className="flex items-center gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-emphz-teal/10 flex items-center justify-center text-emphz-teal">
+                  <Shield className="w-5 h-5" />
                 </div>
-                <span className="block text-[9px] font-mono text-neutral-400 uppercase tracking-widest">Industry Ranking</span>
-                <span className="text-xs font-bold text-emphz-blue tracking-wide">#1 COMPOSITE VENDOR</span>
+                <div>
+                  <span className="block text-[8px] font-mono text-neutral-500 uppercase tracking-widest mb-1">FIRE SAFETY</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-bold text-white">BS476</span>
+                    <span className="text-neutral-600 text-[10px] font-bold tracking-widest font-mono">CLASS_1</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Featured Visual Component */}
-          <div className="lg:w-2/5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full aspect-[4/5] max-w-sm rounded-[3rem] overflow-hidden border-[12px] border-white/10 shadow-2xl group cursor-pointer hover:-translate-y-2 transition-all duration-700 ease-out">
+          <div className="lg:w-2/5 relative">
+            <div className="relative aspect-[4/5] rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)] group">
               <img
                 src={SITE_IMAGES.about}
-                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 grayscale-[30%] group-hover:grayscale-0"
+                className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
                 alt="EMPHZ Manufacturing"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emphz-blue/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
-              <div className="absolute bottom-10 left-10 right-10">
-                <div className="bg-emphz-silver/90 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl transform group-hover:translate-y-[-4px] transition-transform duration-500">
-                  <p className="text-emphz-blue text-[10px] font-bold tracking-[0.3em] uppercase mb-2">READY FOR DEPLOYMENT</p>
-                  <p className="text-emphz-blue text-lg font-bold leading-tight uppercase">Vetted GRP Composite Systems</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent"></div>
+
+              <div className="absolute bottom-12 left-12 right-12">
+                <div className="bg-black/80 backdrop-blur-2xl p-10 rounded-[2.5rem] border border-white/5 group-hover:border-emphz-teal/30 transition-all">
+                  <div className="flex justify-between items-start mb-6">
+                    <Cpu className="w-6 h-6 text-emphz-teal" />
+                    <div className="text-right">
+                      <span className="block text-[8px] font-mono text-neutral-500 uppercase tracking-widest">TYPE: ALPHA_MOD</span>
+                      <span className="block text-white font-mono text-[10px] uppercase font-bold">VETTED_GRP_v4</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white leading-tight uppercase tracking-tight mb-4">Precision Engineered <br />Composite Shell</h3>
+                  <div className="h-0.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-full bg-emphz-teal w-[100%]"></div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Background decorative element */}
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-emphz-silver/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            {/* Background decorative glow */}
+            <div className="absolute -top-20 -right-20 w-96 h-96 bg-emphz-teal/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
           </div>
 
         </div>
       </div>
 
-      {/* Elegant Curved Background Transition */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-30">
-        <svg className="relative block w-[200%] h-32 md:h-64 translate-x-[-25%]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" fill="#F8FAFC"></path>
-        </svg>
-      </div>
-      <style>{`
-        @keyframes flicker {
-          0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 1; }
-          20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.8; }
-        }
-        .animate-flicker {
-          animation: flicker 4s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };

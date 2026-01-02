@@ -36,7 +36,8 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -44,12 +45,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: #1e293b;
   border-radius: 10px;
+  border: 2px solid var(--surface);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F9D8F;
+  background: var(--primary);
 }
 
 h1,
@@ -97,7 +99,7 @@ h6 {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  background-color: #F8FAFC;
+  background-color: var(--surface);
 }
 
 .mesh-blob {
@@ -279,25 +281,6 @@ h6 {
   90% {
     opacity: 0;
   }
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #F1F5F9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 5px;
-  border: 2px solid #F1F5F9;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
 }
 
 /* --- Mobile-First Enhancements --- */
