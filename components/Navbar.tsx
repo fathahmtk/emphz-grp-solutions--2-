@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ quoteCount, openConsultant, openQuoteDr
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center group cursor-pointer">
             <Link to="/">
-              <Logo className="h-6 md:h-7" />
+              <Logo withTagline={true} />
             </Link>
           </div>
 

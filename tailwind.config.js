@@ -35,12 +35,13 @@ export default {
         primary: '#FFCA3B',
         secondary: '#1F1F1F',
 
-        // Legacy Aliases for Instant Theming
-        'emphz-blue': '#1F1F1F',    // Was Blue -> Now Dark Asphalt
-        'emphz-navy': '#1F1F1F',    // Was Navy -> Now Dark Asphalt
-        'emphz-teal': '#FFCA3B',    // Was Teal -> Now Yellow (Accent)
-        'emphz-silver': '#F2F2F2',  // Keep silver as a neutral gray for some backgrounds
-        'emphz-amber': '#FFCA3B',   // Was Amber -> Now Yellow (Primary)
+        // Premium Industrial Palette
+        'emphz-blue': 'var(--surface)',
+        'emphz-dark': 'var(--surface-light)',
+        'emphz-darker': 'var(--surface)',
+        'emphz-teal': 'var(--primary)',
+        'emphz-silver': '#cbd5e1',
+        'emphz-amber': 'var(--accent)',
       },
       fontFamily: {
         sans: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],

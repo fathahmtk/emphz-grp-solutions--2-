@@ -9,48 +9,69 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className = "h-10", size, withTagline }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 156 34"
-      className={`${className} overflow-visible transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:-rotate-1`}
-      fill="none"
-      aria-label="EMPHZ Logo"
-    >
-      {/* E */}
-      <path
-        d="M0 0H23V6H7V14H21V20H7V28H23V34H0V0Z"
-        fill="white"
-        className="transition-colors duration-300 group-hover:fill-neutral-200"
-      />
+    <div className={`flex items-center gap-4 ${className} group cursor-none`}>
+      {/* Precision Engineered Mark */}
+      <div className="relative w-12 h-12 flex items-center justify-center">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-full h-full overflow-visible transition-all duration-1000 group-hover:scale-110"
+        >
+          <defs>
+            <linearGradient id="logo-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#14B8A6" />
+              <stop offset="50%" stopColor="#2DD4BF" />
+              <stop offset="100%" stopColor="#0D9488" />
+            </linearGradient>
+          </defs>
 
-      {/* M */}
-      <path
-        d="M29 0H37L44.5 18L52 0H60V34H53V12L44.5 30L36 12V34H29V0Z"
-        fill="white"
-        className="transition-colors duration-300 group-hover:fill-neutral-200"
-      />
+          {/* Outer technical ring */}
+          <circle
+            cx="50" cy="50" r="45"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="0.5"
+            className="text-white/10"
+          />
 
-      {/* P - Brand Accent Letter */}
-      <path
-        d="M66 0H80C88 0 92 5 92 12C92 19 88 24 80 24H73V34H66V0ZM73 6V18H80C84 18 85 16 85 12C85 8 84 6 80 6H73Z"
-        fill="#C5C6C7"
-        className="logo-accent-path transition-all duration-300 group-hover:brightness-110 drop-shadow-[0_0_8px_rgba(197,198,199,0.3)]"
-      />
+          {/* Hexagonal structural core */}
+          <path
+            d="M50 15 L80 32.5 L80 67.5 L50 85 L20 67.5 L20 32.5 Z"
+            stroke="url(#logo-shimmer)"
+            strokeWidth="3"
+            strokeLinejoin="round"
+            fill="none"
+            className="drop-shadow-[0_0_15px_rgba(20,184,166,0.6)]"
+          />
 
-      {/* H */}
-      <path
-        d="M98 0H105V14H118V0H125V34H118V20H105V34H98V0Z"
-        fill="white"
-        className="transition-colors duration-300 group-hover:fill-neutral-200"
-      />
+          {/* Inner core particle */}
+          <path
+            d="M50 35 L63 42.5 L63 57.5 L50 65 L37 57.5 L37 42.5 Z"
+            fill="url(#logo-shimmer)"
+            className="animate-pulse"
+          />
 
-      {/* Z */}
-      <path
-        d="M131 0H154V6L139 28H154V34H131V28L146 6H131V0Z"
-        fill="white"
-        className="transition-colors duration-300 group-hover:fill-neutral-200"
-      />
-    </svg>
+          {/* Status orbit */}
+          <circle cx="80" cy="32.5" r="4" fill="#F97316" className="animate-pulse shadow-[0_0_10px_#F97316]" />
+        </svg>
+      </div>
+
+      {/* Corporate Identity */}
+      <div className="flex flex-col">
+        <div className="flex items-center">
+          <span className="text-3xl font-bold text-white tracking-[-0.08em] leading-none font-sans uppercase">
+            EMP<span className="text-emphz-teal italic">H</span>Z
+          </span>
+        </div>
+        {withTagline && (
+          <div className="flex items-center gap-2 mt-1.5 overflow-hidden">
+            <span className="h-px w-3 bg-emphz-teal/40"></span>
+            <span className="text-[8px] font-mono text-neutral-500 uppercase tracking-[0.6em] whitespace-nowrap">
+              HIGH_PRECISION_GRP
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
 
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-10 group cursor-pointer inline-block">
-              <Logo className="h-7 w-auto" />
+              <Logo withTagline={true} />
             </div>
             <p className="max-w-xs mb-8 text-xs leading-relaxed font-light opacity-60">
               Engineering Modular Infrastructure for the Next-Century. High-Integrity GRP Composite Solutions. Built for scale. Designed to last.
