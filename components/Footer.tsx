@@ -1,92 +1,78 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
-import { SITE_CONFIG } from '../config';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
-    return (
-        <footer className="bg-industrial-900 text-white pt-24 pb-12 relative overflow-hidden">
-            {/* Watermark Logo */}
-            <div className="absolute -top-[10%] -right-[5%] opacity-[0.03] pointer-events-none select-none">
-                <Logo size="xl" variant="light" withText={false} className="scale-[8] transform rotate-[-15deg] origin-top-right" />
-            </div>
-
-            <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
-                    <div className="lg:col-span-5">
-                        <Link to="/" className="inline-block mb-8">
-                            <Logo variant="light" withTagline={true} size="md" />
-                        </Link>
-                        <p className="text-industrial-400 text-sm leading-relaxed max-w-md mb-8">{SITE_CONFIG.seo.defaultDescription}</p>
-
-                        <div className="flex flex-col gap-1">
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-accent-blue mb-2">Operations</p>
-                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-sm text-xs font-medium text-industrial-300">
-                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                                {SITE_CONFIG.contact.locations}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-3">
-                        <h4 className="text-xs font-bold text-white uppercase tracking-[0.2em] mb-8 border-b border-white/10 pb-4 inline-block">Key Solutions</h4>
-                        <nav className="flex flex-col gap-4">
-                            {[
-                                { name: 'Industrial Enclosures', path: '/products' },
-                                { name: 'Security Cabins', path: '/products' },
-                                { name: 'UrbanCell™ Pods', path: '/products/emp-uc-grid' },
-                                { name: 'Sanitation Units', path: '/products' },
-                                { name: 'Infrastructure', path: '/products' }
-                            ].map((item, idx) => (
-                                <Link
-                                    key={idx}
-                                    to={item.path}
-                                    className="text-industrial-400 hover:text-white hover:translate-x-2 transition-all duration-300 text-sm flex items-center gap-2 group"
-                                >
-                                    <span className="w-0 group-hover:w-2 transition-all duration-300 h-[1px] bg-accent-blue inline-block mb-[2px]"></span>
-                                    {item.name}
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
-
-                    <div className="lg:col-span-4">
-                        <h4 className="text-xs font-bold text-white uppercase tracking-[0.2em] mb-8 border-b border-white/10 pb-4 inline-block">Contact Headquarters</h4>
-                        <div className="space-y-6 text-sm text-industrial-400">
-                            <a href={`https://maps.google.com/?q=${SITE_CONFIG.contact.address}`} target="_blank" rel="noopener noreferrer" className="flex gap-4 group hover:text-white transition-colors">
-                                <div className="mt-1 flex-shrink-0 w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-accent-blue/50 transition-colors">
-                                    <MapPin size={16} className="text-accent-blue" />
-                                </div>
-                                <span className="leading-relaxed">{SITE_CONFIG.contact.address}</span>
-                            </a>
-                            <a href={`tel:${SITE_CONFIG.contact.phone}`} className="flex gap-4 group hover:text-white transition-colors">
-                                <div className="flex-shrink-0 w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-accent-blue/50 transition-colors">
-                                    <Phone size={16} className="text-accent-blue" />
-                                </div>
-                                <span>{SITE_CONFIG.contact.phone}</span>
-                            </a>
-                            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="flex gap-4 group hover:text-white transition-colors">
-                                <div className="flex-shrink-0 w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-accent-blue/50 transition-colors">
-                                    <Mail size={16} className="text-accent-blue" />
-                                </div>
-                                <span>{SITE_CONFIG.contact.email}</span>
-                            </a>
-                        </div>
-                    </div>
+  return (
+    <footer className="bg-emphz-blue text-slate-400 py-24 border-t border-white/5 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          
+          <div className="col-span-1 lg:col-span-1">
+             <div className="mb-10 group cursor-pointer inline-block">
+                <Logo className="h-7 w-auto" />
+             </div>
+             <p className="max-w-xs mb-8 text-xs leading-relaxed font-light opacity-60">
+               Engineering Modular Infrastructure for the Next-Century. High-Integrity GRP Composite Solutions. Built for scale. Designed to last.
+             </p>
+             <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emphz-silver hover:text-emphz-blue transition-all cursor-pointer">
+                   <span className="text-[10px] font-bold">IN</span>
                 </div>
-
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-industrial-500 gap-6">
-                    <p>&copy; {new Date().getFullYear()} {SITE_CONFIG.fullName}. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <Link to="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
-                        <Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link to="#" className="hover:text-white transition-colors">Terms of Service</Link>
-                    </div>
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emphz-silver hover:text-emphz-blue transition-all cursor-pointer">
+                   <span className="text-[10px] font-bold">YT</span>
                 </div>
-            </div>
-        </footer>
-    );
+                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-emphz-silver hover:text-emphz-blue transition-all cursor-pointer">
+                   <span className="text-[10px] font-bold">LI</span>
+                </div>
+             </div>
+          </div>
+          
+          <div>
+            <h4 className="text-white font-bold mb-8 text-[11px] uppercase tracking-[0.4em]">Index</h4>
+            <ul className="space-y-4 text-[11px] font-bold tracking-widest uppercase">
+              <li><a href="#products" className="hover:text-emphz-silver transition-colors flex items-center gap-3"><span className="w-1 h-1 bg-emphz-silver rounded-full"></span> Power Systems</a></li>
+              <li><a href="#products" className="hover:text-emphz-silver transition-colors flex items-center gap-3"><span className="w-1 h-1 bg-emphz-silver rounded-full"></span> Civil Enclosures</a></li>
+              <li><a href="#products" className="hover:text-emphz-silver transition-colors flex items-center gap-3"><span className="w-1 h-1 bg-emphz-silver rounded-full"></span> Custom Modules</a></li>
+              <li><a href="#products" className="hover:text-emphz-silver transition-colors flex items-center gap-3"><span className="w-1 h-1 bg-emphz-silver rounded-full"></span> Hybrid Units</a></li>
+            </ul>
+          </div>
+
+          <div>
+             <h4 className="text-white font-bold mb-8 text-[11px] uppercase tracking-[0.4em]">Connect</h4>
+             <ul className="space-y-4 text-[11px] font-bold tracking-widest uppercase">
+               <li><a href="#about" className="hover:text-emphz-silver transition-colors">Corporate Identity</a></li>
+               <li><a href="#careers" className="hover:text-emphz-silver transition-colors">Talent Pipeline</a></li>
+               <li><a href="#resources" className="hover:text-emphz-silver transition-colors">Legal_Ledger</a></li>
+               <li><a href="#contact" className="hover:text-emphz-silver transition-colors">Global Headquarters</a></li>
+             </ul>
+           </div>
+
+           <div>
+             <h4 className="text-white font-bold mb-8 text-[11px] uppercase tracking-[0.4em]">Support</h4>
+             <ul className="space-y-4 text-[11px] font-bold tracking-widest uppercase">
+               <li><a href="mailto:info@emphz.in" className="hover:text-emphz-silver transition-colors">Technical Desk</a></li>
+               <li><a href="tel:+919037874080" className="hover:text-emphz-silver transition-colors">+91 9037 874 080</a></li>
+               <li><a href="#faq" className="hover:text-emphz-silver transition-colors">Advisory FAQ</a></li>
+               <li><a href="#vetter" className="hover:text-emphz-silver transition-colors">Diagnostic Tools</a></li>
+             </ul>
+           </div>
+        </div>
+        
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono uppercase tracking-[0.3em] font-bold">
+           <div className="flex gap-8 opacity-40 mb-6 md:mb-0">
+             <span>© {new Date().getFullYear()} EMPHZ PVT LTD.</span>
+             <span className="hidden md:block">ISO 9001:2024 Vetted</span>
+             <span className="hidden md:block">Bespoke_Industrial_Ops</span>
+           </div>
+           <div className="flex items-center gap-4 text-emphz-silver">
+             <div className="w-1.5 h-1.5 rounded-full bg-emphz-silver animate-pulse"></div>
+             <span>System Status: Optimal</span>
+           </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
