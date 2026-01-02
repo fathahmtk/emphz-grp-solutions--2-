@@ -5,7 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Industrial Premium - Design System */
+:root {
+  --primary: #0D9488;
+  --primary-glow: rgba(13, 148, 136, 0.4);
+  --surface: #0F172A;
+  --surface-light: #1E293B;
+  --accent: #F59E0B;
+  --accent-glow: rgba(245, 158, 11, 0.3);
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+}
 
 html {
   scroll-behavior: smooth;
@@ -14,26 +23,37 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FFFFFF;
-  color: #0F172A;
+  background-color: var(--surface);
+  color: var(--text-main);
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #E0F2FE;
-  color: #0369A1;
+  background-color: var(--primary);
+  color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F9D8F;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Lexend', sans-serif;
   letter-spacing: -0.025em;
-  /* Tighter headings for modern look */
-  color: #0F172A;
 }
 
 /* --- Components --- */
