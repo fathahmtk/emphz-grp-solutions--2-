@@ -65,53 +65,53 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen text-neutral-900 font-sans selection:bg-emphz-silver selection:text-emphz-blue">
-      <Navbar 
-        quoteCount={quoteItems.length} 
-        openConsultant={() => setIsConsultantOpen(true)} 
+    <div className="min-h-screen text-neutral-900 font-sans selection:bg-emphz-amber selection:text-emphz-blue">
+      <Navbar
+        quoteCount={quoteItems.length}
+        openConsultant={() => setIsConsultantOpen(true)}
         openQuoteDrawer={() => setIsQuoteDrawerOpen(true)}
       />
-      
+
       <main>
         <Hero />
         <ClientReel />
         <About />
         <Products addToQuote={addToQuote} quoteItems={quoteItems} />
-        
+
         {/* Performance & Visualization Tier */}
         <ProjectPulse />
         <MaterialAgingSim />
         <TechnicalVetter addToQuote={addToQuote} quoteItems={quoteItems} />
         <FeatureAnatomy />
-        
+
         {/* Material Intelligence Hubs */}
         <SolutionArchitect />
         <FeatureSpotlight />
         <LaminateStack />
         <DigitalTwin />
-        
+
         {/* Deep Engineering Analysis */}
         <TechnicalBlueprint />
         <SiteReadinessDiagnostic />
         <Quality />
-        
+
         {/* Fiscal & ESG Analysis Tools */}
         <Comparison />
         <ROICalculator />
         <SustainabilityLedger />
         <ResilienceLab />
         <ModularVelocity />
-        
+
         {/* Infrastructure Engineering Configs */}
         <Configurator addToQuote={addToQuote} quoteItems={quoteItems} />
         <TechnicalLedger />
         <EngineeringProtocol />
-        
+
         {/* Supply Chain & Execution */}
         <Capabilities />
         <Process />
         <OperationsMap />
-        
+
         {/* Corporate Trust Matrix */}
         <Industries />
         <InnovationHub />
@@ -123,26 +123,26 @@ function App() {
         <Careers />
         <ComplianceMatrix />
         <FAQ />
-        
+
         {/* Global Resource Center */}
         <TechnicalLibrary />
         <EngineeringDesk />
         <Resources />
-        
+
         <ProjectLaunchpad />
         <Contact quoteItems={quoteItems} />
       </main>
 
       <Footer />
 
-      <QuoteDrawer 
-        isOpen={isQuoteDrawerOpen} 
-        onClose={() => setIsQuoteDrawerOpen(false)} 
+      <QuoteDrawer
+        isOpen={isQuoteDrawerOpen}
+        onClose={() => setIsQuoteDrawerOpen(false)}
         items={quoteItems}
         removeItem={removeItem}
       />
 
-      <button 
+      <button
         onClick={() => setIsConsultantOpen(true)}
         className="fixed bottom-8 right-8 z-[150] bg-emphz-silver text-emphz-blue p-5 rounded-full shadow-2xl hover:scale-110 hover:bg-white transition-all duration-500 group flex items-center gap-2 border border-emphz-silver/20"
         aria-label="AI Technical Consultant"
@@ -153,9 +153,9 @@ function App() {
         </span>
       </button>
 
-      <AIConsultant 
-        isOpen={isConsultantOpen} 
-        onClose={() => setIsConsultantOpen(false)} 
+      <AIConsultant
+        isOpen={isConsultantOpen}
+        onClose={() => setIsConsultantOpen(false)}
       />
     </div>
   );
