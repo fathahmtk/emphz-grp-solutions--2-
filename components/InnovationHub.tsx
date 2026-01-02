@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cpu, FlaskConical, Globe, Zap, ArrowRight, Microchip, Layers } from 'lucide-react';
+import { Cpu, FlaskConical, Globe, Zap, ArrowRight, Layers } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
 
 const InnovationHub: React.FC = () => {
@@ -33,7 +33,7 @@ const InnovationHub: React.FC = () => {
                 { 
                   title: 'Smart Sensors', 
                   desc: 'Integrated IoT monitoring for structural health & environment.',
-                  icon: <Microchip className="w-5 h-5 text-emphz-teal" />
+                  icon: <Cpu className="w-5 h-5 text-emphz-teal" />
                 },
                 { 
                   title: 'Nano-Coatings', 
