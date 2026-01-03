@@ -4,12 +4,14 @@ interface GlowCardProps {
     children: React.ReactNode;
     className?: string;
     glowColor?: string;
+    onClick?: () => void;
 }
 
 const GlowCard: React.FC<GlowCardProps> = ({
     children,
     className = '',
-    glowColor = 'rgba(20, 184, 166, 0.15)'
+    glowColor = 'rgba(20, 184, 166, 0.15)',
+    onClick
 }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [glowPosition, setGlowPosition] = useState({ x: 50, y: 50 });
@@ -29,6 +31,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         <div
             ref={cardRef}
             className={`relative overflow-hidden ${className}`}
+            onClick={onClick}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}

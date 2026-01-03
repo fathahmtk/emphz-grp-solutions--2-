@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Droplets, Wind, Zap, Factory, Landmark, Anchor, ShieldCheck, ArrowRight, Microchip, Database, Network } from 'lucide-react';
+import { Droplets, Wind, Zap, Factory, Landmark, Anchor, ShieldCheck, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 
@@ -126,7 +126,7 @@ const SolutionArchitect: React.FC = () => {
 
                 <div className="bg-emphz-darker text-white p-10 rounded-[2rem] shadow-2xl flex flex-col justify-center items-center text-center cursor-pointer hover:bg-emphz-teal transition-all group overflow-hidden relative">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform"></div>
-                  <Microchip className="w-10 h-10 mb-6 text-emphz-teal group-hover:text-white" />
+                  <Cpu className="w-10 h-10 mb-6 text-emphz-teal group-hover:text-white" />
                   <span className="text-[9px] font-bold tracking-[0.4em] uppercase mb-2 text-emphz-teal group-hover:text-white/80">REQUEST SYSTEM</span>
                   <span className="font-bold text-xs tracking-[0.2em] uppercase relative z-10 font-mono">GENERATE_SPEC_v2 →</span>
                 </div>
