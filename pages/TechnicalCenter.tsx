@@ -1,7 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Send, Loader2, BookOpen, PenTool, FileText, Download, Terminal, Cpu, Thermometer, Activity, Server, AlertTriangle, CheckCircle2, FlaskConical, Search, X } from 'lucide-react';
-import { askTechnicalAssistant } from '../services/geminiService';
-import { ChatMessage } from '../types';
+import React, { useState, useEffect } from 'react';
+import { BookOpen, PenTool, FileText, Download, Cpu, Thermometer, FlaskConical, Search, X, Server, AlertTriangle, CheckCircle2, Activity } from 'lucide-react';
 import GatedDownloadModal from '../components/GatedDownloadModal';
 import SEO from '../components/SEO';
 
@@ -357,47 +355,10 @@ const ChemicalFinder: React.FC = () => {
 // --- MAIN PAGE ---
 
 const TechnicalCenter: React.FC = () => {
-   const [activeModule, setActiveModule] = useState<'terminal' | 'thermal' | 'chemical' | 'library'>('terminal');
+   const [activeModule, setActiveModule] = useState<'thermal' | 'chemical' | 'library'>('library');
    const [activeCategory, setActiveCategory] = useState('Datasheets');
-   const [input, setInput] = useState('');
-   const [messages, setMessages] = useState<ChatMessage[]>([
-      { role: 'model', text: "System initialized. Emphz Technical Database v1.0 online. \nType a query or select a module from the sidebar." }
-   ]);
-   const [isLoading, setIsLoading] = useState(false);
-   const messagesEndRef = useRef<HTMLDivElement>(null);
    const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
    const [fileToDownload, setFileToDownload] = useState<{ title: string; type: string } | null>(null);
-   const [apiKey, setApiKey] = useState(localStorage.getItem('emphz_gemini_key') || '');
-
-   const scrollToBottom = () => {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-   };
-
-   useEffect(() => {
-      scrollToBottom();
-   }, [messages]);
-
-   const handleSend = async () => {
-      if (!input.trim()) return;
-
-      const userMsg: ChatMessage = { role: 'user', text: input };
-      setMessages(prev => [...prev, userMsg]);
-      setInput('');
-      setIsLoading(true);
-
-      const responseText = await askTechnicalAssistant(input, apiKey);
-
-      const botMsg: ChatMessage = { role: 'model', text: responseText };
-      setMessages(prev => [...prev, botMsg]);
-      setIsLoading(false);
-   };
-
-   const handleKeyDown = (e: React.KeyboardEvent) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-         e.preventDefault();
-         handleSend();
-      }
-   };
 
    const handleDownloadClick = (file: { title: string; type: string }) => {
       setFileToDownload(file);
@@ -450,32 +411,6 @@ const TechnicalCenter: React.FC = () => {
                         </p>
                      </div>
                   </div>
-                  <div className="hidden md:flex items-center gap-6 text-[10px] text-neutral-500 font-mono">
-                     <div className="flex items-center gap-2">
-                        <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${apiKey ? 'bg-blue-500' : 'bg-red-500'}`}></div>
-                        {apiKey ? 'ENCRYPTION: ACTIVE' : 'ENCRYPTION: OFFLINE'}
-                     </div>
-                     {!apiKey && (
-                        <div className="flex items-center bg-black border border-gray-700 rounded px-2">
-                           <input
-                              type="password"
-                              placeholder="ENTER_API_KEY"
-                              className="bg-transparent text-white w-24 focus:outline-none py-1"
-                              onKeyDown={(e) => {
-                                 if (e.key === 'Enter') {
-                                    setApiKey(e.currentTarget.value);
-                                    localStorage.setItem('emphz_gemini_key', e.currentTarget.value);
-                                 }
-                              }}
-                           />
-                        </div>
-                     )}
-                     {apiKey && (
-                        <button onClick={() => { setApiKey(''); localStorage.removeItem('emphz_gemini_key'); }} className="hover:text-red-400 decoration-slice">
-                           [DISCONNECT]
-                        </button>
-                     )}
-                  </div>
                </div>
             </div>
 
@@ -485,11 +420,12 @@ const TechnicalCenter: React.FC = () => {
                <div className="lg:col-span-3 flex flex-col gap-4">
                   {/* Module Selector */}
                   <div className="bg-neutral-900/50 rounded-xl border border-neutral-800 p-2 space-y-1 backdrop-blur-md">
+                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Resources</div>
                      <button
-                        onClick={() => setActiveModule('terminal')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'terminal' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
+                        onClick={() => setActiveModule('library')}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'library' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
                      >
-                        <Terminal size={16} /> KNOWLEDGE_BASE
+                        <Server size={16} /> ASSET_LIBRARY
                      </button>
                      <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Calculators</div>
                      <button
@@ -504,19 +440,12 @@ const TechnicalCenter: React.FC = () => {
                      >
                         <FlaskConical size={16} /> CHEM_RESIST
                      </button>
-                     <div className="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Resources</div>
-                     <button
-                        onClick={() => setActiveModule('library')}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all ${activeModule === 'library' ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-neutral-400 hover:bg-white/5 hover:text-white'}`}
-                     >
-                        <Server size={16} /> ASSET_LIBRARY
-                     </button>
                   </div>
 
                   {/* Dynamic Sidebar Content */}
                   <div className="flex-grow bg-[#0B1120] rounded-xl border border-gray-800 p-4 overflow-y-auto">
                      <h3 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">
-                        {activeModule === 'terminal' ? 'Recent Queries' : 'Module Info'}
+                        {activeModule === 'library' ? 'Asset Categories' : 'Module Info'}
                      </h3>
 
                      {activeModule === 'library' && (
@@ -553,13 +482,6 @@ const TechnicalCenter: React.FC = () => {
                            )}
                         </div>
                      )}
-
-                     {activeModule === 'terminal' && (
-                        <div className="text-center py-8">
-                           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse mx-auto mb-2"></div>
-                           <p className="text-[10px] text-gray-600">Awaiting Input...</p>
-                        </div>
-                     )}
                   </div>
                </div>
 
@@ -570,64 +492,6 @@ const TechnicalCenter: React.FC = () => {
                   <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,173,181,0.03)_0%,rgba(0,0,0,0.2)_100%)] pointer-events-none z-0"></div>
 
                   {/* View Switching */}
-                  {activeModule === 'terminal' && (
-                     <div className="bg-black rounded-xl shadow-2xl border border-neutral-800 flex flex-col h-full overflow-hidden relative z-10">
-                        <div className="bg-neutral-900/50 p-3 flex items-center justify-between border-b border-neutral-800 backdrop-blur-sm">
-                           <div className="flex items-center text-xs font-mono font-bold text-neutral-400">
-                              <Terminal size={12} className="mr-2 text-blue-500" /> KNOWLEDGE_BASE_STREAM
-                           </div>
-                        </div>
-
-                        <div className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-neutral-800">
-                           {messages.map((msg, idx) => (
-                              <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                 <div className={`max-w-[85%] ${msg.role === 'user' ? 'text-right' : 'text-left'}`}>
-                                    <span className={`text-[10px] uppercase font-bold mb-1 block tracking-widest ${msg.role === 'user' ? 'text-blue-500' : 'text-neutral-500'}`}>
-                                       {msg.role === 'user' ? 'USER_QUERY' : 'DOC_OUTPUT'}
-                                    </span>
-                                    <div className={`inline-block p-4 rounded-lg text-xs leading-relaxed border shadow-lg ${msg.role === 'user'
-                                       ? 'bg-blue-600/10 border-blue-500/30 text-neutral-300'
-                                       : 'bg-neutral-900/80 border-neutral-700 text-blue-400 font-medium'
-                                       }`}>
-                                       {msg.role === 'model' && idx === 0 ? <TypewriterText text={msg.text} /> : msg.text}
-                                    </div>
-                                 </div>
-                              </div>
-                           ))}
-                           {isLoading && (
-                              <div className="flex justify-start">
-                                 <div className="bg-neutral-900 border border-neutral-800 p-3 rounded-md flex items-center text-blue-500 text-xs shadow-[0_0_15px_rgba(30,64,175,0.1)]">
-                                    <Loader2 className="animate-spin h-3 w-3 mr-2" />
-                                    <span className="animate-pulse">QUERYING_DB...</span>
-                                 </div>
-                              </div>
-                           )}
-                           <div ref={messagesEndRef} />
-                        </div>
-
-                        <div className="p-4 bg-neutral-900/80 border-t border-neutral-800 backdrop-blur-sm">
-                           <div className="relative flex items-center bg-black border border-neutral-700 rounded-md px-3 focus-within:border-blue-500 transition-all">
-                              <span className="text-blue-500 font-bold mr-2 text-sm animate-pulse">$</span>
-                              <input
-                                 type="text"
-                                 value={input}
-                                 onChange={(e) => setInput(e.target.value)}
-                                 onKeyDown={handleKeyDown}
-                                 placeholder="Type a technical question..."
-                                 className="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder-neutral-600 outline-none text-sm h-12 font-mono"
-                                 autoComplete="off"
-                              />
-                              <button
-                                 onClick={handleSend}
-                                 disabled={isLoading || !input.trim()}
-                                 className="text-neutral-500 hover:text-blue-500 disabled:opacity-30 transition-colors p-2"
-                              >
-                                 <Send size={16} />
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  )}
 
                   {activeModule === 'thermal' && (
                      <div className="h-full z-10 relative animate-fade-in">

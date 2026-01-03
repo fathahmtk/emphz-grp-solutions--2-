@@ -7,11 +7,10 @@ import SearchOverlay from './SearchOverlay';
 
 interface NavbarProps {
   quoteCount: number;
-  openConsultant: () => void;
   openQuoteDrawer: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ quoteCount, openConsultant, openQuoteDrawer }) => {
+const Navbar: React.FC<NavbarProps> = ({ quoteCount, openQuoteDrawer }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
