@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Box, FileText, ArrowRight, CornerDownLeft, X, Briefcase, Hash, Globe, Calculator } from 'lucide-react';
+import { Search, Box, CornerDownLeft, Briefcase, Hash, Globe, Calculator } from 'lucide-react';
 import { MOCK_PRODUCTS, NAV_LINKS, MOCK_CASE_STUDIES } from '../constants';
 
 interface CommandPaletteProps {

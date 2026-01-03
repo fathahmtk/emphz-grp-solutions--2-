@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Layers, Shield, Sparkles, Zap, ArrowRight, CheckCircle2, ChevronRight, Binary } from 'lucide-react';
+import { Layers, Shield, Sparkles, Zap, Binary } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 

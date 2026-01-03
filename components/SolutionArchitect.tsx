@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Droplets, Wind, Zap, Factory, Landmark, Anchor, ShieldCheck, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import { Wind, Factory, Landmark, Anchor, ShieldCheck, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 

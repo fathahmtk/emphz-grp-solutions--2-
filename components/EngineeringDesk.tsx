@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, FileCode, Calculator, Ruler, Send, CheckCircle2 } from 'lucide-react';
+import { FileCode, Calculator, Ruler, Send, CheckCircle2 } from 'lucide-react';
 
 const EngineeringDesk: React.FC = () => {
   const [formType, setFormType] = useState<'CAD' | 'CALC' | 'CUSTOM'>('CAD');
@@ -14,10 +14,10 @@ const EngineeringDesk: React.FC = () => {
   return (
     <section id="engineering-desk" className="py-24 bg-emphz-dark border-t border-white/5 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-5 pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16">
-          
+
           <div className="lg:w-1/2">
             <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">12 / Technical Support</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">ENGINEERING DESK</h2>
@@ -33,12 +33,11 @@ const EngineeringDesk: React.FC = () => {
               ].map((item) => (
                 <button
                   key={item.type}
-                  onClick={() => setFormType(item.type as any)}
-                  className={`w-full flex items-start gap-6 p-6 border transition-all text-left ${
-                    formType === item.type 
-                    ? 'bg-emphz-teal/10 border-emphz-teal' 
-                    : 'bg-white/5 border-white/10 hover:border-white/30'
-                  }`}
+                  onClick={() => setFormType(item.type as 'CAD' | 'CALC' | 'CUSTOM')}
+                  className={`w-full flex items-start gap-6 p-6 border transition-all text-left ${formType === item.type
+                      ? 'bg-emphz-teal/10 border-emphz-teal'
+                      : 'bg-white/5 border-white/10 hover:border-white/30'
+                    }`}
                 >
                   <div className={`p-3 rounded ${formType === item.type ? 'bg-emphz-teal text-white' : 'bg-white/5 text-neutral-500'}`}>
                     {item.icon}
@@ -83,9 +82,9 @@ const EngineeringDesk: React.FC = () => {
 
                   <div>
                     <label className="block text-[10px] font-mono text-neutral-600 uppercase mb-2">Technical Specification</label>
-                    <textarea 
+                    <textarea
                       required
-                      rows={4} 
+                      rows={4}
                       placeholder={formType === 'CAD' ? "Specify part numbers or required file format..." : "Detail site constraints or required compliance standards..."}
                       className="w-full bg-emphz-dark border border-white/10 p-3 text-sm text-white focus:border-emphz-teal outline-none transition-colors font-mono resize-none"
                     ></textarea>
@@ -104,7 +103,7 @@ const EngineeringDesk: React.FC = () => {
               )}
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

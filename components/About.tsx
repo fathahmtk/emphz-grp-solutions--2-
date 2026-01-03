@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, ArrowRight, Play, CheckCircle2 } from 'lucide-react';
+import { Phone, ArrowRight, Play, CheckCircle2 } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';

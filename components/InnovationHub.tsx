@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cpu, FlaskConical, Globe, Zap, ArrowRight, Layers } from 'lucide-react';
+import { Cpu, FlaskConical, Zap, ArrowRight, Layers } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';

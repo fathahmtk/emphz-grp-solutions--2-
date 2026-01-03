@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+declare global {
+    interface Window {
+        gtag: (...args: unknown[]) => void;
+        dataLayer: unknown[];
+    }
+}
+
 const GA_ID = 'G-XXXXXXXXXX'; // Placeholder - User to replace
 const CLARITY_ID = 'xxxxxxxxx'; // Placeholder - User to replace
 
@@ -41,8 +48,8 @@ const Analytics: React.FC = () => {
 
     // Track Page Views on Route Change
     useEffect(() => {
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-            (window as any).gtag('event', 'page_view', {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'page_view', {
                 page_path: location.pathname + location.search,
             });
         }

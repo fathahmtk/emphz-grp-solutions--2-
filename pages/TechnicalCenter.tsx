@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BookOpen, PenTool, FileText, Download, Cpu, Thermometer, FlaskConical, Search, X, Server, AlertTriangle, CheckCircle2, Activity } from 'lucide-react';
 import GatedDownloadModal from '../components/GatedDownloadModal';
 import SEO from '../components/SEO';
@@ -74,31 +74,6 @@ const RESOURCES_DB = [
 ];
 
 // --- SUB-COMPONENTS ---
-
-// 1. Typewriter Effect for Terminal
-const TypewriterText: React.FC<{ text: string }> = ({ text }) => {
-   const [displayedText, setDisplayedText] = useState('');
-
-   useEffect(() => {
-      let index = 0;
-      const intervalId = setInterval(() => {
-         setDisplayedText((prev) => {
-            if (index >= text.length) {
-               clearInterval(intervalId);
-               return prev;
-            }
-            const nextChar = text.charAt(index);
-            index++;
-            return prev + nextChar;
-         });
-      }, 15);
-      return () => clearInterval(intervalId);
-   }, [text]);
-
-   return <span dangerouslySetInnerHTML={{
-      __html: displayedText.replace(/\n/g, '<br/>').replace(/\*\*(.*?)\*\*/g, '<b class="text-white">$1</b>')
-   }} />;
-};
 
 // 2. Thermal Calculator Tool
 const ThermalCalculator: React.FC = () => {

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "grp-future-of-infrastructure",
+    "title": "Why GRP is Used in Outdoor Infrastructure",
+    "category": "High-Intent",
+    "date": "2024-08-15",
+    "author": "Emphz Engineering Team",
+    "summary": "A look at why GRP is often preferred over steel for enclosures and cabins in coastal or industrial sites.",
+    "imageUrl": "https://images.unsplash.com/photo-1581092921462-6870002878b6?auto=format&fit=crop&w=800&q=80",
+    "content": "GRP (Glass Reinforced Plastic) is becoming the standard material for outdoor infrastructure where traditional materials fail. We see this most often in coastal areas or chemical plants where steel enclosures rust through in a few years."
+  },
+  {
+    "slug": "sustainability-composite-materials",
+    "title": "The Sustainability of Composite Materials",
+    "category": "Long-Tail",
+    "date": "2024-09-02",
+    "author": "Emphz Research Division",
+    "summary": "How long-lifespan composites reduce total carbon footprint compared to frequently replaced metal assets.",
+    "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+    "content": "While the initial production of composites captures energy, their 50+ year lifespan significantly offsets the carbon cost compared to steel assets that need replacement every 10-15 years in corrosive zones."
+  },
+  {
+    "slug": "fire-safety-industrial-enclosures",
+    "title": "Critical Fire Safety in Industrial Enclosures",
+    "category": "Long-Tail",
+    "date": "2024-09-10",
+    "author": "Emphz Safety Team",
+    "summary": "Understanding UL 94 V-0 ratings and why self-extinguishing materials are non-negotiable for electrical housing.",
+    "imageUrl": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80",
+    "content": "In high-voltage electrical distribution, the enclosure is the last line of defense. We explore why specifying UL 94 V-0 rated SMC materials is crucial for preventing fire propagation in substations."
+  }
+]

@@ -1,12 +1,12 @@
 import React from 'react';
 import { COMPARISON_DATA } from '../data';
-import { Layers, AlertTriangle, CheckSquare } from 'lucide-react';
+import { Layers, CheckSquare } from 'lucide-react';
 
 const Comparison: React.FC = () => {
   return (
     <section className="py-24 bg-emphz-darker border-t border-white/5 relative">
       <div className="absolute inset-0 bg-grid-small opacity-5 pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-16">
           <span className="font-mono text-emphz-teal text-xs tracking-widest uppercase mb-4 block">05 / Analysis</span>
@@ -31,12 +31,12 @@ const Comparison: React.FC = () => {
             {/* Table Body */}
             <div className="space-y-2">
               {COMPARISON_DATA.map((row, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="grid grid-cols-4 gap-4 px-6 py-5 bg-emphz-dark border border-white/5 items-center hover:bg-white/5 transition-colors group"
                 >
                   <div className="font-bold text-white text-sm">{row.criteria}</div>
-                  
+
                   {/* GRP Column - Highlighted */}
                   <div className="text-emphz-teal font-bold text-sm relative">
                     <div className="absolute -left-4 -top-5 -bottom-5 w-[1px] bg-emphz-teal/20 group-hover:bg-emphz-teal/50 transition-colors"></div>
@@ -45,7 +45,7 @@ const Comparison: React.FC = () => {
                     </span>
                     <div className="absolute -right-4 -top-5 -bottom-5 w-[1px] bg-emphz-teal/20 group-hover:bg-emphz-teal/50 transition-colors"></div>
                   </div>
-                  
+
                   <div className="text-neutral-400 text-sm">{row.steel}</div>
                   <div className="text-neutral-400 text-sm">{row.concrete}</div>
                 </div>

@@ -1,0 +1,111 @@
+<nav id="navbar" class="fixed w-full z-[100] transition-all duration-700 bg-transparent py-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center group cursor-pointer">
+            <a href="/">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-emphz-amber flex items-center justify-center rounded-lg shadow-lg">
+                        <span class="text-white font-black text-xl tracking-tighter">E</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-black text-2xl tracking-[0.2em] leading-none">EMPHZ</span>
+                        <span class="text-emphz-amber text-[8px] font-bold tracking-[0.3em] mt-1 uppercase">Modular
+                            Ecosystems</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}"
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                {{ .Name }}
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            {{ end }}
+            <button class="text-white/60 hover:text-white transition-colors p-2" aria-label="Search" id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Action Button -->
+        <div class="hidden lg:flex items-center gap-4">
+            <button
+                class="bg-emphz-amber text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.2em] hover:bg-white hover:text-emphz-darker transition-all duration-500 flex items-center gap-3 uppercase shadow-xl shadow-emphz-amber/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                REQUEST QUOTE
+            </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center gap-4">
+            <button class="text-white p-2" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    id="menu-icon">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="lg:hidden fixed inset-0 z-[90] bg-[#0A0A0A]/98 backdrop-blur-2xl transition-transform duration-500 transform translate-x-full">
+        <div class="flex flex-col items-center justify-center h-full gap-8">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}"
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">{{ .Name
+                }}</a>
+            {{ end }}
+            <button
+                class="bg-emphz-amber text-white px-12 py-5 rounded-full font-bold tracking-[0.2em] mt-4 uppercase flex items-center gap-3">
+                REQUISITION
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('bg-[#0A0A0A]/95', 'backdrop-blur-xl', 'py-3', 'shadow-2xl');
+            nav.classList.remove('bg-transparent', 'py-8');
+        } else {
+            nav.classList.remove('bg-[#0A0A0A]/95', 'backdrop-blur-xl', 'py-3', 'shadow-2xl');
+            nav.classList.add('bg-transparent', 'py-8');
+        }
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = mobileDrawer.classList.contains('translate-x-0');
+        if (isOpen) {
+            mobileDrawer.classList.remove('translate-x-0');
+            mobileDrawer.classList.add('translate-x-full');
+            menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+        } else {
+            mobileDrawer.classList.remove('translate-x-full');
+            mobileDrawer.classList.add('translate-x-0');
+            menuIcon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+        }
+    });
+</script>

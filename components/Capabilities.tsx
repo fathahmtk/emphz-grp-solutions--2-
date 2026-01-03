@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { CAPABILITIES } from '../data';
-import { ArrowRight, Cpu, Settings, Layers } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import SectionHeader from './SectionHeader';
-import GlowCard from './GlowCard';
+
 
 const Capabilities: React.FC = () => {
   const [activeTab, setActiveTab] = useState(CAPABILITIES[0]);
@@ -27,8 +27,8 @@ const Capabilities: React.FC = () => {
                 key={cap.id}
                 onClick={() => setActiveTab(cap)}
                 className={`group flex items-center justify-between p-8 rounded-[2rem] text-left transition-all duration-500 border ${activeTab.id === cap.id
-                    ? 'bg-emphz-teal border-emphz-teal text-white shadow-2xl shadow-emphz-teal/20 scale-105'
-                    : 'bg-white border-neutral-100 text-neutral-400 hover:border-emphz-teal/30 hover:text-emphz-darker'
+                  ? 'bg-emphz-teal border-emphz-teal text-white shadow-2xl shadow-emphz-teal/20 scale-105'
+                  : 'bg-white border-neutral-100 text-neutral-400 hover:border-emphz-teal/30 hover:text-emphz-darker'
                   }`}
               >
                 <div className="flex items-center gap-5">

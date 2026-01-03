@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Navigation, Wind, Thermometer, Droplets, CheckCircle2, ChevronRight, ArrowRight, ShieldAlert } from 'lucide-react';
+import { Navigation, Wind, Thermometer, CheckCircle2, ArrowRight, ShieldAlert } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const SiteReadinessDiagnostic: React.FC = () => {

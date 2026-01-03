@@ -1,41 +1,30 @@
 
 // ... existing imports ...
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Zap, 
-  Settings, 
-  Truck, 
-  Box, 
-  Layout, 
-  Umbrella, 
-  Warehouse, 
+import {
+  ShieldCheck,
+  Zap,
+  Settings,
+  Truck,
+  Box,
+  Layout,
+  Warehouse,
   DraftingCompass,
   Hammer,
   FileCheck,
   Globe,
-  Grid,
-  PenTool,
   CloudRain,
   Building2,
   Factory,
   Cpu,
   RadioTower,
   Landmark,
-  MapPin,
-  Calendar,
-  FileText,
-  Download,
-  Award,
   Layers,
   Thermometer,
   Activity,
   CheckCircle,
-  Briefcase,
-  Leaf,
   Recycle,
   Sun,
-  Users,
   Shield,
   Droplets,
   Flame,
@@ -48,11 +37,11 @@ import {
 } from 'lucide-react';
 
 // Cinematic Unsplash Images
-const unsplash = (id: string, w: number = 1200, h: number = 800) => 
+const unsplash = (id: string, w: number = 1200, h: number = 800) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=80&w=${w}&h=${h}`;
 
 export const SITE_IMAGES = {
-  hero: unsplash("1536842386914-53606f71b9c1", 1920, 1080), 
+  hero: unsplash("1536842386914-53606f71b9c1", 1920, 1080),
   about: unsplash("1581091226825-a6a2a5aee158", 800, 1200),
   valueProp: unsplash("1486406146926-c627a92ad1ab", 1920, 1080),
   contact: unsplash("1451187580459-43490279c0fa", 800, 1200),
@@ -141,8 +130,8 @@ export const PRODUCTS: Product[] = [
         id: 'door',
         label: 'Access Architecture',
         options: [
-          { id: 'single', label: 'Single Door' }, 
-          { id: 'double', label: 'Double Door' }, 
+          { id: 'single', label: 'Single Door' },
+          { id: 'double', label: 'Double Door' },
           { id: 'window', label: 'Polycarb Window' }
         ]
       },
@@ -150,8 +139,8 @@ export const PRODUCTS: Product[] = [
         id: 'mounting',
         label: 'Mounting Style',
         options: [
-          { id: 'wall', label: 'Wall Mounted' }, 
-          { id: 'pole', label: 'Pole Clamp' }, 
+          { id: 'wall', label: 'Wall Mounted' },
+          { id: 'pole', label: 'Pole Clamp' },
           { id: 'pedestal', label: 'Base Pedestal' }
         ]
       },
@@ -159,8 +148,8 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'RAL Technical Finish',
         options: [
-          { id: '7035', label: '7035 Grey', hex: '#d1d5d8' }, 
-          { id: '7032', label: '7032 Pebble', hex: '#b5ad93' }, 
+          { id: '7035', label: '7035 Grey', hex: '#d1d5d8' },
+          { id: '7032', label: '7032 Pebble', hex: '#b5ad93' },
           { id: '9010', label: '9010 White', hex: '#f7f7f7' }
         ]
       }
@@ -208,7 +197,7 @@ export const PRODUCTS: Product[] = [
         id: 'mounting',
         label: 'Support Structure',
         options: [
-          { id: 'wall', label: 'Wall Bracket' }, 
+          { id: 'wall', label: 'Wall Bracket' },
           { id: 'column', label: 'I-Beam Clamp' },
           { id: 'suspended', label: 'Suspension Kit' }
         ]
@@ -217,7 +206,7 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'RAL Colorway',
         options: [
-          { id: '9010', label: '9010 White', hex: '#f7f7f7' }, 
+          { id: '9010', label: '9010 White', hex: '#f7f7f7' },
           { id: '7035', label: '7035 Grey', hex: '#d1d5d8' },
           { id: '5010', label: '5010 Blue', hex: '#004b93' }
         ]
@@ -266,8 +255,8 @@ export const PRODUCTS: Product[] = [
         id: 'glass',
         label: 'Glazing Architecture',
         options: [
-          { id: 'std', label: 'Toughened' }, 
-          { id: 'tint', label: 'Tinted Heat-Shield' }, 
+          { id: 'std', label: 'Toughened' },
+          { id: 'tint', label: 'Tinted Heat-Shield' },
           { id: 'one-way', label: 'One-Way Mirror' }
         ]
       },
@@ -283,7 +272,7 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'RAL Aesthetic',
         options: [
-          { id: '7035', label: '7035 Grey', hex: '#d1d5d8' }, 
+          { id: '7035', label: '7035 Grey', hex: '#d1d5d8' },
           { id: '1013', label: '1013 Oyster', hex: '#eae3cd' },
           { id: '6005', label: '6005 Green', hex: '#1f3d33' }
         ]
@@ -332,7 +321,7 @@ export const PRODUCTS: Product[] = [
         id: 'flush',
         label: 'Fluid Management',
         options: [
-          { id: 'gravity', label: 'Gravity Flow' }, 
+          { id: 'gravity', label: 'Gravity Flow' },
           { id: 'pressure', label: 'Pumped Flush' },
           { id: 'vacuum', label: 'Vacuum (Eco)' }
         ]
@@ -349,7 +338,7 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'RAL Palette',
         options: [
-          { id: '9010', label: '9010 White', hex: '#f7f7f7' }, 
+          { id: '9010', label: '9010 White', hex: '#f7f7f7' },
           { id: '6005', label: '6005 Dark Green', hex: '#1f3d33' },
           { id: '1015', label: '1015 Ivory', hex: '#e6d9bd' }
         ]
@@ -398,7 +387,7 @@ export const PRODUCTS: Product[] = [
         id: 'acoustic',
         label: 'Attenuation Matrix',
         options: [
-          { id: 'std', label: '25dB Standard' }, 
+          { id: 'std', label: '25dB Standard' },
           { id: 'high', label: '35dB Critical' }
         ]
       },
@@ -414,7 +403,7 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'Environmental RAL',
         options: [
-          { id: '6005', label: '6005 Dark Green', hex: '#1f3d33' }, 
+          { id: '6005', label: '6005 Dark Green', hex: '#1f3d33' },
           { id: '7035', label: '7035 Grey', hex: '#d1d5d8' }
         ]
       }
@@ -462,7 +451,7 @@ export const PRODUCTS: Product[] = [
         id: 'opening',
         label: 'Aperture Control',
         options: [
-          { id: 'gas', label: 'Gas Strut (Up)' }, 
+          { id: 'gas', label: 'Gas Strut (Up)' },
           { id: 'side', label: 'Side Sliding' },
           { id: 'fold', label: 'Bi-Folding' }
         ]
@@ -471,8 +460,8 @@ export const PRODUCTS: Product[] = [
         id: 'color',
         label: 'Corporate RAL',
         options: [
-          { id: 'brand-red', label: 'Coca Red', hex: '#fe001a' }, 
-          { id: 'brand-blue', label: 'Pepsi Blue', hex: '#004b93' }, 
+          { id: 'brand-red', label: 'Coca Red', hex: '#fe001a' },
+          { id: 'brand-blue', label: 'Pepsi Blue', hex: '#004b93' },
           { id: 'brand-white', label: 'Classic White', hex: '#f7f7f7' }
         ]
       }
@@ -493,7 +482,7 @@ export const CAPABILITIES = [
     id: "tech-01",
     name: "Hot Press Molding (SMC)",
     icon: <Layers className="w-6 h-6" />,
-    image: unsplash("1581090464777-f3220bbe1b8b", 1000, 600), 
+    image: unsplash("1581090464777-f3220bbe1b8b", 1000, 600),
     desc: "Automated Sheet Molding Compound (SMC) compression molding for high-precision, high-volume component production.",
     stats: [
       { label: "Pressure", value: "2,000 Tons" },

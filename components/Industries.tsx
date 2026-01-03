@@ -1,6 +1,6 @@
 
 import { SECTORS } from '../data';
-import { ArrowRight, Landmark, Zap, Factory, Cpu, RadioTower, Building2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const Industries: React.FC = () => {

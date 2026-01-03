@@ -1,5 +1,5 @@
 import { PROJECTS } from '../data';
-import { MapPin, Calendar, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { MapPin, ArrowUpRight, ArrowRight } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const Projects: React.FC = () => {

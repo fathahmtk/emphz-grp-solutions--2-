@@ -1,0 +1,30 @@
+[
+  {
+    "id": "smart-city",
+    "title": "Smart Cities & Municipalities",
+    "category": "Flagship",
+    "description": "Networked infrastructure for urban retail, services, and connectivity.",
+    "imageUrl": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "labor-camp",
+    "title": "Workforce Housing & Labor Camps",
+    "category": "Essential",
+    "description": "Standardized retail and sanitary solutions for mass labor accommodations.",
+    "imageUrl": "https://images.unsplash.com/photo-1590674899484-d564fa788e3c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "elec-dist",
+    "title": "Power & Utility Distribution",
+    "category": "Industrial",
+    "description": "Weatherproof housing for panels, junction boxes, and meters.",
+    "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": "telecom",
+    "title": "Telecom & Net-Zero Energy",
+    "category": "Infrastructure",
+    "description": "Shielding for 5G hardware and modular solar energy storage.",
+    "imageUrl": "https://images.unsplash.com/photo-1544669146-6dec42bc7438?auto=format&fit=crop&w=800&q=80"
+  }
+]

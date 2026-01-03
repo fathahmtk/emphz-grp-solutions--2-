@@ -6,15 +6,14 @@ const Preloader: React.FC = () => {
     const [progress, setProgress] = useState(0);
     const [bootLog, setBootLog] = useState<string[]>([]);
 
-    const logs = [
-        "INITIALIZING CORE SYSTEMS...",
-        "LOADING MATERIAL DATABASE: GRP_PROFILES_V2",
-        "ESTABLISHING SECURE PROTOCOLS...",
-        "VETTING STRUCTURAL INTEGRITY...",
-        "SYSTEMS NOMINAL. ACCESS GRANTED."
-    ];
-
     useEffect(() => {
+        const logs = [
+            "INITIALIZING CORE SYSTEMS...",
+            "LOADING MATERIAL DATABASE: GRP_PROFILES_V2",
+            "ESTABLISHING SECURE PROTOCOLS...",
+            "VETTING STRUCTURAL INTEGRITY...",
+            "SYSTEMS NOMINAL. ACCESS GRANTED."
+        ];
         let currentLog = 0;
         const logInterval = setInterval(() => {
             if (currentLog < logs.length) {

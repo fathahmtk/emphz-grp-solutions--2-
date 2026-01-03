@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Star, ArrowUpRight, Cpu, Activity, Globe, Shield } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Cpu, Activity, Shield } from 'lucide-react';
 import { SITE_IMAGES } from '../data';
 
 const Hero: React.FC = () => {

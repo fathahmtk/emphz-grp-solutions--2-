@@ -33,23 +33,23 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
       document.body.style.overflow = 'hidden';
       // Reset state when opening
       setIsSuccess(false);
-      
+
       // Auto-fill from cookie if available
       const savedUser = getCookie('emphz_user_info');
       if (savedUser) {
         try {
-           const parsed = JSON.parse(decodeURIComponent(savedUser));
-           setFormData({ 
-             name: parsed.name || '', 
-             company: parsed.company || '', 
-             email: parsed.email || '' 
-           });
-        } catch(e) {
-           // Fallback to empty if cookie is corrupt
-           setFormData({ name: '', company: '', email: '' });
+          const parsed = JSON.parse(decodeURIComponent(savedUser));
+          setFormData({
+            name: parsed.name || '',
+            company: parsed.company || '',
+            email: parsed.email || ''
+          });
+        } catch {
+          // Fallback to empty if cookie is corrupt
+          setFormData({ name: '', company: '', email: '' });
         }
       } else {
-         setFormData({ name: '', company: '', email: '' });
+        setFormData({ name: '', company: '', email: '' });
       }
 
       setTimeout(() => firstInputRef.current?.focus(), 100);
@@ -100,10 +100,7 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
     e.preventDefault();
     setIsSubmitting(true);
 
-    console.log('--- LEAD CAPTURED (Gated Download) ---');
-    console.log('User:', formData);
-    console.log('Downloaded:', fileToDownload?.title);
-    console.log('------------------------------------');
+
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -137,11 +134,11 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
         <div className={`p-8 transition-opacity duration-300 ${isSuccess ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <div className="text-center mb-6">
             <div className="mx-auto bg-emphz-teal/10 w-16 h-16 rounded-full flex items-center justify-center border-4 border-emphz-teal/20">
-               <Download className="w-8 h-8 text-emphz-teal" />
+              <Download className="w-8 h-8 text-emphz-teal" />
             </div>
             <h2 id="download-modal-title" className="text-2xl font-bold text-white mt-4">Unlock Your Download</h2>
             <p className="text-gray-400 text-sm mt-1">
-              Provide your details to access: <br/>
+              Provide your details to access: <br />
               <span className="font-bold text-emphz-beige">{fileToDownload?.title}</span>
             </p>
           </div>
@@ -179,29 +176,29 @@ const GatedDownloadModal: React.FC<GatedDownloadModalProps> = ({ isOpen, onClose
             >
               {isSubmitting ? (
                 <><Loader2 className="animate-spin h-5 w-5 mr-2" /> Processing...</>
-              ) : ( 'SUBMIT & DOWNLOAD' )}
+              ) : ('SUBMIT & DOWNLOAD')}
             </button>
             <p className="text-[10px] text-gray-600 text-center pt-2">
               By submitting, you agree to receive occasional marketing updates.
             </p>
           </form>
         </div>
-        
+
         {/* Success State */}
         <div className={`absolute inset-0 p-8 flex flex-col items-center justify-center text-center transition-opacity duration-300 ${isSuccess ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-             <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6 border-4 border-green-500/20">
-                <CheckCircle className="w-10 h-10 text-green-500" />
-            </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-            <p className="text-gray-400 text-sm mb-6">
-                Your download for "{fileToDownload?.title}" will begin shortly. If it doesn't, please check your browser settings.
-            </p>
-            <button
-                onClick={onClose}
-                className="w-full bg-emphz-teal text-emphz-navy font-black py-4 rounded-lg hover:bg-white transition-all shadow-lg text-sm uppercase tracking-wide"
-            >
-                Close
-            </button>
+          <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6 border-4 border-green-500/20">
+            <CheckCircle className="w-10 h-10 text-green-500" />
+          </div>
+          <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
+          <p className="text-gray-400 text-sm mb-6">
+            Your download for "{fileToDownload?.title}" will begin shortly. If it doesn't, please check your browser settings.
+          </p>
+          <button
+            onClick={onClose}
+            className="w-full bg-emphz-teal text-emphz-navy font-black py-4 rounded-lg hover:bg-white transition-all shadow-lg text-sm uppercase tracking-wide"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>

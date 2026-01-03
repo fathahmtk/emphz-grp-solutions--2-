@@ -1,0 +1,37 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'EMPHZ | Vetted GRP Composite Ecosystems'
+
+[params]
+  description = 'Engineering Modular Infrastructure for Modern Utilities. Certified GRP Composite Solutions.'
+  logo = '/logo.png'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menus.main]]
+  name = 'HOME'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'SOLUTIONS'
+  pageRef = '/catalog'
+  weight = 20
+
+[[menus.main]]
+  name = 'TECHNICAL'
+  pageRef = '/technical'
+  weight = 30
+
+[[menus.main]]
+  name = 'INDUSTRIES'
+  pageRef = '/industries'
+  weight = 40
+
+[[menus.main]]
+  name = 'CONTACT'
+  pageRef = '/contact'
+  weight = 50

@@ -16,9 +16,10 @@ const FutureVision: React.FC = () => {
             const yPos = (clientY / innerHeight - 0.5) * 40;
 
             const elements = containerRef.current.querySelectorAll('.parallax-element');
-            elements.forEach((el: any) => {
-                const speed = el.getAttribute('data-speed') || 1;
-                el.style.transform = `translate3d(${xPos * speed}px, ${yPos * speed}px, 0)`;
+            elements.forEach((el) => {
+                const htmlEl = el as HTMLElement;
+                const speed = parseFloat(htmlEl.getAttribute('data-speed') || '1');
+                htmlEl.style.transform = `translate3d(${xPos * speed}px, ${yPos * speed}px, 0)`;
             });
         };
 

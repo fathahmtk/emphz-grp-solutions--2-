@@ -184,7 +184,7 @@ const ProductDetail: React.FC = () => {
           {['specs', 'desc', 'downloads'].map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab as any)}
+              onClick={() => setActiveTab(tab as 'specs' | 'desc' | 'downloads')}
               className={`pb-4 text-[10px] font-bold uppercase tracking-[0.2em] transition-all border-b-2 ${activeTab === tab ? 'border-accent-blue text-industrial-900' : 'border-transparent text-industrial-400 hover:text-industrial-600'
                 }`}
             >

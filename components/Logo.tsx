@@ -3,11 +3,11 @@ import React from 'react';
 
 interface LogoProps {
   className?: string;
-  size?: 'sm' | 'md' | 'lg';
+
   withTagline?: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = "h-10", size, withTagline }) => {
+export const Logo: React.FC<LogoProps> = ({ className = "h-10", withTagline }) => {
   return (
     <div className={`flex items-center gap-4 ${className} group cursor-none`}>
       {/* Precision Engineered Mark */}

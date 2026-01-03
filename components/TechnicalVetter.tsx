@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldAlert, Thermometer, Droplets, CheckCircle2, Hammer, Settings, ArrowRight, Activity, Terminal, ShieldCheck } from 'lucide-react';
+import { Thermometer, Droplets, Hammer, Settings, ArrowRight, Activity, ShieldCheck } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 

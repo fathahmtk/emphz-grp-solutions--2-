@@ -12,7 +12,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const items = useRFQStore((state) => state.items);
@@ -22,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
             const currentScrollY = window.scrollY;
 
             // Show background when scrolled
-            setIsScrolled(currentScrollY > 50);
+            // setIsScrolled(currentScrollY > 50);
 
             // Hide/Show logic
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -60,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ isActive, onSearchClick }) => {
                     <div className="nav-island px-6 py-3 flex items-center justify-between">
                         {/* Logo */}
                         <Link to="/" className="flex-shrink-0" onClick={() => setIsMenuOpen(false)}>
-                            <Logo size="sm" withTagline={false} />
+                            <Logo withTagline={false} />
                         </Link>
 
                         {/* Desktop Navigation */}

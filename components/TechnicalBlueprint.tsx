@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Ruler, Maximize2, Layers, Crosshair, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { Maximize2, Layers, Crosshair, ChevronRight } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const BLUEPRINTS = [

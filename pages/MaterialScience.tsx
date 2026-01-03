@@ -86,7 +86,7 @@ const MaterialScience: React.FC = () => {
                   ].map(tab => (
                      <button
                         key={tab.id}
-                        onClick={() => setActiveTab(tab.id as any)}
+                        onClick={() => setActiveTab(tab.id as 'comparison' | 'lcc' | 'chemical')}
                         className={`py-6 text-xs font-bold uppercase tracking-widest border-b-2 transition-all ${activeTab === tab.id ? 'border-blue-600 text-neutral-900' : 'border-transparent text-neutral-400 hover:text-neutral-600'}`}
                      >
                         {tab.label}

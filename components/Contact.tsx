@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, ArrowRight, MapPin, ShoppingBag, Send, User, Building } from 'lucide-react';
+import { Mail, Phone, MapPin, ShoppingBag, Send, User, Building } from 'lucide-react';
 import { OFFICES } from '../data';
 
 interface ContactProps {

@@ -1,17 +1,16 @@
 import React, { useRef, useState } from 'react';
 
-interface GlowCardProps {
+interface GlowCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
     className?: string;
     glowColor?: string;
-    onClick?: () => void;
 }
 
 const GlowCard: React.FC<GlowCardProps> = ({
     children,
     className = '',
     glowColor = 'rgba(20, 184, 166, 0.15)',
-    onClick
+    ...props
 }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [glowPosition, setGlowPosition] = useState({ x: 50, y: 50 });
@@ -31,10 +30,19 @@ const GlowCard: React.FC<GlowCardProps> = ({
         <div
             ref={cardRef}
             className={`relative overflow-hidden ${className}`}
-            onClick={onClick}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
+            onMouseMove={(e) => {
+                handleMouseMove(e);
+                props.onMouseMove?.(e);
+            }}
+            onMouseEnter={(e) => {
+                setIsHovering(true);
+                props.onMouseEnter?.(e);
+            }}
+            onMouseLeave={(e) => {
+                setIsHovering(false);
+                props.onMouseLeave?.(e);
+            }}
+            {...props}
         >
             {/* Radial Glow */}
             <div

@@ -14,7 +14,6 @@ import { MOCK_PRODUCTS } from '../constants';
 import SEO from '../components/SEO';
 import TiltCard from '../components/TiltCard';
 import StatsSection from '../components/StatsSection';
-import GlowCard from '../components/GlowCard';
 import FadeInSection from '../components/FadeInSection';
 
 const Home: React.FC = () => {

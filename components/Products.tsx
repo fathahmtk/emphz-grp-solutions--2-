@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { PRODUCTS } from '../data';
-import { ArrowRight, ChevronDown, CheckCircle2, List, Settings, Activity, ShieldCheck } from 'lucide-react';
+import { ChevronDown, CheckCircle2, List, Settings, Activity, ShieldCheck } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 
@@ -92,8 +92,8 @@ const Products: React.FC<ProductsProps> = ({ addToQuote, quoteItems }) => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-12 py-4 text-[10px] font-bold tracking-[0.2em] uppercase rounded-full transition-all duration-500 border ${selectedCategory === cat
-                  ? 'bg-emphz-silver text-emphz-blue border-emphz-silver shadow-2xl shadow-neutral-300/50 scale-105'
-                  : 'bg-white text-neutral-400 border-neutral-200 hover:border-emphz-blue hover:text-emphz-blue'
+                ? 'bg-emphz-silver text-emphz-blue border-emphz-silver shadow-2xl shadow-neutral-300/50 scale-105'
+                : 'bg-white text-neutral-400 border-neutral-200 hover:border-emphz-blue hover:text-emphz-blue'
                 }`}
             >
               {cat}
@@ -191,8 +191,8 @@ const Products: React.FC<ProductsProps> = ({ addToQuote, quoteItems }) => {
                   <button
                     onClick={() => addToQuote(product.title)}
                     className={`w-full py-5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-500 shadow-md flex items-center justify-center gap-3 ${quoteItems.includes(product.title)
-                        ? 'bg-emphz-blue text-white'
-                        : 'bg-neutral-100 text-neutral-500 hover:bg-emphz-silver hover:text-emphz-blue'
+                      ? 'bg-emphz-blue text-white'
+                      : 'bg-neutral-100 text-neutral-500 hover:bg-emphz-silver hover:text-emphz-blue'
                       }`}
                   >
                     {quoteItems.includes(product.title) ? 'SPECIFICATION SYNCED' : 'REQUEST VETTED SPEC'}

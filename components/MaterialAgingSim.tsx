@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Clock, AlertTriangle, ShieldCheck, ArrowRight, Activity } from 'lucide-react';
+import { Clock, ShieldCheck, Activity } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import GlowCard from './GlowCard';
 

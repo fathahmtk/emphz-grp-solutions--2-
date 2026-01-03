@@ -8,6 +8,8 @@ export default {
     "./contexts/**/*.{js,ts,jsx,tsx}",
     "./services/**/*.{js,ts,jsx,tsx}",
     "./utils/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.html",
+    "./content/**/*.md",
   ],
   theme: {
     extend: {
