@@ -1,120 +1,236 @@
 {{ define "main" }}
-<div class="bg-emphz-teal-black min-h-screen text-white selection:bg-emphz-teal">
+<div class="bg-emphz-teal-black min-h-screen text-white selection:bg-emphz-teal selection:text-white overflow-hidden">
     <!-- CONCEPTUAL HEADER: THE ORIGIN -->
-    <section class="relative pt-40 pb-20 border-b border-white/5 overflow-hidden">
+    <section class="relative pt-40 pb-32 overflow-hidden">
+        <!-- Enhanced Background Layers -->
         <div class="absolute inset-0 z-0">
             <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.1),transparent_70%)] opacity-50">
+                class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.15),transparent_60%)]">
             </div>
-            <div class="absolute top-0 left-0 w-1/3 h-full bg-emphz-teal/5 skew-x-12 -translate-x-1/2"></div>
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(52,211,153,0.08),transparent_70%)]">
+            </div>
+            <div
+                class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-emphz-teal/10 via-transparent to-transparent -skew-x-12 -translate-x-1/2">
+            </div>
+            <!-- Animated Grid -->
+            <div
+                class="absolute inset-0 bg-[linear-gradient(rgba(20,184,166,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(20,184,166,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-grid-shift">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="flex items-center gap-4 mb-8">
-                <span class="w-12 h-px bg-emphz-teal"></span>
-                <span class="font-mono text-[10px] uppercase tracking-[0.5em] text-emphz-teal">System // Profile</span>
+            <!-- Enhanced Badge -->
+            <div class="inline-flex items-center gap-4 mb-12 group">
+                <div class="flex items-center gap-3 px-4 py-2 bg-white/5 border border-emphz-teal/30 backdrop-blur-sm">
+                    <div class="w-2 h-2 rounded-full bg-emphz-teal animate-pulse"></div>
+                    <span class="font-mono text-[10px] uppercase tracking-[0.5em] text-emphz-teal">System //
+                        Corporate_Intel</span>
+                </div>
+                <span class="w-24 h-px bg-gradient-to-r from-emphz-teal to-transparent"></span>
             </div>
-            <h1
-                class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none animate-fade-in-up">
-                MATERIAL<br /><span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-emerald-400">HERITAGE.</span>
+
+            <!-- Enhanced Title with Glitch Effect -->
+            <h1 class="text-6xl md:text-9xl font-black mb-10 tracking-tighter leading-[0.85] relative">
+                <span class="block opacity-0 animate-fade-in-up">MATERIAL</span>
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal via-emerald-400 to-teal-300 opacity-0 animate-fade-in-up [animation-delay:200ms] relative">
+                    HERITAGE.
+                    <span class="absolute inset-0 text-emphz-teal blur-2xl opacity-30">HERITAGE.</span>
+                </span>
             </h1>
+
             <p
-                class="text-lg text-industrial-500 max-w-2xl font-light leading-relaxed animate-fade-in-up [animation-delay:200ms]">
+                class="text-xl md:text-2xl text-industrial-400 max-w-3xl font-light leading-relaxed mb-16 opacity-0 animate-fade-in-up [animation-delay:400ms] border-l-2 border-emphz-teal/30 pl-8">
                 EMPHZ GRP Solutions manufactures high-durability composite ecosystems for critical national
                 infrastructure.
-                Our mission is the total elimination of structural entropy through material science.
+                Our mission: <span class="text-white font-normal">the total elimination of structural entropy</span>
+                through advanced material science.
             </p>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-0 animate-fade-in-up [animation-delay:600ms]">
+                <div class="group">
+                    <div
+                        class="text-5xl font-black text-white mb-3 font-mono group-hover:text-emphz-teal transition-colors">
+                        50<span class="text-2xl">+</span></div>
+                    <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-industrial-600">Years Lifespan
+                    </div>
+                </div>
+                <div class="group">
+                    <div
+                        class="text-5xl font-black text-white mb-3 font-mono group-hover:text-emphz-teal transition-colors">
+                        120<span class="text-2xl">+</span></div>
+                    <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-industrial-600">Engineers</div>
+                </div>
+                <div class="group">
+                    <div
+                        class="text-5xl font-black text-white mb-3 font-mono group-hover:text-emphz-teal transition-colors">
+                        50K<span class="text-2xl">+</span></div>
+                    <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-industrial-600">SqFt Facility
+                    </div>
+                </div>
+                <div class="group">
+                    <div
+                        class="text-5xl font-black text-white mb-3 font-mono group-hover:text-emphz-teal transition-colors">
+                        ISO</div>
+                    <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-industrial-600">Certified QMS
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Element -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emphz-teal/50 to-transparent">
         </div>
     </section>
 
     <!-- CORPORATE CHASSIS: THE DATA -->
-    <section class="max-w-7xl mx-auto px-6 py-24 md:py-40">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div class="animate-fade-in-up [animation-delay:400ms]">
-                <h2 class="font-mono text-[10px] font-bold text-emphz-teal uppercase tracking-[0.4em] mb-8">Operational
-                    Briefing</h2>
-                <h3 class="text-4xl md:text-5xl font-black text-white mb-10 tracking-tighter leading-tight">THE PHYSICS
-                    OF<br /><span class="text-industrial-600">PERMANENCE.</span></h3>
-                <div class="space-y-8 text-industrial-400 font-light leading-relaxed">
-                    <p>Founded to disrupt the decay cycle of traditional infrastructure, EMPHZ specializing in Glass
-                        Reinforced Polyester (GRP) systems that remain inert in the face of chemical and saline stress.
-                    </p>
-                    <p>From our high-capacity manufacturing hub in Mysuru, Karnataka, we deploy structural modules
-                        engineered for a half-century lifecycle in the world's most aggressive atmospheres.</p>
+    <section class="relative py-32 md:py-48">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <!-- Left Content -->
+                <div class="space-y-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-16 h-px bg-emphz-teal"></span>
+                            <h2 class="font-mono text-[11px] font-bold text-emphz-teal uppercase tracking-[0.5em]">
+                                Operational Briefing</h2>
+                        </div>
+                        <h3 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                            THE PHYSICS<br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-industrial-600 to-industrial-700">OF
+                                PERMANENCE.</span>
+                        </h3>
+                    </div>
+
+                    <div
+                        class="space-y-8 text-lg text-industrial-400 font-light leading-relaxed pl-8 border-l border-white/10">
+                        <p class="hover:text-industrial-300 transition-colors">Founded to disrupt the decay cycle of
+                            traditional infrastructure, EMPHZ specializes in <span class="text-white font-medium">Glass
+                                Reinforced Polyester (GRP) systems</span> that remain inert in the face of chemical and
+                            saline stress.</p>
+                        <p class="hover:text-industrial-300 transition-colors">From our high-capacity manufacturing hub
+                            in <span class="text-emphz-teal font-medium">Mysuru, Karnataka</span>, we deploy structural
+                            modules engineered for a half-century lifecycle in the world's most aggressive industrial
+                            atmospheres.</p>
+                    </div>
+
+                    <!-- Mission Statement Box -->
+                    <div class="p-8 bg-white/[0.02] border-l-4 border-emphz-teal backdrop-blur-sm">
+                        <p class="text-sm font-mono uppercase tracking-wide text-industrial-500 mb-2">Core Directive</p>
+                        <p class="text-lg font-light italic text-white">"Zero maintenance. Total resilience. Infinite
+                            protection."</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="bg-[#010807] border border-white/5 p-12 md:p-16 relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-emphz-teal/10 blur-[60px]"></div>
-                <h4
-                    class="font-mono text-[10px] font-bold text-white uppercase tracking-[0.3em] mb-12 flex items-center gap-4">
-                    <span class="w-2 h-2 rounded-full bg-emphz-teal"></span> Facility_Status
-                </h4>
+                <!-- Right Facility Cards -->
+                <div class="relative">
+                    <!-- Floating Background Element -->
+                    <div class="absolute -top-12 -right-12 w-96 h-96 bg-emphz-teal/5 blur-[100px] rounded-full"></div>
 
-                <div class="space-y-10">
-                    <div class="flex gap-8 group">
-                        <div class="text-industrial-700 group-hover:text-emphz-teal transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 2v20M2 12h20"></path>
-                            </svg>
+                    <div
+                        class="relative bg-[#010807] border border-white/10 p-12 md:p-16 overflow-hidden group hover:border-emphz-teal/30 transition-all duration-500">
+                        <!-- Corner Accent -->
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-emphz-teal/10 to-transparent">
                         </div>
-                        <div>
+
+                        <div class="flex items-center justify-between mb-12">
+                            <h4 class="font-mono text-[11px] font-bold text-white uppercase tracking-[0.4em]">
+                                <span class="inline-block w-3 h-3 rounded-full bg-emphz-teal mr-4 animate-pulse"></span>
+                                Manufacturing_Status
+                            </h4>
+                            <span class="font-mono text-[9px] text-emerald-400 uppercase tracking-widest">ACTIVE</span>
+                        </div>
+
+                        <div class="space-y-10">
+                            <!-- Card 1 -->
                             <div
-                                class="font-mono text-[9px] text-industrial-600 uppercase tracking-widest mb-1 group-hover:text-emphz-teal transition-colors">
-                                SMC_Precision</div>
-                            <div class="text-sm font-bold text-white tracking-tight uppercase tracking-widest">
-                                High-Pressure Molding & Layup</div>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 group">
-                        <div class="text-industrial-700 group-hover:text-emphz-teal transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            </svg>
-                        </div>
-                        <div>
+                                class="flex gap-8 p-6 bg-white/[0.02] border border-white/5 hover:border-emphz-teal/20 hover:bg-white/[0.04] transition-all group/item">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-emphz-teal/10 border border-emphz-teal/30 flex items-center justify-center group-hover/item:bg-emphz-teal/20 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M12 2v20M2 12h20"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <div
+                                        class="font-mono text-[10px] text-emphz-teal uppercase tracking-widest mb-2 flex items-center gap-2">
+                                        <span class="w-1 h-1 bg-emphz-teal rounded-full"></span> SMC_Precision_Core
+                                    </div>
+                                    <div class="text-base font-bold text-white uppercase tracking-wide">High-Pressure
+                                        Molding & Advanced Layup</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
                             <div
-                                class="font-mono text-[9px] text-industrial-600 uppercase tracking-widest mb-1 group-hover:text-emphz-teal transition-colors">
-                                Infrastructure</div>
-                            <div class="text-sm font-bold text-white tracking-tight uppercase tracking-widest">50,000+
-                                Sq. Ft. Controlled ENV</div>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 group">
-                        <div class="text-industrial-700 group-hover:text-emphz-teal transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            </svg>
-                        </div>
-                        <div>
+                                class="flex gap-8 p-6 bg-white/[0.02] border border-white/5 hover:border-emphz-teal/20 hover:bg-white/[0.04] transition-all group/item">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-emphz-teal/10 border border-emphz-teal/30 flex items-center justify-center group-hover/item:bg-emphz-teal/20 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <div
+                                        class="font-mono text-[10px] text-emphz-teal uppercase tracking-widest mb-2 flex items-center gap-2">
+                                        <span class="w-1 h-1 bg-emphz-teal rounded-full"></span> Infrastructure_Grid
+                                    </div>
+                                    <div class="text-base font-bold text-white uppercase tracking-wide">50,000+ Sq.Ft.
+                                        Climate-Controlled Facility</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
                             <div
-                                class="font-mono text-[9px] text-industrial-600 uppercase tracking-widest mb-1 group-hover:text-emphz-teal transition-colors">
-                                Technical_Staff</div>
-                            <div class="text-sm font-bold text-white tracking-tight uppercase tracking-widest">120+
-                                Specialized Ops Experts</div>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 group">
-                        <div class="text-industrial-700 group-hover:text-emphz-teal transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </div>
-                        <div>
+                                class="flex gap-8 p-6 bg-white/[0.02] border border-white/5 hover:border-emphz-teal/20 hover:bg-white/[0.04] transition-all group/item">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-emphz-teal/10 border border-emphz-teal/30 flex items-center justify-center group-hover/item:bg-emphz-teal/20 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <div
+                                        class="font-mono text-[10px] text-emphz-teal uppercase tracking-widest mb-2 flex items-center gap-2">
+                                        <span class="w-1 h-1 bg-emphz-teal rounded-full"></span> Technical_Personnel
+                                    </div>
+                                    <div class="text-base font-bold text-white uppercase tracking-wide">120+ Specialized
+                                        Operations Experts</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
                             <div
-                                class="font-mono text-[9px] text-industrial-600 uppercase tracking-widest mb-1 group-hover:text-emphz-teal transition-colors">
-                                Certification</div>
-                            <div class="text-sm font-bold text-white tracking-tight uppercase tracking-widest">ISO
-                                9001:2015 Registered QMS</div>
+                                class="flex gap-8 p-6 bg-white/[0.02] border border-white/5 hover:border-emphz-teal/20 hover:bg-white/[0.04] transition-all group/item">
+                                <div
+                                    class="flex-shrink-0 w-14 h-14 bg-emphz-teal/10 border border-emphz-teal/30 flex items-center justify-center group-hover/item:bg-emphz-teal/20 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow">
+                                    <div
+                                        class="font-mono text-[10px] text-emphz-teal uppercase tracking-widest mb-2 flex items-center gap-2">
+                                        <span class="w-1 h-1 bg-emphz-teal rounded-full"></span> Certification_Matrix
+                                    </div>
+                                    <div class="text-base font-bold text-white uppercase tracking-wide">ISO 9001:2015
+                                        Registered QMS</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,87 +239,158 @@
     </section>
 
     <!-- CORE LOGIC: THE PILLARS -->
-    <section class="bg-[#010807] py-32 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-24">
-                <h2 class="font-mono text-[10px] font-bold text-emphz-teal uppercase tracking-[0.4em] mb-4">Core
-                    Protocols</h2>
-                <h3 class="text-4xl font-black text-white tracking-tighter">ASSET_INTEGRITY.</h3>
+    <section class="relative bg-[#010807] py-40 border-y border-white/5">
+        <!-- Diagonal Accent -->
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emphz-teal/5 to-transparent skew-x-12 translate-x-1/4">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="mb-32 text-center">
+                <h2 class="font-mono text-[11px] font-bold text-emphz-teal uppercase tracking-[0.5em] mb-6">Core
+                    Engineering Protocols</h2>
+                <h3 class="text-6xl md:text-8xl font-black text-white tracking-tighter mb-6">
+                    ASSET<span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-emerald-400">_INTEGRITY.</span>
+                </h3>
+                <div class="w-32 h-1 bg-gradient-to-r from-transparent via-emphz-teal to-transparent mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-16">
-                <div class="space-y-8 group">
-                    <div class="w-12 h-px bg-emphz-teal group-hover:w-20 transition-all duration-500"></div>
+            <div class="grid md:grid-cols-3 gap-12 md:gap-16">
+                <!-- Pillar 1 -->
+                <div
+                    class="group relative p-10 bg-white/[0.01] border border-white/5 hover:border-emphz-teal/30 hover:bg-white/[0.03] transition-all duration-500">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emphz-teal to-transparent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500">
+                    </div>
+                    <div class="w-16 h-px bg-emphz-teal mb-8 group-hover:w-full transition-all duration-500"></div>
                     <h4
-                        class="font-bold text-sm text-white uppercase tracking-widest group-hover:text-emphz-teal transition-colors">
+                        class="text-xl font-black text-white uppercase tracking-wide mb-6 group-hover:text-emphz-teal transition-colors">
                         Oxidation Immunity</h4>
-                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Total resistance to high salinity
-                        and acidic soil. Zero corrosion link.</p>
+                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Total resistance to high salinity,
+                        acidic soil contamination, and atmospheric degradation. Zero corrosion propagation at molecular
+                        level.</p>
+                    <div
+                        class="mt-8 font-mono text-[9px] text-emphz-teal uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                        Performance: Infinite ∞</div>
                 </div>
-                <div class="space-y-8 group">
-                    <div class="w-12 h-px bg-emphz-teal group-hover:w-20 transition-all duration-500"></div>
+
+                <!-- Pillar 2 -->
+                <div
+                    class="group relative p-10 bg-white/[0.01] border border-white/5 hover:border-emphz-teal/30 hover:bg-white/[0.03] transition-all duration-500">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emphz-teal to-transparent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500">
+                    </div>
+                    <div class="w-16 h-px bg-emphz-teal mb-8 group-hover:w-full transition-all duration-500"></div>
                     <h4
-                        class="font-bold text-sm text-white uppercase tracking-widest group-hover:text-emphz-teal transition-colors">
-                        Tolerated Precision</h4>
-                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Advanced molding ensuring
-                        consistent density and dimensional lock.</p>
+                        class="text-xl font-black text-white uppercase tracking-wide mb-6 group-hover:text-emphz-teal transition-colors">
+                        Dimensional Precision</h4>
+                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Advanced compression molding
+                        ensuring consistent laminate density and sub-millimeter dimensional tolerances across production
+                        batches.</p>
+                    <div
+                        class="mt-8 font-mono text-[9px] text-emphz-teal uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                        Tolerance: ±0.5mm</div>
                 </div>
-                <div class="space-y-8 group">
-                    <div class="w-12 h-px bg-emphz-teal group-hover:w-20 transition-all duration-500"></div>
+
+                <!-- Pillar 3 -->
+                <div
+                    class="group relative p-10 bg-white/[0.01] border border-white/5 hover:border-emphz-teal/30 hover:bg-white/[0.03] transition-all duration-500">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emphz-teal to-transparent scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500">
+                    </div>
+                    <div class="w-16 h-px bg-emphz-teal mb-8 group-hover:w-full transition-all duration-500"></div>
                     <h4
-                        class="font-bold text-sm text-white uppercase tracking-widest group-hover:text-emphz-teal transition-colors">
-                        Modular Polymer</h4>
-                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Optimized glass-to-resin matrix
-                        for extreme thermal stability.</p>
+                        class="text-xl font-black text-white uppercase tracking-wide mb-6 group-hover:text-emphz-teal transition-colors">
+                        Thermal Stability</h4>
+                    <p class="text-sm text-industrial-500 font-light leading-relaxed">Optimized glass-to-resin polymer
+                        matrix maintaining structural integrity across extreme temperature differentials and thermal
+                        cycling.</p>
+                    <div
+                        class="mt-8 font-mono text-[9px] text-emphz-teal uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                        Range: -40°C to +80°C</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- LEADERSHIP UPLINK -->
-    <section class="max-w-7xl mx-auto px-6 py-40">
-        <div class="max-w-4xl border-l border-white/10 pl-12 md:pl-24 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-emphz-teal via-white/10 to-transparent">
-            </div>
-            <p class="text-3xl md:text-5xl font-light text-white leading-tight mb-16 italic tracking-tight">
-                "We synthesize the materials that shield national progress. Our mandate is engineering simplicity and
-                absolute material longevity."
-            </p>
-            <div class="flex items-center gap-6">
-                <div class="w-16 h-px bg-emphz-teal"></div>
-                <div>
-                    <div class="text-[12px] font-bold text-white uppercase tracking-[0.3em] mb-1">Muhammed Rashik P
+    <section class="relative py-48">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="relative border-l-4 border-emphz-teal/30 pl-16 md:pl-32">
+                <div
+                    class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-emphz-teal via-emphz-teal/50 to-transparent">
+                </div>
+
+                <div class="mb-12">
+                    <div class="inline-block px-4 py-2 bg-emphz-teal/10 border border-emphz-teal/30 mb-8">
+                        <span class="font-mono text-[10px] text-emphz-teal uppercase tracking-[0.4em]">Leadership
+                            Vision</span>
                     </div>
-                    <div class="font-mono text-[10px] text-industrial-600 uppercase tracking-widest">Master of
-                        Operations // MD</div>
+                </div>
+
+                <blockquote
+                    class="text-4xl md:text-6xl font-light text-white leading-tight mb-16 italic tracking-tight">
+                    "We synthesize the materials that <span class="text-emphz-teal font-normal">shield national
+                        progress</span>. Our mandate is engineering simplicity and absolute material longevity."
+                </blockquote>
+
+                <div class="flex items-center gap-8">
+                    <div class="w-24 h-px bg-gradient-to-r from-emphz-teal to-transparent"></div>
+                    <div>
+                        <div class="text-lg font-bold text-white uppercase tracking-wide mb-2">Muhammed Rashik P</div>
+                        <div class="font-mono text-[10px] text-industrial-600 uppercase tracking-[0.3em]">Managing
+                            Director // Chief Operations</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FINAL MISSION CALL -->
-    <section class="max-w-7xl mx-auto px-6 pb-40">
-        <div class="relative p-12 md:p-32 bg-emphz-teal-black border border-white/5 overflow-hidden text-center group">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.1),transparent_70%)]">
+    <section class="max-w-7xl mx-auto px-6 pb-48">
+        <div
+            class="relative p-16 md:p-32 bg-gradient-to-br from-emphz-teal/10 to-transparent border border-emphz-teal/30 overflow-hidden group hover:from-emphz-teal/15 transition-all duration-700">
+            <!-- Animated Background -->
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.15),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700">
             </div>
-            <h2 class="text-4xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-none relative z-10">
-                DEPLOYING<br /><span class="text-industrial-600">AT SCALE.</span></h2>
-            <p class="text-lg text-industrial-400 font-light max-w-2xl mx-auto mb-16 relative z-10 leading-relaxed">
-                From individual unit prototypes to regional infrastructure rollouts, our logistical hubs are optimized
-                for consistent delivery across the subcontinent.
-            </p>
-            <div class="flex flex-wrap justify-center gap-8 relative z-10">
-                <a href="/contact"
-                    class="bg-white text-[#020C0B] px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-emphz-teal hover:text-white transition-all shadow-2xl shadow-emphz-teal/20">
-                    Uplink Request
-                </a>
-                <div class="flex items-center gap-4 font-mono text-[9px] text-industrial-600 uppercase tracking-widest">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="1" y="3" width="15" height="13"></rect>
-                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                    </svg>
-                    Operational Hub Mysore
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-emerald-400/10 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+            </div>
+
+            <div class="relative z-10 text-center">
+                <h2 class="text-5xl md:text-8xl font-black text-white mb-12 tracking-tighter leading-none">
+                    DEPLOYING<br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-industrial-600 to-industrial-700">AT
+                        SCALE.</span>
+                </h2>
+                <p class="text-xl text-industrial-400 font-light max-w-3xl mx-auto mb-16 leading-relaxed">
+                    From individual unit prototypes to <span class="text-white font-normal">regional infrastructure
+                        rollouts</span>, our logistical hubs are optimized for consistent delivery across the
+                    subcontinent.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <a href="/contact"
+                        class="group/btn relative px-16 py-6 bg-white text-[#020C0B] font-bold uppercase tracking-widest text-sm overflow-hidden hover:bg-emphz-teal hover:text-white transition-all shadow-2xl shadow-emphz-teal/20">
+                        <span class="relative z-10">Uplink Request</span>
+                        <div
+                            class="absolute inset-0 bg-emphz-teal scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left duration-300">
+                        </div>
+                    </a>
+                    <div
+                        class="flex items-center gap-4 font-mono text-[10px] text-industrial-600 uppercase tracking-widest px-8 py-6 border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-emphz-teal">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        Operational Hub // Mysore
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,7 +401,7 @@
     @keyframes fade-in-up {
         from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
         }
 
         to {
@@ -224,7 +411,21 @@
     }
 
     .animate-fade-in-up {
-        animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes grid-shift {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 100px 100px;
+        }
+    }
+
+    .animate-grid-shift {
+        animation: grid-shift 20s linear infinite;
     }
 </style>
 {{ end }}
