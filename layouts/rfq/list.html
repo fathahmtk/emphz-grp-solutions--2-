@@ -1,0 +1,166 @@
+{{ define "main" }}
+<div class="min-h-screen bg-white flex flex-col lg:flex-row">
+    <!-- Left Panel: The Manifest (Industrial Dark) -->
+    <div
+        class="w-full lg:w-5/12 bg-industrial-900 text-white relative flex flex-col order-2 lg:order-1 border-r border-industrial-800 lg:min-h-[calc(100vh-80px)]">
+        <div class="absolute inset-0 opacity-10 pointer-events-none"
+            style="background-image: radial-gradient(circle, #334155 1px, transparent 1px); background-size: 30px 30px">
+        </div>
+
+        <div class="p-8 lg:p-12 relative z-10 flex-grow flex flex-col h-full">
+            <div class="flex items-center justify-between mb-12">
+                <a href="/catalog"
+                    class="inline-flex items-center text-industrial-400 hover:text-white text-[10px] font-bold uppercase tracking-[0.2em] transition-colors gap-2">
+                    <div
+                        class="w-6 h-6 rounded-full border border-industrial-700 flex items-center justify-center hover:bg-industrial-800">
+                        ←</div> Modify Config
+                </a>
+                <span class="text-[10px] font-mono text-industrial-600">SID-{{ now.Format "2006" }}</span>
+            </div>
+
+            <div class="mb-10">
+                <h1 class="text-3xl lg:text-5xl font-medium mb-4 tracking-tight text-white leading-tight">
+                    Project <br /> <span class="text-industrial-400">Requisition.</span>
+                </h1>
+                <p class="text-industrial-400 text-sm font-light leading-relaxed max-w-sm">
+                    Confirm your system configuration below. Engineering will review all items for compatibility before
+                    issuance.
+                </p>
+            </div>
+
+            <div id="manifest-items" class="flex-grow space-y-3 overflow-y-auto pr-2 mb-8 max-h-[40vh] lg:max-h-none">
+                <!-- Items populated by JS -->
+            </div>
+
+            <div class="pt-8 border-t border-industrial-800 mt-auto">
+                <div
+                    class="grid grid-cols-2 gap-y-6 gap-x-8 text-[9px] uppercase tracking-[0.15em] font-bold text-industrial-400">
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-accent-blue">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>ISO 9001:2015 <br /><span
+                                class="text-industrial-600 font-normal normal-case tracking-normal">Certified
+                                Process</span></span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-accent-blue">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        <span>24hr Turnaround <br /><span
+                                class="text-industrial-600 font-normal normal-case tracking-normal">For Standard
+                                Quotes</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel: Form (Clean Industrial Light) -->
+    <div class="w-full lg:w-7/12 bg-white p-8 lg:p-16 overflow-y-auto order-1 lg:order-2 py-24 md:py-32">
+        <div id="rfq-success" class="hidden max-w-xl mx-auto text-center py-20">
+            <div
+                class="w-24 h-24 bg-industrial-50 rounded-full flex items-center justify-center mx-auto mb-10 border border-industrial-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-accent-blue">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2 class="text-4xl font-medium text-industrial-900 mb-2 tracking-tight">Requirement Logged</h2>
+            <div class="text-xs font-bold text-industrial-400 uppercase tracking-widest mb-12">Ref ID: <span
+                    id="ref-id"></span></div>
+            <p class="text-industrial-500 text-lg mb-12 leading-relaxed font-light">Transmission received. A formal
+                technical evaluation will be issued within 24 business hours.</p>
+            <a href="/"
+                class="bg-industrial-900 text-white px-12 py-4 uppercase tracking-[0.2em] font-bold text-xs hover:bg-accent-blue transition-all">Return
+                to Dashboard</a>
+        </div>
+
+        <div id="rfq-form-container" class="max-w-2xl mx-auto">
+            <div class="flex items-center justify-between mb-10 pb-6 border-b border-industrial-100">
+                <div>
+                    <h2 class="text-2xl font-medium text-industrial-900">Project Parameters</h2>
+                    <p class="text-sm text-industrial-500 mt-1 font-light">Coordinate supply chain and site
+                        requirements.</p>
+                </div>
+            </div>
+
+            <form id="rfq-form" class="space-y-12">
+                <div class="space-y-8">
+                    <h3
+                        class="text-[10px] font-bold text-industrial-900 uppercase tracking-[0.2em] flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-accent-blue"></span> Operational Context
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider">Industry
+                                Sector</label>
+                            <select name="industry"
+                                class="w-full bg-industrial-50/50 border border-industrial-200 rounded-sm p-3 text-sm text-industrial-900 focus:border-accent-blue outline-none">
+                                <option value="Construction">Construction / Civil</option>
+                                <option value="Utilities">Power & Utilities</option>
+                                <option value="OilGas">Oil & Gas / Petrochem</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] font-bold text-industrial-500 uppercase mb-2 tracking-wider">Project
+                                Timeline</label>
+                            <select name="urgency"
+                                class="w-full bg-industrial-50/50 border border-industrial-200 rounded-sm p-3 text-sm text-industrial-900 focus:border-accent-blue outline-none">
+                                <option value="Standard">Standard (4-6 Weeks)</option>
+                                <option value="Immediate">Immediate (Stock Check)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h3
+                        class="text-[10px] font-bold text-industrial-900 uppercase tracking-[0.2em] flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-accent-blue"></span> Contact Intelligence
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Full Name" required
+                            class="w-full border border-industrial-200 p-3 text-sm rounded-sm">
+                        <input type="text" name="company" placeholder="Company Name" required
+                            class="w-full border border-industrial-200 p-3 text-sm rounded-sm">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="email" name="email" placeholder="Official Email" required
+                            class="w-full border border-industrial-200 p-3 text-sm rounded-sm">
+                        <input type="tel" name="phone" placeholder="Direct Phone" required
+                            class="w-full border border-industrial-200 p-3 text-sm rounded-sm">
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button id="submit-rfq-btn" type="submit"
+                        class="w-full bg-industrial-900 text-white font-bold py-5 rounded-sm hover:bg-accent-blue transition-all duration-300 text-xs uppercase tracking-[0.2em] disabled:opacity-50">
+                        Transmit Requisition
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/rfq.js"></script>
+<script>
+    document.getElementById('rfq-form')?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const refId = Math.random().toString(36).substr(2, 9).toUpperCase();
+        document.getElementById('ref-id').innerText = refId;
+        document.getElementById('rfq-form-container').classList.add('hidden');
+        document.getElementById('rfq-success').classList.remove('hidden');
+        clearRFQCart();
+    });
+</script>
+{{ end }}
