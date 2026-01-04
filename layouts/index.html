@@ -1,182 +1,293 @@
 {{ define "main" }}
-<div class="flex flex-col bg-industrial-50 text-industrial-900">
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center overflow-hidden bg-industrial-900">
+<div class="bg-emphz-teal-black text-white selection:bg-emphz-teal selection:text-white">
+    <!-- CONCEPT HERO: THE VANGUARD -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <!-- Background Layer -->
         <div class="absolute inset-0 z-0">
-            <div class="relative w-full h-full">
-                <div class="absolute inset-0 bg-cover bg-center opacity-60"
-                    style="background-image: url('/hero-1.jpg');"></div>
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-emphz-teal-black/95 via-emphz-teal-deep/80 to-transparent">
-                </div>
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] ease-linear scale-110 motion-safe:animate-slow-zoom"
+                style="background-image: url('cinematic_grp_infrastructure_1767531219690.png');">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-emphz-teal-black via-emphz-teal-black/40 to-transparent">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-emphz-teal-black via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Diagnostic Overlay -->
+        <div class="absolute inset-0 z-10 pointer-events-none opacity-20">
+            <div
+                class="h-full w-full bg-[linear-gradient(rgba(20,184,166,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(20,184,166,0.1)_1px,transparent_1px)] bg-[size:40px_40px]">
             </div>
         </div>
 
-        <div
-            class="absolute top-0 right-0 w-[80%] md:w-[60%] h-full bg-industrial-100/20 -skew-x-12 translate-x-1/4 pointer-events-none z-10">
-        </div>
-
-        <div
-            class="w-full max-w-screen-2xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 md:gap-16 items-center relative z-20">
-            <div class="animate-up">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-industrial-200 mb-6 md:mb-8 font-bold text-[10px] text-[#2563EB] uppercase tracking-widest shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="text-[#2563EB]">
-                        <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z">
-                        </path>
-                        <path d="M17 18h1"></path>
-                        <path d="M12 18h1"></path>
-                        <path d="M7 18h1"></path>
-                    </svg>
-                    <span class="hidden xs:inline">Kerala Managed | Mysuru Manufactured</span>
-                    <span class="xs:hidden">Made in India</span>
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-4 mb-8 translate-y-8 animate-fade-in-up">
+                    <span class="h-px w-12 bg-emphz-teal"></span>
+                    <span class="font-mono text-xs tracking-[0.5em] text-emphz-teal uppercase">Project:
+                        Future-Proof</span>
                 </div>
+
                 <h1
-                    class="text-4xl xs:text-5xl md:text-7xl font-display font-medium leading-[1.05] tracking-tight text-white mb-6 md:mb-8 drop-shadow-lg">
-                    Composite <br />
-                    <span class="text-industrial-200">Infrastructure.</span>
+                    class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter translate-y-8 animate-fade-in-up [animation-delay:200ms]">
+                    MATERIAL<br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-emerald-400">INTELLIGENCE.</span>
                 </h1>
+
                 <p
-                    class="text-base md:text-lg lg:text-xl text-white/90 max-w-lg leading-relaxed mb-8 md:mb-10 font-light drop-shadow-md">
-                    Specialized GRP manufacturer delivering high-durability enclosures, cabins, and modular structures
-                    designed for aggressive industrial environments.
+                    class="text-xl md:text-2xl text-industrial-400 font-light max-w-2xl mb-12 translate-y-8 animate-fade-in-up [animation-delay:400ms]">
+                    Engineering non-corrosive ecosystems that outlast the traditional.
+                    Where GRP composite chemistry meets high-performance infrastructure.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+
+                <div class="flex flex-wrap gap-6 translate-y-8 animate-fade-in-up [animation-delay:600ms]">
                     <a href="/catalog"
-                        class="bg-[#1A5F7A] text-white px-8 py-4 rounded-sm font-bold text-sm uppercase tracking-wider hover:bg-[#0D9488] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#2563EB]/20">
-                        View Solutions
-                    </a>
-                    <a href="/technical"
-                        class="bg-white/90 backdrop-blur-sm text-industrial-900 px-8 py-4 rounded-sm font-bold text-sm uppercase tracking-wider hover:bg-white transition-colors flex items-center justify-center gap-2">
-                        Technical Center
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        class="group relative px-10 py-5 bg-emphz-teal overflow-hidden transition-all hover:pr-14">
+                        <span class="relative z-10 font-bold text-sm uppercase tracking-widest text-[#020C0B]">Enter
+                            Matrix</span>
+                        <div
+                            class="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500">
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="ml-2">
+                            class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all text-[#020C0B]">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
+                    <a href="/technical"
+                        class="px-10 py-5 border border-white/10 hover:border-emphz-teal/50 hover:bg-emphz-teal/5 transition-all text-sm font-bold uppercase tracking-widest">
+                        Protocol Datasheets
+                    </a>
                 </div>
             </div>
-            <div class="relative animate-in hidden lg:block">
-                <div
-                    class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-white/10 backdrop-blur-sm relative group">
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-industrial-500">Initialize
+                Sequence</span>
+            <div class="w-px h-16 bg-gradient-to-b from-emphz-teal to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- CONCEPT: MOLECULAR STABILITY -->
+    <section class="py-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-emphz-teal-deep/20 skew-x-12 translate-x-1/4"></div>
+
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+            <div class="order-2 lg:order-1 relative">
+                <div class="aspect-square relative flex items-center justify-center">
+                    <!-- Conceptual GRP Core Visualization -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-tr from-[#2563EB]/10 to-transparent pointer-events-none z-10">
+                        class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.2),transparent_70%)] animate-pulse">
                     </div>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO1hJQxalyxfSiUQD0Co6FyBl4at4jQbtoB5T0iOeOeUi112a4SbR1tk_s2zWjJvOeAIVTf-yU1vM_e-rFFCArb6KZpbArxSR3skWuBDM9tznEyxLQ59jc-h5zaCkL-UVeoUwYtDr7Oo6R8654X6D4Htw=w1563-h879-s-no-gm?authuser=0"
-                        alt="EMPHZ GRP Composite Manufacturing"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        width="800" height="600" />
+                    <div class="relative w-64 h-64 border border-emphz-teal/30 rounded-full animate-spin-slow">
+                        <div
+                            class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-emphz-teal rounded-full shadow-[0_0_20px_rgba(20,184,166,0.8)]">
+                        </div>
+                    </div>
+                    <div class="absolute w-48 h-48 border border-emerald-400/20 rounded-full animate-reverse-spin">
+                        <div class="absolute top-1/2 -right-1 w-2 h-2 bg-emerald-400 rounded-full"></div>
+                    </div>
+                    <div class="z-10 text-center">
+                        <span class="block font-mono text-4xl font-bold text-white mb-2">50+</span>
+                        <span class="block font-mono text-[10px] uppercase tracking-widest text-emphz-teal">Years
+                            Life-Cycle</span>
+                    </div>
                 </div>
-                <div
-                    class="absolute -bottom-8 -left-8 bg-white/75 backdrop-blur-md p-6 md:p-8 max-w-[240px] md:max-w-[280px] rounded-xl animate-float border border-white/60 shadow-xl">
-                    <p
-                        class="text-[10px] font-bold text-[#2563EB] uppercase tracking-widest mb-2 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
-                        </svg>
-                        Material Science
-                    </p>
-                    <p class="text-sm font-medium text-industrial-900 leading-snug">Advanced FRP composites engineered
-                        for 50+ year service life.</p>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <h2 class="text-xs font-bold text-emphz-teal uppercase tracking-[0.4em] mb-4">Chemical Supremacy</h2>
+                <h3 class="text-4xl md:text-6xl font-black mb-8 leading-tight">THE END OF<br /><span
+                        class="text-industrial-500">OXIDATION.</span></h3>
+                <p class="text-industrial-300 text-lg font-light leading-relaxed mb-12">
+                    Unlike steel which decays or concrete which spalls, Emphz Composites use a cross-linked polymer
+                    matrix.
+                    This isn't a coating—it's a fundamental material evolution designed for total atmospheric immunity.
+                </p>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="p-6 border border-white/5 bg-white/[0.02] backdrop-blur-sm">
+                        <div class="text-emphz-teal mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wide mb-2">Dielectric Isolation</h4>
+                        <p class="text-xs text-industrial-500 font-light">Zero grounding required. Total personnel
+                            safety.</p>
+                    </div>
+                    <div class="p-6 border border-white/5 bg-white/[0.02] backdrop-blur-sm">
+                        <div class="text-emphz-amber mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="m13 2-2 10h3L10 22l2-10H9l4-10Z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm uppercase tracking-wide mb-2">Thermal Stability</h4>
+                        <p class="text-xs text-industrial-500 font-light">-40°C to +80°C functional range.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Engineering Advantages -->
-    <section class="py-24 md:py-32 bg-emphz-teal-black">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="max-w-3xl mb-20">
-                <h2 class="text-xs font-bold text-[#2563EB] uppercase tracking-[0.3em] mb-4">Engineering Precision</h2>
-                <h3 class="text-4xl md:text-5xl font-medium text-industrial-900 leading-[1.1]">
-                    Engineered for the <br />
-                    <span class="text-industrial-400">Extreme Environment.</span>
-                </h3>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+    <!-- CONCEPT: THE PRODUCT GRID -->
+    <section class="py-32 bg-[#010807]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
                 <div>
-                    <div
-                        class="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-[#2563EB]">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-medium mb-4">Chemical Resilience</h3>
-                    <p class="text-industrial-500 text-sm leading-relaxed">
-                        Inherently resistant to acid rain, coastal salinity, and industrial effluents. Zero risk of
-                        oxidation or structural leaching.
-                    </p>
+                    <h2 class="text-xs font-bold text-emphz-teal uppercase tracking-[0.4em] mb-4">Deployment Catalog
+                    </h2>
+                    <h3 class="text-4xl md:text-5xl font-black text-white">THE MATRIX.</h3>
                 </div>
-                <div>
-                    <div
-                        class="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-[#2563EB]">
-                            <path d="m13 2-2 10h3L10 22l2-10H9l4-10Z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-medium mb-4">Dielectric Safety</h3>
-                    <p class="text-industrial-500 text-sm leading-relaxed">
-                        Non-conductive properties eliminate the need for grounding in electrical installations, ensuring
-                        total operator safety.
-                    </p>
-                </div>
-                <div>
-                    <div
-                        class="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-8 border border-industrial-100 shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-[#2563EB]">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-medium mb-4">Zero Maintenance</h3>
-                    <p class="text-industrial-500 text-sm leading-relaxed">
-                        UV-stabilized gel coats provide permanent color and finish. No painting, scraping, or rust
-                        treatment required.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section class="py-24 md:py-32 bg-emphz-teal-deep relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent)]"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-8 tracking-tight">Upgrade Your
-                Infrastructure Durability</h2>
-            <p class="text-industrial-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light">
-                Contact our engineering team to discuss GRP replacements for your existing steel or concrete assets.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="/rfq"
-                    class="bg-white text-industrial-900 px-10 py-4 text-sm font-bold uppercase tracking-wider rounded hover:bg-industrial-50 transition-all">
-                    Request Technical Quote
+                <a href="/catalog"
+                    class="font-mono text-xs uppercase tracking-[0.3em] text-emphz-teal hover:text-white transition-colors flex items-center gap-4">
+                    View Full Deployment <span class="w-12 h-px bg-emphz-teal"></span>
                 </a>
-                <a href="/technical"
-                    class="border border-industrial-700 text-white px-10 py-4 text-sm font-bold uppercase tracking-wider rounded hover:bg-industrial-800 transition-all flex items-center justify-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <line x1="10" y1="9" x2="8" y2="9"></line>
-                    </svg>
-                    Datasheets
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
+                {{ range first 6 .Site.Data.products }}
+                <div class="group relative bg-emphz-teal-black p-10 overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="block font-mono text-[10px] text-emphz-teal mb-4 uppercase tracking-[0.2em]">{{
+                            .category }}</span>
+                        <h4 class="text-2xl font-bold text-white mb-6 group-hover:text-emphz-teal transition-colors">{{
+                            .name }}</h4>
+                        <p class="text-sm text-industrial-500 mb-10 line-clamp-3 font-light leading-relaxed">{{
+                            .shortDescription }}</p>
+                        <a href="/products/{{ .id }}"
+                            class="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-all">
+                            Analyze Access <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Hover Effect -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-emphz-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT: CTA -->
+    <section class="py-40 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.15),transparent_70%)]">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-xs font-bold text-emphz-teal uppercase tracking-[0.5em] mb-8">System Integration</h2>
+            <h3 class="text-5xl md:text-8xl font-black text-white mb-12 tracking-tighter">ENGINEER<br />THE FUTURE.</h3>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="/rfq"
+                    class="bg-white text-[#020C0B] px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-emphz-teal hover:text-white transition-all shadow-2xl shadow-emphz-teal/20">
+                    Request Intelligence
+                </a>
+                <a href="/contact"
+                    class="px-12 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm hover:border-emphz-teal transition-all">
+                    Consult Engineering
                 </a>
             </div>
         </div>
     </section>
 </div>
+
+<style>
+    @keyframes slow-zoom {
+        from {
+            transform: scale(1.1);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+    .animate-slow-zoom {
+        animation: slow-zoom 20s ease-out forwards;
+    }
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+    }
+
+    @keyframes reverse-spin {
+        from {
+            transform: rotate(360deg);
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    .animate-reverse-spin {
+        animation: reverse-spin 15s linear infinite;
+    }
+
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+</style>
+
+<script>
+    const solveText = (el) => {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
+        const originalText = el.innerText;
+        let iteration = 0;
+
+        const interval = setInterval(() => {
+            el.innerText = originalText.split('')
+                .map((char, index) => {
+                    if (index < iteration) return originalText[index];
+                    return chars[Math.floor(Math.random() * chars.length)];
+                })
+                .join('');
+
+            if (iteration >= originalText.length) clearInterval(interval);
+            iteration += 1 / 3;
+        }, 30);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const titles = document.querySelectorAll('h1');
+        titles.forEach(solveText);
+    });
+</script>
 {{ end }}
