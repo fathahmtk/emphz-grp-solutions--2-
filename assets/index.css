@@ -1195,3 +1195,78 @@ a:hover {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+/* Typography & Prose */
+.prose-industrial h2 {
+    color: var(--industrial-900);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose-industrial p {
+    margin-bottom: 1.5rem;
+}
+
+.prose-industrial ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.prose-industrial li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.prose-industrial li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+}
+
+.prose-industrial table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.875rem;
+}
+
+.prose-industrial th {
+    text-align: left;
+    padding: 1rem;
+    background: var(--industrial-50);
+    border-bottom: 2px solid var(--industrial-100);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.prose-industrial td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--industrial-100);
+}
+
+.animate-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
