@@ -8,12 +8,18 @@ if (!fs.existsSync(productsDir)) {
 }
 
 MOCK_PRODUCTS.forEach(product => {
+    const escapedId = product.id.replace(/"/g, '\\"');
+    const escapedTitle = product.name.replace(/"/g, '\\"');
+    const escapedDescription = product.shortDescription.replace(/"/g, '\\"');
+    const escapedCategory = product.category.replace(/"/g, '\\"');
+    const escapedImageUrl = product.imageUrl.replace(/"/g, '\\"');
+
     const content = `---
-id: "${product.id}"
-title: "${product.name}"
-description: "${product.shortDescription}"
-category: "${product.category}"
-imageUrl: "${product.imageUrl}"
+id: "${escapedId}"
+title: "${escapedTitle}"
+description: "${escapedDescription}"
+category: "${escapedCategory}"
+imageUrl: "${escapedImageUrl}"
 layout: "single"
 ---
 
