@@ -1,0 +1,868 @@
+[
+  {
+    "id": "emp-uc-grid",
+    "name": "SmartPod Grid™ Ecosystem",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "The intelligent, IoT-managed network of UrbanCell™ infrastructure.",
+    "fullDescription": "EMPHZ SmartPod Grid™ is a deployable, connected network of modular retail and service pods. Designed for campuses, industrial zones, and workforce cities, it provides centralized IoT management for inventory, security, and revenue expansion across multiple physical locations.",
+    "whyItExists": "Managing decentralized infrastructure is complex; SmartPod Grid™ centralizes control into a single IoT dashboard.",
+    "typicalUsage": "Campuses, workforce accommodations, industrial parks, and transport hubs.",
+    "recommendedWhen": [
+      "Scaleable retail networks required",
+      "Geographically dispersed service points",
+      "Centralized asset tracking is critical"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Ecosystem",
+        "value": "Managed IoT Network"
+      },
+      {
+        "label": "Management",
+        "value": "Centralized Remote Dashboard"
+      },
+      {
+        "label": "Connectivity",
+        "value": "4G/5G/Satellite Hub"
+      }
+    ],
+    "features": [
+      "Real-time inventory data",
+      "Fleet management analytics",
+      "Automated security monitoring",
+      "Revenue expansion tools"
+    ],
+    "downloads": [
+      {
+        "title": "SmartPod Grid Technical Paper",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-retail",
+    "name": "UrbanCell™ RETAIL",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Modular, plug-in retail hubs for smart city environments.",
+    "fullDescription": "UrbanCell RETAIL is a factory-built, plug-in infrastructure cell designed for rapid deployment as retail hubs, mini-markets, or convenience store setups. Built with high-durability GRP, it features glass facades and integrated thermal management for modern urban commerce.",
+    "whyItExists": "Traditional brick-and-mortar retail takes months to build; UrbanCell deploys in hours with a premium aesthetic.",
+    "typicalUsage": "Mini-markets, convenience store setups, pop-up shops, and urban hubs.",
+    "recommendedWhen": [
+      "Smart city projects requiring fast ROI",
+      "Areas with limited construction footprints",
+      "High-traffic urban zones needing premium design"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Mini-market / Convenience"
+      },
+      {
+        "label": "Form Factor",
+        "value": "Modular 3.5m x 4.0m"
+      },
+      {
+        "label": "Shell",
+        "value": "GRP Monocoque"
+      }
+    ],
+    "features": [
+      "Plug-and-play electrical",
+      "Integrated POS ready",
+      "Smart locks",
+      "Self-cleaning coating"
+    ],
+    "downloads": [
+      {
+        "title": "UrbanCell Retail Specs",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-services",
+    "name": "UrbanCell™ SERVICES",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Automated service pods for banking, digital services, and kiosks.",
+    "fullDescription": "UrbanCell SERVICES is a secure, automated pod designed for digital banking, government service kiosks, and customer service hubs. It provides a climate-controlled, secure environment for 24/7 automated operations.",
+    "whyItExists": "To provide high-tech service touchpoints in smart cities without the overhead of manned branch offices.",
+    "typicalUsage": "Automated Service Kiosks, digital banking, municipal service points, and information hubs.",
+    "recommendedWhen": [
+      "Municipalities expanding digital reach",
+      "Banks extending 24/7 service footprint",
+      "Urban zones requiring secure automated kiosks"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Banking & Automated Services"
+      },
+      {
+        "label": "Form Factor",
+        "value": "Kiosk Format"
+      },
+      {
+        "label": "Security",
+        "value": "Reinforced GRP + Smart Surveillance"
+      }
+    ],
+    "features": [
+      "Climate controlled",
+      "IoT-ready networking",
+      "Secure card access",
+      "Solar-ready roof"
+    ],
+    "downloads": [
+      {
+        "title": "UrbanCell Service Guide",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-energy",
+    "name": "UrbanCell™ ENERGY",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Integrated EV charging and solar hub for modern transit.",
+    "fullDescription": "The UrbanCell ENERGY module combines high-capacity EV charging stations with a solar-active roof structure. It serves as both a charging point and a power management hub for smart grid integration.",
+    "whyItExists": "To solve the need for aesthetic, weather-proof, and rapidly deployable EV infrastructure in cities.",
+    "typicalUsage": "EV Charging + solar panels, battery backup, highway rest stops, and corporate campuses.",
+    "recommendedWhen": [
+      "Transitioning to electric fleets",
+      "Municipal green-energy mandates",
+      "Remote sites requiring off-grid power"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "EV Charging & Solar Hub"
+      },
+      {
+        "label": "Charger",
+        "value": "Dual 50kW DC Fast Charge"
+      },
+      {
+        "label": "Solar Cap",
+        "value": "12-Panel HV Array"
+      }
+    ],
+    "features": [
+      "Solar integration",
+      "Battery storage ready",
+      "Weather-proof GRP housing",
+      "Remote monitoring"
+    ],
+    "downloads": [
+      {
+        "title": "UrbanCell Energy Guide",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-cold",
+    "name": "UrbanCell™ COLD",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Industrial-grade modular cold storage and delivery hub.",
+    "fullDescription": "UrbanCell COLD provides thermally superior temperature-controlled storage cells. Ideal for last-mile food delivery or medical storage, these units use composite insulation that outperforms traditional sandwich panels.",
+    "whyItExists": "To prevent the \"thermal leak\" common in metal-sheet cold rooms that rust in humid environments.",
+    "typicalUsage": "Temperature-controlled Cold Chain module, grocery collection points, pharmaceutical storage.",
+    "recommendedWhen": [
+      "Strict temperature control required",
+      "Coastal or high-humidity regions",
+      "Food-grade hygiene standards"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Cold Chain / Storage"
+      },
+      {
+        "label": "Operating Temp",
+        "value": "-20°C to +10°C"
+      },
+      {
+        "label": "Wall Type",
+        "value": "High-Density Composite PUF"
+      }
+    ],
+    "features": [
+      "Algae-free interior",
+      "High R-Value insulation",
+      "Integrated defrost",
+      "Shock-resistant walls"
+    ],
+    "downloads": [
+      {
+        "title": "UrbanCell Cold Data",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-flexserve",
+    "name": "FlexServe™ Hybrid Pod",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Hybrid retail and citizen service node for high-footfall zones.",
+    "fullDescription": "EMPHZ FlexServe™ is a multi-functional modular pod designed to house both essential retail and digital citizen services. It features a split layout for commercial activity and public service kiosks, maximizing utility in limited urban footprints.",
+    "whyItExists": "To diversify revenue streams and public utility within a single modular footprint.",
+    "typicalUsage": "City centers, public plazas, and multi-modal transit stations.",
+    "recommendedWhen": [
+      "High footfall locations needing diverse services",
+      "Municipal-private partnerships (PPP)",
+      "Maximizing ROI on small urban land parcels"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1517245327032-96ad3ddbc602?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Retail & Public Services"
+      },
+      {
+        "label": "Layout",
+        "value": "Dual-Zone Configuration"
+      },
+      {
+        "label": "Tech Stack",
+        "value": "IoT + Service Terminals"
+      }
+    ],
+    "features": [
+      "Split-use interior",
+      "Vandal-proof service screen",
+      "Automatic vending integration",
+      "Public Wi-Fi hub"
+    ],
+    "downloads": [
+      {
+        "title": "FlexServe Product Guide",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-campmart",
+    "name": "CampMart™ Retail",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Purpose-built retail for workforce cities and labor camps.",
+    "fullDescription": "CampMart™ is a standardized retail infrastructure designed for institutional deployment in massive labor accommodations. It focuses on high-volume essential goods with a layout optimized for efficient throughput and inventory management.",
+    "whyItExists": "Traditional camp canteens are inefficient; CampMart™ provides a dignified, modern retail experience for workforce populations.",
+    "typicalUsage": "Workforce accommodations, labor camps, and remote industrial project sites.",
+    "recommendedWhen": [
+      "Managing 1000+ residents",
+      "Institutional bulk procurement needs",
+      "Predictable demand modeling required"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Workforce Retail"
+      },
+      {
+        "label": "Durability",
+        "value": "Extreme Industrial Duty"
+      },
+      {
+        "label": "Inventory",
+        "value": "Integrated POS + Live ERP"
+      }
+    ],
+    "features": [
+      "High-traffic flooring",
+      "Reinforced shelving",
+      "Secure cash/point systems",
+      "Modular expansion"
+    ],
+    "downloads": [
+      {
+        "title": "CampMart Implementation Guide",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-storebox",
+    "name": "StoreBox™ Inventory Pod",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Retail frontage with integrated secure storage or cold storage.",
+    "fullDescription": "StoreBox™ solves the critical issue of space management for small retailers by combining a display-front shop with a high-capacity, thermally controlled rear storage zone. It minimizes stock-outs and theft while optimizing sales floor space.",
+    "whyItExists": "To solve inventory, theft, and space constraints for retailers in dense urban areas.",
+    "typicalUsage": "Neighborhood retail, pharmacies, and high-value electronics boutiques.",
+    "recommendedWhen": [
+      "Restricted shop floor area",
+      "Temperature-sensitive inventory",
+      "High-shrinkage/theft environments"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Frontage",
+        "value": "Full Glazing / Display"
+      },
+      {
+        "label": "Storage",
+        "value": "Insulated 10m³ Rear Zone"
+      },
+      {
+        "label": "Control",
+        "value": "Biometric Access"
+      }
+    ],
+    "features": [
+      "Smart inventory racks",
+      "Rear loading access",
+      "Integrated CCTV",
+      "Thermal zoning"
+    ],
+    "downloads": [
+      {
+        "title": "StoreBox Technical Brief",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-streetsmart",
+    "name": "StreetSmart™ Municipality Unit",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Standardized municipal street retail for regulated vending.",
+    "fullDescription": "StreetSmart™ is a regulated modular kiosk designed for municipality-led urban renewal. It provides a standardized, clean, and taxable retail platform for street vendors, ensuring urban aesthetic consistency and public safety.",
+    "whyItExists": "To replace disorganized street vending with a premium, manageable urban infrastructure.",
+    "typicalUsage": "Public sidewalks, heritage zones, and municipal market areas.",
+    "recommendedWhen": [
+      "Smart City urban renewal projects",
+      "Municipality vending regulation",
+      "Tourist-heavy heritage zones"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Application",
+        "value": "Regulated Street Retail"
+      },
+      {
+        "label": "Certification",
+        "value": "Municipal Standard Approved"
+      },
+      {
+        "label": "Mobility",
+        "value": "Forklift-ready Base"
+      }
+    ],
+    "features": [
+      "Self-closing security shutters",
+      "Standardized power hookup",
+      "Vandal-resistant GRP",
+      "Aesthetic customization"
+    ],
+    "downloads": [
+      {
+        "title": "StreetSmart Project Catalog",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-uc-tradepod",
+    "name": "TradePod™ Showroom",
+    "category": "UrbanCell™ Infrastructure",
+    "shortDescription": "Premium modular showroom for brands and exhibitions.",
+    "fullDescription": "TradePod™ is a high-spec modular showcase designed for temporary exhibitions, product launches, or semi-permanent dealership extensions. It offers a premium glass-heavy aesthetic that mirrors high-end corporate interiors.",
+    "whyItExists": "To provide a mobile, high-margin rental platform for brands requiring instant physical presence.",
+    "typicalUsage": "Trade shows, automotive showrooms, and luxury brand launches.",
+    "recommendedWhen": [
+      "Product launch campaign",
+      "Exhibition presence",
+      "Semi-permanent dealership extensions"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      {
+        "label": "Aesthetic",
+        "value": "Premium Glass + GRP Finish"
+      },
+      {
+        "label": "Lighting",
+        "value": "Integrated LED Studio Array"
+      },
+      {
+        "label": "HVAC",
+        "value": "Dual-unit Climate Control"
+      }
+    ],
+    "features": [
+      "Panoramic glass walls",
+      "Designer interior finish",
+      "Acoustic treatment",
+      "Fast 4-hour setup"
+    ],
+    "downloads": [
+      {
+        "title": "TradePod Design Options",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-encl-001",
+    "name": "Industrial GRP Junction Box (J-Series)",
+    "category": "GRP Electrical Enclosures",
+    "shortDescription": "Outdoor and indoor enclosures used for electrical panels, junction boxes, and meters.",
+    "fullDescription": "GRP electrical enclosures manufactured by EMPHZ are used to house electrical and electronic equipment in outdoor and indoor locations. These enclosures are commonly selected where steel cabinets corrode or require frequent maintenance.",
+    "whyItExists": "Practical replacement for steel where corrosion, repainting, and maintenance become recurring problems.",
+    "typicalUsage": "Typical applications include electrical distribution panels, junction boxes, metering enclosures, solar inverter housings, and telecom equipment cabinets.",
+    "recommendedWhen": [
+      "Outdoor installations",
+      "Coastal and humid regions",
+      "Industrial environments"
+    ],
+    "notRecommendedWhen": [
+      "Explosion-proof certification is required without additional specification"
+    ],
+    "imageUrl": "https://image.made-in-china.com/2f0j00UVrCiOMyLBqP/GRP-Glass-Reinforced-Polyester-Enclosure-Electrical-Distribution-Fiberglass-Enclosure-IP65.webp",
+    "gallery": [
+      "https://cpimg.tistatic.com/00883297/b/6/FRP-Electric-Panel-Box.jpg"
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Glass Reinforced Plastic (SMC)"
+      },
+      {
+        "label": "Protection",
+        "value": "IP66 Waterproof"
+      },
+      {
+        "label": "Impact Rating",
+        "value": "IK10 (High impact)"
+      },
+      {
+        "label": "Fire Rating",
+        "value": "Self-extinguishing (UL 94 V0)"
+      }
+    ],
+    "features": [
+      "No rust or corrosion",
+      "No repainting required",
+      "Non-conductive body",
+      "UV stable outer finish"
+    ],
+    "downloads": [
+      {
+        "title": "J-Series Datasheet",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-toil-001",
+    "name": "Eco-San GRP Toilet Cabin",
+    "category": "Portable Toilet Units",
+    "shortDescription": "Factory-made GRP toilet cabins for construction sites and public areas.",
+    "fullDescription": "GRP portable toilet units are factory-manufactured cabins used in construction sites, public places, events, and institutions. GRP construction helps avoid corrosion and water damage common in steel toilets.",
+    "whyItExists": "Avoids corrosion and water damage common in steel toilets in high-use or outdoor locations.",
+    "typicalUsage": "Labor camps, construction sites, public grounds, and temporary institutions.",
+    "recommendedWhen": [
+      "Sites requiring frequent cleaning with water",
+      "Coastal areas prone to rusting",
+      "Temporary installations needing quick deployment"
+    ],
+    "notRecommendedWhen": [
+      "Permanent brick-and-mortar requirements"
+    ],
+    "imageUrl": "/portable-toilet.jpg",
+    "gallery": [
+      "/portable-toilet.jpg",
+      "https://lh3.googleusercontent.com/pw/AP1GczNflc3SRp2gYEInU7lZELUN8Jnn_g1f33VxbVxTakvnUd1Fo8vLuAmkakM7-VI6IAFDjlwj3Qbx6SSoHTdwWidcGwutrihjdzZT2sxzfH3qOFKrFqPqd91l3439BHIsQ7JQXVXbrii582OgFakqDxMRVw=w1536-h1024-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMPrF-TWF_ZnCDWFxcGdBDAimpA9r_OC7lPni2nihaZrWmeJFaVKVDi04JIHYEojH0t3GiRHzQff2rF6HRVaFL4jtdhU2UrY2M_Eacoeo5BKEgaTjsbpdrs8SbhSlYnhUTm7GDbMDJ8H4dJmDgHQB45XQ=w948-h1422-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOQCBCGPhZmf_8ilQ0TED_VfO2Yh2GRgUiIbZ3WB3tbtea5rCI43cIVGHNUo-dy4zyOJV3QYL3YAxSUbZsCHr7EVEWRq4SmPiNCEIlMzxIiE6FRwBb5S9HtFn-08vgOPxWVTNSMLnmdTyuEeIMgtX7iYA=w1024-h1024-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMiUWr28EvL9AR0wHUKbdlqB-OzkN2RnyqTWlol49aDF3TSLfES9aV28WaY_oQkctCSLi0zXcelw3ag9vAjfSjHO39whwyMxVM9AbSq6B2YCLGfMNEcycXPdHTzJwCuRtp6VOH4ZwqjpzrFOaNMv59Mwg=w948-h1422-s-no-gm?authuser=0"
+    ],
+    "specs": [
+      {
+        "label": "Size",
+        "value": "1100 x 1100 x 2300 mm"
+      },
+      {
+        "label": "Surface",
+        "value": "Glossy Gelcoat Finish"
+      },
+      {
+        "label": "Base",
+        "value": "Skid Base for lifting"
+      }
+    ],
+    "features": [
+      "Strong GRP shell",
+      "Easy to wash",
+      "Does not absorb odors"
+    ],
+    "downloads": [
+      {
+        "title": "Eco-San Brochure",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-cbn-001",
+    "name": "Sentinel Guard Kiosk",
+    "category": "Security Cabins",
+    "shortDescription": "GRP guard cabins for industrial, commercial, and infrastructure sites.",
+    "fullDescription": "Security cabins are manufactured using GRP panels and structural components for long-term outdoor use. These cabins are commonly installed at factory gates, residential complexes, and infrastructure sites.",
+    "whyItExists": "Provides an insulated, rust-free alternative to GI sheet cabins that leak or get too hot.",
+    "typicalUsage": "Factory gates, residential complexes, and infrastructure construction points.",
+    "recommendedWhen": [
+      "High rainfall areas requiring leak-proof roofs",
+      "Long-term deployment at site gates",
+      "Projects requiring AC-ready design"
+    ],
+    "notRecommendedWhen": [
+      "Multi-story control tower requirements"
+    ],
+    "imageUrl": "https://www.aradhanafrp.com/assets/img/frp-security-guard-cabin.jpg",
+    "specs": [
+      {
+        "label": "Windows",
+        "value": "Sliding glass panels"
+      },
+      {
+        "label": "Wall",
+        "value": "PUF Insulated"
+      },
+      {
+        "label": "Electrical",
+        "value": "Cabling and points provided"
+      }
+    ],
+    "features": [
+      "Leak proof roof",
+      "Resists heat",
+      "Easy to install"
+    ],
+    "downloads": [
+      {
+        "title": "Sentinel Series Specs",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-ksk-001",
+    "name": "Neo-Retail Kiosk",
+    "category": "Modular Kiosks",
+    "shortDescription": "Food, retail, ticketing, and service kiosks manufactured using GRP construction.",
+    "fullDescription": "GRP kiosks are used for food stalls, retail counters, ticket booths, and service points. These kiosks are manufactured as single-piece or panel-type structures depending on size and usage.",
+    "whyItExists": "Quickly deployable retail and service points that do not require painting or rust treatment.",
+    "typicalUsage": "Food kiosks, retail kiosks, ticket counters, and information booths.",
+    "recommendedWhen": [
+      "Coastal areas where metal kiosks rust",
+      "High mobility requirement (mobile kiosks)",
+      "Custom branding via gelcoat color"
+    ],
+    "imageUrl": "https://tejaswi-group.com/wp-content/uploads/2025/03/Food-Retail-Kiosk-Designer-1080x675.webp",
+    "specs": [
+      {
+        "label": "Shutters",
+        "value": "Hydraulic lifting type"
+      },
+      {
+        "label": "Counters",
+        "value": "Easy-to-clean GRP"
+      }
+    ],
+    "features": [
+      "Scratch resistant",
+      "Custom colors",
+      "Easy to move"
+    ],
+    "downloads": [
+      {
+        "title": "Retail Kiosk Catalog",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-shelter-001",
+    "name": "Metro City Bus Shelter",
+    "category": "Infrastructure Shelters",
+    "shortDescription": "Vandal-resistant GRP bus shelters for urban public transport networks.",
+    "fullDescription": "Our modular GRP bus shelters are designed for the modern smart city. They offer high resistance to vandalism, graffiti, and environmental wear while providing a sleek aesthetic for urban landscapes.",
+    "whyItExists": "Concrete shelters crack and steel shelters rust. GRP offers a permanent, low-maintenance solution for municipal corporations.",
+    "typicalUsage": "City bus stops, metro feeder stations, and campus waiting areas.",
+    "recommendedWhen": [
+      "High-traffic urban areas",
+      "Coastal cities with salt air",
+      "Municipal projects requiring 20+ year life"
+    ],
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/1/YI/WO/XU/3642603/frp-bus-shelter.jpg",
+    "specs": [
+      {
+        "label": "Dimensions",
+        "value": "L5000 x W1500 x H2500 mm"
+      },
+      {
+        "label": "Wind Load",
+        "value": "Designed for 180 km/h"
+      },
+      {
+        "label": "Seating",
+        "value": "Integrated GRP Bench"
+      }
+    ],
+    "features": [
+      "Graffiti-resistant gelcoat",
+      "Integrated rain gutter",
+      "Solar-ready roof"
+    ],
+    "downloads": [
+      {
+        "title": "Metro Shelter Specs",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-cust-001",
+    "name": "Project Specific GRP Fabrication",
+    "category": "Custom GRP Fabrication",
+    "shortDescription": "Project-specific GRP products manufactured as per approved drawings.",
+    "fullDescription": "EMPHZ undertakes custom GRP fabrication based on client drawings or jointly developed designs. Products are manufactured after drawing approval and specification finalization.",
+    "whyItExists": "When standard products do not meet unique site dimensions or structural requirements.",
+    "typicalUsage": "Custom enclosures, special-purpose cabins, GRP rooms, covers, and project-specific components.",
+    "recommendedWhen": [
+      "Unique dimensions required",
+      "Special resin requirements (Acid resistance)",
+      "Joint engineering development needed"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1587575494201-11fe74d90d38?auto=format&fit=crop&w=600&q=80",
+    "specs": [
+      {
+        "label": "Scope",
+        "value": "Custom Fabrication"
+      },
+      {
+        "label": "Standard",
+        "value": "As per approved drawing"
+      }
+    ],
+    "features": [
+      "Custom design",
+      "Material choice",
+      "Precision molding"
+    ],
+    "downloads": [
+      {
+        "title": "Radome Design Specs",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-safety-001",
+    "name": "RedGuard Fire Hose Cabinet",
+    "category": "GRP Electrical Enclosures",
+    "shortDescription": "UV-stable safety equipment housing for fire hoses and extinguishers.",
+    "fullDescription": "The RedGuard series is engineered to protect vital fire safety equipment from the elements. Unlike steel cabinets that rust shut, our GRP hinges and bodies ensure the equipment is accessible when it matters most.",
+    "whyItExists": "To ensure fire safety equipment is not compromised by rusted cabinet doors in outdoor settings.",
+    "typicalUsage": "Refineries, outdoor industrial plants, and marine jetties.",
+    "recommendedWhen": [
+      "Outdoor fire hydrant points",
+      "Marine and offshore platforms",
+      "Chemical plants with corrosive atmosphere"
+    ],
+    "imageUrl": "https://m.media-amazon.com/images/I/61kC-IqN+pL.jpg",
+    "specs": [
+      {
+        "label": "Color",
+        "value": "Signal Red (RAL 3000)"
+      },
+      {
+        "label": "Material",
+        "value": "UV Stabilized GRP"
+      },
+      {
+        "label": "Window",
+        "value": "Break-glass or Acrylic"
+      }
+    ],
+    "features": [
+      "High-visibility finish",
+      "Corrosion-proof hinges",
+      "Weather sealed"
+    ],
+    "downloads": [
+      {
+        "title": "RedGuard Catalog",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-tank-001",
+    "name": "Modular GRP Panel Tank",
+    "category": "Custom GRP Fabrication",
+    "shortDescription": "Sectional GRP water storage tanks for potable and industrial water.",
+    "fullDescription": "EMPHZ modular tanks are assembled on-site using hot-pressed SMC panels. This allows for massive storage capacities even in areas with restricted access, like basements or rooftops.",
+    "whyItExists": "A hygienic, algae-free alternative to concrete tanks that is easier to install than welded steel.",
+    "typicalUsage": "Residential complexes, commercial buildings, and industrial fire water storage.",
+    "recommendedWhen": [
+      "High capacity storage needed (10kL - 1000kL)",
+      "Rooftop installation (Lightweight)",
+      "Hygienic potable water requirement"
+    ],
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/12/QO/QZ/IG/2456909/smc-panel-tank.jpg",
+    "specs": [
+      {
+        "label": "Panel Size",
+        "value": "1m x 1m / 1m x 0.5m"
+      },
+      {
+        "label": "Standard",
+        "value": "SS 245:1995"
+      },
+      {
+        "label": "Reinforcement",
+        "value": "Internal SS Tie-rods"
+      }
+    ],
+    "features": [
+      "Food-grade material",
+      "Zero leakage design",
+      "Fast assembly"
+    ],
+    "downloads": [
+      {
+        "title": "Tank Capacity Chart",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-inst-001",
+    "name": "Instrument Sunshade S2",
+    "category": "GRP Electrical Enclosures",
+    "shortDescription": "Protective canopies for field instruments and transmitters.",
+    "fullDescription": "The S2 Sunshade protects sensitive field instruments from direct sunlight, rain, and physical impact. It prevents overheating of electronics and ensures accurate readings in harsh climates.",
+    "whyItExists": "Prevents \"LCD blackening\" and overheating of transmitters in direct desert or tropical sun.",
+    "typicalUsage": "Oil & Gas fields, power plants, and outdoor process industries.",
+    "recommendedWhen": [
+      "Protecting pressure transmitters",
+      "Outdoor gauge protection",
+      "High UV exposure zones"
+    ],
+    "imageUrl": "https://cpimg.tistatic.com/08544838/b/4/FRP-Canopy-for-Instruments.jpg",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Anti-static GRP"
+      },
+      {
+        "label": "Mounting",
+        "value": "2\" Pipe Mount"
+      },
+      {
+        "label": "Wind Rating",
+        "value": "Type tested for storms"
+      }
+    ],
+    "features": [
+      "UV blocking",
+      "Chemical resistant",
+      "Lightweight"
+    ],
+    "downloads": [
+      {
+        "title": "S2 Shade Datasheet",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-auto-001",
+    "name": "EV Battery Pack Shield",
+    "category": "Custom GRP Fabrication",
+    "shortDescription": "Lightweight, flame-retardant covers for electric vehicle battery packs.",
+    "fullDescription": "Engineered for the automotive sector, these GRP composite shields provide impact protection and fire retardancy for EV battery packs while keeping weight to a minimum.",
+    "whyItExists": "Metal shields are too heavy; standard plastics melt. GRP offers the perfect balance of heat resistance and light weight.",
+    "typicalUsage": "Electric buses, 3-wheelers, and commercial EV fleets.",
+    "recommendedWhen": [
+      "Weight reduction is critical",
+      "UL 94 V0 fire rating is needed",
+      "Impact protection for under-chassis"
+    ],
+    "imageUrl": "https://www.compositestrategies.com/wp-content/uploads/2019/11/EV-Battery-Box-Composite.jpg",
+    "specs": [
+      {
+        "label": "Resin",
+        "value": "Fire Retardant Vinyl Ester"
+      },
+      {
+        "label": "Process",
+        "value": "RTM / Infusion"
+      },
+      {
+        "label": "Dielectric",
+        "value": "High strength"
+      }
+    ],
+    "features": [
+      "High strength-to-weight",
+      "Electrical insulation",
+      "Thermal barrier"
+    ],
+    "downloads": [
+      {
+        "title": "EV Automotives Guide",
+        "type": "PDF"
+      }
+    ]
+  },
+  {
+    "id": "emp-cable-001",
+    "name": "Heavy Duty Cable Tray",
+    "category": "Custom GRP Fabrication",
+    "shortDescription": "Pultruded GRP cable trays for corrosive industrial environments.",
+    "fullDescription": "Our GRP cable trays and ladders are manufactured using pultrusion for maximum load-bearing capacity. They are essential in chemical plants where steel trays would corrode within months.",
+    "whyItExists": "To carry heavy power cables in acid/alkali rich environments without collapsing from corrosion.",
+    "typicalUsage": "Chemical plants, offshore platforms, wastewater treatment plants, and tunnels.",
+    "recommendedWhen": [
+      "Desalination plants (Chlorine)",
+      "Fertilizer plants (Ammonia)",
+      "Battery rooms (Acid fumes)"
+    ],
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2021/4/XK/QD/OM/3499709/frp-cable-trays.jpg",
+    "specs": [
+      {
+        "label": "Standard",
+        "value": "NEMA FG-1"
+      },
+      {
+        "label": "Load Class",
+        "value": "Heavy Duty"
+      },
+      {
+        "label": "Length",
+        "value": "3m Standard"
+      }
+    ],
+    "features": [
+      "Snap-fit covers",
+      "Electrical transparency",
+      "Zero maintenance"
+    ],
+    "downloads": [
+      {
+        "title": "Cable Support Systems",
+        "type": "PDF"
+      }
+    ]
+  }
+]

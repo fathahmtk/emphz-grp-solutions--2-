@@ -68,6 +68,11 @@ const RESOURCES_DB = [
     { id: 'cert-003', category: 'Certifications', title: 'NEMA 4X Compliance Docs', format: 'PDF', size: '1.1 MB' }
 ];
 
+const staticDataDir = path.join(process.cwd(), 'static', 'data');
+if (!fs.existsSync(staticDataDir)) {
+    fs.mkdirSync(staticDataDir, { recursive: true });
+}
+
 fs.writeFileSync(path.join(dataDir, 'chemicals.json'), JSON.stringify(CHEMICAL_DB, null, 2));
 fs.writeFileSync(path.join(dataDir, 'resources.json'), JSON.stringify(RESOURCES_DB, null, 2));
 fs.writeFileSync(path.join(dataDir, 'products.json'), JSON.stringify(MOCK_PRODUCTS, null, 2));
@@ -75,4 +80,7 @@ fs.writeFileSync(path.join(dataDir, 'industries.json'), JSON.stringify(INDUSTRIE
 fs.writeFileSync(path.join(dataDir, 'blog.json'), JSON.stringify(MOCK_BLOG_POSTS, null, 2));
 fs.writeFileSync(path.join(dataDir, 'case_studies.json'), JSON.stringify(MOCK_CASE_STUDIES, null, 2));
 
-console.log('Data exported to Hugo data directory.');
+// Export products to static for client-side RFQ logic
+fs.writeFileSync(path.join(staticDataDir, 'products.json'), JSON.stringify(MOCK_PRODUCTS, null, 2));
+
+console.log('Data exported to Hugo data directory and static/data.');
