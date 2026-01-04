@@ -1,3 +1,5 @@
+</div>
+{{ end }}
 {{ define "main" }}
 <div class="bg-white text-industrial-900 min-h-screen">
     <!-- Hero Section -->
@@ -61,8 +63,7 @@
                             <h3
                                 class="text-xl font-medium text-industrial-900 mb-4 group-hover:text-accent-blue transition-colors">
                                 {{ $industry.title }}</h3>
-                            <p class="text-sm text-industrial-600 font-light leading-relaxed mb-6">{{
-                                $industry.description }}</p>
+                            <p class="text-sm text-industrial-600 font-light leading-relaxed mb-6">{{                                 $industry.description }}</p>
                         </div>
                         <a href="/catalog"
                             class="inline-flex items-center text-[10px] font-bold text-industrial-900 uppercase tracking-widest hover:text-accent-blue transition-colors">
@@ -127,5 +128,3 @@
             </div>
         </div>
     </section>
-</div>
-{{ end }}

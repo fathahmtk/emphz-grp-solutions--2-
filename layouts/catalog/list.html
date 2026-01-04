@@ -123,14 +123,12 @@
                             </div>
                             <div class="flex flex-col flex-grow p-8">
                                 <div class="flex items-center gap-2 mb-3">
-                                    <span class="text-[9px] font-bold text-accent-blue uppercase tracking-widest">{{
-                                        .category }}</span>
+                                    <span class="text-[9px] font-bold text-accent-blue uppercase tracking-widest">{{ .category }}</span>
                                 </div>
                                 <h4
                                     class="text-xl font-medium text-industrial-900 mb-3 group-hover:text-accent-blue transition-colors">
                                     {{ .name }}</h4>
-                                <p class="text-sm text-industrial-500 leading-relaxed mb-8 flex-grow line-clamp-2">{{
-                                    .shortDescription }}</p>
+                                <p class="text-sm text-industrial-500 leading-relaxed mb-8 flex-grow line-clamp-2">{{ .shortDescription }}</p>
                                 <div class="flex items-center justify-between pt-6 border-t border-industrial-100">
                                     <span
                                         class="text-[10px] font-bold uppercase tracking-widest text-industrial-400">Technical
@@ -197,5 +195,3 @@
             });
         });
     });
-</script>
-{{ end }}
