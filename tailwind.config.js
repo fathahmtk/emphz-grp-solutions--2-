@@ -95,6 +95,7 @@ module.exports = {
                 'slide-in': 'slideIn 0.6s ease-out forwards',
                 'glow-pulse': 'glowPulse 3s ease-in-out infinite',
                 'float': 'float 6s ease-in-out infinite',
+                'spin-slow': 'spin 12s linear infinite',
             },
             keyframes: {
                 fadeIn: {
