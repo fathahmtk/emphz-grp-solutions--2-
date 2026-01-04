@@ -235,12 +235,7 @@
             </div>
 
             <div class="space-y-4 max-w-4xl mx-auto">
-                {{ range $index, $faq := (slice (dict "q" "Do you offer custom dimensions?" "a" "Yes, our SMC hot press
-                process allows for modular customization, and we also offer hand-layup services for bespoke
-                requirements.") (dict "q" "What is your typical lead time?" "a" "Standard enclosures are shipped within
-                48 hours. Custom orders typically require 2-4 weeks depending on mold availability.") (dict "q" "Do you
-                ship internationally?" "a" "Yes, we export to the Middle East, Southeast Asia, and Africa. All shipments
-                are palletized and ISPM-15 compliant.")) }}
+                {{ range .Site.Data.faq }}
                 <div class="glass rounded-2xl border border-neutral-100 bg-white/40 overflow-hidden">
                     <button
                         class="faq-btn w-full flex items-center justify-between p-6 text-left cursor-pointer focus:outline-none">
@@ -255,7 +250,7 @@
                                     <line x1="12" y1="17" x2="12.01" y2="17"></line>
                                 </svg>
                             </div>
-                            <h4 class="font-semibold text-base text-neutral-900">{{ $faq.q }}</h4>
+                            <h4 class="font-semibold text-base text-neutral-900">{{ .q }}</h4>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -267,7 +262,7 @@
                         <div class="px-6 pb-6 pl-20">
                             <p
                                 class="text-sm text-neutral-500 leading-relaxed font-light border-l-2 border-blue-100 pl-4">
-                                {{ $faq.a }}</p>
+                                {{ .a }}</p>
                         </div>
                     </div>
                 </div>
