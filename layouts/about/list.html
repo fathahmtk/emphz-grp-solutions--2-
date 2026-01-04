@@ -53,15 +53,12 @@
                 </h4>
 
                 <div class="space-y-10">
-                    {{ range (slice
-                    (dict "label" "SMC_Precision" "desc" "High-Pressure Molding & Layup" "icon" "M12 2v20M2 12h20")
-                    (dict "label" "Infrastructure" "desc" "50,000+ Sq. Ft. Controlled ENV" "icon" "M3 9l9-7 9 7v11a2 2 0
-                    0 1-2 2H5a2 2 0 0 1-2-2z")
-                    (dict "label" "Technical_Staff" "desc" "120+ Specialized Ops Experts" "icon" "M17 21v-2a4 4 0 0
-                    0-4-4H5a4 4 0 0 0-4 4v2")
-                    (dict "label" "Certification" "desc" "ISO 9001:2015 Registered QMS" "icon" "M12 22s8-4 8-10V5l-8-3-8
-                    3v7c0 6 8 10 8 10z")
-                    ) }}
+                    {{ range (slice (dict "label" "SMC_Precision" "desc" "High-Pressure Molding & Layup" "icon" "M12
+                    2v20M2 12h20") (dict "label" "Infrastructure" "desc" "50,000+ Sq. Ft. Controlled ENV" "icon" "M3
+                    9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z") (dict "label" "Technical_Staff" "desc" "120+
+                    Specialized Ops Experts" "icon" "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2") (dict "label"
+                    "Certification" "desc" "ISO 9001:2015 Registered QMS" "icon" "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10
+                    8 10z") ) }}
                     <div class="flex gap-8 group">
                         <div class="text-industrial-700 group-hover:text-emphz-teal transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -94,13 +91,10 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-16">
-                {{ range (slice
-                (dict "title" "Oxidation Immunity" "desc" "Total resistance to high salinity and acidic soil. Zero
-                corrosion link.")
-                (dict "title" "Tolerated Precision" "desc" "Advanced molding ensuring consistent density and dimensional
-                lock.")
-                (dict "title" "Modular Polymer" "desc" "Optimized glass-to-resin matrix for extreme thermal stability.")
-                ) }}
+                {{ range (slice (dict "title" "Oxidation Immunity" "desc" "Total resistance to high salinity and acidic
+                soil. Zero corrosion link.") (dict "title" "Tolerated Precision" "desc" "Advanced molding ensuring
+                consistent density and dimensional lock.") (dict "title" "Modular Polymer" "desc" "Optimized
+                glass-to-resin matrix for extreme thermal stability.") ) }}
                 <div class="space-y-8 group">
                     <div class="w-12 h-px bg-emphz-teal group-hover:w-20 transition-all duration-500"></div>
                     <h4
