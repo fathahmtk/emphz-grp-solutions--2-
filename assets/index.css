@@ -8,13 +8,13 @@
 :root {
   --primary: #14B8A6;
   --primary-glow: rgba(20, 184, 166, 0.4);
-  --surface: #020617;
-  --surface-light: #0F172A;
-  --accent: #F97316;
-  --accent-glow: rgba(249, 115, 22, 0.3);
-  --text-main: #F8FAFC;
+  --surface: #020C0B;
+  --surface-light: #042F2E;
+  --accent: #FFCA3B;
+  --accent-glow: rgba(255, 202, 59, 0.3);
+  --text-main: #F0FDFA;
   --text-muted: #94A3B8;
-  --industrial-border: rgba(255, 255, 255, 0.1);
+  --industrial-border: rgba(20, 184, 166, 0.1);
 }
 
 html {

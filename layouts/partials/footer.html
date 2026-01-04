@@ -1,4 +1,4 @@
-<footer class="bg-white border-t border-industrial-100 py-12 md:py-20">
+<footer class="bg-emphz-teal-black border-t border-emphz-teal-deep/30 py-12 md:py-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
             <div class="lg:col-span-2">
@@ -8,12 +8,12 @@
                     </div>
                     <div class="flex flex-col">
                         <span
-                            class="text-industrial-900 font-black text-2xl tracking-[0.2em] leading-none uppercase">EMPHZ</span>
+                            class="text-white font-black text-2xl tracking-[0.2em] leading-none uppercase">EMPHZ</span>
                         <span class="text-emphz-amber text-[8px] font-bold tracking-[0.3em] mt-1 uppercase">Modular
                             Ecosystems</span>
                     </div>
                 </div>
-                <p class="text-industrial-500 text-sm leading-relaxed max-w-sm mb-8">
+                <p class="text-industrial-300 text-sm leading-relaxed max-w-sm mb-8">
                     Engineering modular infrastructure for a non-corrosive future. Specializing in high-performance
                     GRP/FRP composite solutions for global utilities and industries.
                 </p>
@@ -23,42 +23,42 @@
             </div>
 
             <div>
-                <h4 class="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Quick Access</h4>
+                <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-8">Quick Access</h4>
                 <ul class="space-y-4">
                     {{ range .Site.Menus.main }}
                     <li><a href="{{ .URL }}"
-                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">{{ .Name }}</a>
+                            class="text-sm text-industrial-400 hover:text-emphz-amber transition-colors">{{ .Name }}</a>
                     </li>
                     {{ end }}
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Technical</h4>
+                <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-8">Technical</h4>
                 <ul class="space-y-4">
                     <li><a href="/technical"
-                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Resources</a>
+                            class="text-sm text-industrial-400 hover:text-emphz-amber transition-colors">Resources</a>
                     </li>
                     <li><a href="/rfq"
-                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Request
+                            class="text-sm text-industrial-400 hover:text-emphz-amber transition-colors">Request
                             Quote</a></li>
                     <li><a href="/sitemap"
-                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Sitemap</a>
+                            class="text-sm text-industrial-400 hover:text-emphz-amber transition-colors">Sitemap</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div
-            class="mt-20 pt-8 border-t border-industrial-50 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest">
+            class="mt-20 pt-8 border-t border-emphz-teal-deep/20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-industrial-500 font-bold uppercase tracking-widest">
                 &copy; {{ now.Year }} EMPHZ INFRASTRUCTURE SOLUTIONS. ALL RIGHTS RESERVED.
             </p>
             <div class="flex gap-8">
                 <a href="/privacy"
-                    class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest hover:text-industrial-900 transition-colors">Privacy</a>
+                    class="text-[10px] text-industrial-500 font-bold uppercase tracking-widest hover:text-white transition-colors">Privacy</a>
                 <a href="/terms"
-                    class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest hover:text-industrial-900 transition-colors">Terms</a>
+                    class="text-[10px] text-industrial-500 font-bold uppercase tracking-widest hover:text-white transition-colors">Terms</a>
             </div>
         </div>
     </div>
