@@ -78,4 +78,26 @@ function updateCartUI() {
     `).join('');
 }
 
-document.addEventListener('DOMContentLoaded', updateCartUI);
+async function handleQueryParam() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');
+
+    if (productId) {
+        try {
+            const response = await fetch('/data/products.json');
+            const products = await response.json();
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                addToRFQCart(product);
+            }
+        } catch (error) {
+            console.error('Error fetching products for RFQ:', error);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+    handleQueryParam();
+});
