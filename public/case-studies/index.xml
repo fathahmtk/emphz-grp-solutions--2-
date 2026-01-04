@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Case Studies on EMPHZ | Vetted GRP Composite Ecosystems</title>
+    <link>http://localhost:1313/case-studies/</link>
+    <description>Recent content in Case Studies on EMPHZ | Vetted GRP Composite Ecosystems</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heritage Zone Renewal Project</title>
+      <link>http://localhost:1313/case-studies/cs-heritage-kiosk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/cs-heritage-kiosk/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;The municipality needed to regulate street vendors in a sensitive heritage zone where permanent concrete structures were strictly prohibited.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Supplied 15 &lt;strong&gt;StreetSmart™ Municipality Units&lt;/strong&gt; with custom heritage-inspired finishes and integrated lighting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;outcome&#34;&gt;Outcome&lt;/h2&gt;&#xA;&lt;p&gt;Clean, regulated tourist experience. Zero structural impact on the heritage site. Increased municipal revenue via standardized lease agreements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Industrial Workforce City Optimization</title>
+      <link>http://localhost:1313/case-studies/cs-labor-camp-retail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/cs-labor-camp-retail/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;A labor camp housing 5,000 residents lacked dignified retail infrastructure, leading to disorganized street vending and hygiene concerns.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Designed and installed a custom &lt;strong&gt;CampMart™&lt;/strong&gt; retail block featuring &lt;strong&gt;Eco-San GRP Toilet Cabins&lt;/strong&gt; and &lt;strong&gt;StoreBox™&lt;/strong&gt; inventory modules.&lt;/p&gt;&#xA;&lt;h2 id=&#34;outcome&#34;&gt;Outcome&lt;/h2&gt;&#xA;&lt;p&gt;Standardized retail availability for residents. Improved sanitation metrics. Secured POS integration reduced cash-handling risks for camp operators.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Smart City Retail Hub Expansion</title>
+      <link>http://localhost:1313/case-studies/cs-smart-city-retail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/case-studies/cs-smart-city-retail/</guid>
+      <description>&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;&#xA;&lt;p&gt;The park required standardized, IoT-ready retail units that could be deployed overnight to support a growing tech workforce without permanent construction.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;p&gt;Deployed a fleet of 12 &lt;strong&gt;UrbanCell™ RETAIL&lt;/strong&gt; modules integrated with the &lt;strong&gt;SmartPod Grid™&lt;/strong&gt; IoT controller for centralized energy monitoring.&lt;/p&gt;&#xA;&lt;h2 id=&#34;outcome&#34;&gt;Outcome&lt;/h2&gt;&#xA;&lt;p&gt;95% occupancy within 30 days. No disruption to park utilities during setup. Centralized billing reduced operational overhead by 40%.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

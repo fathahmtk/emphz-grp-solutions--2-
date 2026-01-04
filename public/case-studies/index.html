@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies | EMPHZ | Vetted GRP Composite Ecosystems</title>
+    <meta name="description"
+        content="Proven performance in the field. Explore real-world applications of EMPHZ GRP solutions." />
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --color-emphz-blue: #1F1F1F;
+            --color-emphz-silver: #F2F2F2;
+            --color-emphz-yellow: #FFCA3B;
+        }
+
+        * {
+            cursor: none !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #FFFFFF;
+            color: #1F1F1F;
+            overflow-x: hidden;
+        }
+
+        [id] {
+            scroll-margin-top: 100px;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(31, 31, 31, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.15s ease-out, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-cursor::after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: #1F1F1F;
+            border-radius: 50%;
+        }
+
+        .custom-cursor-glow {
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255, 202, 59, 0.15) 0%, transparent 75%);
+            pointer-events: none;
+            z-index: 9998;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+
+        .bg-grid {
+            background-size: 80px 80px;
+            background-image: linear-gradient(to right, rgba(197, 198, 199, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(197, 198, 199, 0.03) 1px, transparent 1px);
+        }
+
+        .bg-grid-small {
+            background-size: 20px 20px;
+            background-image: linear-gradient(to right, rgba(197, 198, 199, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(197, 198, 199, 0.02) 1px, transparent 1px);
+        }
+
+        @keyframes scanline {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(197, 198, 199, 0.08), transparent);
+            animation: scanline 10s linear infinite;
+            z-index: 9997;
+            pointer-events: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-emphz-silver);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-emphz-blue);
+        }
+    </style>
+
+    
+    
+    <link rel="stylesheet" href="/index.css">
+    
+</head>
+
+<body>
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-700 bg-transparent py-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        
+        <div class="flex-shrink-0 flex items-center group cursor-pointer">
+            <a href="/">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-emphz-amber flex items-center justify-center rounded-lg shadow-lg">
+                        <span class="text-white font-black text-xl tracking-tighter">E</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-black text-2xl tracking-[0.2em] leading-none">EMPHZ</span>
+                        <span class="text-emphz-amber text-[8px] font-bold tracking-[0.3em] mt-1 uppercase">Modular
+                            Ecosystems</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        
+        <div class="hidden lg:flex items-center space-x-8">
+            
+            <a href="/"
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                HOME
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            
+            <a href="/catalog/"
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                SOLUTIONS
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            
+            <a href="/technical/"
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                TECHNICAL
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            
+            <a href="/industries/"
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                INDUSTRIES
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            
+            <a href=""
+                class="text-[11px] font-bold tracking-[0.15em] transition-all duration-300 relative group/link text-white/80 hover:text-emphz-amber">
+                CONTACT
+                <span
+                    class="absolute -bottom-1 left-0 h-px bg-emphz-amber transition-all w-0 group-hover/link:w-full"></span>
+            </a>
+            
+            <button class="text-white/60 hover:text-white transition-colors p-2" aria-label="Search" id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+
+        
+        <div class="hidden lg:flex items-center gap-4">
+            <button
+                class="bg-emphz-amber text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.2em] hover:bg-white hover:text-emphz-darker transition-all duration-500 flex items-center gap-3 uppercase shadow-xl shadow-emphz-amber/20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                    <path d="M3 6h18"></path>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                REQUEST QUOTE
+            </button>
+        </div>
+
+        
+        <div class="lg:hidden flex items-center gap-4">
+            <button class="text-white p-2" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    id="menu-icon">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    
+    <div id="mobile-drawer"
+        class="lg:hidden fixed inset-0 z-[90] bg-[#0A0A0A]/98 backdrop-blur-2xl transition-transform duration-500 transform translate-x-full">
+        <div class="flex flex-col items-center justify-center h-full gap-8">
+            
+            <a href="/"
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">HOME</a>
+            
+            <a href="/catalog/"
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">SOLUTIONS</a>
+            
+            <a href="/technical/"
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">TECHNICAL</a>
+            
+            <a href="/industries/"
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">INDUSTRIES</a>
+            
+            <a href=""
+                class="text-2xl font-bold tracking-[0.2em] text-white hover:text-emphz-amber transition-colors">CONTACT</a>
+            
+            <button
+                class="bg-emphz-amber text-white px-12 py-5 rounded-full font-bold tracking-[0.2em] mt-4 uppercase flex items-center gap-3">
+                REQUISITION
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('bg-[#0A0A0A]/95', 'backdrop-blur-xl', 'py-3', 'shadow-2xl');
+            nav.classList.remove('bg-transparent', 'py-8');
+        } else {
+            nav.classList.remove('bg-[#0A0A0A]/95', 'backdrop-blur-xl', 'py-3', 'shadow-2xl');
+            nav.classList.add('bg-transparent', 'py-8');
+        }
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = mobileDrawer.classList.contains('translate-x-0');
+        if (isOpen) {
+            mobileDrawer.classList.remove('translate-x-0');
+            mobileDrawer.classList.add('translate-x-full');
+            menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+        } else {
+            mobileDrawer.classList.remove('translate-x-full');
+            mobileDrawer.classList.add('translate-x-0');
+            menuIcon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+        }
+    });
+</script>
+
+    <main>
+        
+<div class="bg-emphz-navy min-h-screen text-white selection:bg-emphz-teal selection:text-white">
+    
+    <div class="relative py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-carbon-fibre opacity-10"></div>
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-emphz-teal/20 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-emphz-teal animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-300 font-display">Proven
+                    Performance</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 font-display tracking-tight leading-none">
+                ENGINEERING <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-cyan-400">SUCCESS
+                    STORIES</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto font-sans font-light leading-relaxed">
+                From the saline coasts of Kerala to the industrial hubs of Karnataka, explore how Emphz GRP solutions
+                solve critical infrastructure challenges.
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="grid grid-cols-1 gap-20">
+            
+            <div class="group relative">
+                
+                <div
+                    class="hidden lg:block absolute left-1/2 bottom-[-80px] w-px h-20 bg-gradient-to-b from-white/10 to-transparent">
+                </div>
+                
+
+                <div
+                    class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:flex-row-reverse">
+                    
+                    <div class="w-full lg:w-3/5 relative">
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/5 group-hover:border-emphz-teal/30 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1588525287394-135b3d7c95e4?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Heritage Zone Renewal Project" loading="lazy"
+                                class="w-full aspect-[16/10] object-cover transform transition-transform duration-1000 group-hover:scale-110 relative z-10">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emphz-navy via-transparent to-transparent opacity-80 z-20">
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 z-30 flex flex-wrap gap-3">
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Fort Kochi, Kerala</span>
+                                </div>
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-blue-400">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="22"></line>
+                                        <line x1="15" y1="22" x2="15" y2="22"></line>
+                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Tourism</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="w-full lg:w-2/5 relative">
+                        <div class="text-[10px] font-mono text-emphz-teal mb-3 flex items-center gap-2">
+                            <span class="w-8 h-px bg-emphz-teal"></span>
+                            CASE STUDY 01
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">Heritage Zone Renewal Project</h2>
+
+                        <div class="space-y-8 relative">
+                            <div class="absolute left-3 top-2 bottom-2 w-px bg-white/10"></div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-red-400">
+                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Challenge</h4>
+                                <p class="text-gray-300 text-sm leading-relaxed font-light">The municipality needed to regulate street vendors in a sensitive heritage zone where permanent concrete structures were strictly prohibited.</p>
+                            </div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-emphz-teal">
+                                    <span class="w-2 h-2 rounded-full bg-emphz-teal"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Solution</h4>
+                                <div class="text-gray-300 text-sm leading-relaxed font-light mt-2">
+                                    <h2 id="challenge">Challenge</h2>
+<p>The municipality needed to regulate street vendors in a sensitive heritage zone where permanent concrete structures were strictly prohibited.</p>
+<h2 id="solution">Solution</h2>
+<p>Supplied 15 <strong>StreetSmart™ Municipality Units</strong> with custom heritage-inspired finishes and integrated lighting.</p>
+<h2 id="outcome">Outcome</h2>
+<p>Clean, regulated tourist experience. Zero structural impact on the heritage site. Increased municipal revenue via standardized lease agreements.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-1">Impact
+                                    Metric</span>
+                                <div class="flex items-center text-emphz-teal font-mono font-bold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mr-2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                    <span>100% ROI &lt; 2 Yrs</span>
+                                </div>
+                            </div>
+                            <a href="/contact"
+                                class="bg-white text-emphz-navy px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emphz-teal hover:text-white transition-all shadow-lg hover:shadow-emphz-teal/50">
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="group relative">
+                
+                <div
+                    class="hidden lg:block absolute left-1/2 bottom-[-80px] w-px h-20 bg-gradient-to-b from-white/10 to-transparent">
+                </div>
+                
+
+                <div
+                    class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center ">
+                    
+                    <div class="w-full lg:w-3/5 relative">
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/5 group-hover:border-emphz-teal/30 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1590674899484-d564fa788e3c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Industrial Workforce City Optimization" loading="lazy"
+                                class="w-full aspect-[16/10] object-cover transform transition-transform duration-1000 group-hover:scale-110 relative z-10">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emphz-navy via-transparent to-transparent opacity-80 z-20">
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 z-30 flex flex-wrap gap-3">
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Industrial Estate, Mysore</span>
+                                </div>
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-blue-400">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="22"></line>
+                                        <line x1="15" y1="22" x2="15" y2="22"></line>
+                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Logistics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="w-full lg:w-2/5 relative">
+                        <div class="text-[10px] font-mono text-emphz-teal mb-3 flex items-center gap-2">
+                            <span class="w-8 h-px bg-emphz-teal"></span>
+                            CASE STUDY 02
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">Industrial Workforce City Optimization</h2>
+
+                        <div class="space-y-8 relative">
+                            <div class="absolute left-3 top-2 bottom-2 w-px bg-white/10"></div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-red-400">
+                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Challenge</h4>
+                                <p class="text-gray-300 text-sm leading-relaxed font-light">A labor camp housing 5,000 residents lacked dignified retail infrastructure, leading to disorganized street vending and hygiene concerns.</p>
+                            </div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-emphz-teal">
+                                    <span class="w-2 h-2 rounded-full bg-emphz-teal"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Solution</h4>
+                                <div class="text-gray-300 text-sm leading-relaxed font-light mt-2">
+                                    <h2 id="challenge">Challenge</h2>
+<p>A labor camp housing 5,000 residents lacked dignified retail infrastructure, leading to disorganized street vending and hygiene concerns.</p>
+<h2 id="solution">Solution</h2>
+<p>Designed and installed a custom <strong>CampMart™</strong> retail block featuring <strong>Eco-San GRP Toilet Cabins</strong> and <strong>StoreBox™</strong> inventory modules.</p>
+<h2 id="outcome">Outcome</h2>
+<p>Standardized retail availability for residents. Improved sanitation metrics. Secured POS integration reduced cash-handling risks for camp operators.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-1">Impact
+                                    Metric</span>
+                                <div class="flex items-center text-emphz-teal font-mono font-bold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mr-2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                    <span>100% ROI &lt; 2 Yrs</span>
+                                </div>
+                            </div>
+                            <a href="/contact"
+                                class="bg-white text-emphz-navy px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emphz-teal hover:text-white transition-all shadow-lg hover:shadow-emphz-teal/50">
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="group relative">
+                
+
+                <div
+                    class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:flex-row-reverse">
+                    
+                    <div class="w-full lg:w-3/5 relative">
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/5 group-hover:border-emphz-teal/30 transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Smart City Retail Hub Expansion" loading="lazy"
+                                class="w-full aspect-[16/10] object-cover transform transition-transform duration-1000 group-hover:scale-110 relative z-10">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emphz-navy via-transparent to-transparent opacity-80 z-20">
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 z-30 flex flex-wrap gap-3">
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Dubai Digital Park, UAE</span>
+                                </div>
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-blue-400">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="22"></line>
+                                        <line x1="15" y1="22" x2="15" y2="22"></line>
+                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">Smart City</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="w-full lg:w-2/5 relative">
+                        <div class="text-[10px] font-mono text-emphz-teal mb-3 flex items-center gap-2">
+                            <span class="w-8 h-px bg-emphz-teal"></span>
+                            CASE STUDY 03
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">Smart City Retail Hub Expansion</h2>
+
+                        <div class="space-y-8 relative">
+                            <div class="absolute left-3 top-2 bottom-2 w-px bg-white/10"></div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-red-400">
+                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Challenge</h4>
+                                <p class="text-gray-300 text-sm leading-relaxed font-light">The park required standardized, IoT-ready retail units that could be deployed overnight to support a growing tech workforce without permanent construction.</p>
+                            </div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-emphz-teal">
+                                    <span class="w-2 h-2 rounded-full bg-emphz-teal"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Solution</h4>
+                                <div class="text-gray-300 text-sm leading-relaxed font-light mt-2">
+                                    <h2 id="challenge">Challenge</h2>
+<p>The park required standardized, IoT-ready retail units that could be deployed overnight to support a growing tech workforce without permanent construction.</p>
+<h2 id="solution">Solution</h2>
+<p>Deployed a fleet of 12 <strong>UrbanCell™ RETAIL</strong> modules integrated with the <strong>SmartPod Grid™</strong> IoT controller for centralized energy monitoring.</p>
+<h2 id="outcome">Outcome</h2>
+<p>95% occupancy within 30 days. No disruption to park utilities during setup. Centralized billing reduced operational overhead by 40%.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-1">Impact
+                                    Metric</span>
+                                <div class="flex items-center text-emphz-teal font-mono font-bold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mr-2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                    <span>100% ROI &lt; 2 Yrs</span>
+                                </div>
+                            </div>
+                            <a href="/contact"
+                                class="bg-white text-emphz-navy px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emphz-teal hover:text-white transition-all shadow-lg hover:shadow-emphz-teal/50">
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="mt-20 text-center">
+            <p class="text-gray-400 mb-6 font-light">Have a challenging environment? Let's engineer a solution.</p>
+            <a href="/contact"
+                class="inline-flex items-center text-emphz-teal hover:text-white font-bold tracking-widest uppercase text-sm transition-colors group">
+                Contact Engineering Team <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <footer class="bg-white border-t border-industrial-100 py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 bg-emphz-amber flex items-center justify-center rounded-lg shadow-lg">
+                        <span class="text-white font-black text-xl tracking-tighter">E</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span
+                            class="text-industrial-900 font-black text-2xl tracking-[0.2em] leading-none uppercase">EMPHZ</span>
+                        <span class="text-emphz-amber text-[8px] font-bold tracking-[0.3em] mt-1 uppercase">Modular
+                            Ecosystems</span>
+                    </div>
+                </div>
+                <p class="text-industrial-500 text-sm leading-relaxed max-w-sm mb-8">
+                    Engineering modular infrastructure for a non-corrosive future. Specializing in high-performance
+                    GRP/FRP composite solutions for global utilities and industries.
+                </p>
+                <div class="flex gap-4">
+                    
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Quick Access</h4>
+                <ul class="space-y-4">
+                    
+                    <li><a href="/"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">HOME</a>
+                    </li>
+                    
+                    <li><a href="/catalog/"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">SOLUTIONS</a>
+                    </li>
+                    
+                    <li><a href="/technical/"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">TECHNICAL</a>
+                    </li>
+                    
+                    <li><a href="/industries/"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">INDUSTRIES</a>
+                    </li>
+                    
+                    <li><a href=""
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">CONTACT</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xs font-bold text-industrial-900 uppercase tracking-widest mb-8">Technical</h4>
+                <ul class="space-y-4">
+                    <li><a href="/technical"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Resources</a>
+                    </li>
+                    <li><a href="/rfq"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Request
+                            Quote</a></li>
+                    <li><a href="/sitemap"
+                            class="text-sm text-industrial-500 hover:text-emphz-amber transition-colors">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="mt-20 pt-8 border-t border-industrial-50 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest">
+                &copy; 2026 EMPHZ INFRASTRUCTURE SOLUTIONS. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex gap-8">
+                <a href="/privacy"
+                    class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest hover:text-industrial-900 transition-colors">Privacy</a>
+                <a href="/terms"
+                    class="text-[10px] text-industrial-400 font-bold uppercase tracking-widest hover:text-industrial-900 transition-colors">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <div id="cursor-glow" class="custom-cursor-glow"></div>
+    <div id="cursor" class="custom-cursor"></div>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const cursorGlow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor.style.left = x - 20 + 'px';
+            cursor.style.top = y - 20 + 'px';
+            cursorGlow.style.left = x + 'px';
+            cursorGlow.style.top = y + 'px';
+        });
+        document.addEventListener('mousedown', () => cursor.style.transform = 'scale(0.8)');
+        document.addEventListener('mouseup', () => cursor.style.transform = 'scale(1)');
+    </script>
+</body>
+
+</html>

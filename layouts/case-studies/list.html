@@ -1,0 +1,158 @@
+{{ define "main" }}
+<div class="bg-emphz-navy min-h-screen text-white selection:bg-emphz-teal selection:text-white">
+    <!-- Cinematic Hero -->
+    <div class="relative py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-carbon-fibre opacity-10"></div>
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-emphz-teal/20 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-emphz-teal animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-300 font-display">Proven
+                    Performance</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 font-display tracking-tight leading-none">
+                ENGINEERING <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-cyan-400">SUCCESS
+                    STORIES</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto font-sans font-light leading-relaxed">
+                From the saline coasts of Kerala to the industrial hubs of Karnataka, explore how Emphz GRP solutions
+                solve critical infrastructure challenges.
+            </p>
+        </div>
+    </div>
+
+    <!-- Case Study Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="grid grid-cols-1 gap-20">
+            {{ range $idx, $post := .Pages }}
+            <div class="group relative">
+                {{ if lt $idx (sub (len $.Pages) 1) }}
+                <div
+                    class="hidden lg:block absolute left-1/2 bottom-[-80px] w-px h-20 bg-gradient-to-b from-white/10 to-transparent">
+                </div>
+                {{ end }}
+
+                <div
+                    class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center {{ if modBool $idx 2 }}lg:flex-row-reverse{{ end }}">
+                    <!-- Visual Side -->
+                    <div class="w-full lg:w-3/5 relative">
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/5 group-hover:border-emphz-teal/30 transition-all duration-500">
+                            <img src="{{ .Params.imageUrl }}" alt="{{ .Title }}" loading="lazy"
+                                class="w-full aspect-[16/10] object-cover transform transition-transform duration-1000 group-hover:scale-110 relative z-10">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-emphz-navy via-transparent to-transparent opacity-80 z-20">
+                            </div>
+
+                            <div class="absolute bottom-6 left-6 z-30 flex flex-wrap gap-3">
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-emphz-teal">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">{{ .Params.location }}</span>
+                                </div>
+                                <div
+                                    class="bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="text-blue-400">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="22"></line>
+                                        <line x1="15" y1="22" x2="15" y2="22"></line>
+                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    </svg>
+                                    <span class="text-xs font-mono font-bold">{{ .Params.category }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Side -->
+                    <div class="w-full lg:w-2/5 relative">
+                        <div class="text-[10px] font-mono text-emphz-teal mb-3 flex items-center gap-2">
+                            <span class="w-8 h-px bg-emphz-teal"></span>
+                            CASE STUDY 0{{ add $idx 1 }}
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">{{ .Title
+                            }}</h2>
+
+                        <div class="space-y-8 relative">
+                            <div class="absolute left-3 top-2 bottom-2 w-px bg-white/10"></div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-red-400">
+                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Challenge</h4>
+                                <p class="text-gray-300 text-sm leading-relaxed font-light">{{ .Description }}</p>
+                            </div>
+
+                            <div class="relative pl-10">
+                                <div
+                                    class="absolute left-0 top-1 w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-emphz-teal">
+                                    <span class="w-2 h-2 rounded-full bg-emphz-teal"></span>
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 font-display">
+                                    The Solution</h4>
+                                <div class="text-gray-300 text-sm leading-relaxed font-light mt-2">
+                                    {{ .Content }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-1">Impact
+                                    Metric</span>
+                                <div class="flex items-center text-emphz-teal font-mono font-bold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="mr-2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                    <span>100% ROI &lt; 2 Yrs</span>
+                                </div>
+                            </div>
+                            <a href="/contact"
+                                class="bg-white text-emphz-navy px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emphz-teal hover:text-white transition-all shadow-lg hover:shadow-emphz-teal/50">
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="mt-20 text-center">
+            <p class="text-gray-400 mb-6 font-light">Have a challenging environment? Let's engineer a solution.</p>
+            <a href="/contact"
+                class="inline-flex items-center text-emphz-teal hover:text-white font-bold tracking-widest uppercase text-sm transition-colors group">
+                Contact Engineering Team <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+{{ end }}
