@@ -1,301 +1,295 @@
 {{ define "main" }}
-<div class="bg-void-950 min-h-screen text-slate-300 selection:bg-teal-500/30 selection:text-teal-200 font-sans">
+<div
+    class="bg-void-950 min-h-screen text-slate-300 font-sans selection:bg-teal-500 selection:text-void-950 bg-noise relative overflow-x-hidden">
 
-    <!-- HEADER SPACER -->
+    <!-- GLOBAL DECORATION: FIXED GRID LINES -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]">
+        <div class="absolute left-6 md:left-24 top-0 bottom-0 w-px bg-white"></div>
+        <div class="absolute right-6 md:right-24 top-0 bottom-0 w-px bg-white"></div>
+        <div class="absolute left-1/4 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+        <div class="absolute left-3/4 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+    </div>
 
-    <!-- KINETIC HERO SECTION -->
-    <section class="relative pt-40 pb-20 md:pt-64 md:pb-40 px-6 overflow-hidden min-h-[90vh] flex flex-col justify-end">
-        <!-- Minimal Ambient Light -->
+    <!-- SECTION 1: HERO - TYPOGRAPHIC STATEMENT -->
+    <section
+        class="relative min-h-screen flex flex-col justify-center px-6 md:px-24 pt-32 pb-20 z-10 w-full max-w-[1920px] mx-auto">
+
+        <!-- Top Meta Data -->
         <div
-            class="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-900/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none">
+            class="absolute top-32 md:top-40 left-6 md:left-24 right-6 md:right-24 flex justify-between items-end border-b border-white/10 pb-6 opacity-0 animate-fade-in text-xs font-mono tracking-widest text-teal-500 uppercase">
+            <div>[ CORP_PROFILE_V2.0 ]</div>
+            <div class="hidden md:block">EST. 1999 — MYSURU, IND</div>
+            <div class="text-right">SCROLL_HINT ↓</div>
         </div>
 
-        <div class="max-w-[1800px] mx-auto w-full relative z-10 border-b border-slate-900 pb-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-                <div class="lg:col-span-9">
-                    <div class="flex items-center gap-4 mb-10 opacity-0 animate-fade-in-up">
-                        <div class="w-16 h-[1px] bg-teal-500"></div>
-                        <span class="font-mono text-xs uppercase tracking-[0.3em] text-teal-400">Corporate
-                            Profile</span>
+        <!-- Main Title -->
+        <div class="space-y-2 mt-10 md:mt-0">
+            <div class="overflow-hidden">
+                <h1
+                    class="text-[12vw] leading-[0.85] font-black text-white tracking-tighter transform translate-y-full animate-slide-up-reveal mix-blend-difference">
+                    MATERIAL
+                </h1>
+            </div>
+            <div class="overflow-hidden">
+                <h1
+                    class="text-[12vw] leading-[0.85] font-black text-slate-800 tracking-tighter transform translate-y-full animate-slide-up-reveal animation-delay-200 hover:text-outline-teal transition-all duration-700 cursor-default">
+                    MASTERY<span class="text-teal-500">.</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Introduction Paragraph -->
+        <div class="grid grid-cols-1 md:grid-cols-12 mt-20 md:mt-32 gap-10 opacity-0 animate-fade-in delay-500">
+            <div class="md:col-start-8 md:col-span-5 relative">
+                <div class="absolute -left-6 top-1.5 w-1.5 h-1.5 bg-teal-500"></div>
+                <p class="text-xl md:text-2xl font-light text-slate-400 leading-relaxed text-balance">
+                    We engineer <span class="text-white font-medium">structural permanence</span>. By synthesizing
+                    advanced GRP composites, we eliminate entropy in critical infrastructure—delivering lifecycles
+                    measured in centuries, not decades.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE SPECS (SCROLL TICKER + GRID) -->
+    <section class="border-y border-white/10 bg-void-900/30 backdrop-blur-sm z-20 relative overflow-hidden py-8">
+        <!-- Infinite Ticker -->
+        <div class="ticker-wrap w-full">
+            <div class="ticker font-mono text-sm md:text-base text-slate-500 uppercase tracking-[0.2em]">
+                <span class="mx-8">• ISO 9001:2015 CERTIFIED</span>
+                <span class="mx-8">• ZERO CORROSION PROPAGATION</span>
+                <span class="mx-8">• DIELECTRIC STRENGTH: 15KV/MM</span>
+                <span class="mx-8">• TENSILE STRENGTH: >400 MPA</span>
+                <span class="mx-8">• THERMAL RANGE: -50°C TO +120°C</span>
+                <span class="mx-8">• UV STABILIZED MATRIX</span>
+                <!-- Duplicate for loop -->
+                <span class="mx-8 text-teal-500">• ISO 9001:2015 CERTIFIED</span>
+                <span class="mx-8">• ZERO CORROSION PROPAGATION</span>
+                <span class="mx-8">• DIELECTRIC STRENGTH: 15KV/MM</span>
+                <span class="mx-8">• TENSILE STRENGTH: >400 MPA</span>
+                <span class="mx-8">• THERMAL RANGE: -50°C TO +120°C</span>
+                <span class="mx-8">• UV STABILIZED MATRIX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: VISUAL & CONCEPT (ASYMMETRIC) -->
+    <section class="relative z-10 w-full max-w-[1920px] mx-auto">
+        <div class="grid lg:grid-cols-2 min-h-screen">
+            <!-- Left: Sticky Image -->
+            <div
+                class="relative lg:sticky lg:top-0 h-[60vh] lg:h-screen w-full border-r border-white/5 lens-container group">
+                <img src="/grp_composite_material_1767532869096.png" alt="Microstructure"
+                    class="lens-image absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000">
+
+                <!-- HUD Overlay -->
+                <div class="absolute inset-0 p-6 md:p-12 flex flex-col justify-between pointer-events-none">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="font-mono text-xs text-teal-500 border border-teal-500/30 px-2 py-1 bg-void-950/50 backdrop-blur">
+                            FIG. 2.4 - MATRIX MAGNIFICATION</div>
+                        <div class="w-24 h-24 border border-white/20 rounded-full border-dashed animate-spin-slow">
+                        </div>
                     </div>
-                    <h1
-                        class="text-7xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter leading-[0.8] text-white opacity-0 animate-fade-in-up delay-100">
-                        MATERIAL<br>
-                        <span
-                            class="text-slate-800 transition-colors duration-700 hover:text-white cursor-default">MASTERY.</span>
-                    </h1>
+                    <div class="grid grid-cols-2 gap-4 text-xs font-mono text-white/50">
+                        <div>
+                            <span class="block text-white">RESIN:</span> ISOPHTHALIC
+                        </div>
+                        <div>
+                            <span class="block text-white">REINFORCEMENT:</span> E-GLASS FIBER
+                        </div>
+                    </div>
                 </div>
-                <div class="lg:col-span-3 pb-4 opacity-0 animate-fade-in-up delay-200">
-                    <p
-                        class="text-lg md:text-xl text-slate-400 font-light leading-relaxed border-l border-slate-800 pl-8">
-                        We engineer <span class="text-white">structural permanence</span> through advanced composite
-                        science, eliminating entropy in critical infrastructure.
+            </div>
+
+            <!-- Right: Conceptual Content -->
+            <div class="px-6 md:px-24 py-32 lg:py-48 space-y-40">
+
+                <!-- Concept Block 1 -->
+                <div class="reveal-trigger">
+                    <span class="font-mono text-teal-500 text-xs tracking-widest mb-6 block">01 // THE PROBLEM</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">THE PHYSICS OF <br>DECAY.
+                    </h2>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">
+                        Steel rusts. Concrete cracks. Wood rots. Traditional infrastructure materials are engaged in a
+                        constant losing battle against thermodynamics. They require perpetual maintenance, costing
+                        billions and creating systemic fragility.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- STATS GRID: SWISS GRIDS -->
-    <section class="bg-void-900/20">
-        <div class="max-w-[1800px] mx-auto border-x border-slate-900">
-            <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-slate-900">
-                <!-- Stat 1 -->
-                <div class="p-10 md:p-12 group hover:bg-slate-900/30 transition-all duration-500">
-                    <div
-                        class="font-mono text-5xl md:text-6xl text-white mb-3 group-hover:text-teal-400 transition-colors duration-300">
-                        50<span class="text-2xl text-slate-600 align-top">+</span></div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 group-hover:text-slate-300">Years
-                        Design Life</div>
+                <!-- Concept Block 2 -->
+                <div class="reveal-trigger">
+                    <span class="font-mono text-teal-500 text-xs tracking-widest mb-6 block">02 // THE SOLUTION</span>
+                    <h2 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">MOLECULAR <br>PERMANENCE.
+                    </h2>
+                    <p class="text-lg text-slate-400 font-light leading-relaxed">
+                        EMPHZ composites are engineered to exist outside this cycle. By cross-linking polymer chains
+                        with woven glass reinforcements, we create a material that is naturally immune to chemical,
+                        thermal, and saline aggression.
+                    </p>
                 </div>
-                <!-- Stat 2 -->
-                <div class="p-10 md:p-12 group hover:bg-slate-900/30 transition-all duration-500">
-                    <div
-                        class="font-mono text-5xl md:text-6xl text-white mb-3 group-hover:text-teal-400 transition-colors duration-300">
-                        120<span class="text-2xl text-slate-600 align-top">+</span></div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 group-hover:text-slate-300">Engineers
-                    </div>
-                </div>
-                <!-- Stat 3 -->
-                <div class="p-10 md:p-12 group hover:bg-slate-900/30 transition-all duration-500">
-                    <div
-                        class="font-mono text-5xl md:text-6xl text-white mb-3 group-hover:text-teal-400 transition-colors duration-300">
-                        50K</div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 group-hover:text-slate-300">Sq.Ft
-                        Facility</div>
-                </div>
-                <!-- Stat 4 -->
-                <div class="p-10 md:p-12 group hover:bg-slate-900/30 transition-all duration-500">
-                    <div
-                        class="font-mono text-5xl md:text-6xl text-white mb-3 group-hover:text-teal-400 transition-colors duration-300">
-                        ISO</div>
-                    <div class="text-xs uppercase tracking-widest text-slate-500 group-hover:text-slate-300">9001:2015
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CONTENT: ASYMMETRIC SPLIT -->
-    <section class="py-32 md:py-48 px-6">
-        <div class="max-w-[1800px] mx-auto">
-            <div class="grid lg:grid-cols-2 gap-24 items-start">
-
-                <!-- Sticky Visual -->
-                <div class="relative lg:sticky lg:top-32">
-                    <div
-                        class="relative w-full aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-slate-900 grayscale hover:grayscale-0 transition-all duration-1000">
-                        <!-- Image Overlay -->
-                        <div class="absolute inset-0 z-10 bg-void-950/10 mix-blend-multiply"></div>
-                        <img src="/grp_composite_material_1767532869096.png" alt="Composite Microstructure"
-                            class="w-full h-full object-cover transform hover:scale-110 transition-all duration-[2s]">
-
-                        <!-- Technical Overlay -->
-                        <div
-                            class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-void-950 to-transparent">
-                            <div class="flex justify-between items-end border-t border-white/20 pt-6">
-                                <div>
-                                    <div class="font-mono text-xs text-teal-400 mb-2">FIG 2.0</div>
-                                    <div class="text-white font-medium tracking-wide">Glass Reinforced Matrix</div>
-                                </div>
-                                <div
-                                    class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center animate-spin-slow">
-                                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M12 4v16m8-8H4" />
-                                    </svg>
-                                </div>
-                            </div>
+                <!-- Metrics Grid -->
+                <div class="reveal-trigger border-t border-white/10 pt-20">
+                    <div class="grid grid-cols-2 gap-12">
+                        <div>
+                            <div class="font-mono text-5xl text-white mb-2">50+</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Year Design Life</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-5xl text-white mb-2">0%</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Maintenance Req.</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-5xl text-white mb-2">1/4</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Weight of Steel</div>
+                        </div>
+                        <div>
+                            <div class="font-mono text-5xl text-white mb-2">ISO</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Global Certified</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Text Content -->
-                <div class="space-y-32 lg:pt-10">
-
-                    <!-- Block 1 -->
-                    <div class="group">
-                        <span
-                            class="font-mono text-slate-600 text-xs mb-8 block group-hover:text-teal-500 transition-colors">01
-                            / CONCEPT</span>
-                        <h2 class="text-5xl md:text-7xl font-bold text-white mb-10 tracking-tighter leading-[0.9]">The
-                            Physics of <br><span
-                                class="text-slate-700 group-hover:text-white transition-colors duration-500">Permanence.</span>
-                        </h2>
-                        <div class="text-xl md:text-2xl text-slate-400 font-light leading-relaxed space-y-8 max-w-2xl">
-                            <p>Founded to eliminate infrastructure decay, EMPHZ specializes in GRP composite systems
-                                that resist chemical and saline stress at the molecular level.</p>
-                            <p class="text-slate-500">Traditional materials—steel, concrete, wood—are destined to revert
-                                to their elemental states. Our composites are engineered to defy this natural entropy.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="h-px bg-slate-800 w-full"></div>
-
-                    <!-- Block 2 -->
-                    <div class="group">
-                        <span
-                            class="font-mono text-slate-600 text-xs mb-8 block group-hover:text-teal-500 transition-colors">02
-                            / CORE PROPERTIES</span>
-
-                        <div class="space-y-16">
-                            <div class="grid md:grid-cols-[100px_1fr] gap-8 items-start">
-                                <div
-                                    class="font-mono text-4xl text-slate-800 group-hover:text-teal-500 transition-colors">
-                                    A.</div>
-                                <div>
-                                    <h3 class="text-3xl text-white font-medium mb-4">Zero Corrosion</h3>
-                                    <p class="text-lg text-slate-400 leading-relaxed font-light">Complete immunity to
-                                        oxidation, saline environments, and aggressive chemical exposure.</p>
-                                </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-[100px_1fr] gap-8 items-start">
-                                <div
-                                    class="font-mono text-4xl text-slate-800 group-hover:text-teal-500 transition-colors">
-                                    B.</div>
-                                <div>
-                                    <h3 class="text-3xl text-white font-medium mb-4">Dielectric Isolation</h3>
-                                    <p class="text-lg text-slate-400 leading-relaxed font-light">Naturally
-                                        non-conductive matrix ensuring absolute electrical safety without grounding.</p>
-                                </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-[100px_1fr] gap-8 items-start">
-                                <div
-                                    class="font-mono text-4xl text-slate-800 group-hover:text-teal-500 transition-colors">
-                                    C.</div>
-                                <div>
-                                    <h3 class="text-3xl text-white font-medium mb-4">Thermal Stability</h3>
-                                    <p class="text-lg text-slate-400 leading-relaxed font-light">Maintains structural
-                                        integrity across extreme thermal ranges from -40°C to +80°C.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- CAPABILITIES: GRID SYSTEM -->
-    <section class="bg-void-900 border-t border-slate-900 pt-32 pb-12 px-6">
-        <div class="max-w-[1800px] mx-auto">
-            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-10">
-                <div>
-                    <span
-                        class="font-mono text-teal-500 text-xs uppercase tracking-widest mb-4 block">Manufacturing</span>
-                    <h2 class="text-5xl md:text-8xl text-white font-black tracking-tighter leading-none">
-                        PRECISION<br><span class="text-slate-800">GRID</span></h2>
-                </div>
-                <div class="text-slate-500 max-w-sm pb-2">
-                    ISO 9001:2015 certified facility in Mysuru, Karnataka with state-of-the-art composite manufacturing
-                    technology.
-                </div>
-            </div>
+    <!-- SECTION 4: CAPABILITIES -->
+    <section class="relative z-10 py-32 w-full border-t border-white/5 bg-void-950">
+        <div class="px-6 md:px-24 max-w-[1920px] mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-20">MANUFACTURING GRID</h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-900 border border-slate-900">
-                <!-- Cap 1 -->
-                <div class="bg-void-950 p-10 md:p-14 hover:bg-slate-900/50 transition-colors duration-300 group h-full">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center rounded-full mb-12 border border-slate-800 group-hover:border-teal-500 group-hover:text-teal-400 text-slate-600 transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-l border-t border-white/10">
+                <!-- Grid Item 1 -->
+                <div
+                    class="p-10 border-r border-b border-white/10 hover:bg-white/5 transition-colors duration-300 group min-h-[300px] flex flex-col justify-between">
+                    <div class="font-mono text-xs text-slate-500">01</div>
+                    <div>
+                        <svg class="w-8 h-8 text-teal-500 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
                             </path>
                         </svg>
+                        <h3 class="text-xl text-white font-bold mb-2">SMC MOLDING</h3>
+                        <p class="text-sm text-slate-500">High-tonnage compression for precision parts.</p>
                     </div>
-                    <h3 class="text-xl text-white font-bold mb-4 uppercase tracking-wide">SMC Molding</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">High-pressure sheet molding compound
-                        technology for complex geometries.</p>
                 </div>
 
-                <!-- Cap 2 -->
-                <div class="bg-void-950 p-10 md:p-14 hover:bg-slate-900/50 transition-colors duration-300 group h-full">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center rounded-full mb-12 border border-slate-800 group-hover:border-teal-500 group-hover:text-teal-400 text-slate-600 transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Grid Item 2 -->
+                <div
+                    class="p-10 border-r border-b border-white/10 hover:bg-white/5 transition-colors duration-300 group min-h-[300px] flex flex-col justify-between">
+                    <div class="font-mono text-xs text-slate-500">02</div>
+                    <div>
+                        <svg class="w-8 h-8 text-teal-500 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                        <h3 class="text-xl text-white font-bold mb-2">RTM PROCESS</h3>
+                        <p class="text-sm text-slate-500">Resin Transfer Molding for high-strength components.</p>
+                    </div>
+                </div>
+
+                <!-- Grid Item 3 -->
+                <div
+                    class="p-10 border-r border-b border-white/10 hover:bg-white/5 transition-colors duration-300 group min-h-[300px] flex flex-col justify-between">
+                    <div class="font-mono text-xs text-slate-500">03</div>
+                    <div>
+                        <svg class="w-8 h-8 text-teal-500 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
+                        <h3 class="text-xl text-white font-bold mb-2">QUALITY LABS</h3>
+                        <p class="text-sm text-slate-500">In-house testing for ASTM/NEMA compliance.</p>
                     </div>
-                    <h3 class="text-xl text-white font-bold mb-4 uppercase tracking-wide">QA Systems</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">Advanced quality control protocols compliant
-                        with ISO 9001:2015.</p>
                 </div>
 
-                <!-- Cap 3 -->
-                <div class="bg-void-950 p-10 md:p-14 hover:bg-slate-900/50 transition-colors duration-300 group h-full">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center rounded-full mb-12 border border-slate-800 group-hover:border-teal-500 group-hover:text-teal-400 text-slate-600 transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl text-white font-bold mb-4 uppercase tracking-wide">Expert Team</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">120+ specialized engineers and operations
-                        professionals.</p>
-                </div>
-
-                <!-- Cap 4 -->
-                <div class="bg-void-950 p-10 md:p-14 hover:bg-slate-900/50 transition-colors duration-300 group h-full">
-                    <div
-                        class="w-12 h-12 flex items-center justify-center rounded-full mb-12 border border-slate-800 group-hover:border-teal-500 group-hover:text-teal-400 text-slate-600 transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Grid Item 4 -->
+                <div
+                    class="p-10 border-r border-b border-white/10 hover:bg-white/5 transition-colors duration-300 group min-h-[300px] flex flex-col justify-between">
+                    <div class="font-mono text-xs text-slate-500">04</div>
+                    <div>
+                        <svg class="w-8 h-8 text-teal-500 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                 d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
                             </path>
                         </svg>
+                        <h3 class="text-xl text-white font-bold mb-2">GLOBAL LOGISTICS</h3>
+                        <p class="text-sm text-slate-500">Optimized supply chain for international delivery.</p>
                     </div>
-                    <h3 class="text-xl text-white font-bold mb-4 uppercase tracking-wide">Global Logisitcs</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">Integrated supply chain handling
-                        international deployment.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- QUOTE: TYPOGRAPHIC FOCUS -->
-    <section class="py-40 px-6 border-t border-slate-900 relative overflow-hidden">
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-900/10 rounded-full blur-[100px] pointer-events-none">
-        </div>
-
-        <div class="max-w-6xl mx-auto text-center relative z-10">
-            <svg class="w-16 h-16 text-teal-800/50 mx-auto mb-16" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                    d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H9.01699V12.9996H12.017C13.1216 12.9996 14.017 12.1042 14.017 10.9996V7.99951H17.017V10.9996C17.017 12.1042 17.9124 12.9996 19.017 12.9996H19.9056C19.3564 14.5029 17.8016 15.5 16.017 15.5C14.9124 15.5 14.017 16.3954 14.017 17.5V21ZM10.017 21L10.017 18C10.017 16.8954 10.9124 16 12.017 16H15.017V12.9996H12.017C10.9124 12.9996 10.017 12.1042 10.017 10.9996V7.99951H8.01699V10.9996C8.01699 12.1042 7.12159 12.9996 6.01699 12.9996H4.01699C4.01699 16.0006 6.22389 18.4901 9.17299 18.9169C9.64619 18.9854 10.017 19.3904 10.017 19.8689V21H10.017Z" />
-            </svg>
-            <blockquote
-                class="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-16 tracking-tight">
-                "WE SYNTHESIZE THE MATERIALS THAT <span class="text-teal-500">SHIELD NATIONAL PROGRESS</span>."
-            </blockquote>
-            <cite class="not-italic flex flex-col items-center gap-2">
-                <div class="text-white font-medium text-lg">Muhammed Rashik P</div>
-                <div class="text-slate-600 text-xs uppercase tracking-[0.2em] font-mono">Managing Director</div>
-            </cite>
-        </div>
-    </section>
-
-    <!-- FOOTER CTA: MINIMALIST -->
-    <section class="py-32 bg-teal-500 text-void-950 text-center px-6 selection:bg-void-950 selection:text-teal-400">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl md:text-8xl font-black mb-16 tracking-tighter">READY TO DEPLOY?</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
+    <!-- SECTION 5: CTA (MINIMALIST) -->
+    <section class="py-40 bg-teal-500 text-void-950 relative overflow-hidden group">
+        <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-500"></div>
+        <div class="px-6 md:px-24 text-center max-w-4xl mx-auto relative z-10">
+            <h2 class="text-5xl md:text-8xl font-black mb-12 tracking-tighter">INITIATE <br>PROJECT.</h2>
+            <div class="flex justify-center flex-wrap gap-4">
                 <a href="/contact"
-                    class="px-12 py-6 bg-void-950 text-white font-mono uppercase tracking-widest hover:scale-105 transition-all duration-300 border border-void-950">Start
-                    Consultation</a>
+                    class="px-12 py-5 bg-void-950 text-white font-mono uppercase tracking-widest hover:scale-105 transition-transform duration-300">Contact
+                    Engineering</a>
                 <a href="/catalog"
-                    class="px-12 py-6 border border-void-950/20 text-void-950 font-mono uppercase tracking-widest hover:bg-void-950/5 transition-all duration-300">View
+                    class="px-12 py-5 border border-void-950 text-void-950 font-mono uppercase tracking-widest hover:bg-void-950 hover:text-white transition-colors duration-300">View
                     Catalog</a>
             </div>
         </div>
     </section>
+
 </div>
+
+<!-- INTERSECTION OBSERVER FOR REVEALS -->
+<style>
+    @keyframes slideUpReveal {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .animate-slide-up-reveal {
+        animation: slideUpReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animation-delay-500 {
+        animation-delay: 0.5s;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        // Select elements to reveal
+        const reveals = document.querySelectorAll('.reveal-trigger');
+        reveals.forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    });
+</script>
 {{ end }}
