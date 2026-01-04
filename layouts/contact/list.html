@@ -1,201 +1,227 @@
 {{ define "main" }}
-<div class="bg-emphz-teal-black min-h-screen text-white selection:bg-emphz-teal selection:text-white">
-    <!-- CONCEPTUAL HEADER: THE CHANNEL -->
-    <section class="relative pt-40 pb-20 border-b border-white/5 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.1),transparent_70%)]">
-            </div>
-            <div
-                class="h-full w-full bg-[linear-gradient(rgba(20,184,166,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(20,184,166,0.02)_1px,transparent_1px)] bg-[size:80px_80px]">
-            </div>
-        </div>
+<div
+    class="bg-void-950 min-h-screen text-slate-300 font-sans selection:bg-teal-500 selection:text-void-950 bg-noise relative overflow-x-hidden">
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="flex flex-col items-center animate-fade-in-up">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="w-8 h-px bg-emphz-teal"></span>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.5em] text-emphz-teal">Protocol //
-                        Communication</span>
-                    <span class="w-8 h-px bg-emphz-teal"></span>
+    <!-- GLOBAL DECORATION: FIXED GRID LINES -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]">
+        <div class="absolute left-6 md:left-24 top-0 bottom-0 w-px bg-white"></div>
+        <div class="absolute right-6 md:right-24 top-0 bottom-0 w-px bg-white"></div>
+        <div class="absolute left-1/4 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+        <div class="absolute left-3/4 top-0 bottom-0 w-px bg-white hidden md:block"></div>
+    </div>
+
+    <!-- HEADER: KINETIC TYPOGRAPHY -->
+    <section class="relative pt-40 px-6 md:px-24 z-10 border-b border-white/10 pb-20">
+        <div class="max-w-[1920px] mx-auto">
+            <div class="flex flex-col gap-6">
+                <!-- Meta -->
+                <div class="flex justify-between items-end opacity-0 animate-fade-in">
+                    <div class="flex items-center gap-4 text-xs font-mono text-teal-500 tracking-widest uppercase">
+                        <span class="w-12 h-px bg-teal-500"></span>
+                        [ COMM_LINK: SECURE ]
+                    </div>
                 </div>
-                <h1 class="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none">
-                    ENGINEERING<br /><span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-emphz-teal to-emerald-400">UP_LINK.</span>
-                </h1>
-                <p class="text-lg text-industrial-500 max-w-2xl font-light leading-relaxed">
-                    Direct access to GRP structural engineers and material science consultants.
-                    Initialize a requisition to receive technical evaluations for your specific environmental stress
-                    factors.
+
+                <!-- Main Title -->
+                <div class="relative overflow-hidden">
+                    <h1
+                        class="text-7xl md:text-[8vw] font-black text-white tracking-tighter leading-[0.8] animate-slide-up-reveal transform translate-y-full">
+                        ENGINEERING<br>
+                        <span class="text-transparent stroke-white"
+                            style="-webkit-text-stroke: 1px #fff;">UPLINK.</span>
+                    </h1>
+                </div>
+
+                <p class="text-xl text-slate-400 font-light max-w-2xl mt-12 opacity-0 animate-fade-in delay-200">
+                    Direct channel to GRP structural consultants. Initialize a transmission for technical evaluations or
+                    project requisitions.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content Container -->
-    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-20 -mt-12 mb-32">
-        <div class="bg-[#010807] border border-white/5 flex flex-col lg:flex-row min-h-[700px]">
+    <!-- CONTENT SPLIT -->
+    <div class="max-w-[1920px] mx-auto px-6 md:px-24 relative z-10">
+        <div class="flex flex-col lg:flex-row border-x border-white/10 min-h-screen">
 
-            <!-- Sidebar: Logistical Metadata -->
-            <div class="lg:w-5/12 border-r border-white/5 p-12 md:p-16 flex flex-col justify-between">
-                <div>
-                    <h2 class="font-mono text-[10px] font-bold text-emphz-teal uppercase tracking-[0.4em] mb-12">
-                        Registry Data</h2>
+            <!-- LEFT: INFO & METADATA -->
+            <div class="lg:w-4/12 border-b lg:border-r border-white/10 p-12 flex flex-col justify-between">
+                <div class="space-y-20">
+                    <div>
+                        <h3
+                            class="font-mono text-[10px] font-bold text-teal-500 uppercase tracking-[0.4em] mb-12 flex items-center gap-3">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>
+                            Registry Data
+                        </h3>
 
-                    <div class="space-y-12">
-                        <!-- Location -->
-                        <div class="group">
-                            <span
-                                class="block font-mono text-[9px] text-industrial-600 uppercase mb-4 tracking-widest group-hover:text-emphz-teal transition-colors">Production_Hub</span>
-                            <p class="text-sm text-white font-light leading-relaxed">
-                                KIADB Industrial Area, Phase 2<br />
-                                Mysuru, Karnataka - India
-                            </p>
+                        <!-- Details Grid -->
+                        <div class="space-y-12">
+                            <div class="group">
+                                <label
+                                    class="block font-mono text-[9px] text-slate-500 uppercase tracking-widest mb-4">Production_Hub</label>
+                                <p class="text-lg text-white font-light group-hover:text-teal-400 transition-colors">
+                                    KIADB Industrial Area<br>
+                                    Mysuru, Karnataka - India
+                                </p>
+                            </div>
+
+                            <div class="group">
+                                <label
+                                    class="block font-mono text-[9px] text-slate-500 uppercase tracking-widest mb-4">Signal_Transfer</label>
+                                <a href="mailto:info@emphz.in"
+                                    class="text-2xl font-mono text-white hover:text-teal-400 transition-colors border-b border-white/10 pb-1">info@emphz.in</a>
+                            </div>
+
+                            <div class="group">
+                                <label
+                                    class="block font-mono text-[9px] text-slate-500 uppercase tracking-widest mb-4">Operations_Line</label>
+                                <a href="tel:+919037874080"
+                                    class="text-2xl font-mono text-white hover:text-teal-400 transition-colors border-b border-white/10 pb-1">+91
+                                    9037 874 080</a>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Email -->
-                        <div class="group">
-                            <span
-                                class="block font-mono text-[9px] text-industrial-600 uppercase mb-4 tracking-widest group-hover:text-emphz-teal transition-colors">Data_Transfer</span>
-                            <a href="mailto:info@emphz.in"
-                                class="text-xl font-bold text-white hover:text-emphz-teal transition-all">info@emphz.in</a>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="group">
-                            <span
-                                class="block font-mono text-[9px] text-industrial-600 uppercase mb-4 tracking-widest group-hover:text-emphz-teal transition-colors">Operations_Line</span>
-                            <a href="tel:+919037874080"
-                                class="text-xl font-bold text-white hover:text-emphz-teal transition-all text-industrial-300 tracking-wider">+91
-                                9037 874 080</a>
+                    <!-- FAQ Mini -->
+                    <div class="border-t border-white/10 pt-12">
+                        <h4 class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-6">
+                            Quick_Diagnostics</h4>
+                        <div class="space-y-6">
+                            {{ range first 2 .Site.Data.faq }}
+                            <div>
+                                <h5 class="text-white font-bold text-sm mb-2">{{ .q }}</h5>
+                                <p class="text-xs text-slate-500 leading-relaxed">{{ .a }}</p>
+                            </div>
+                            {{ end }}
                         </div>
                     </div>
                 </div>
 
-                <div class="pt-12 border-t border-white/5">
-                    <div class="flex items-center gap-4">
-                        <div class="w-3 h-3 rounded-full bg-emphz-teal animate-pulse"></div>
-                        <span class="font-mono text-[9px] text-industrial-600 uppercase tracking-widest">System Status:
-                            Optimal</span>
-                    </div>
+                <div class="mt-20 font-mono text-[9px] text-slate-600 uppercase tracking-widest">
+                    Latency: <span class="text-teal-500">12ms</span> // Encryption: <span
+                        class="text-teal-500">AES-256</span>
                 </div>
             </div>
 
-            <!-- Form Side: Requisition Terminal -->
-            <div class="lg:w-7/12 p-12 md:p-16 bg-emphz-teal-black/40">
+            <!-- RIGHT: TERMINAL FORM -->
+            <div class="lg:w-8/12 bg-void-900/30">
+
+                <!-- Success State -->
                 <div id="contact-success"
-                    class="hidden h-full flex flex-col items-center justify-center text-center py-20 animate-fade-in-up">
+                    class="hidden h-full flex flex-col items-center justify-center text-center p-20 animate-fade-in">
                     <div
-                        class="w-20 h-20 bg-emphz-teal/10 border border-emphz-teal/30 rounded-full flex items-center justify-center mb-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-emphz-teal">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                        class="w-32 h-32 border border-teal-500 rounded-full flex items-center justify-center mb-12 relative">
+                        <div class="absolute inset-0 border border-teal-500 rounded-full animate-ping opacity-20"></div>
+                        <svg class="w-12 h-12 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7">
+                            </path>
                         </svg>
                     </div>
-                    <h3 class="text-3xl font-black text-white mb-6">SIGNAL_TX_OK</h3>
-                    <p class="text-industrial-500 max-w-sm mb-12">Your requisition has been encrypted and routed to the
-                        engineering department. Expect an uplink within 4 business hours.</p>
+                    <h2 class="text-5xl font-black text-white mb-6 tracking-tight">TRANSMISSION<br>COMPLETE.</h2>
+                    <p class="text-slate-400 max-w-md font-light mb-12">
+                        Your requisition packet has been successfully routed to our engineering grid. Expect a downlink
+                        connection within 4 business hours.
+                    </p>
                     <button onclick="window.location.reload()"
-                        class="bg-white text-[#020C0B] px-10 py-4 font-bold uppercase tracking-widest text-[10px] hover:bg-emphz-teal hover:text-white transition-all">New
-                        Requisition</button>
+                        class="px-10 py-4 border border-teal-500 text-teal-500 font-mono text-xs uppercase tracking-widest hover:bg-teal-500 hover:text-void-950 transition-all">
+                        Initialize New Sequence
+                    </button>
                 </div>
 
-                <form id="contact-form" class="space-y-10">
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <div class="space-y-4">
-                            <label
-                                class="block font-mono text-[9px] text-industrial-600 uppercase tracking-widest">Ident_Name</label>
-                            <input type="text" required
-                                class="w-full bg-white/5 border border-white/5 p-4 text-xs text-white outline-none focus:border-emphz-teal focus:bg-white/[0.08] transition-all"
-                                placeholder="Enter full name">
+                <!-- Active Form -->
+                <form id="contact-form" class="h-full flex flex-col">
+                    <div class="flex-1 p-12 md:p-20 space-y-16">
+
+                        <!-- Section 1 -->
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div class="group relative">
+                                <input type="text" required
+                                    class="peer w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-transparent focus:border-teal-500 focus:outline-none transition-colors font-mono">
+                                <label
+                                    class="absolute left-0 -top-3 text-[10px] font-mono text-slate-500 uppercase tracking-widest transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-600 peer-focus:-top-3 peer-focus:text-[10px] peer-focus:text-teal-500">Ident_Name</label>
+                            </div>
+                            <div class="group relative">
+                                <input type="email" required
+                                    class="peer w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-transparent focus:border-teal-500 focus:outline-none transition-colors font-mono">
+                                <label
+                                    class="absolute left-0 -top-3 text-[10px] font-mono text-slate-500 uppercase tracking-widest transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-600 peer-focus:-top-3 peer-focus:text-[10px] peer-focus:text-teal-500">Auth_Email</label>
+                            </div>
                         </div>
-                        <div class="space-y-4">
+
+                        <!-- Section 2 -->
+                        <div class="group relative">
+                            <select
+                                class="w-full bg-transparent border-b border-white/20 py-4 text-white focus:border-teal-500 focus:outline-none transition-colors font-mono appearance-none uppercase text-sm">
+                                <option value="" disabled selected class="bg-void-950 text-slate-500">Select Protocol...
+                                </option>
+                                <option value="sales" class="bg-void-950">Project Deployment Inquiry</option>
+                                <option value="tech" class="bg-void-950">Technical Data Request</option>
+                                <option value="custom" class="bg-void-950">Custom Fabrication</option>
+                            </select>
                             <label
-                                class="block font-mono text-[9px] text-industrial-600 uppercase tracking-widest">Auth_Email</label>
-                            <input type="email" required
-                                class="w-full bg-white/5 border border-white/5 p-4 text-xs text-white outline-none focus:border-emphz-teal focus:bg-white/[0.08] transition-all"
-                                placeholder="Enter corporate email">
+                                class="absolute left-0 -top-3 text-[10px] font-mono text-slate-500 uppercase tracking-widest">Inquiry_Type</label>
+                            <div class="absolute right-0 top-4 pointer-events-none">
+                                <svg class="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
                         </div>
+
+                        <!-- Section 3 -->
+                        <div class="group relative flex-1">
+                            <textarea required rows="8"
+                                class="peer w-full bg-transparent border border-white/10 p-6 text-white text-sm font-light focus:border-teal-500 focus:outline-none transition-colors resize-none bg-void-950/50"
+                                placeholder="USAGE: Describe environmental variables and structural requirements..."></textarea>
+                            <label
+                                class="absolute left-6 -top-3 bg-void-950 px-2 text-[10px] font-mono text-slate-500 uppercase tracking-widest transition-all peer-focus:text-teal-500">Message_Payload</label>
+                        </div>
+
                     </div>
 
-                    <div class="space-y-4">
-                        <label
-                            class="block font-mono text-[9px] text-industrial-600 uppercase tracking-widest">Inquiry_Protocol</label>
-                        <select
-                            class="w-full bg-white/5 border border-white/5 p-4 text-xs text-white/50 outline-none focus:border-emphz-teal focus:bg-white/[0.08] transition-all appearance-none">
-                            <option value="sales">Project Deployment Inquiry</option>
-                            <option value="tech">Technical/Material Data Request</option>
-                            <option value="custom">Custom Fabrication Protocol</option>
-                        </select>
-                    </div>
-
-                    <div class="space-y-4">
-                        <label
-                            class="block font-mono text-[9px] text-industrial-600 uppercase tracking-widest">Message_Payload</label>
-                        <textarea required rows="6"
-                            class="w-full bg-white/5 border border-white/5 p-4 text-xs text-white outline-none focus:border-emphz-teal focus:bg-white/[0.08] transition-all resize-none"
-                            placeholder="Describe environmental conditions and structural requirements..."></textarea>
-                    </div>
-
+                    <!-- Submit Action -->
                     <button type="submit"
-                        class="w-full group relative bg-white text-[#020C0B] py-6 font-bold uppercase tracking-[0.3em] text-[11px] overflow-hidden transition-all hover:bg-emphz-teal hover:text-white shadow-2xl shadow-emphz-teal/10">
-                        <span class="relative z-10 transition-transform group-hover:translate-x-2 inline-block">Execute
-                            Transmission</span>
-                        <div
-                            class="absolute inset-x-0 bottom-0 h-1 bg-emphz-teal scale-x-0 transition-transform origin-left group-hover:scale-x-100">
-                        </div>
+                        class="w-full bg-white text-void-950 py-10 font-black uppercase text-xl tracking-widest hover:bg-teal-500 transition-colors flex items-center justify-center gap-4 group">
+                        <span>Execute Transmission</span>
+                        <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
                     </button>
-                    <p class="text-center font-mono text-[8px] text-industrial-700 uppercase tracking-widest">Encrypted
-                        end-to-end // RSA-4096 Enabled</p>
                 </form>
             </div>
-        </div>
 
-        <!-- FAQ: UNIT DIAGNOSTICS -->
-        <div class="mt-40">
-            <h2 class="text-center font-mono text-[10px] text-emphz-teal uppercase tracking-[0.5em] mb-12">
-                Knowledge_Base // Diagnostics</h2>
-            <div class="grid md:grid-cols-2 gap-px bg-white/5 border border-white/5 max-w-5xl mx-auto">
-                {{ range .Site.Data.faq }}
-                <div class="p-8 bg-[#010807] border border-white/5 hover:bg-emphz-teal/5 transition-all group">
-                    <h3 class="text-sm font-bold text-white mb-4 flex items-start gap-4 uppercase tracking-wide">
-                        <span class="text-emphz-teal font-mono group-hover:animate-pulse">Q</span>
-                        {{ .q }}
-                    </h3>
-                    <p
-                        class="text-xs text-industrial-500 font-light leading-relaxed pl-8 border-l border-white/5 group-hover:border-emphz-teal/30 transition-all">
-                        {{ .a }}
-                    </p>
-                </div>
-                {{ end }}
-            </div>
         </div>
     </div>
+
 </div>
+
+<style>
+    @keyframes slideUpReveal {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .animate-slide-up-reveal {
+        animation: slideUpReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+</style>
 
 <script>
     document.getElementById('contact-form')?.addEventListener('submit', function (e) {
         e.preventDefault();
-        this.classList.add('hidden');
+        this.parentElement.classList.add('hidden'); // Hide form container
+        this.style.display = 'none'; // Double ensure
         document.getElementById('contact-success').classList.remove('hidden');
     });
 </script>
-
-<style>
-    @keyframes fade-in-up {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .animate-fade-in-up {
-        animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-</style>
 {{ end }}
