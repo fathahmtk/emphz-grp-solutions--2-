@@ -2,87 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/blog/fire-safety-industrial-enclosures/</loc>
+    <loc>http://localhost:1314/blog/fire-safety-industrial-enclosures/</loc>
     <lastmod>2024-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>http://localhost:1314/</loc>
     <lastmod>2024-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/blog/</loc>
+    <loc>http://localhost:1314/blog/</loc>
     <lastmod>2024-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/blog/sustainability-composite-materials/</loc>
+    <loc>http://localhost:1314/blog/sustainability-composite-materials/</loc>
     <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/blog/grp-future-of-infrastructure/</loc>
+    <loc>http://localhost:1314/blog/grp-future-of-infrastructure/</loc>
     <lastmod>2024-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/about/</loc>
+    <loc>http://localhost:1314/about/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-campmart/</loc>
+    <loc>http://localhost:1314/products/emp-uc-campmart/</loc>
   </url><url>
-    <loc>http://example.org/case-studies/</loc>
+    <loc>http://localhost:1314/case-studies/</loc>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://localhost:1314/categories/</loc>
   </url><url>
-    <loc>http://example.org/contact/</loc>
+    <loc>http://localhost:1314/contact/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-toil-001/</loc>
+    <loc>http://localhost:1314/products/emp-toil-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-auto-001/</loc>
+    <loc>http://localhost:1314/products/emp-auto-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-flexserve/</loc>
+    <loc>http://localhost:1314/products/emp-uc-flexserve/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-cable-001/</loc>
+    <loc>http://localhost:1314/products/emp-cable-001/</loc>
   </url><url>
-    <loc>http://example.org/case-studies/cs-heritage-kiosk/</loc>
+    <loc>http://localhost:1314/case-studies/cs-heritage-kiosk/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-encl-001/</loc>
+    <loc>http://localhost:1314/products/emp-encl-001/</loc>
   </url><url>
-    <loc>http://example.org/case-studies/cs-labor-camp-retail/</loc>
+    <loc>http://localhost:1314/case-studies/cs-labor-camp-retail/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-inst-001/</loc>
+    <loc>http://localhost:1314/products/emp-inst-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-shelter-001/</loc>
+    <loc>http://localhost:1314/products/emp-shelter-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-tank-001/</loc>
+    <loc>http://localhost:1314/products/emp-tank-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-ksk-001/</loc>
+    <loc>http://localhost:1314/products/emp-ksk-001/</loc>
   </url><url>
-    <loc>http://example.org/products/</loc>
+    <loc>http://localhost:1314/products/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-cust-001/</loc>
+    <loc>http://localhost:1314/products/emp-cust-001/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-safety-001/</loc>
+    <loc>http://localhost:1314/products/emp-safety-001/</loc>
   </url><url>
-    <loc>http://example.org/rfq/</loc>
+    <loc>http://localhost:1314/rfq/</loc>
   </url><url>
-    <loc>http://example.org/industries/</loc>
+    <loc>http://localhost:1314/industries/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-cbn-001/</loc>
+    <loc>http://localhost:1314/products/emp-cbn-001/</loc>
   </url><url>
-    <loc>http://example.org/case-studies/cs-smart-city-retail/</loc>
+    <loc>http://localhost:1314/case-studies/cs-smart-city-retail/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-grid/</loc>
+    <loc>http://localhost:1314/products/emp-uc-grid/</loc>
   </url><url>
-    <loc>http://example.org/catalog/</loc>
+    <loc>http://localhost:1314/catalog/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-storebox/</loc>
+    <loc>http://localhost:1314/products/emp-uc-storebox/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-streetsmart/</loc>
+    <loc>http://localhost:1314/products/emp-uc-streetsmart/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://localhost:1314/tags/</loc>
   </url><url>
-    <loc>http://example.org/technical/</loc>
+    <loc>http://localhost:1314/technical/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-tradepod/</loc>
+    <loc>http://localhost:1314/products/emp-uc-tradepod/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-cold/</loc>
+    <loc>http://localhost:1314/products/emp-uc-cold/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-energy/</loc>
+    <loc>http://localhost:1314/products/emp-uc-energy/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-retail/</loc>
+    <loc>http://localhost:1314/products/emp-uc-retail/</loc>
   </url><url>
-    <loc>http://example.org/products/emp-uc-services/</loc>
+    <loc>http://localhost:1314/products/emp-uc-services/</loc>
   </url>
 </urlset>
