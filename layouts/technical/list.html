@@ -1,0 +1,130 @@
+{{ define "main" }}
+<div class="bg-neutral-950 min-h-screen text-neutral-300 font-mono pt-24 pb-24">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- Header -->
+        <div class="flex items-center gap-4 mb-12">
+            <div class="inline-flex items-center justify-center p-3 bg-white/5 rounded-xl border border-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-blue-500 animate-pulse">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="15" x2="23" y2="15"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="15" x2="4" y2="15"></line>
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-2xl font-semibold text-white tracking-tight">Technical Center</h1>
+                <p class="text-blue-500 font-mono text-xs tracking-wide">
+                    // CORE_ACCESS: GRANTED // MAN_PROC_V1
+                </p>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12">
+            <!-- Library / Calculators Section -->
+            <div class="lg:col-span-12">
+                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-8 mb-12">
+                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-blue-500">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        Asset Library
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {{ range .Site.Data.resources }}
+                        <div
+                            class="bg-black/40 border border-neutral-800 rounded-lg p-6 hover:border-blue-500/50 transition-all group">
+                            <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="p-3 bg-neutral-900 rounded-lg border border-neutral-800 text-neutral-400 group-hover:text-blue-500 group-hover:border-blue-500/30 transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-[10px] bg-neutral-900 px-2 py-1 rounded text-neutral-500 font-bold uppercase tracking-widest">{{
+                                    .format }}</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-neutral-200 group-hover:text-white mb-4">{{ .title }}</h4>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-neutral-500">{{ .size }}</span>
+                                <button
+                                    class="text-blue-500 hover:text-blue-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2">
+                                    Download <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-8">
+                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-blue-500">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        Chemical Compatibility Finder
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead class="bg-black/50 text-neutral-400 font-bold uppercase tracking-wider">
+                                <tr>
+                                    <th class="p-4 border-b border-neutral-800">Medium</th>
+                                    <th class="p-4 border-b border-neutral-800">Conc.</th>
+                                    <th class="p-4 border-b border-neutral-800">Max Temp</th>
+                                    <th class="p-4 border-b border-neutral-800">Resin Rec.</th>
+                                    <th class="p-4 border-b border-neutral-800 text-right">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-neutral-800/50">
+                                {{ range .Site.Data.chemicals }}
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 font-bold text-white">{{ .name }}</td>
+                                    <td class="p-4 text-neutral-400">{{ .conc }}</td>
+                                    <td class="p-4 text-neutral-400">{{ .temp }}</td>
+                                    <td class="p-4 text-blue-500 font-semibold">{{ .resin }}</td>
+                                    <td class="p-4 text-right">
+                                        <span
+                                            class="inline-flex items-center px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wide border {{ if eq .rating "
+                                            Recommended" }}bg-green-500/10 text-green-500 border-green-500/20{{ else if
+                                            eq .rating "Caution" }}bg-yellow-500/10 text-yellow-500
+                                            border-yellow-500/20{{ else }}bg-red-500/10 text-red-500 border-red-500/20{{
+                                            end }}">
+                                            {{ .rating }}
+                                        </span>
+                                    </td>
+                                </tr>
+                                {{ end }}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

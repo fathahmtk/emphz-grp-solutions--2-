@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Acetic Acid",
+    "conc": "10%",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Acetic Acid",
+    "conc": "50%",
+    "temp": "60°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Acetic Acid",
+    "conc": "Glacial",
+    "temp": "40°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Benzoic Acid",
+    "conc": "Sat.",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Chromic Acid",
+    "conc": "20%",
+    "temp": "50°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Citric Acid",
+    "conc": "Sat.",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Formic Acid",
+    "conc": "10%",
+    "temp": "40°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Hydrochloric Acid",
+    "conc": "10%",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Hydrochloric Acid",
+    "conc": "37%",
+    "temp": "90°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Hydrofluoric Acid",
+    "conc": "10%",
+    "temp": "40°C",
+    "resin": "Synthetic Veil + VE",
+    "rating": "Caution"
+  },
+  {
+    "name": "Nitric Acid",
+    "conc": "20%",
+    "temp": "50°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Nitric Acid",
+    "conc": "5%",
+    "temp": "60°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Phosphoric Acid",
+    "conc": "80%",
+    "temp": "100°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Sulphuric Acid",
+    "conc": "25%",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Sulphuric Acid",
+    "conc": "75%",
+    "temp": "60°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Sulphuric Acid",
+    "conc": "98%",
+    "temp": "-",
+    "resin": "None",
+    "rating": "Avoid"
+  },
+  {
+    "name": "Ammonium Hydroxide",
+    "conc": "20%",
+    "temp": "40°C",
+    "resin": "Synthetic Veil + VE",
+    "rating": "Caution"
+  },
+  {
+    "name": "Calcium Chloride",
+    "conc": "Sat.",
+    "temp": "95°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Caustic Soda (NaOH)",
+    "conc": "10%",
+    "temp": "80°C",
+    "resin": "Synthetic Veil + VE",
+    "rating": "Caution"
+  },
+  {
+    "name": "Chlorine Water",
+    "conc": "Sat.",
+    "temp": "80°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Ferric Chloride",
+    "conc": "Sat.",
+    "temp": "100°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Potassium Hydroxide",
+    "conc": "20%",
+    "temp": "50°C",
+    "resin": "Synthetic Veil + VE",
+    "rating": "Caution"
+  },
+  {
+    "name": "Sea Water",
+    "conc": "100%",
+    "temp": "80°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Sodium Chloride",
+    "conc": "Sat.",
+    "temp": "100°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Sodium Hypochlorite",
+    "conc": "15%",
+    "temp": "50°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Acetone",
+    "conc": "100%",
+    "temp": "-",
+    "resin": "None",
+    "rating": "Avoid"
+  },
+  {
+    "name": "Benzene",
+    "conc": "Pure",
+    "temp": "-",
+    "resin": "None",
+    "rating": "Avoid"
+  },
+  {
+    "name": "Carbon Tetrachloride",
+    "conc": "100%",
+    "temp": "40°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Diesel Fuel",
+    "conc": "100%",
+    "temp": "60°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Ethanol",
+    "conc": "50%",
+    "temp": "40°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Ethanol",
+    "conc": "96%",
+    "temp": "30°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Formaldehyde",
+    "conc": "37%",
+    "temp": "60°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Gasoline (Unleaded)",
+    "conc": "100%",
+    "temp": "40°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Glycerin",
+    "conc": "100%",
+    "temp": "95°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Kerosene",
+    "conc": "100%",
+    "temp": "60°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Methanol",
+    "conc": "100%",
+    "temp": "30°C",
+    "resin": "Vinyl Ester",
+    "rating": "Caution"
+  },
+  {
+    "name": "Toluene",
+    "conc": "100%",
+    "temp": "-",
+    "resin": "None",
+    "rating": "Avoid"
+  },
+  {
+    "name": "Xylene",
+    "conc": "100%",
+    "temp": "-",
+    "resin": "None",
+    "rating": "Avoid"
+  },
+  {
+    "name": "Alum. Sulphate",
+    "conc": "Sat.",
+    "temp": "95°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Urea",
+    "conc": "Sat.",
+    "temp": "90°C",
+    "resin": "Isophthalic",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Water (Potable)",
+    "conc": "100%",
+    "temp": "60°C",
+    "resin": "Isophthalic (WRAS)",
+    "rating": "Recommended"
+  },
+  {
+    "name": "Water (Demineralized)",
+    "conc": "100%",
+    "temp": "80°C",
+    "resin": "Vinyl Ester",
+    "rating": "Recommended"
+  }
+]
