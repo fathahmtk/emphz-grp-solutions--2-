@@ -1,13 +1,16 @@
 {{ define "main" }}
-<div class="bg-emphz-teal-black min-h-screen text-industrial-300 font-mono">
-  <!-- Header -->
-  <div class="bg-neutral-900 pb-12 relative overflow-hidden border-b border-white/5 pt-24 md:pt-32">
-    <div class="absolute inset-0 bg-dots opacity-5"></div>
+<div
+  class="bg-emphz-teal-black min-h-screen text-industrial-300 font-mono selection:bg-emphz-teal selection:text-white">
+  <!-- CONCEPTUAL HEADER: THE TERMINAL -->
+  <div class="bg-[#010807] pb-12 relative overflow-hidden border-b border-white/5 pt-40">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.1),transparent_70%)] opacity-50">
+    </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10 flex items-center justify-between">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-6">
         <div
-          class="inline-flex items-center justify-center p-3 bg-white/5 rounded-xl border border-white/10 text-blue-500">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          class="inline-flex items-center justify-center p-4 bg-emphz-teal/10 rounded-sm border border-emphz-teal/20 text-emphz-teal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-pulse">
             <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
             <rect x="9" y="9" width="6" height="6"></rect>
@@ -15,84 +18,71 @@
             <line x1="15" y1="1" x2="15" y2="4"></line>
             <line x1="9" y1="20" x2="9" y2="23"></line>
             <line x1="15" y1="20" x2="15" y2="23"></line>
-            <line x1="20" y1="9" x2="23" y2="9"></line>
-            <line x1="20" y1="15" x2="23" y2="15"></line>
-            <line x1="1" y1="9" x2="4" y2="9"></line>
-            <line x1="1" y1="15" x2="4" y2="15"></line>
           </svg>
         </div>
         <div>
-          <h1 class="text-2xl font-semibold text-white tracking-tight">Technical Center</h1>
-          <p class="text-blue-500 font-mono text-xs tracking-wide">// CORE_ACCESS: GRANTED // MAN_PROC_V1</p>
+          <h1 class="text-4xl font-black text-white tracking-tighter uppercase mb-1">Technical_Vault</h1>
+          <p class="text-emphz-teal font-mono text-[10px] tracking-[0.4em] uppercase opacity-70">// CORE_ACCESS: GRANTED
+            // SYST_SPEC_V0.1</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
-    <!-- Sidebar -->
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
+    <!-- Sidebar Navigation -->
     <div class="lg:col-span-3 space-y-4">
-      <div class="bg-neutral-900/50 rounded-xl border border-neutral-800 p-2 space-y-1 backdrop-blur-md">
-        <div class="pt-2 pb-1 px-4 text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Modules</div>
+      <div class="bg-[#010807] border border-white/5 p-2 space-y-1 backdrop-blur-md">
+        <div class="pt-4 pb-2 px-4 text-[9px] font-bold text-industrial-600 uppercase tracking-[0.4em]">Protocols</div>
         <button onclick="switchModule('library')"
-          class="module-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all bg-blue-600 text-white shadow-lg shadow-blue-600/20"
+          class="module-btn w-full flex items-center gap-4 px-6 py-4 text-left transition-all bg-emphz-teal text-[#020C0B] font-black italic tracking-widest text-[11px]"
           data-module="library">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-          </svg>
-          ASSET_LIBRARY
+          <span class="w-2 h-2 rounded-full bg-[#020C0B]"></span> ASSET_LIBRARY
         </button>
         <button onclick="switchModule('thermal')"
-          class="module-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all text-neutral-400 hover:bg-white/5 hover:text-white"
+          class="module-btn w-full flex items-center gap-4 px-6 py-4 text-left transition-all text-industrial-500 hover:text-white border-white/0 hover:border-white/5 font-bold tracking-widest text-[11px]"
           data-module="thermal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
-          </svg>
-          THERMAL_LOAD
+          <span class="w-1 h-px bg-current"></span> THERMAL_MATRIX
         </button>
         <button onclick="switchModule('chemical')"
-          class="module-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-xs font-bold transition-all text-neutral-400 hover:bg-white/5 hover:text-white"
+          class="module-btn w-full flex items-center gap-4 px-6 py-4 text-left transition-all text-industrial-500 hover:text-white border-white/0 hover:border-white/5 font-bold tracking-widest text-[11px]"
           data-module="chemical">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 3h12l-6 18-6-18z"></path>
-          </svg>
-          CHEM_RESIST
+          <span class="w-1 h-px bg-current"></span> CHEM_STABILITY
         </button>
+      </div>
+
+      <div class="p-6 border border-emphz-teal/20 bg-emphz-teal/5">
+        <span class="block font-mono text-[8px] text-emphz-teal uppercase tracking-[0.3em] mb-2">Notice</span>
+        <p class="text-[9px] leading-relaxed text-industrial-500 uppercase">Values represent mean structural performance
+          under ASTM standardized testing conditions.</p>
       </div>
     </div>
 
-    <!-- Content Area -->
+    <!-- Main Terminal Area -->
     <div class="lg:col-span-9">
-      <!-- Asset Library -->
+      <!-- Unit Database -->
       <div id="library-module" class="module-content">
-        <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-8">
-          <h2 class="text-white font-bold text-xl mb-8 pb-4 border-b border-neutral-800">Resource Database</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[#010807] border border-white/5 p-12">
+          <h2
+            class="text-white font-black text-2xl mb-12 pb-6 border-b border-white/5 tracking-tighter flex items-center gap-4">
+            <span class="w-2 h-8 bg-emphz-teal"></span> RESOURCE_ARCHIVE
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
             {{ range .Site.Data.resources }}
-            <div
-              class="bg-black/40 border border-neutral-800 rounded-lg p-4 hover:border-blue-500/50 transition-colors group">
-              <div class="flex items-start gap-4">
+            <div class="bg-emphz-teal-black p-6 group hover:bg-emphz-teal/5 transition-all">
+              <div class="flex items-start gap-6">
                 <div
-                  class="p-3 bg-neutral-900 rounded-lg border border-neutral-800 text-neutral-400 group-hover:text-blue-500 transition-all">
+                  class="p-4 bg-[#010807] border border-white/5 text-industrial-600 group-hover:text-emphz-teal group-hover:border-emphz-teal/30 transition-all">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
                   </svg>
                 </div>
                 <div>
-                  <h4 class="text-sm font-bold text-neutral-200 group-hover:text-white mb-1">{{ .title }}</h4>
-                  <div class="flex items-center gap-3 text-[10px] text-neutral-500 font-mono">
-                    <span class="bg-neutral-900 px-1.5 py-0.5 rounded uppercase font-bold">{{ .format }}</span>
+                  <h4 class="text-sm font-bold text-white mb-2 tracking-wide">{{ .title }}</h4>
+                  <div class="flex items-center gap-4 text-[9px] text-industrial-600 font-mono">
+                    <span class="bg-white/5 px-2 py-1 uppercase font-bold">{{ .format }}</span>
                     <span>{{ .size }}</span>
                   </div>
                 </div>
@@ -103,94 +93,87 @@
         </div>
       </div>
 
-      <!-- Thermal Calculator -->
+      <!-- Thermal Load Analysis -->
       <div id="thermal-module" class="module-content hidden">
-        <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-8 font-mono">
-          <h3 class="text-white font-bold text-xl mb-8 pb-4 border-b border-neutral-800">Thermal Sizing Matrix</h3>
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="space-y-6">
-              <div class="grid grid-cols-3 gap-3">
+        <div class="bg-[#010807] border border-white/5 p-12">
+          <h3
+            class="text-white font-black text-2xl mb-12 pb-6 border-b border-white/5 tracking-tighter flex items-center gap-4">
+            <span class="w-2 h-8 bg-emphz-amber"></span> THERMAL_SIZING_PROTOCOL
+          </h3>
+          <div class="grid lg:grid-cols-2 gap-16">
+            <div class="space-y-8">
+              <div class="grid grid-cols-3 gap-4">
+                {{ range (slice "H" "W" "D") }}
                 <div>
-                  <label class="text-[10px] text-neutral-500 block mb-1">H (MM)</label>
-                  <input type="number" id="h-dim" value="600"
-                    class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
+                  <label class="text-[9px] text-industrial-600 block mb-2 uppercase tracking-widest">{{ . }}_DIM
+                    (MM)</label>
+                  <input type="number" id="{{ lower . }}-dim" value="500"
+                    class="w-full bg-[#020C0B] border border-white/10 p-3 text-white text-xs outline-none focus:border-emphz-teal transition-all">
                 </div>
-                <div>
-                  <label class="text-[10px] text-neutral-500 block mb-1">W (MM)</label>
-                  <input type="number" id="w-dim" value="400"
-                    class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
-                </div>
-                <div>
-                  <label class="text-[10px] text-neutral-500 block mb-1">D (MM)</label>
-                  <input type="number" id="d-dim" value="250"
-                    class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
-                </div>
+                {{ end }}
               </div>
               <div>
-                <label class="text-[10px] text-neutral-500 block mb-1 uppercase">Heat Load (Watts)</label>
-                <input type="number" id="heat-load" value="45"
-                  class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
+                <label class="text-[9px] text-industrial-600 block mb-2 uppercase tracking-widest">Load_Input
+                  (Watts)</label>
+                <input type="number" id="heat-load" value="60"
+                  class="w-full bg-[#020C0B] border border-white/10 p-3 text-white text-xs outline-none focus:border-emphz-teal transition-all">
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="text-[10px] text-neutral-500 block mb-1 uppercase">Ambient (°C)</label>
-                  <input type="number" id="ambient-temp" value="35"
-                    class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
-                </div>
-                <div>
-                  <label class="text-[10px] text-neutral-500 block mb-1 uppercase">Mounting</label>
-                  <select id="mount-type"
-                    class="w-full bg-black border border-neutral-700 rounded p-2 text-white text-sm outline-none focus:border-blue-500">
-                    <option value="wall">Wall Mount</option>
-                    <option value="free">Free Standing</option>
-                  </select>
+                  <label class="text-[9px] text-industrial-600 block mb-2 uppercase tracking-widest">Ambient_ENV
+                    (°C)</label>
+                  <input type="number" id="ambient-temp" value="40"
+                    class="w-full bg-[#020C0B] border border-white/10 p-3 text-white text-xs outline-none focus:border-emphz-teal transition-all">
                 </div>
               </div>
             </div>
-            <div class="bg-black/40 rounded-xl border border-neutral-800 p-6 flex flex-col justify-between">
-              <div class="space-y-4">
-                <div class="flex justify-between items-end border-b border-neutral-800 pb-2">
-                  <span class="text-xs text-neutral-500">Effective Surface Area</span>
-                  <span id="res-area" class="text-sm font-bold text-white">0.98 m²</span>
+            <div class="bg-emphz-teal-black p-8 border border-white/5 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex justify-between items-end border-b border-white/5 pb-4">
+                  <span class="text-[10px] text-industrial-500 uppercase">Effective Surface</span>
+                  <span id="res-area" class="text-xs font-bold text-white tracking-widest">0.98 m²</span>
                 </div>
-                <div class="flex justify-between items-end border-b border-neutral-800 pb-2">
-                  <span class="text-xs text-neutral-500">Temp Rise (ΔT)</span>
-                  <span id="res-dt" class="text-sm font-bold text-blue-500">+13.1 °C</span>
+                <div class="flex justify-between items-end border-b border-white/5 pb-4">
+                  <span class="text-[10px] text-industrial-500 uppercase">Delta Response (ΔT)</span>
+                  <span id="res-dt" class="text-xs font-bold text-emphz-teal">+13.1 °C</span>
                 </div>
-                <div class="flex justify-between items-end pb-2">
-                  <span class="text-xs text-neutral-500">Internal Temp</span>
-                  <span id="res-temp" class="text-2xl font-black text-green-500">48.1 °C</span>
+                <div class="flex flex-col gap-2 pt-4">
+                  <span class="text-[10px] text-industrial-500 uppercase">Calculated Core Temperature</span>
+                  <span id="res-temp" class="text-5xl font-black text-white tracking-tighter">48.1<span
+                      class="text-lg text-industrial-600">°C</span></span>
                 </div>
               </div>
-              <div id="thermal-status" class="mt-8 p-4 rounded-lg border bg-green-500/10 border-green-500/30">
-                <span class="text-green-400 block text-xs font-bold">PASS: THERMAL INTEGRITY OK</span>
+              <div id="thermal-status" class="mt-12 p-5 border bg-emerald-500/5 border-emerald-500/20 text-emerald-400">
+                <span class="text-[10px] font-black uppercase tracking-[0.4em]">Unit_Integrity: Operational</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Chemical Finder -->
+      <!-- Chemical Stability Registry -->
       <div id="chemical-module" class="module-content hidden">
-        <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-8 font-mono">
-          <h3 class="text-white font-bold text-xl mb-8 pb-4 border-b border-neutral-800">Chemical Resistance Matrix</h3>
-          <div class="mb-6">
-            <input type="text" id="chem-search" placeholder="Search medium..."
-              class="w-full bg-black border border-neutral-700 rounded px-4 py-3 text-sm text-white focus:border-blue-500 outline-none">
+        <div class="bg-[#010807] border border-white/5 p-12">
+          <h3
+            class="text-white font-black text-2xl mb-12 pb-6 border-b border-white/5 tracking-tighter flex items-center gap-4">
+            <span class="w-2 h-8 bg-emerald-500"></span> STABILITY_MATRIX
+          </h3>
+          <div class="mb-10">
+            <input type="text" id="chem-search" placeholder="Search medium registry..."
+              class="w-full bg-[#020C0B] border border-white/5 px-6 py-4 text-xs text-white focus:border-emphz-teal outline-none transition-all placeholder:text-industrial-600">
           </div>
           <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-neutral-800 text-neutral-400 uppercase tracking-widest">
+            <table class="w-full text-left text-[10px]">
+              <thead class="bg-white/5 text-industrial-500 uppercase tracking-[0.3em]">
                 <tr>
-                  <th class="p-4">Medium</th>
-                  <th class="p-4">Conc.</th>
-                  <th class="p-4">Temp</th>
-                  <th class="p-4">Resin</th>
-                  <th class="p-4 text-right">Status</th>
+                  <th class="p-6 font-bold">Registry</th>
+                  <th class="p-6 font-bold">Saturation</th>
+                  <th class="p-6 font-bold">Max_Temp</th>
+                  <th class="p-6 font-bold text-right">Protection_Rating</th>
                 </tr>
               </thead>
-              <tbody id="chem-table-body" class="divide-y divide-neutral-800">
-                <!-- Populated by JS -->
+              <tbody id="chem-table-body" class="divide-y divide-white/5">
+                <!-- Data injection point -->
               </tbody>
             </table>
           </div>
@@ -207,27 +190,36 @@
     document.getElementById(id + '-module').classList.remove('hidden');
 
     document.querySelectorAll('.module-btn').forEach(b => {
-      b.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
-      b.classList.add('text-neutral-400', 'hover:bg-white/5', 'hover:text-white');
+      b.classList.remove('bg-emphz-teal', 'text-[#020C0B]', 'font-black', 'italic');
+      b.classList.add('text-industrial-500', 'hover:text-white', 'font-bold');
+      const dot = b.querySelector('span');
+      if (dot) {
+        dot.classList.remove('bg-[#020C0B]', 'w-2', 'h-2', 'rounded-full');
+        dot.classList.add('w-1', 'h-px', 'bg-current');
+      }
     });
 
     const activeBtn = document.querySelector(`[data-module="${id}"]`);
-    activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
-    activeBtn.classList.remove('text-neutral-400', 'hover:bg-white/5', 'hover:text-white');
+    activeBtn.classList.add('bg-emphz-teal', 'text-[#020C0B]', 'font-black', 'italic');
+    activeBtn.classList.remove('text-industrial-500', 'hover:text-white', 'font-bold');
+
+    const activeDot = activeBtn.querySelector('span');
+    if (activeDot) {
+      activeDot.classList.remove('w-1', 'h-px', 'bg-current');
+      activeDot.classList.add('bg-[#020C0B]', 'w-2', 'h-2', 'rounded-full');
+    }
   }
 
-  // Initialize chemical table
   document.addEventListener('DOMContentLoaded', () => {
     const chemTable = document.getElementById('chem-table-body');
-    if (chemTable) {
+    if (chemTable && typeof CHEMICAL_DB !== 'undefined') {
       chemTable.innerHTML = CHEMICAL_DB.map(item => `
-                <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-bold text-white">${item.name}</td>
-                    <td class="p-4 text-neutral-400">${item.conc}</td>
-                    <td class="p-4 text-neutral-400">${item.temp}</td>
-                    <td class="p-4 text-blue-500 font-semibold">${item.resin}</td>
-                    <td class="p-4 text-right">
-                        <span class="inline-flex items-center px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wide border ${item.rating === 'Recommended' ? 'bg-green-500/10 text-green-500 border-green-500/20' : 'bg-red-500/10 text-red-500 border-red-500/20'}">
+                <tr class="hover:bg-emphz-teal/5 transition-colors border-white/5">
+                    <td class="p-6 font-bold text-white tracking-wide uppercase">${item.name}</td>
+                    <td class="p-6 text-industrial-500 font-mono tracking-widest">${item.conc}</td>
+                    <td class="p-6 text-industrial-500 font-mono tracking-widest">${item.temp}</td>
+                    <td class="p-6 text-right">
+                        <span class="px-4 py-2 border ${item.rating === 'Recommended' ? 'bg-emerald-500/5 text-emerald-400 border-emerald-500/30' : 'bg-red-500/5 text-red-500 border-red-500/30'} font-black uppercase text-[8px] tracking-[0.2em]">
                             ${item.rating}
                         </span>
                     </td>
