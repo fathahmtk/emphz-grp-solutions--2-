@@ -1,11 +1,46 @@
 {{ define "main" }}
-<div class="bg-industrial-50 min-h-screen py-32">
-    <div class="max-w-4xl mx-auto px-6">
-        <h1 class="text-4xl md:text-5xl font-medium text-industrial-900 mb-12 tracking-tight uppercase">{{ .Title }}
-        </h1>
-        <div class="prose prose-industrial max-w-none">
+<div class="bg-emphz-teal-black min-h-screen pt-40 pb-32 text-white selection:bg-emphz-teal">
+    <div class="max-w-4xl mx-auto px-6 relative">
+        <!-- CONCEPT BREADCRUMB -->
+        <nav class="flex items-center gap-6 mb-16 text-[10px] font-mono text-industrial-500 uppercase tracking-[0.3em]">
+            <a href="/" class="hover:text-emphz-teal transition-all flex items-center gap-2">
+                <span class="w-4 h-px bg-current"></span> RET_TO_CORE
+            </a>
+            <span class="text-white/10">/</span>
+            <span class="text-emphz-teal">{{ .Title }}</span>
+        </nav>
+
+        <header class="mb-20 border-b border-white/5 pb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-none uppercase">
+                {{ .Title }}
+            </h1>
+            <div class="flex items-center gap-4 text-industrial-600 font-mono text-[9px] uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-emphz-teal"></span> Last Review: {{ .Date.Format "02_JAN_2006" }}
+            </div>
+        </header>
+
+        <div
+            class="prose prose-invert prose-emphz max-w-none text-industrial-400 font-light leading-relaxed prose-headings:text-white prose-headings:font-black prose-headings:tracking-tight prose-headings:uppercase prose-strong:text-emphz-teal prose-a:text-emphz-teal hover:prose-a:text-white">
             {{ .Content }}
         </div>
     </div>
 </div>
+
+<style>
+    .prose-emphz h2 {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+        border-left: 4px solid var(--primary);
+        padding-left: 1.5rem;
+    }
+
+    .prose-emphz h3 {
+        font-size: 1.25rem;
+        margin-top: 3rem;
+    }
+
+    .prose-emphz p {
+        margin-bottom: 2rem;
+    }
+</style>
 {{ end }}
