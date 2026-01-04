@@ -2043,6 +2043,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(26 95 122 / var(--tw-bg-opacity, 1));
 }
+.bg-\[\#F2F2F2\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
+}
 .bg-amber-500\/20{
   background-color: rgb(245 158 11 / 0.2);
 }
