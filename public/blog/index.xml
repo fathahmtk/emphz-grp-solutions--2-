@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical Insights on EMPHZ | Vetted GRP Composite Ecosystems</title>
-    <link>http://example.org/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Technical Insights on EMPHZ | Vetted GRP Composite Ecosystems</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Critical Fire Safety in Industrial Enclosures</title>
-      <link>http://example.org/blog/fire-safety-industrial-enclosures/</link>
+      <link>http://localhost:1313/blog/fire-safety-industrial-enclosures/</link>
       <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://example.org/blog/fire-safety-industrial-enclosures/</guid>
+      <guid>http://localhost:1313/blog/fire-safety-industrial-enclosures/</guid>
       <description>&lt;p&gt;In high-voltage electrical distribution, the enclosure is the last line of defense. We explore why specifying UL 94 V-0 rated SMC materials is crucial for preventing fire propagation in substations.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Sustainability of Composite Materials</title>
-      <link>http://example.org/blog/sustainability-composite-materials/</link>
+      <link>http://localhost:1313/blog/sustainability-composite-materials/</link>
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://example.org/blog/sustainability-composite-materials/</guid>
+      <guid>http://localhost:1313/blog/sustainability-composite-materials/</guid>
       <description>&lt;p&gt;While the initial production of composites captures energy, their 50+ year lifespan significantly offsets the carbon cost compared to steel assets that need replacement every 10-15 years in corrosive zones.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why GRP is Used in Outdoor Infrastructure</title>
-      <link>http://example.org/blog/grp-future-of-infrastructure/</link>
+      <link>http://localhost:1313/blog/grp-future-of-infrastructure/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://example.org/blog/grp-future-of-infrastructure/</guid>
+      <guid>http://localhost:1313/blog/grp-future-of-infrastructure/</guid>
       <description>&lt;p&gt;GRP (Glass Reinforced Plastic) is becoming the standard material for outdoor infrastructure where traditional materials fail. We see this most often in coastal areas or chemical plants where steel enclosures rust through in a few years.&lt;/p&gt;</description>
     </item>
   </channel>
