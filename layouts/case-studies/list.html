@@ -1,4 +1,3 @@
-</script>
 {{ define "main" }}
 <div class="bg-emphz-navy min-h-screen text-white selection:bg-emphz-teal selection:text-white">
     <!-- Cinematic Hero -->
@@ -87,7 +86,8 @@
                             CASE STUDY 0{{ add $idx 1 }}
                         </div>
 
-                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">{{ .Title }}</h2>
+                        <h2 class="text-3xl md:text-4xl font-black text-white mb-6 font-display leading-tight">{{ .Title
+                            }}</h2>
 
                         <div class="space-y-8 relative">
                             <div class="absolute left-3 top-2 bottom-2 w-px bg-white/10"></div>
@@ -155,3 +155,4 @@
         </div>
     </div>
 </div>
+{{ end }}
